@@ -69,6 +69,7 @@
       "category": "throughput",
       "phase": 1,
       "assignCd": true,
+      "suggestPersonals": true,
       "note": "Soak — major CD."
     },
     {

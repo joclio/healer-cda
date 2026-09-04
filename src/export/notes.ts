@@ -97,10 +97,28 @@ export function toTextNote(plan: Plan, boss: Boss): string {
   return lines.join("\n");
 }
 
+/**
+ * NSRT Shared Notes import format (Northern Sky Raid Tools):
+ * - Header must include EncounterID + Name (+ Difficulty) or ImportFullReminderString drops it
+ * - Reminder lines must NOT repeat EncounterID (parser skips firstline with EncounterID)
+ * - Every reminder needs tag + time + (text|spellid); use tag:everyone for raid-wide calls
+ * - Player tags are bare names (tag:Shammy), not {Shammy}
+ * - Always ph:1 — our timeSec is pull-relative; window.phase is guide metadata only.
+ *   Emitting ph:2/3 breaks Viserio import when that boss has no such phase.
+ */
+function nsrtLine(
+  parts: Array<string | null | undefined | false>,
+): string {
+  return parts.filter(Boolean).join(";") + ";";
+}
+
 export function toNsrtNote(plan: Plan, boss: Boss): string {
   const lines: string[] = [
-    `{${boss.name}}`,
-    `EncounterID:${boss.encounterId}`,
+    nsrtLine([
+      `EncounterID:${boss.encounterId}`,
+      `Difficulty:${boss.difficulty}`,
+      `Name:${boss.name}`,
+    ]),
   ];
 
   const windows = noteWindows(plan, boss);
@@ -108,31 +126,35 @@ export function toNsrtNote(plan: Plan, boss: Boss): string {
 
   for (const window of windows) {
     const assigned = plan.assignments.filter((a) => a.windowId === window.id);
-    const phase = window.phase ?? 1;
     const personals = personalSet.has(window.id);
+    const bossSpell = window.abilitySpellId
+      ? `bossSpell:${window.abilitySpellId}`
+      : null;
 
     if (personals) {
       lines.push(
-        [
-          `EncounterID:${boss.encounterId}`,
+        nsrtLine([
           `time:${window.timeSec}`,
-          `ph:${phase}`,
+          `ph:1`,
+          `tag:everyone`,
           `text:Raid personals @ ${window.ability}`,
+          bossSpell,
           `countdown:5`,
-        ].join(";"),
+        ]),
       );
     }
 
     if (assigned.length === 0) {
       if (personals) continue;
       lines.push(
-        [
-          `EncounterID:${boss.encounterId}`,
+        nsrtLine([
           `time:${window.timeSec}`,
-          `ph:${phase}`,
+          `ph:1`,
+          `tag:everyone`,
           `text:${window.ability}`,
+          bossSpell,
           `countdown:5`,
-        ].join(";"),
+        ]),
       );
       continue;
     }
@@ -144,24 +166,89 @@ export function toNsrtNote(plan: Plan, boss: Boss): string {
       const text = spell
         ? onTank
           ? `${who} ${spell.name} → ${onTank} @ ${window.ability}`
-          : `${who} ${spell.name} @ ${window.ability}`
+          : spell.kind === "raidUtility"
+            ? `${who} ${spell.name} (Raid) @ ${window.ability}`
+            : `${who} ${spell.name} @ ${window.ability}`
         : `${who} ${a.spellId}`;
 
       lines.push(
-        [
-          `EncounterID:${boss.encounterId}`,
+        nsrtLine([
           `time:${a.timeSec}`,
-          `ph:${phase}`,
-          `tag:{${who}}`,
+          `ph:1`,
+          `tag:${who}`,
           spell ? `spellid:${spell.spellId}` : null,
           `text:${text}`,
+          bossSpell,
           `countdown:5`,
-        ]
-          .filter(Boolean)
-          .join(";"),
+        ]),
       );
     }
   }
 
   return lines.join("\n");
 }
+
+/**
+ * Viserio Cooldowns CD Import (NSRT paste).
+ * Spell rows must be spellid-only — a long text: field makes Viserio treat the
+ * line as a text reminder (class-colored chips with names, no spell icons).
+ * Personals stay text reminders with tag:everyone. Skip bare ability rows.
+ */
+export function toViserioNote(plan: Plan, boss: Boss): string {
+  const lines: string[] = [
+    nsrtLine([
+      `EncounterID:${boss.encounterId}`,
+      `Difficulty:${boss.difficulty}`,
+      `Name:${boss.name}`,
+    ]),
+  ];
+
+  const windows = noteWindows(plan, boss);
+  const personalSet = new Set(plan.personalWindowIds ?? []);
+
+  for (const window of windows) {
+    const assigned = plan.assignments.filter((a) => a.windowId === window.id);
+    const personals = personalSet.has(window.id);
+    const bossSpell = window.abilitySpellId
+      ? `bossSpell:${window.abilitySpellId}`
+      : null;
+
+    if (personals) {
+      lines.push(
+        nsrtLine([
+          `time:${window.timeSec}`,
+          `ph:1`,
+          `tag:everyone`,
+          `text:Raid personals`,
+          bossSpell,
+          `countdown:5`,
+        ]),
+      );
+    }
+
+    for (const a of assigned) {
+      const spell = getSpell(a.spellId);
+      if (!spell) continue;
+      const who = assigneeName(plan, a);
+      const onTank = tankName(plan.tanks, a.tankId);
+
+      lines.push(
+        nsrtLine([
+          `time:${a.timeSec}`,
+          `ph:1`,
+          `tag:${who}`,
+          `spellid:${spell.spellId}`,
+          bossSpell,
+          onTank ? `glowunit:${onTank}` : null,
+          `countdown:5`,
+        ]),
+      );
+    }
+  }
+
+  return lines.join("\n");
+}
+
+export const VISERIO_COOLDOWNS_URL =
+  "https://wowutils.com/viserio-cooldowns";
+

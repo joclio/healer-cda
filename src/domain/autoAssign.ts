@@ -407,8 +407,8 @@ export function autoAssign(
   roster: Healer[],
   spells: Spell[],
   tanks: Tank[] = [],
-  cdWindowIds?: string[],
   utilities: UtilityCaster[] = [],
+  cdWindowIds?: string[],
 ): Assignment[] {
   const cdSet =
     cdWindowIds !== undefined

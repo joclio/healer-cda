@@ -104,7 +104,6 @@ describe("autoAssign", () => {
       roster,
       SPELLS,
       tanks,
-      undefined,
       [{ id: "u1", name: "BloodDK", class: "death-knight" }],
     );
     const amz = plan.find((a) => a.spellId === "anti-magic-zone");
@@ -140,7 +139,6 @@ describe("autoAssign", () => {
       [],
       SPELLS,
       [],
-      undefined,
       [{ id: "u1", name: "BloodDK", class: "death-knight" }],
     );
     const amzs = plan.filter((a) => a.spellId === "anti-magic-zone");
@@ -153,8 +151,6 @@ describe("autoAssign", () => {
       roster,
       SPELLS,
       [{ id: "t1", name: "ProtWarr", class: "warrior" }],
-      undefined,
-      [],
     );
     const rally = plan.find((a) => a.spellId === "rallying-cry");
     expect(rally?.utilityId).toBe("t1");
@@ -219,7 +215,7 @@ describe("autoAssign", () => {
   });
 
   it("respects explicit cdWindowIds over boss defaults", () => {
-    const plan = autoAssign(boss, roster, SPELLS, tanks, ["w2"]);
+    const plan = autoAssign(boss, roster, SPELLS, tanks, [], ["w2"]);
     expect(plan.every((a) => a.windowId === "w2")).toBe(true);
     expect(uncoveredWindows(boss, [], ["w1"]).map((w) => w.id)).toEqual([
       "w1",

@@ -7,7 +7,7 @@ import {
   useSyncExternalStore,
 } from "react";
 import { BossPicker } from "@/components/BossPicker";
-import { CopyNsrtButton, ExportPanel } from "@/components/ExportPanel";
+import { CopyNsrtButton, CopyViserioButton, ExportPanel } from "@/components/ExportPanel";
 import { RosterEditor } from "@/components/RosterEditor";
 import { Timeline } from "@/components/Timeline";
 import { getBoss, getSpell, SPELLS } from "@/data/catalog";
@@ -81,7 +81,10 @@ function loadPlanSlice(
     assignments: (saved.assignments ?? []).filter((a) =>
       validWindows.has(a.windowId),
     ),
-    noteWindowIds: pruneIds(saved.noteWindowIds ?? [], validWindows),
+    noteWindowIds:
+      saved.noteWindowIds !== undefined
+        ? pruneIds(saved.noteWindowIds, validWindows)
+        : defaultNoteWindowIds(boss),
     personalWindowIds: pruneIds(saved.personalWindowIds ?? [], validWindows),
     timeOverrides: Object.fromEntries(
       Object.entries(saved.timeOverrides ?? {}).filter(([wid]) =>
@@ -309,13 +312,9 @@ export function PlannerApp() {
     [baseBoss, timeOverrides],
   );
 
-  function applyPlanSlice(slice: SavedPlan, bossForDefaults: Boss) {
+  function applyPlanSlice(slice: SavedPlan) {
     setAssignments(slice.assignments);
-    setNoteWindowIds(
-      slice.noteWindowIds.length > 0
-        ? slice.noteWindowIds
-        : defaultNoteWindowIds(bossForDefaults),
-    );
+    setNoteWindowIds(slice.noteWindowIds);
     setPersonalWindowIds(slice.personalWindowIds);
     setTimeOverrides(slice.timeOverrides);
   }
@@ -332,7 +331,7 @@ export function PlannerApp() {
         });
       }
       setBossId(b.id);
-      applyPlanSlice(loadPlanSlice(readSavedPlans(), b.id, b), b);
+      applyPlanSlice(loadPlanSlice(readSavedPlans(), b.id, b));
     }
     setLastBossId(b.id);
     if (goRoster) setStep("roster");
@@ -340,7 +339,7 @@ export function PlannerApp() {
 
   function applyAutoAssign() {
     if (!boss) return;
-    const next = autoAssign(boss, roster, SPELLS, tanks, undefined, utilities);
+    const next = autoAssign(boss, roster, SPELLS, tanks, utilities);
     setAssignments(next);
     const personals = autoAssignPersonals(boss);
     setPersonalWindowIds(personals);
@@ -542,6 +541,7 @@ export function PlannerApp() {
                     Back
                   </button>
                   <CopyNsrtButton plan={plan} boss={boss} />
+                  <CopyViserioButton plan={plan} boss={boss} />
                 </div>
               </div>
             </div>
@@ -594,6 +594,12 @@ export function PlannerApp() {
             onPersonalWindowIdsChange={setPersonalWindowIds}
             onAutoAssign={runAutoAssign}
             onReset={() => {
+              if (assignments.length > 0 || personalWindowIds.length > 0) {
+                const ok = window.confirm(
+                  "Clear all CD and personals assignments for this fight? Your saved plan will be wiped.",
+                );
+                if (!ok) return;
+              }
               setAssignments([]);
               setPersonalWindowIds([]);
             }}

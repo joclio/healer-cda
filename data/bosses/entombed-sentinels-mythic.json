@@ -69,6 +69,7 @@
       "category": "throughput",
       "phase": 1,
       "assignCd": true,
+      "suggestPersonals": true,
       "note": "Second soak cluster."
     },
     {
@@ -93,6 +94,7 @@
       "category": "defensive",
       "phase": 1,
       "assignCd": true,
+      "suggestPersonals": true,
       "note": "Mid-fight soak into Contaminate."
     },
     {
@@ -141,6 +143,7 @@
       "category": "defensive",
       "phase": 1,
       "assignCd": true,
+      "suggestPersonals": true,
       "note": "Late soak on ~3:45–3:50 kills."
     },
     {

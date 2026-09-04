@@ -17,7 +17,7 @@ Open [http://localhost:3000](http://localhost:3000).
 
 1. **Boss** — pick a fight, then **Heroic** / **Mythic** (or click the selected card again) to go to roster.
 2. **Roster** — healers (name + spec), tanks, and **raid utilities**. Paste WowAudit Main Roster to import healers/tanks plus Warrior / DK / DH / Rogue DPS for Rally, AMZ, Darkness, and Smoke Bomb.
-3. **Plan** — first visit auto-assigns; later visits restore your saved plan. **Auto-assign CDs** asks before replacing manual work. Tweak rows, set tank targets, then **Copy NSRT**.
+3. **Plan** — first visit auto-assigns; later visits restore your saved plan. **Auto-assign CDs** asks before replacing manual work. Tweak rows, set tank targets, then **Copy NSRT** (in-game) or **Copy Viserio** (paste into [Viserio Cooldowns](https://wowutils.com/viserio-cooldowns) CD → Import).
 4. In-game: `/ns` → Shared Notes → Import → paste.
 
 ### Plan screen tips

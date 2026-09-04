@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { toNsrtNote, toTextNote } from "@/export/notes";
+import { toNsrtNote, toTextNote, toViserioNote } from "@/export/notes";
 import type { Boss, Plan } from "@/domain/types";
 
 const boss: Boss = {
@@ -85,9 +85,10 @@ describe("toTextNote", () => {
 });
 
 describe("toNsrtNote", () => {
-  it("emits NSRT lines with spell ids and tags", () => {
+  it("emits NSRT import header + reminder lines NSRT accepts", () => {
     const plan: Plan = {
       ...basePlan,
+      personalWindowIds: ["w1"],
       assignments: [
         {
           id: "a1",
@@ -100,9 +101,99 @@ describe("toNsrtNote", () => {
       noteWindowIds: ["w1"],
     };
     const nsrt = toNsrtNote(plan, boss);
-    expect(nsrt).toContain("EncounterID:42");
+    const lines = nsrt.split("\n");
+    expect(lines[0]).toBe(
+      "EncounterID:42;Difficulty:Heroic;Name:Test Boss;",
+    );
+    expect(nsrt).toContain("tag:everyone");
+    expect(nsrt).toContain("tag:MainTank");
+    expect(nsrt).not.toContain("tag:{");
     expect(nsrt).toContain("spellid:97462");
-    expect(nsrt).toContain("tag:{MainTank}");
-    expect(nsrt).toContain("MainTank Rallying Cry @ Raid Hit");
+    expect(nsrt).toContain("MainTank Rallying Cry (Raid) @ Raid Hit");
+    // Reminder rows must not repeat EncounterID or NSRT skips them
+    expect(lines.slice(1).every((l) => !l.includes("EncounterID:"))).toBe(
+      true,
+    );
+  });
+
+  it("always uses ph:1 (pull-relative times, not guide phases)", () => {
+    const phased: Boss = {
+      ...boss,
+      windows: [
+        { ...boss.windows[0], phase: 2 },
+        { ...boss.windows[1], phase: 3 },
+      ],
+    };
+    const plan: Plan = {
+      ...basePlan,
+      noteWindowIds: ["w1", "w2"],
+      assignments: [
+        {
+          id: "a1",
+          windowId: "w1",
+          healerId: "h1",
+          spellId: "spirit-link",
+          timeSec: 30,
+        },
+      ],
+    };
+    const nsrt = toNsrtNote(plan, phased);
+    expect(nsrt).toContain("ph:1");
+    expect(nsrt).not.toContain("ph:2");
+    expect(nsrt).not.toContain("ph:3");
+  });
+});
+
+describe("toViserioNote", () => {
+  it("emits spellid lines without text so Viserio shows spell icons", () => {
+    const plan: Plan = {
+      ...basePlan,
+      personalWindowIds: ["w1"],
+      noteWindowIds: ["w1", "w2"],
+      assignments: [
+        {
+          id: "a1",
+          windowId: "w1",
+          healerId: "h1",
+          spellId: "spirit-link",
+          timeSec: 30,
+        },
+        {
+          id: "a2",
+          windowId: "w2",
+          healerId: "h2",
+          spellId: "ironbark",
+          timeSec: 60,
+          tankId: "t1",
+        },
+      ],
+    };
+    const note = toViserioNote(plan, boss);
+    expect(note).toContain("spellid:98008");
+    expect(note).toContain("spellid:102342");
+    expect(note).toContain("tag:Shammy");
+    expect(note).toContain("glowunit:MainTank");
+    expect(note).toContain("tag:everyone");
+    expect(note).toContain("text:Raid personals");
+    // Spell CD lines must not carry a text: field (Viserio treats those as notes)
+    const spellLines = note
+      .split("\n")
+      .filter((l) => l.includes("spellid:"));
+    expect(spellLines.length).toBe(2);
+    expect(spellLines.every((l) => !l.includes("text:"))).toBe(true);
+    expect(note).not.toContain("Spirit Link Totem @");
+  });
+
+  it("skips bare ability rows with no assignment", () => {
+    const plan: Plan = {
+      ...basePlan,
+      noteWindowIds: ["w1", "w2"],
+      assignments: [],
+      personalWindowIds: [],
+    };
+    const note = toViserioNote(plan, boss);
+    expect(note.split("\n")).toEqual([
+      "EncounterID:42;Difficulty:Heroic;Name:Test Boss;",
+    ]);
   });
 });

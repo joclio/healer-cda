@@ -105,6 +105,7 @@
       "category": "throughput",
       "phase": 2,
       "assignCd": true,
+      "suggestPersonals": true,
       "note": "Movement / soak — major mid-fight check before Pop!"
     },
     {
