@@ -70,6 +70,7 @@ export function ExportPanel({ plan, boss }: Props) {
 
   const text = toTextNote(plan, boss);
   const nsrt = toNsrtNote(plan, boss);
+  const viserio = toViserioNote(plan, boss);
 
   return (
     <div className="rounded-xl border border-white/10 bg-white/[0.03]">
@@ -98,9 +99,7 @@ export function ExportPanel({ plan, boss }: Props) {
           </button>
           <button
             type="button"
-            onClick={() =>
-              viserioCopy.copy(toViserioNote(plan, boss), "Copied Viserio")
-            }
+            onClick={() => viserioCopy.copy(viserio, "Copied Viserio")}
             className="rounded-md border border-teal-400/30 bg-teal-500/10 px-3 py-1 text-xs text-teal-100 hover:bg-teal-500/20"
           >
             {viserioCopy.label}
@@ -145,6 +144,9 @@ export function ExportPanel({ plan, boss }: Props) {
                 </a>
                 , click Import, paste, then confirm.
               </p>
+              <pre className="max-h-40 overflow-auto whitespace-pre-wrap font-mono text-xs leading-relaxed text-white/70">
+                {viserio}
+              </pre>
             </div>
           </div>
         </div>
