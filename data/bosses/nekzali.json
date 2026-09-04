@@ -48,9 +48,9 @@
       "note": "Tank frontal — external if stacks are high."
     },
     {
-      "id": "nk-barrage2",
+      "id": "nk-barrage1b",
       "timeSec": 70,
-      "ability": "Possession Barrage #2",
+      "ability": "Possession Barrage (mid)",
       "abilitySpellId": 1284103,
       "trigger": "WCL 1:10",
       "severity": "tank",
@@ -109,9 +109,9 @@
       "note": "Stage 2 — Invoke overlaps Ritual Burn. Lust here on many kills."
     },
     {
-      "id": "nk-barrage3",
+      "id": "nk-barrage2",
       "timeSec": 194,
-      "ability": "Possession Barrage #3",
+      "ability": "Possession Barrage #2",
       "abilitySpellId": 1284103,
       "trigger": "WCL 3:14",
       "severity": "tank",
