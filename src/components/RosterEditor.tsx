@@ -11,16 +11,21 @@ import {
   TANK_CLASS_COLOR,
   TANK_CLASS_LABELS,
   TANK_SPEC_LABELS,
+  UTILITY_CLASS_COLOR,
+  UTILITY_CLASS_LABELS,
   specsForClass,
   type Healer,
   type HealerClass,
   type HealerSpec,
   type Tank,
   type TankClass,
+  type UtilityCaster,
+  type UtilityClass,
 } from "@/domain/types";
 
 const HEALER_CLASSES = Object.keys(HEALER_CLASS_LABELS) as HealerClass[];
 const TANK_CLASSES = Object.keys(TANK_CLASS_LABELS) as TankClass[];
+const UTILITY_CLASSES = Object.keys(UTILITY_CLASS_LABELS) as UtilityClass[];
 
 const FIELD =
   "w-full rounded-md border border-white/10 bg-slate-950/60 px-2 py-1.5 text-sm text-white outline-none focus:border-teal-400/60";
@@ -98,30 +103,39 @@ function moveItem<T>(list: T[], index: number, dir: -1 | 1): T[] {
 
 type UndoState =
   | { kind: "healer"; item: Healer; index: number }
-  | { kind: "tank"; item: Tank; index: number };
+  | { kind: "tank"; item: Tank; index: number }
+  | { kind: "utility"; item: UtilityCaster; index: number };
 
 interface Props {
   bossName: string;
   poolHealers: Healer[];
   poolTanks: Tank[];
+  poolUtilities: UtilityCaster[];
   activeHealerIds: string[];
   activeTankIds: string[];
+  activeUtilityIds: string[];
   onPoolHealersChange: (healers: Healer[]) => void;
   onPoolTanksChange: (tanks: Tank[]) => void;
+  onPoolUtilitiesChange: (utilities: UtilityCaster[]) => void;
   onActiveHealerIdsChange: (ids: string[]) => void;
   onActiveTankIdsChange: (ids: string[]) => void;
+  onActiveUtilityIdsChange: (ids: string[]) => void;
 }
 
 export function RosterEditor({
   bossName,
   poolHealers,
   poolTanks,
+  poolUtilities,
   activeHealerIds,
   activeTankIds,
+  activeUtilityIds,
   onPoolHealersChange,
   onPoolTanksChange,
+  onPoolUtilitiesChange,
   onActiveHealerIdsChange,
   onActiveTankIdsChange,
+  onActiveUtilityIdsChange,
 }: Props) {
   const [pasteText, setPasteText] = useState("");
   const [pasteError, setPasteError] = useState<string | null>(null);
@@ -134,8 +148,12 @@ export function RosterEditor({
 
   const activeHealerSet = new Set(activeHealerIds);
   const activeTankSet = new Set(activeTankIds);
+  const activeUtilitySet = new Set(activeUtilityIds);
   const showTankPicker = poolTanks.length >= 3;
-  const empty = poolHealers.length === 0 && poolTanks.length === 0;
+  const empty =
+    poolHealers.length === 0 &&
+    poolTanks.length === 0 &&
+    poolUtilities.length === 0;
 
   useEffect(() => {
     if (!undo) return;
@@ -147,9 +165,13 @@ export function RosterEditor({
     setPasteError(null);
     setPasteNote(null);
     const result = parseRosterPaste(pasteText);
-    if (result.healers.length === 0 && result.tanks.length === 0) {
+    if (
+      result.healers.length === 0 &&
+      result.tanks.length === 0 &&
+      result.utilities.length === 0
+    ) {
       setPasteError(
-        "No healers or tanks found. Paste the WowAudit Main Roster tab.",
+        "No healers, tanks, or raid utilities found. Paste the WowAudit Main Roster tab.",
       );
       return;
     }
@@ -172,6 +194,15 @@ export function RosterEditor({
       }));
       onPoolTanksChange(next);
       onActiveTankIdsChange(next.map((t) => t.id));
+    }
+    if (result.utilities.length > 0) {
+      const next = result.utilities.map((u) => ({
+        id: stableId("u", u.name),
+        name: u.name,
+        class: u.class,
+      }));
+      onPoolUtilitiesChange(next);
+      onActiveUtilityIdsChange(next.map((u) => u.id));
     }
     setPasteNote(result.note);
     setPasteText("");
@@ -255,6 +286,40 @@ export function RosterEditor({
     }
   }
 
+  function addUtility() {
+    const u: UtilityCaster = {
+      id: newId("u"),
+      name: `Utility ${poolUtilities.length + 1}`,
+      class: "warrior",
+    };
+    onPoolUtilitiesChange([...poolUtilities, u]);
+    onActiveUtilityIdsChange([...activeUtilityIds, u.id]);
+    setEditing(true);
+  }
+
+  function updateUtility(id: string, patch: Partial<UtilityCaster>) {
+    onPoolUtilitiesChange(
+      poolUtilities.map((u) => (u.id === id ? { ...u, ...patch } : u)),
+    );
+  }
+
+  function removeUtility(id: string) {
+    const index = poolUtilities.findIndex((u) => u.id === id);
+    if (index < 0) return;
+    const item = poolUtilities[index];
+    onPoolUtilitiesChange(poolUtilities.filter((u) => u.id !== id));
+    onActiveUtilityIdsChange(activeUtilityIds.filter((x) => x !== id));
+    setUndo({ kind: "utility", item, index });
+  }
+
+  function toggleUtility(id: string) {
+    if (activeUtilitySet.has(id)) {
+      onActiveUtilityIdsChange(activeUtilityIds.filter((x) => x !== id));
+    } else {
+      onActiveUtilityIdsChange([...activeUtilityIds, id]);
+    }
+  }
+
   function restoreUndo() {
     if (!undo) return;
     if (undo.kind === "healer") {
@@ -264,12 +329,19 @@ export function RosterEditor({
       if (!activeHealerIds.includes(undo.item.id)) {
         onActiveHealerIdsChange([...activeHealerIds, undo.item.id]);
       }
-    } else {
+    } else if (undo.kind === "tank") {
       const next = [...poolTanks];
       next.splice(undo.index, 0, undo.item);
       onPoolTanksChange(next);
       if (!activeTankIds.includes(undo.item.id)) {
         onActiveTankIdsChange([...activeTankIds, undo.item.id]);
+      }
+    } else {
+      const next = [...poolUtilities];
+      next.splice(undo.index, 0, undo.item);
+      onPoolUtilitiesChange(next);
+      if (!activeUtilityIds.includes(undo.item.id)) {
+        onActiveUtilityIdsChange([...activeUtilityIds, undo.item.id]);
       }
     }
     setUndo(null);
@@ -441,7 +513,7 @@ export function RosterEditor({
                   Replace roster
                 </h3>
                 <p className="mt-1 text-sm text-white/55">
-                  Overwrites saved healers and tanks.
+                  Overwrites saved healers, tanks, and raid utilities.
                 </p>
               </div>
               <button
@@ -650,6 +722,87 @@ export function RosterEditor({
             </button>
           </div>
         </section>
+
+        <section className="space-y-2">
+          <h3 className="text-sm font-medium text-white">
+            Raid utilities ({poolUtilities.length})
+          </h3>
+          <p className="text-xs text-white/40">
+            DPS (or anyone) who brings Rally, AMZ, Darkness, Smoke Bomb. Matching
+            tanks are offered automatically.
+          </p>
+
+          <div className={tankHeader}>
+            {reordering && <span />}
+            <span>Name</span>
+            <span>Class</span>
+            <span />
+          </div>
+
+          {poolUtilities.length === 0 ? (
+            <p className="text-sm text-white/45">No utility casters yet.</p>
+          ) : (
+            <ul className="space-y-1.5">
+              {poolUtilities.map((u, i) => (
+                <li key={u.id} className={tankGrid}>
+                  {reordering &&
+                    moveButtons(i, poolUtilities.length, (dir) =>
+                      onPoolUtilitiesChange(moveItem(poolUtilities, i, dir)),
+                    )}
+                  <div className="flex min-w-0 flex-col gap-1">
+                    <span className={MOBILE_LABEL}>Name</span>
+                    <div className="flex min-w-0 items-center gap-2">
+                      {colorDot(UTILITY_CLASS_COLOR[u.class])}
+                      <input
+                        value={u.name}
+                        onChange={(e) =>
+                          updateUtility(u.id, { name: e.target.value })
+                        }
+                        className={`min-w-0 ${FIELD}`}
+                        placeholder="Name"
+                      />
+                    </div>
+                  </div>
+                  <div className="flex flex-col gap-1">
+                    <span className={MOBILE_LABEL}>Class</span>
+                    <select
+                      value={u.class}
+                      onChange={(e) =>
+                        updateUtility(u.id, {
+                          class: e.target.value as UtilityClass,
+                        })
+                      }
+                      className={FIELD}
+                      title="Class"
+                    >
+                      {UTILITY_CLASSES.map((c) => (
+                        <option key={c} value={c}>
+                          {UTILITY_CLASS_LABELS[c]}
+                        </option>
+                      ))}
+                    </select>
+                  </div>
+                  <button
+                    type="button"
+                    onClick={() => removeUtility(u.id)}
+                    className="justify-self-end rounded-md px-2 py-1 text-sm text-rose-300 hover:bg-rose-500/10 sm:self-center"
+                  >
+                    Remove
+                  </button>
+                </li>
+              ))}
+            </ul>
+          )}
+          <div className="flex justify-end">
+            <button
+              type="button"
+              onClick={addUtility}
+              className="text-sm text-teal-300/80 hover:text-teal-200"
+            >
+              + Add utility
+            </button>
+          </div>
+        </section>
       </div>
     );
   }
@@ -822,6 +975,72 @@ export function RosterEditor({
           )}
         </section>
       )}
+
+      <section className="space-y-2">
+        <div className="flex flex-wrap items-end justify-between gap-3">
+          <div>
+            <h2 className="text-sm font-medium text-white">Raid utilities</h2>
+            <p className="mt-0.5 text-sm text-white/55">
+              {activeUtilityIds.length} selected · Rally / AMZ / Darkness /
+              Smoke Bomb
+            </p>
+          </div>
+          <div className="flex flex-wrap gap-2 text-xs">
+            <button
+              type="button"
+              onClick={() =>
+                onActiveUtilityIdsChange(poolUtilities.map((u) => u.id))
+              }
+              className="rounded-md border border-white/10 px-2 py-1 text-teal-300/90 hover:bg-white/5"
+            >
+              All
+            </button>
+            <button
+              type="button"
+              onClick={() => onActiveUtilityIdsChange([])}
+              className="rounded-md border border-white/10 px-2 py-1 text-white/50 hover:bg-white/5"
+            >
+              None
+            </button>
+          </div>
+        </div>
+        {poolUtilities.length === 0 ? (
+          <p className="text-sm text-white/45">
+            None yet — Edit roster to add DPS who bring raid CDs. Matching tanks
+            still count.
+          </p>
+        ) : (
+          <ul className="space-y-1.5">
+            {poolUtilities.map((u) => {
+              const on = activeUtilitySet.has(u.id);
+              return (
+                <li key={u.id}>
+                  <label
+                    className={`flex cursor-pointer items-center gap-3 rounded-md border px-3 py-2.5 text-sm ${
+                      on
+                        ? "border-white/15 bg-white/[0.05] text-white"
+                        : "border-white/5 bg-white/[0.02] text-white/55"
+                    }`}
+                  >
+                    <input
+                      type="checkbox"
+                      checked={on}
+                      onChange={() => toggleUtility(u.id)}
+                    />
+                    {colorDot(UTILITY_CLASS_COLOR[u.class])}
+                    <span className="min-w-0 flex-1 truncate font-medium">
+                      {u.name}
+                    </span>
+                    <span className="shrink-0 text-xs text-white/40">
+                      {UTILITY_CLASS_LABELS[u.class]}
+                    </span>
+                  </label>
+                </li>
+              );
+            })}
+          </ul>
+        )}
+      </section>
     </div>
   );
 }

@@ -71,9 +71,13 @@ describe("autoAssign", () => {
   it("assigns coverage across windows", () => {
     const plan = autoAssign(boss, roster, SPELLS, tanks);
     expect(plan.length).toBeGreaterThanOrEqual(3);
-    expect(plan.every((a) => roster.some((h) => h.id === a.healerId))).toBe(
-      true,
-    );
+    expect(
+      plan.every(
+        (a) =>
+          (a.healerId != null && roster.some((h) => h.id === a.healerId)) ||
+          a.utilityId != null,
+      ),
+    ).toBe(true);
   });
 
   it("respects cooldowns on the same spell", () => {
@@ -90,8 +94,66 @@ describe("autoAssign", () => {
     }
   });
 
-  it("returns empty for empty roster", () => {
+  it("returns empty for empty roster and no utilities", () => {
     expect(autoAssign(boss, [], SPELLS, tanks)).toEqual([]);
+  });
+
+  it("assigns AMZ from a DK utility onto a defensive window", () => {
+    const plan = autoAssign(
+      boss,
+      roster,
+      SPELLS,
+      tanks,
+      [{ id: "u1", name: "BloodDK", class: "death-knight" }],
+    );
+    const amz = plan.find((a) => a.spellId === "anti-magic-zone");
+    expect(amz).toBeDefined();
+    expect(amz?.utilityId).toBe("u1");
+    expect(amz?.windowId).toBe("w3");
+  });
+
+  it("blocks double-booking the same utility CD within cooldown", () => {
+    const utilBoss: Boss = {
+      ...boss,
+      windows: [
+        {
+          id: "d1",
+          timeSec: 30,
+          ability: "DR 1",
+          trigger: "t",
+          severity: "raid",
+          category: "defensive",
+        },
+        {
+          id: "d2",
+          timeSec: 50,
+          ability: "DR 2",
+          trigger: "t",
+          severity: "raid",
+          category: "defensive",
+        },
+      ],
+    };
+    const plan = autoAssign(
+      utilBoss,
+      [],
+      SPELLS,
+      [],
+      [{ id: "u1", name: "BloodDK", class: "death-knight" }],
+    );
+    const amzs = plan.filter((a) => a.spellId === "anti-magic-zone");
+    expect(amzs).toHaveLength(1);
+  });
+
+  it("offers tank warriors for Rally without a utility roster entry", () => {
+    const plan = autoAssign(
+      boss,
+      roster,
+      SPELLS,
+      [{ id: "t1", name: "ProtWarr", class: "warrior" }],
+    );
+    const rally = plan.find((a) => a.spellId === "rallying-cry");
+    expect(rally?.utilityId).toBe("t1");
   });
 
   it("treats raid personals as covering a CD window", () => {
@@ -99,19 +161,25 @@ describe("autoAssign", () => {
     expect(uncovered.map((w) => w.id)).not.toContain("w1");
   });
 
-  it("autoAssignPersonals uses soak / suggestPersonals windows", () => {
+  it("autoAssignPersonals uses suggestPersonals / soft-CD wording", () => {
     const withSoak: Boss = {
       ...boss,
       windows: [
         {
           ...boss.windows[0],
           id: "soak1",
+          suggestPersonals: true,
           note: "Group soak — soft CD if the raid is low.",
         },
         {
           ...boss.windows[1],
           id: "tank1",
           note: "Tank hit — external.",
+        },
+        {
+          ...boss.windows[0],
+          id: "mech-soak",
+          note: "Platform soak only — not a personals call.",
         },
       ],
     };
@@ -147,7 +215,7 @@ describe("autoAssign", () => {
   });
 
   it("respects explicit cdWindowIds over boss defaults", () => {
-    const plan = autoAssign(boss, roster, SPELLS, tanks, ["w2"]);
+    const plan = autoAssign(boss, roster, SPELLS, tanks, [], ["w2"]);
     expect(plan.every((a) => a.windowId === "w2")).toBe(true);
     expect(uncoveredWindows(boss, [], ["w1"]).map((w) => w.id)).toEqual([
       "w1",

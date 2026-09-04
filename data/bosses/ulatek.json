@@ -33,6 +33,7 @@
       "category": "throughput",
       "phase": 1,
       "assignCd": true,
+      "suggestPersonals": true,
       "note": "Raid soak: coils crush the platform. Split damage by soaking impacts (~40% of raid). Also breaks carried eggs."
     },
     {
@@ -129,6 +130,7 @@
       "category": "throughput",
       "phase": 1,
       "assignCd": true,
+      "suggestPersonals": true,
       "note": "Second soak set — alternate eligible soakers on Heroic (Soul Constrictor)."
     },
     {
@@ -213,6 +215,7 @@
       "category": "defensive",
       "phase": 2,
       "assignCd": true,
+      "suggestPersonals": true,
       "note": "Dense coil soak cluster. Soft CD / throughput if the raid is dripping from Rage."
     },
     {
@@ -249,6 +252,7 @@
       "category": "defensive",
       "phase": 3,
       "assignCd": true,
+      "suggestPersonals": true,
       "note": "Targeted soak (typically melee/healer/ranged groups). Soak fully, then spread for Volatile Purge — missed soaks → Calcified Corpse."
     },
     {
@@ -333,6 +337,7 @@
       "category": "defensive",
       "phase": 3,
       "assignCd": true,
+      "suggestPersonals": true,
       "note": "Second soak set — same rules as Bite #1."
     },
     {
@@ -381,6 +386,7 @@
       "category": "defensive",
       "phase": 3,
       "assignCd": true,
+      "suggestPersonals": true,
       "note": "Late fight — third soak set on slower kills."
     },
     {
@@ -453,6 +459,7 @@
       "category": "defensive",
       "phase": 3,
       "assignCd": true,
+      "suggestPersonals": true,
       "note": "Late fight — fourth soak set."
     },
     {

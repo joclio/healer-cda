@@ -11,6 +11,8 @@ describe("parseRosterPaste", () => {
       "Changpriesto\tHealer\tPriest\tDiscipline",
       "Eglantina\tTank\tWarrior\tProtection",
       "Boomkin\tDps\tDruid\tBalance",
+      "AmzBoy\tDps\tDeath Knight\tUnholy",
+      "Smoke\tDps\tRogue\tAssassination",
     ].join("\n");
     const r = parseRosterPaste(raw);
     expect(r.healers).toEqual([
@@ -18,6 +20,10 @@ describe("parseRosterPaste", () => {
       { name: "Changpriesto", spec: "disc-priest" },
     ]);
     expect(r.tanks).toEqual([{ name: "Eglantina", class: "warrior" }]);
+    expect(r.utilities).toEqual([
+      { name: "AmzBoy", class: "death-knight" },
+      { name: "Smoke", class: "rogue" },
+    ]);
     expect(r.skipped).toBe(1);
   });
 
@@ -62,6 +68,15 @@ describe("parseRosterPaste", () => {
       { name: "Poseïdom", class: "paladin" },
       { name: "Jocí", class: "paladin" },
       { name: "Gnomeghust", class: "death-knight" },
+    ]);
+    expect(r.utilities).toEqual([
+      { name: "Zenithus", class: "demon-hunter" },
+      { name: "Wargyu", class: "warrior" },
+      { name: "Mamuthe", class: "death-knight" },
+      { name: "Zilbag", class: "death-knight" },
+      { name: "Neroditty", class: "rogue" },
+      { name: "Fefalas", class: "rogue" },
+      { name: "Maeliel", class: "demon-hunter" },
     ]);
   });
 });

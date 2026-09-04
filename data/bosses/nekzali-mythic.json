@@ -117,6 +117,7 @@
       "category": "defensive",
       "phase": 2,
       "assignCd": true,
+      "suggestPersonals": true,
       "note": "First Pyre soak cluster."
     },
     {
