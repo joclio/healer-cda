@@ -1,0 +1,123 @@
+{
+  "id": "nekzali",
+  "name": "Nek’zali the Soulcoiler",
+  "shortName": "Nek’zali",
+  "encounterId": 3470,
+  "group": "raid",
+  "difficulty": "Heroic",
+  "order": 1,
+  "source": "WCL Heroic consensus — 3 speed kills (~2:49–3:47). Ritual Burn / Pyre / Invoke are the repeating heal checks; Soulcoil Ignition only reliably at pull on fast kills.",
+  "sourceUrl": "https://www.warcraftlogs.com/reports/zQJ3FbXBAm1Cx7k2?fight=22",
+  "enrageSec": 240,
+  "enrageName": "Kill target (~4:00 speed)",
+  "windows": [
+    {
+      "id": "nk-ign1",
+      "timeSec": 3,
+      "ability": "Soulcoil Ignition #1",
+      "abilitySpellId": 1285681,
+      "trigger": "WCL 0:03",
+      "severity": "critical",
+      "category": "throughput",
+      "phase": 1,
+      "assignCd": true,
+      "note": "Opener ignition. Heroic: overlaps Ritual Burn."
+    },
+    {
+      "id": "nk-burn1",
+      "timeSec": 5,
+      "ability": "Ritual Burn #1",
+      "abilitySpellId": 1297624,
+      "trigger": "WCL 0:05",
+      "severity": "raid",
+      "category": "defensive",
+      "phase": 1,
+      "assignCd": false,
+      "note": "Paired with opener Ignition — usually covered by the same CD."
+    },
+    {
+      "id": "nk-barrage1",
+      "timeSec": 34,
+      "ability": "Possession Barrage #1",
+      "abilitySpellId": 1284103,
+      "trigger": "WCL 0:34",
+      "severity": "tank",
+      "category": "external",
+      "phase": 1,
+      "assignCd": true,
+      "note": "Tank frontal — external if stacks are high."
+    },
+    {
+      "id": "nk-burn2",
+      "timeSec": 76,
+      "ability": "Ritual Burn #2",
+      "abilitySpellId": 1297624,
+      "trigger": "WCL 1:16",
+      "severity": "critical",
+      "category": "defensive",
+      "phase": 1,
+      "assignCd": true,
+      "note": "Second major burn window."
+    },
+    {
+      "id": "nk-pyre1",
+      "timeSec": 99,
+      "ability": "Hungering Pyre #1",
+      "abilitySpellId": 1294742,
+      "trigger": "WCL 1:39",
+      "severity": "critical",
+      "category": "throughput",
+      "phase": 2,
+      "assignCd": true,
+      "note": "Group soak on tank — first Pyre / mid-fight push."
+    },
+    {
+      "id": "nk-pyre2",
+      "timeSec": 134,
+      "ability": "Hungering Pyre #2",
+      "abilitySpellId": 1294742,
+      "trigger": "WCL 2:14",
+      "severity": "critical",
+      "category": "defensive",
+      "phase": 2,
+      "assignCd": true,
+      "note": "Second Pyre before Stage 2 Invoke."
+    },
+    {
+      "id": "nk-invoke1",
+      "timeSec": 161,
+      "ability": "Invoke #1 (+ Ritual Burn)",
+      "abilitySpellId": 1299673,
+      "trigger": "WCL 2:41",
+      "severity": "critical",
+      "category": "throughput",
+      "phase": 3,
+      "assignCd": true,
+      "note": "Stage 2 — Invoke overlaps Ritual Burn. Lust here on many kills."
+    },
+    {
+      "id": "nk-barrage2",
+      "timeSec": 194,
+      "ability": "Possession Barrage #2",
+      "abilitySpellId": 1284103,
+      "trigger": "WCL 3:14",
+      "severity": "tank",
+      "category": "external",
+      "phase": 3,
+      "assignCd": true,
+      "note": "Late tank frontal."
+    },
+    {
+      "id": "nk-invoke2",
+      "timeSec": 209,
+      "ability": "Invoke #2 (+ Ritual Burn)",
+      "abilitySpellId": 1299673,
+      "trigger": "WCL 3:29",
+      "severity": "critical",
+      "category": "defensive",
+      "phase": 3,
+      "assignCd": true,
+      "note": "Second Invoke — leftover raid CDs on slower kills."
+    }
+  ]
+}

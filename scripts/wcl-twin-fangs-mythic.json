@@ -1,0 +1,33 @@
+{
+  "kills": [
+    {
+      "code": "hpq8F2H6KLxBg4mG",
+      "fightId": 8,
+      "duration": 416,
+      "url": "https://www.warcraftlogs.com/reports/hpq8F2H6KLxBg4mG?fight=8",
+      "title": "raid"
+    },
+    {
+      "code": "4d7gGMRCjArnzWaT",
+      "fightId": 39,
+      "duration": 426,
+      "url": "https://www.warcraftlogs.com/reports/4d7gGMRCjArnzWaT?fight=39",
+      "title": "B2"
+    },
+    {
+      "code": "9rMa7Z1JBNDqxnPz",
+      "fightId": 37,
+      "duration": 427,
+      "url": "https://www.warcraftlogs.com/reports/9rMa7Z1JBNDqxnPz?fight=37",
+      "title": "The Venomous Abyss"
+    },
+    {
+      "code": "bX9r7nMgCf8Gzd26",
+      "fightId": 17,
+      "duration": 430,
+      "url": "https://www.warcraftlogs.com/reports/bX9r7nMgCf8Gzd26?fight=17",
+      "title": "Cancel Tactyks, he is a cyberbully"
+    }
+  ],
+  "windowCount": 19
+}

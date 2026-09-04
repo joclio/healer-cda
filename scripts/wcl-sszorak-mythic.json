@@ -1,0 +1,33 @@
+{
+  "kills": [
+    {
+      "code": "h4GKpPrQbnY7Wfmd",
+      "fightId": 13,
+      "duration": 360,
+      "url": "https://www.warcraftlogs.com/reports/h4GKpPrQbnY7Wfmd?fight=13",
+      "title": "week 3.2"
+    },
+    {
+      "code": "aDrAXfN9yBjYFHgc",
+      "fightId": 22,
+      "duration": 366,
+      "url": "https://www.warcraftlogs.com/reports/aDrAXfN9yBjYFHgc?fight=22",
+      "title": "Snowblind's Wrath Will Be Swift"
+    },
+    {
+      "code": "yRpcDAbhkwPxjngz",
+      "fightId": 19,
+      "duration": 368,
+      "url": "https://www.warcraftlogs.com/reports/yRpcDAbhkwPxjngz?fight=19",
+      "title": "raid"
+    },
+    {
+      "code": "M98z37nZ21AYrQVK",
+      "fightId": 13,
+      "duration": 369,
+      "url": "https://www.warcraftlogs.com/reports/M98z37nZ21AYrQVK?fight=13",
+      "title": "The Venomous Abyss"
+    }
+  ],
+  "windowCount": 23
+}

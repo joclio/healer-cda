@@ -1,0 +1,46 @@
+---
+description: Next.js App Router, React 19, and Tailwind v4 UI practices
+globs: src/app/**/*.{ts,tsx,css},src/components/**/*.{ts,tsx}
+alwaysApply: false
+---
+
+# Next / React / Tailwind
+
+## App Router
+
+- Pages stay thin: load data/compose, put interaction in `src/components/`
+- Mark interactive trees with `"use client"` at the leaf that needs state/effects — not the whole app by default
+- Fonts via `next/font` CSS variables (`--font-sans`, `--font-display`); wire in `layout.tsx`
+- Import UI with `@/components/...`, never deep relative hops from `app/`
+
+```tsx
+// ❌ BAD
+export default function Home() { /* big stateful planner here */ }
+
+// ✅ GOOD
+export default function Home() {
+  return <PlannerApp />;
+}
+```
+
+## React
+
+- Functional components + hooks only
+- Hydrate localStorage behind a `hydrated` flag so SSR and first paint match
+- Prefer controlled local state; no new global store unless asked
+- Typed props interfaces; export named components (`export function X`)
+
+## Tailwind v4
+
+- Utility classes in JSX; shared tokens in `globals.css` (`:root`, `@theme inline`)
+- Use existing palette (`background`, `foreground`, teal/amber accents) — don’t invent a second theme
+- Responsive with `sm:` / grid utilities already used in pickers
+- No new CSS frameworks or UI kits
+
+```tsx
+// ❌ BAD
+<div style={{ color: '#2dd4bf' }} />
+
+// ✅ GOOD
+<div className="text-teal-300/70" />
+```

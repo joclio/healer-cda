@@ -1,0 +1,164 @@
+[
+  {
+    "id": "tranquility",
+    "spellId": 740,
+    "name": "Tranquility",
+    "specs": ["resto-druid"],
+    "kind": "raidThroughput",
+    "cooldownSec": 180,
+    "durationSec": 8
+  },
+  {
+    "id": "ironbark",
+    "spellId": 102342,
+    "name": "Ironbark",
+    "specs": ["resto-druid"],
+    "kind": "tankExternal",
+    "cooldownSec": 90,
+    "durationSec": 12
+  },
+  {
+    "id": "divine-hymn",
+    "spellId": 64843,
+    "name": "Divine Hymn",
+    "specs": ["holy-priest"],
+    "kind": "raidThroughput",
+    "cooldownSec": 180,
+    "durationSec": 8
+  },
+  {
+    "id": "guardian-spirit",
+    "spellId": 47788,
+    "name": "Guardian Spirit",
+    "specs": ["holy-priest"],
+    "kind": "tankExternal",
+    "cooldownSec": 180,
+    "durationSec": 10
+  },
+  {
+    "id": "power-word-barrier",
+    "spellId": 62618,
+    "name": "Power Word: Barrier",
+    "specs": ["disc-priest"],
+    "kind": "raidDefensive",
+    "cooldownSec": 180,
+    "durationSec": 10
+  },
+  {
+    "id": "pain-suppression",
+    "spellId": 33206,
+    "name": "Pain Suppression",
+    "specs": ["disc-priest"],
+    "kind": "tankExternal",
+    "cooldownSec": 180,
+    "durationSec": 8
+  },
+  {
+    "id": "rapture",
+    "spellId": 47536,
+    "name": "Rapture",
+    "specs": ["disc-priest"],
+    "kind": "raidThroughput",
+    "cooldownSec": 90,
+    "durationSec": 8
+  },
+  {
+    "id": "spirit-link",
+    "spellId": 98008,
+    "name": "Spirit Link Totem",
+    "specs": ["resto-shaman"],
+    "kind": "raidDefensive",
+    "cooldownSec": 180,
+    "durationSec": 6
+  },
+  {
+    "id": "healing-tide",
+    "spellId": 108280,
+    "name": "Healing Tide Totem",
+    "specs": ["resto-shaman"],
+    "kind": "raidThroughput",
+    "cooldownSec": 180,
+    "durationSec": 10
+  },
+  {
+    "id": "ascendance-sham",
+    "spellId": 114052,
+    "name": "Ascendance",
+    "specs": ["resto-shaman"],
+    "kind": "raidThroughput",
+    "cooldownSec": 180,
+    "durationSec": 15
+  },
+  {
+    "id": "revival",
+    "spellId": 115310,
+    "name": "Revival",
+    "specs": ["mistweaver"],
+    "kind": "raidThroughput",
+    "cooldownSec": 180,
+    "durationSec": 0
+  },
+  {
+    "id": "life-cocoon",
+    "spellId": 116849,
+    "name": "Life Cocoon",
+    "specs": ["mistweaver"],
+    "kind": "tankExternal",
+    "cooldownSec": 120,
+    "durationSec": 12
+  },
+  {
+    "id": "aura-mastery",
+    "spellId": 31821,
+    "name": "Aura Mastery",
+    "specs": ["holy-paladin"],
+    "kind": "raidDefensive",
+    "cooldownSec": 180,
+    "durationSec": 8
+  },
+  {
+    "id": "blessing-of-sacrifice",
+    "spellId": 6940,
+    "name": "Blessing of Sacrifice",
+    "specs": ["holy-paladin"],
+    "kind": "tankExternal",
+    "cooldownSec": 60,
+    "durationSec": 12
+  },
+  {
+    "id": "lay-on-hands",
+    "spellId": 633,
+    "name": "Lay on Hands",
+    "specs": ["holy-paladin"],
+    "kind": "tankExternal",
+    "cooldownSec": 600,
+    "durationSec": 0
+  },
+  {
+    "id": "rewind",
+    "spellId": 363534,
+    "name": "Rewind",
+    "specs": ["preservation"],
+    "kind": "raidThroughput",
+    "cooldownSec": 240,
+    "durationSec": 0
+  },
+  {
+    "id": "time-dilation",
+    "spellId": 357170,
+    "name": "Time Dilation",
+    "specs": ["preservation"],
+    "kind": "tankExternal",
+    "cooldownSec": 60,
+    "durationSec": 8
+  },
+  {
+    "id": "stasis",
+    "spellId": 370537,
+    "name": "Stasis",
+    "specs": ["preservation"],
+    "kind": "raidThroughput",
+    "cooldownSec": 90,
+    "durationSec": 0
+  }
+]

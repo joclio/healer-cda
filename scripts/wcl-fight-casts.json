@@ -1,0 +1,607 @@
+{
+  "report": "ASDTGSG",
+  "fight": {
+    "id": 49,
+    "name": "Ula'tek",
+    "encounterID": 3492,
+    "kill": true,
+    "startTime": 26592353,
+    "endTime": 27180402,
+    "difficulty": 4,
+    "friendlyPlayers": [
+      238,
+      217,
+      412,
+      236,
+      223,
+      408,
+      225,
+      348,
+      222,
+      227,
+      440,
+      441,
+      145,
+      216,
+      215,
+      346,
+      143,
+      218,
+      431,
+      487,
+      385,
+      345,
+      219,
+      226,
+      309,
+      485,
+      220,
+      473,
+      472,
+      380
+    ]
+  },
+  "duration": "9:48",
+  "casts": [
+    {
+      "time": "0:15",
+      "sec": 15,
+      "spellId": 1298367,
+      "spellName": "Mother's Wrath",
+      "src": "Ula'tek"
+    },
+    {
+      "time": "0:20",
+      "sec": 20,
+      "spellId": 1308927,
+      "spellName": "Spectral Coils",
+      "src": "Gore Rattle"
+    },
+    {
+      "time": "0:28",
+      "sec": 28,
+      "spellId": 1299010,
+      "spellName": "Spectral Coils",
+      "src": "Spectral Coil"
+    },
+    {
+      "time": "0:31",
+      "sec": 31,
+      "spellId": 1299010,
+      "spellName": "Spectral Coils",
+      "src": "Spectral Coil"
+    },
+    {
+      "time": "0:39",
+      "sec": 39,
+      "spellId": 1296301,
+      "spellName": "Mephitic Thrash",
+      "src": "Gore Rattle"
+    },
+    {
+      "time": "0:48",
+      "sec": 48,
+      "spellId": 1311807,
+      "spellName": "Caustic Waves",
+      "src": "Gore Rattle"
+    },
+    {
+      "time": "0:48",
+      "sec": 48,
+      "spellId": 1319282,
+      "spellName": "Caustic Waves",
+      "src": "Ula'tek"
+    },
+    {
+      "time": "0:51",
+      "sec": 51,
+      "spellId": 1298570,
+      "spellName": "Caustic Waves",
+      "src": "Gore Rattle"
+    },
+    {
+      "time": "1:04",
+      "sec": 64,
+      "spellId": 1292521,
+      "spellName": "Submerge",
+      "src": "Ula'tek"
+    },
+    {
+      "time": "1:16",
+      "sec": 76,
+      "spellId": 1304012,
+      "spellName": "Call of the Serpent",
+      "src": "Ula'tek"
+    },
+    {
+      "time": "1:22",
+      "sec": 82,
+      "spellId": 1298367,
+      "spellName": "Mother's Wrath",
+      "src": "Ula'tek"
+    },
+    {
+      "time": "1:31",
+      "sec": 91,
+      "spellId": 1296301,
+      "spellName": "Mephitic Thrash",
+      "src": "Gore Rattle"
+    },
+    {
+      "time": "1:40",
+      "sec": 100,
+      "spellId": 1319282,
+      "spellName": "Caustic Waves",
+      "src": "Ula'tek"
+    },
+    {
+      "time": "1:40",
+      "sec": 100,
+      "spellId": 1311807,
+      "spellName": "Caustic Waves",
+      "src": "Gore Rattle"
+    },
+    {
+      "time": "1:43",
+      "sec": 103,
+      "spellId": 1298570,
+      "spellName": "Caustic Waves",
+      "src": "Gore Rattle"
+    },
+    {
+      "time": "1:55",
+      "sec": 115,
+      "spellId": 1308927,
+      "spellName": "Spectral Coils",
+      "src": "Gore Rattle"
+    },
+    {
+      "time": "1:59",
+      "sec": 119,
+      "spellId": 1298367,
+      "spellName": "Mother's Wrath",
+      "src": "Ula'tek"
+    },
+    {
+      "time": "2:02",
+      "sec": 122,
+      "spellId": 1299010,
+      "spellName": "Spectral Coils",
+      "src": "Spectral Coil"
+    },
+    {
+      "time": "2:06",
+      "sec": 126,
+      "spellId": 1299010,
+      "spellName": "Spectral Coils",
+      "src": "Spectral Coil"
+    },
+    {
+      "time": "2:15",
+      "sec": 135,
+      "spellId": 1286860,
+      "spellName": "Rage of the Shackled",
+      "src": "Ula'tek"
+    },
+    {
+      "time": "2:16",
+      "sec": 136,
+      "spellId": 1299526,
+      "spellName": "Venomous Heart",
+      "src": "Venomous Heart"
+    },
+    {
+      "time": "2:43",
+      "sec": 163,
+      "spellId": 1295995,
+      "spellName": "Toxin Cloud",
+      "src": "Toxin Cloud Stalker"
+    },
+    {
+      "time": "2:52",
+      "sec": 172,
+      "spellId": 1301213,
+      "spellName": "Shadow Molt",
+      "src": "Doomscale Warden"
+    },
+    {
+      "time": "2:55",
+      "sec": 175,
+      "spellId": 1301213,
+      "spellName": "Shadow Molt",
+      "src": "Doomscale Warden"
+    },
+    {
+      "time": "2:56",
+      "sec": 176,
+      "spellId": 1302950,
+      "spellName": "Writhing Gestation",
+      "src": "Doomscale Warden"
+    },
+    {
+      "time": "2:58",
+      "sec": 178,
+      "spellId": 1302950,
+      "spellName": "Writhing Gestation",
+      "src": "Doomscale Warden"
+    },
+    {
+      "time": "2:58",
+      "sec": 178,
+      "spellId": 1290990,
+      "spellName": "Writhing Gestation",
+      "src": "Blightscale Clutch"
+    },
+    {
+      "time": "3:09",
+      "sec": 189,
+      "spellId": 1301117,
+      "spellName": "Grasping Fangs",
+      "src": "Doomscale Warden"
+    },
+    {
+      "time": "3:12",
+      "sec": 192,
+      "spellId": 1301117,
+      "spellName": "Grasping Fangs",
+      "src": "Doomscale Warden"
+    },
+    {
+      "time": "3:44",
+      "sec": 224,
+      "spellId": 1303410,
+      "spellName": "Defect: Weakened",
+      "src": "Weakened Doomscale"
+    },
+    {
+      "time": "4:01",
+      "sec": 241,
+      "spellId": 1305709,
+      "spellName": "Desperate Thrash",
+      "src": "Weakened Doomscale"
+    },
+    {
+      "time": "4:03",
+      "sec": 243,
+      "spellId": 1305709,
+      "spellName": "Desperate Thrash",
+      "src": "Weakened Doomscale"
+    },
+    {
+      "time": "4:20",
+      "sec": 260,
+      "spellId": 1305709,
+      "spellName": "Desperate Thrash",
+      "src": "Weakened Doomscale"
+    },
+    {
+      "time": "4:45",
+      "sec": 285,
+      "spellId": 1286860,
+      "spellName": "Rage of the Shackled",
+      "src": "Ula'tek"
+    },
+    {
+      "time": "4:45",
+      "sec": 285,
+      "spellId": 1299526,
+      "spellName": "Venomous Heart",
+      "src": "Venomous Heart"
+    },
+    {
+      "time": "5:13",
+      "sec": 313,
+      "spellId": 1304012,
+      "spellName": "Call of the Serpent",
+      "src": "Ula'tek"
+    },
+    {
+      "time": "5:27",
+      "sec": 327,
+      "spellId": 1299010,
+      "spellName": "Spectral Coils",
+      "src": "Spectral Coil"
+    },
+    {
+      "time": "5:30",
+      "sec": 330,
+      "spellId": 1299010,
+      "spellName": "Spectral Coils",
+      "src": "Spectral Coil"
+    },
+    {
+      "time": "5:34",
+      "sec": 334,
+      "spellId": 1299010,
+      "spellName": "Spectral Coils",
+      "src": "Spectral Coil"
+    },
+    {
+      "time": "5:35",
+      "sec": 335,
+      "spellId": 145629,
+      "spellName": "Anti-Magic Zone",
+      "src": "Environment"
+    },
+    {
+      "time": "5:37",
+      "sec": 337,
+      "spellId": 1299010,
+      "spellName": "Spectral Coils",
+      "src": "Spectral Coil"
+    },
+    {
+      "time": "5:37",
+      "sec": 337,
+      "spellId": 145629,
+      "spellName": "Anti-Magic Zone",
+      "src": "Environment"
+    },
+    {
+      "time": "5:40",
+      "sec": 340,
+      "spellId": 145629,
+      "spellName": "Anti-Magic Zone",
+      "src": "Environment"
+    },
+    {
+      "time": "5:42",
+      "sec": 342,
+      "spellId": 1299010,
+      "spellName": "Spectral Coils",
+      "src": "Spectral Coil"
+    },
+    {
+      "time": "5:45",
+      "sec": 345,
+      "spellId": 1299010,
+      "spellName": "Spectral Coils",
+      "src": "Spectral Coil"
+    },
+    {
+      "time": "6:11",
+      "sec": 371,
+      "spellId": 1300751,
+      "spellName": "Call of the Serpent",
+      "src": "Ula'tek"
+    },
+    {
+      "time": "6:12",
+      "sec": 372,
+      "spellId": 1290990,
+      "spellName": "Writhing Gestation",
+      "src": "Blightscale Clutch"
+    },
+    {
+      "time": "6:17",
+      "sec": 377,
+      "spellId": 1298367,
+      "spellName": "Mother's Wrath",
+      "src": "Ula'tek"
+    },
+    {
+      "time": "6:32",
+      "sec": 392,
+      "spellId": 1295905,
+      "spellName": "Serpent's Bite",
+      "src": "Ula'tek"
+    },
+    {
+      "time": "6:41",
+      "sec": 401,
+      "spellId": 1300751,
+      "spellName": "Call of the Serpent",
+      "src": "Ula'tek"
+    },
+    {
+      "time": "6:42",
+      "sec": 402,
+      "spellId": 1290990,
+      "spellName": "Writhing Gestation",
+      "src": "Blightscale Clutch"
+    },
+    {
+      "time": "6:57",
+      "sec": 417,
+      "spellId": 1292211,
+      "spellName": "Caustic Waves",
+      "src": "Ula'tek"
+    },
+    {
+      "time": "6:58",
+      "sec": 418,
+      "spellId": 1298570,
+      "spellName": "Caustic Waves",
+      "src": "Gore Rattle"
+    },
+    {
+      "time": "7:10",
+      "sec": 430,
+      "spellId": 1315341,
+      "spellName": "Circling Prey",
+      "src": "Ula'tek"
+    },
+    {
+      "time": "7:13",
+      "sec": 433,
+      "spellId": 1301512,
+      "spellName": "Submerge",
+      "src": "Ula'tek"
+    },
+    {
+      "time": "7:26",
+      "sec": 446,
+      "spellId": 1300751,
+      "spellName": "Call of the Serpent",
+      "src": "Ula'tek"
+    },
+    {
+      "time": "7:27",
+      "sec": 447,
+      "spellId": 1290990,
+      "spellName": "Writhing Gestation",
+      "src": "Blightscale Clutch"
+    },
+    {
+      "time": "7:32",
+      "sec": 452,
+      "spellId": 1298367,
+      "spellName": "Mother's Wrath",
+      "src": "Ula'tek"
+    },
+    {
+      "time": "7:38",
+      "sec": 458,
+      "spellId": 1313531,
+      "spellName": "Acidic Expulsion",
+      "src": "Blightscale Shrieker"
+    },
+    {
+      "time": "7:43",
+      "sec": 463,
+      "spellId": 1295905,
+      "spellName": "Serpent's Bite",
+      "src": "Ula'tek"
+    },
+    {
+      "time": "7:52",
+      "sec": 472,
+      "spellId": 1292211,
+      "spellName": "Caustic Waves",
+      "src": "Ula'tek"
+    },
+    {
+      "time": "7:53",
+      "sec": 473,
+      "spellId": 1298570,
+      "spellName": "Caustic Waves",
+      "src": "Gore Rattle"
+    },
+    {
+      "time": "8:01",
+      "sec": 481,
+      "spellId": 1315341,
+      "spellName": "Circling Prey",
+      "src": "Ula'tek"
+    },
+    {
+      "time": "8:05",
+      "sec": 485,
+      "spellId": 1301512,
+      "spellName": "Submerge",
+      "src": "Ula'tek"
+    },
+    {
+      "time": "8:20",
+      "sec": 500,
+      "spellId": 1295905,
+      "spellName": "Serpent's Bite",
+      "src": "Ula'tek"
+    },
+    {
+      "time": "8:26",
+      "sec": 506,
+      "spellId": 1300751,
+      "spellName": "Call of the Serpent",
+      "src": "Ula'tek"
+    },
+    {
+      "time": "8:27",
+      "sec": 507,
+      "spellId": 1290990,
+      "spellName": "Writhing Gestation",
+      "src": "Blightscale Clutch"
+    },
+    {
+      "time": "8:38",
+      "sec": 518,
+      "spellId": 1313531,
+      "spellName": "Acidic Expulsion",
+      "src": "Blightscale Shrieker"
+    },
+    {
+      "time": "8:42",
+      "sec": 522,
+      "spellId": 1292211,
+      "spellName": "Caustic Waves",
+      "src": "Ula'tek"
+    },
+    {
+      "time": "8:43",
+      "sec": 523,
+      "spellId": 1298570,
+      "spellName": "Caustic Waves",
+      "src": "Gore Rattle"
+    },
+    {
+      "time": "8:48",
+      "sec": 528,
+      "spellId": 1298367,
+      "spellName": "Mother's Wrath",
+      "src": "Ula'tek"
+    },
+    {
+      "time": "9:02",
+      "sec": 542,
+      "spellId": 1315341,
+      "spellName": "Circling Prey",
+      "src": "Ula'tek"
+    },
+    {
+      "time": "9:05",
+      "sec": 545,
+      "spellId": 1301512,
+      "spellName": "Submerge",
+      "src": "Ula'tek"
+    },
+    {
+      "time": "9:20",
+      "sec": 560,
+      "spellId": 1295905,
+      "spellName": "Serpent's Bite",
+      "src": "Ula'tek"
+    },
+    {
+      "time": "9:26",
+      "sec": 566,
+      "spellId": 1292211,
+      "spellName": "Caustic Waves",
+      "src": "Ula'tek"
+    },
+    {
+      "time": "9:27",
+      "sec": 567,
+      "spellId": 1298570,
+      "spellName": "Caustic Waves",
+      "src": "Gore Rattle"
+    },
+    {
+      "time": "9:34",
+      "sec": 574,
+      "spellId": 1286860,
+      "spellName": "Rage of the Shackled",
+      "src": "Ula'tek"
+    },
+    {
+      "time": "9:34",
+      "sec": 574,
+      "spellId": 1299526,
+      "spellName": "Venomous Heart",
+      "src": "Venomous Heart"
+    },
+    {
+      "time": "9:43",
+      "sec": 583,
+      "spellId": 145629,
+      "spellName": "Anti-Magic Zone",
+      "src": "Environment"
+    },
+    {
+      "time": "9:47",
+      "sec": 587,
+      "spellId": 145629,
+      "spellName": "Anti-Magic Zone",
+      "src": "Environment"
+    }
+  ]
+}

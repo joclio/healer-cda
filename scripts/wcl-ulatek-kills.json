@@ -1,0 +1,1634 @@
+{
+  "encounterID": 3492,
+  "difficulty": 4,
+  "results": [
+    {
+      "code": "CYcDQFnv91bfBxwr",
+      "fightId": 49,
+      "title": "ASDTGSG",
+      "durationSec": 588,
+      "duration": "9:48",
+      "url": "https://www.warcraftlogs.com/reports/CYcDQFnv91bfBxwr?fight=49",
+      "casts": {
+        "Mother’s Wrath": [
+          {
+            "sec": 15,
+            "time": "0:15"
+          },
+          {
+            "sec": 82,
+            "time": "1:22"
+          },
+          {
+            "sec": 119,
+            "time": "1:59"
+          },
+          {
+            "sec": 377,
+            "time": "6:17"
+          },
+          {
+            "sec": 452,
+            "time": "7:32"
+          },
+          {
+            "sec": 528,
+            "time": "8:48"
+          }
+        ],
+        "Spectral Coils": [
+          {
+            "sec": 20,
+            "time": "0:20"
+          },
+          {
+            "sec": 28,
+            "time": "0:28"
+          },
+          {
+            "sec": 115,
+            "time": "1:55"
+          },
+          {
+            "sec": 122,
+            "time": "2:02"
+          },
+          {
+            "sec": 126,
+            "time": "2:06"
+          },
+          {
+            "sec": 327,
+            "time": "5:27"
+          },
+          {
+            "sec": 330,
+            "time": "5:30"
+          },
+          {
+            "sec": 334,
+            "time": "5:34"
+          },
+          {
+            "sec": 342,
+            "time": "5:42"
+          }
+        ],
+        "Caustic Waves": [
+          {
+            "sec": 48,
+            "time": "0:48"
+          },
+          {
+            "sec": 100,
+            "time": "1:40"
+          },
+          {
+            "sec": 417,
+            "time": "6:57"
+          },
+          {
+            "sec": 472,
+            "time": "7:52"
+          },
+          {
+            "sec": 522,
+            "time": "8:42"
+          },
+          {
+            "sec": 566,
+            "time": "9:26"
+          }
+        ],
+        "Submerge": [
+          {
+            "sec": 64,
+            "time": "1:04"
+          },
+          {
+            "sec": 433,
+            "time": "7:13"
+          },
+          {
+            "sec": 485,
+            "time": "8:05"
+          },
+          {
+            "sec": 545,
+            "time": "9:05"
+          }
+        ],
+        "Call of the Serpent": [
+          {
+            "sec": 76,
+            "time": "1:16"
+          },
+          {
+            "sec": 313,
+            "time": "5:13"
+          },
+          {
+            "sec": 371,
+            "time": "6:11"
+          },
+          {
+            "sec": 401,
+            "time": "6:41"
+          },
+          {
+            "sec": 446,
+            "time": "7:26"
+          },
+          {
+            "sec": 506,
+            "time": "8:26"
+          }
+        ],
+        "Rage of the Shackled": [
+          {
+            "sec": 135,
+            "time": "2:15"
+          },
+          {
+            "sec": 285,
+            "time": "4:45"
+          },
+          {
+            "sec": 574,
+            "time": "9:34"
+          }
+        ],
+        "Serpent’s Bite": [
+          {
+            "sec": 392,
+            "time": "6:32"
+          },
+          {
+            "sec": 463,
+            "time": "7:43"
+          },
+          {
+            "sec": 500,
+            "time": "8:20"
+          },
+          {
+            "sec": 560,
+            "time": "9:20"
+          }
+        ],
+        "Circling Prey": [
+          {
+            "sec": 430,
+            "time": "7:10"
+          },
+          {
+            "sec": 481,
+            "time": "8:01"
+          },
+          {
+            "sec": 542,
+            "time": "9:02"
+          }
+        ]
+      }
+    },
+    {
+      "code": "KXDpAmTrkBPhvgZa",
+      "fightId": 41,
+      "title": "2026-09-02 The Venomous Abyss",
+      "durationSec": 472,
+      "duration": "7:52",
+      "url": "https://www.warcraftlogs.com/reports/KXDpAmTrkBPhvgZa?fight=41",
+      "casts": {
+        "Mother’s Wrath": [
+          {
+            "sec": 15,
+            "time": "0:15"
+          },
+          {
+            "sec": 82,
+            "time": "1:22"
+          },
+          {
+            "sec": 119,
+            "time": "1:59"
+          },
+          {
+            "sec": 377,
+            "time": "6:17"
+          },
+          {
+            "sec": 452,
+            "time": "7:32"
+          }
+        ],
+        "Spectral Coils": [
+          {
+            "sec": 20,
+            "time": "0:20"
+          },
+          {
+            "sec": 28,
+            "time": "0:28"
+          },
+          {
+            "sec": 31,
+            "time": "0:31"
+          },
+          {
+            "sec": 115,
+            "time": "1:55"
+          },
+          {
+            "sec": 123,
+            "time": "2:03"
+          },
+          {
+            "sec": 326,
+            "time": "5:26"
+          },
+          {
+            "sec": 330,
+            "time": "5:30"
+          },
+          {
+            "sec": 334,
+            "time": "5:34"
+          },
+          {
+            "sec": 341,
+            "time": "5:41"
+          },
+          {
+            "sec": 345,
+            "time": "5:45"
+          }
+        ],
+        "Caustic Waves": [
+          {
+            "sec": 48,
+            "time": "0:48"
+          },
+          {
+            "sec": 100,
+            "time": "1:40"
+          },
+          {
+            "sec": 417,
+            "time": "6:57"
+          },
+          {
+            "sec": 472,
+            "time": "7:52"
+          }
+        ],
+        "Submerge": [
+          {
+            "sec": 64,
+            "time": "1:04"
+          },
+          {
+            "sec": 433,
+            "time": "7:13"
+          }
+        ],
+        "Call of the Serpent": [
+          {
+            "sec": 76,
+            "time": "1:16"
+          },
+          {
+            "sec": 313,
+            "time": "5:13"
+          },
+          {
+            "sec": 371,
+            "time": "6:11"
+          },
+          {
+            "sec": 401,
+            "time": "6:41"
+          },
+          {
+            "sec": 446,
+            "time": "7:26"
+          }
+        ],
+        "Rage of the Shackled": [
+          {
+            "sec": 136,
+            "time": "2:16"
+          },
+          {
+            "sec": 285,
+            "time": "4:45"
+          }
+        ],
+        "Serpent’s Bite": [
+          {
+            "sec": 392,
+            "time": "6:32"
+          },
+          {
+            "sec": 463,
+            "time": "7:43"
+          }
+        ],
+        "Circling Prey": [
+          {
+            "sec": 430,
+            "time": "7:10"
+          }
+        ]
+      }
+    },
+    {
+      "code": "QABFyfVxPHgmv7k8",
+      "fightId": 14,
+      "title": "The Venomous Abyss",
+      "durationSec": 490,
+      "duration": "8:10",
+      "url": "https://www.warcraftlogs.com/reports/QABFyfVxPHgmv7k8?fight=14",
+      "casts": {
+        "Mother’s Wrath": [
+          {
+            "sec": 15,
+            "time": "0:15"
+          },
+          {
+            "sec": 82,
+            "time": "1:22"
+          },
+          {
+            "sec": 119,
+            "time": "1:59"
+          },
+          {
+            "sec": 377,
+            "time": "6:17"
+          },
+          {
+            "sec": 452,
+            "time": "7:32"
+          }
+        ],
+        "Spectral Coils": [
+          {
+            "sec": 20,
+            "time": "0:20"
+          },
+          {
+            "sec": 28,
+            "time": "0:28"
+          },
+          {
+            "sec": 115,
+            "time": "1:55"
+          },
+          {
+            "sec": 123,
+            "time": "2:03"
+          },
+          {
+            "sec": 327,
+            "time": "5:27"
+          },
+          {
+            "sec": 334,
+            "time": "5:34"
+          },
+          {
+            "sec": 337,
+            "time": "5:37"
+          },
+          {
+            "sec": 341,
+            "time": "5:41"
+          },
+          {
+            "sec": 345,
+            "time": "5:45"
+          }
+        ],
+        "Caustic Waves": [
+          {
+            "sec": 48,
+            "time": "0:48"
+          },
+          {
+            "sec": 100,
+            "time": "1:40"
+          },
+          {
+            "sec": 417,
+            "time": "6:57"
+          },
+          {
+            "sec": 472,
+            "time": "7:52"
+          }
+        ],
+        "Call of the Serpent": [
+          {
+            "sec": 76,
+            "time": "1:16"
+          },
+          {
+            "sec": 313,
+            "time": "5:13"
+          },
+          {
+            "sec": 371,
+            "time": "6:11"
+          },
+          {
+            "sec": 401,
+            "time": "6:41"
+          },
+          {
+            "sec": 446,
+            "time": "7:26"
+          }
+        ],
+        "Rage of the Shackled": [
+          {
+            "sec": 135,
+            "time": "2:15"
+          },
+          {
+            "sec": 284,
+            "time": "4:44"
+          }
+        ],
+        "Serpent’s Bite": [
+          {
+            "sec": 392,
+            "time": "6:32"
+          },
+          {
+            "sec": 463,
+            "time": "7:43"
+          }
+        ],
+        "Circling Prey": [
+          {
+            "sec": 430,
+            "time": "7:10"
+          },
+          {
+            "sec": 481,
+            "time": "8:01"
+          }
+        ],
+        "Submerge": [
+          {
+            "sec": 433,
+            "time": "7:13"
+          },
+          {
+            "sec": 485,
+            "time": "8:05"
+          }
+        ]
+      }
+    },
+    {
+      "code": "rJ9RwgZ26FmQ43Hv",
+      "fightId": 10,
+      "title": "The Venomous Abyss",
+      "durationSec": 497,
+      "duration": "8:17",
+      "url": "https://www.warcraftlogs.com/reports/rJ9RwgZ26FmQ43Hv?fight=10",
+      "casts": {
+        "Mother’s Wrath": [
+          {
+            "sec": 15,
+            "time": "0:15"
+          },
+          {
+            "sec": 82,
+            "time": "1:22"
+          },
+          {
+            "sec": 119,
+            "time": "1:59"
+          },
+          {
+            "sec": 377,
+            "time": "6:17"
+          },
+          {
+            "sec": 452,
+            "time": "7:32"
+          }
+        ],
+        "Spectral Coils": [
+          {
+            "sec": 20,
+            "time": "0:20"
+          },
+          {
+            "sec": 28,
+            "time": "0:28"
+          },
+          {
+            "sec": 31,
+            "time": "0:31"
+          },
+          {
+            "sec": 115,
+            "time": "1:55"
+          },
+          {
+            "sec": 123,
+            "time": "2:03"
+          },
+          {
+            "sec": 326,
+            "time": "5:26"
+          },
+          {
+            "sec": 330,
+            "time": "5:30"
+          },
+          {
+            "sec": 334,
+            "time": "5:34"
+          },
+          {
+            "sec": 337,
+            "time": "5:37"
+          },
+          {
+            "sec": 342,
+            "time": "5:42"
+          },
+          {
+            "sec": 345,
+            "time": "5:45"
+          }
+        ],
+        "Caustic Waves": [
+          {
+            "sec": 48,
+            "time": "0:48"
+          },
+          {
+            "sec": 100,
+            "time": "1:40"
+          },
+          {
+            "sec": 417,
+            "time": "6:57"
+          },
+          {
+            "sec": 472,
+            "time": "7:52"
+          }
+        ],
+        "Submerge": [
+          {
+            "sec": 64,
+            "time": "1:04"
+          },
+          {
+            "sec": 433,
+            "time": "7:13"
+          },
+          {
+            "sec": 485,
+            "time": "8:05"
+          }
+        ],
+        "Call of the Serpent": [
+          {
+            "sec": 76,
+            "time": "1:16"
+          },
+          {
+            "sec": 313,
+            "time": "5:13"
+          },
+          {
+            "sec": 371,
+            "time": "6:11"
+          },
+          {
+            "sec": 401,
+            "time": "6:41"
+          },
+          {
+            "sec": 446,
+            "time": "7:26"
+          }
+        ],
+        "Rage of the Shackled": [
+          {
+            "sec": 135,
+            "time": "2:15"
+          },
+          {
+            "sec": 284,
+            "time": "4:44"
+          }
+        ],
+        "Serpent’s Bite": [
+          {
+            "sec": 392,
+            "time": "6:32"
+          },
+          {
+            "sec": 463,
+            "time": "7:43"
+          }
+        ],
+        "Circling Prey": [
+          {
+            "sec": 430,
+            "time": "7:10"
+          },
+          {
+            "sec": 481,
+            "time": "8:01"
+          }
+        ]
+      }
+    },
+    {
+      "code": "qwGhVzgj4BRQkY1p",
+      "fightId": 2,
+      "title": "The Venomous Abyss",
+      "durationSec": 509,
+      "duration": "8:29",
+      "url": "https://www.warcraftlogs.com/reports/qwGhVzgj4BRQkY1p?fight=2",
+      "casts": {
+        "Mother’s Wrath": [
+          {
+            "sec": 15,
+            "time": "0:15"
+          },
+          {
+            "sec": 82,
+            "time": "1:22"
+          },
+          {
+            "sec": 119,
+            "time": "1:59"
+          },
+          {
+            "sec": 377,
+            "time": "6:17"
+          },
+          {
+            "sec": 452,
+            "time": "7:32"
+          }
+        ],
+        "Spectral Coils": [
+          {
+            "sec": 20,
+            "time": "0:20"
+          },
+          {
+            "sec": 28,
+            "time": "0:28"
+          },
+          {
+            "sec": 115,
+            "time": "1:55"
+          },
+          {
+            "sec": 122,
+            "time": "2:02"
+          },
+          {
+            "sec": 126,
+            "time": "2:06"
+          },
+          {
+            "sec": 327,
+            "time": "5:27"
+          },
+          {
+            "sec": 334,
+            "time": "5:34"
+          },
+          {
+            "sec": 338,
+            "time": "5:38"
+          },
+          {
+            "sec": 342,
+            "time": "5:42"
+          }
+        ],
+        "Caustic Waves": [
+          {
+            "sec": 48,
+            "time": "0:48"
+          },
+          {
+            "sec": 100,
+            "time": "1:40"
+          },
+          {
+            "sec": 417,
+            "time": "6:57"
+          },
+          {
+            "sec": 472,
+            "time": "7:52"
+          }
+        ],
+        "Submerge": [
+          {
+            "sec": 64,
+            "time": "1:04"
+          },
+          {
+            "sec": 433,
+            "time": "7:13"
+          },
+          {
+            "sec": 485,
+            "time": "8:05"
+          }
+        ],
+        "Call of the Serpent": [
+          {
+            "sec": 76,
+            "time": "1:16"
+          },
+          {
+            "sec": 313,
+            "time": "5:13"
+          },
+          {
+            "sec": 371,
+            "time": "6:11"
+          },
+          {
+            "sec": 401,
+            "time": "6:41"
+          },
+          {
+            "sec": 446,
+            "time": "7:26"
+          },
+          {
+            "sec": 506,
+            "time": "8:26"
+          }
+        ],
+        "Rage of the Shackled": [
+          {
+            "sec": 135,
+            "time": "2:15"
+          },
+          {
+            "sec": 285,
+            "time": "4:45"
+          }
+        ],
+        "Serpent’s Bite": [
+          {
+            "sec": 392,
+            "time": "6:32"
+          },
+          {
+            "sec": 463,
+            "time": "7:43"
+          },
+          {
+            "sec": 500,
+            "time": "8:20"
+          }
+        ],
+        "Circling Prey": [
+          {
+            "sec": 430,
+            "time": "7:10"
+          },
+          {
+            "sec": 481,
+            "time": "8:01"
+          }
+        ]
+      }
+    },
+    {
+      "code": "QLMgGd3fcNY2JyXa",
+      "fightId": 21,
+      "title": "Mythic+ Season 2",
+      "durationSec": 511,
+      "duration": "8:31",
+      "url": "https://www.warcraftlogs.com/reports/QLMgGd3fcNY2JyXa?fight=21",
+      "casts": {
+        "Mother’s Wrath": [
+          {
+            "sec": 15,
+            "time": "0:15"
+          },
+          {
+            "sec": 82,
+            "time": "1:22"
+          },
+          {
+            "sec": 119,
+            "time": "1:59"
+          },
+          {
+            "sec": 377,
+            "time": "6:17"
+          },
+          {
+            "sec": 452,
+            "time": "7:32"
+          }
+        ],
+        "Spectral Coils": [
+          {
+            "sec": 20,
+            "time": "0:20"
+          },
+          {
+            "sec": 27,
+            "time": "0:27"
+          },
+          {
+            "sec": 31,
+            "time": "0:31"
+          },
+          {
+            "sec": 115,
+            "time": "1:55"
+          },
+          {
+            "sec": 123,
+            "time": "2:03"
+          },
+          {
+            "sec": 327,
+            "time": "5:27"
+          },
+          {
+            "sec": 330,
+            "time": "5:30"
+          },
+          {
+            "sec": 334,
+            "time": "5:34"
+          },
+          {
+            "sec": 338,
+            "time": "5:38"
+          },
+          {
+            "sec": 342,
+            "time": "5:42"
+          }
+        ],
+        "Caustic Waves": [
+          {
+            "sec": 48,
+            "time": "0:48"
+          },
+          {
+            "sec": 100,
+            "time": "1:40"
+          },
+          {
+            "sec": 417,
+            "time": "6:57"
+          },
+          {
+            "sec": 472,
+            "time": "7:52"
+          }
+        ],
+        "Call of the Serpent": [
+          {
+            "sec": 76,
+            "time": "1:16"
+          },
+          {
+            "sec": 313,
+            "time": "5:13"
+          },
+          {
+            "sec": 371,
+            "time": "6:11"
+          },
+          {
+            "sec": 401,
+            "time": "6:41"
+          },
+          {
+            "sec": 446,
+            "time": "7:26"
+          },
+          {
+            "sec": 506,
+            "time": "8:26"
+          }
+        ],
+        "Rage of the Shackled": [
+          {
+            "sec": 135,
+            "time": "2:15"
+          },
+          {
+            "sec": 285,
+            "time": "4:45"
+          }
+        ],
+        "Serpent’s Bite": [
+          {
+            "sec": 392,
+            "time": "6:32"
+          },
+          {
+            "sec": 463,
+            "time": "7:43"
+          },
+          {
+            "sec": 500,
+            "time": "8:20"
+          }
+        ],
+        "Circling Prey": [
+          {
+            "sec": 430,
+            "time": "7:10"
+          },
+          {
+            "sec": 481,
+            "time": "8:01"
+          }
+        ],
+        "Submerge": [
+          {
+            "sec": 433,
+            "time": "7:13"
+          },
+          {
+            "sec": 485,
+            "time": "8:05"
+          }
+        ]
+      }
+    },
+    {
+      "code": "K7hxMDRHbrv94PYB",
+      "fightId": 12,
+      "title": "The Venomous Abyss",
+      "durationSec": 515,
+      "duration": "8:35",
+      "url": "https://www.warcraftlogs.com/reports/K7hxMDRHbrv94PYB?fight=12",
+      "casts": {
+        "Mother’s Wrath": [
+          {
+            "sec": 15,
+            "time": "0:15"
+          },
+          {
+            "sec": 82,
+            "time": "1:22"
+          },
+          {
+            "sec": 119,
+            "time": "1:59"
+          },
+          {
+            "sec": 377,
+            "time": "6:17"
+          },
+          {
+            "sec": 452,
+            "time": "7:32"
+          }
+        ],
+        "Spectral Coils": [
+          {
+            "sec": 20,
+            "time": "0:20"
+          },
+          {
+            "sec": 28,
+            "time": "0:28"
+          },
+          {
+            "sec": 115,
+            "time": "1:55"
+          },
+          {
+            "sec": 122,
+            "time": "2:02"
+          },
+          {
+            "sec": 126,
+            "time": "2:06"
+          },
+          {
+            "sec": 327,
+            "time": "5:27"
+          },
+          {
+            "sec": 334,
+            "time": "5:34"
+          },
+          {
+            "sec": 337,
+            "time": "5:37"
+          },
+          {
+            "sec": 342,
+            "time": "5:42"
+          }
+        ],
+        "Caustic Waves": [
+          {
+            "sec": 48,
+            "time": "0:48"
+          },
+          {
+            "sec": 100,
+            "time": "1:40"
+          },
+          {
+            "sec": 417,
+            "time": "6:57"
+          },
+          {
+            "sec": 472,
+            "time": "7:52"
+          }
+        ],
+        "Call of the Serpent": [
+          {
+            "sec": 76,
+            "time": "1:16"
+          },
+          {
+            "sec": 313,
+            "time": "5:13"
+          },
+          {
+            "sec": 371,
+            "time": "6:11"
+          },
+          {
+            "sec": 401,
+            "time": "6:41"
+          },
+          {
+            "sec": 446,
+            "time": "7:26"
+          },
+          {
+            "sec": 506,
+            "time": "8:26"
+          }
+        ],
+        "Rage of the Shackled": [
+          {
+            "sec": 135,
+            "time": "2:15"
+          },
+          {
+            "sec": 285,
+            "time": "4:45"
+          }
+        ],
+        "Serpent’s Bite": [
+          {
+            "sec": 392,
+            "time": "6:32"
+          },
+          {
+            "sec": 463,
+            "time": "7:43"
+          },
+          {
+            "sec": 500,
+            "time": "8:20"
+          }
+        ],
+        "Circling Prey": [
+          {
+            "sec": 430,
+            "time": "7:10"
+          },
+          {
+            "sec": 481,
+            "time": "8:01"
+          }
+        ],
+        "Submerge": [
+          {
+            "sec": 433,
+            "time": "7:13"
+          },
+          {
+            "sec": 485,
+            "time": "8:05"
+          }
+        ]
+      }
+    },
+    {
+      "code": "YC6LpNf4Vxn3zc21",
+      "fightId": 3,
+      "title": "p",
+      "durationSec": 515,
+      "duration": "8:35",
+      "url": "https://www.warcraftlogs.com/reports/YC6LpNf4Vxn3zc21?fight=3",
+      "casts": {
+        "Mother’s Wrath": [
+          {
+            "sec": 15,
+            "time": "0:15"
+          },
+          {
+            "sec": 82,
+            "time": "1:22"
+          },
+          {
+            "sec": 119,
+            "time": "1:59"
+          },
+          {
+            "sec": 377,
+            "time": "6:17"
+          },
+          {
+            "sec": 452,
+            "time": "7:32"
+          }
+        ],
+        "Spectral Coils": [
+          {
+            "sec": 20,
+            "time": "0:20"
+          },
+          {
+            "sec": 27,
+            "time": "0:27"
+          },
+          {
+            "sec": 31,
+            "time": "0:31"
+          },
+          {
+            "sec": 115,
+            "time": "1:55"
+          },
+          {
+            "sec": 122,
+            "time": "2:02"
+          },
+          {
+            "sec": 125,
+            "time": "2:05"
+          },
+          {
+            "sec": 326,
+            "time": "5:26"
+          },
+          {
+            "sec": 330,
+            "time": "5:30"
+          },
+          {
+            "sec": 334,
+            "time": "5:34"
+          },
+          {
+            "sec": 342,
+            "time": "5:42"
+          }
+        ],
+        "Caustic Waves": [
+          {
+            "sec": 48,
+            "time": "0:48"
+          },
+          {
+            "sec": 100,
+            "time": "1:40"
+          },
+          {
+            "sec": 417,
+            "time": "6:57"
+          },
+          {
+            "sec": 472,
+            "time": "7:52"
+          }
+        ],
+        "Submerge": [
+          {
+            "sec": 64,
+            "time": "1:04"
+          },
+          {
+            "sec": 433,
+            "time": "7:13"
+          },
+          {
+            "sec": 485,
+            "time": "8:05"
+          }
+        ],
+        "Call of the Serpent": [
+          {
+            "sec": 76,
+            "time": "1:16"
+          },
+          {
+            "sec": 313,
+            "time": "5:13"
+          },
+          {
+            "sec": 371,
+            "time": "6:11"
+          },
+          {
+            "sec": 401,
+            "time": "6:41"
+          },
+          {
+            "sec": 446,
+            "time": "7:26"
+          },
+          {
+            "sec": 506,
+            "time": "8:26"
+          }
+        ],
+        "Rage of the Shackled": [
+          {
+            "sec": 135,
+            "time": "2:15"
+          },
+          {
+            "sec": 284,
+            "time": "4:44"
+          }
+        ],
+        "Serpent’s Bite": [
+          {
+            "sec": 392,
+            "time": "6:32"
+          },
+          {
+            "sec": 463,
+            "time": "7:43"
+          },
+          {
+            "sec": 500,
+            "time": "8:20"
+          }
+        ],
+        "Circling Prey": [
+          {
+            "sec": 430,
+            "time": "7:10"
+          },
+          {
+            "sec": 481,
+            "time": "8:01"
+          }
+        ]
+      }
+    },
+    {
+      "code": "BzbZN1GfMCrwDxY3",
+      "fightId": 45,
+      "title": "The Venomous Abyss",
+      "durationSec": 516,
+      "duration": "8:36",
+      "url": "https://www.warcraftlogs.com/reports/BzbZN1GfMCrwDxY3?fight=45",
+      "casts": {
+        "Mother’s Wrath": [
+          {
+            "sec": 15,
+            "time": "0:15"
+          },
+          {
+            "sec": 82,
+            "time": "1:22"
+          },
+          {
+            "sec": 119,
+            "time": "1:59"
+          },
+          {
+            "sec": 377,
+            "time": "6:17"
+          },
+          {
+            "sec": 452,
+            "time": "7:32"
+          }
+        ],
+        "Spectral Coils": [
+          {
+            "sec": 20,
+            "time": "0:20"
+          },
+          {
+            "sec": 27,
+            "time": "0:27"
+          },
+          {
+            "sec": 31,
+            "time": "0:31"
+          },
+          {
+            "sec": 115,
+            "time": "1:55"
+          },
+          {
+            "sec": 122,
+            "time": "2:02"
+          },
+          {
+            "sec": 126,
+            "time": "2:06"
+          },
+          {
+            "sec": 327,
+            "time": "5:27"
+          },
+          {
+            "sec": 334,
+            "time": "5:34"
+          },
+          {
+            "sec": 338,
+            "time": "5:38"
+          },
+          {
+            "sec": 342,
+            "time": "5:42"
+          }
+        ],
+        "Caustic Waves": [
+          {
+            "sec": 48,
+            "time": "0:48"
+          },
+          {
+            "sec": 100,
+            "time": "1:40"
+          },
+          {
+            "sec": 417,
+            "time": "6:57"
+          },
+          {
+            "sec": 472,
+            "time": "7:52"
+          }
+        ],
+        "Call of the Serpent": [
+          {
+            "sec": 76,
+            "time": "1:16"
+          },
+          {
+            "sec": 313,
+            "time": "5:13"
+          },
+          {
+            "sec": 371,
+            "time": "6:11"
+          },
+          {
+            "sec": 401,
+            "time": "6:41"
+          },
+          {
+            "sec": 446,
+            "time": "7:26"
+          },
+          {
+            "sec": 506,
+            "time": "8:26"
+          }
+        ],
+        "Rage of the Shackled": [
+          {
+            "sec": 135,
+            "time": "2:15"
+          },
+          {
+            "sec": 285,
+            "time": "4:45"
+          }
+        ],
+        "Serpent’s Bite": [
+          {
+            "sec": 392,
+            "time": "6:32"
+          },
+          {
+            "sec": 463,
+            "time": "7:43"
+          },
+          {
+            "sec": 500,
+            "time": "8:20"
+          }
+        ],
+        "Circling Prey": [
+          {
+            "sec": 430,
+            "time": "7:10"
+          },
+          {
+            "sec": 481,
+            "time": "8:01"
+          }
+        ],
+        "Submerge": [
+          {
+            "sec": 433,
+            "time": "7:13"
+          },
+          {
+            "sec": 485,
+            "time": "8:05"
+          }
+        ]
+      }
+    },
+    {
+      "code": "dR6jcM732QnLbk9W",
+      "fightId": 38,
+      "title": "sadge",
+      "durationSec": 522,
+      "duration": "8:42",
+      "url": "https://www.warcraftlogs.com/reports/dR6jcM732QnLbk9W?fight=38",
+      "casts": {
+        "Mother’s Wrath": [
+          {
+            "sec": 15,
+            "time": "0:15"
+          },
+          {
+            "sec": 82,
+            "time": "1:22"
+          },
+          {
+            "sec": 119,
+            "time": "1:59"
+          },
+          {
+            "sec": 377,
+            "time": "6:17"
+          },
+          {
+            "sec": 452,
+            "time": "7:32"
+          }
+        ],
+        "Spectral Coils": [
+          {
+            "sec": 20,
+            "time": "0:20"
+          },
+          {
+            "sec": 27,
+            "time": "0:27"
+          },
+          {
+            "sec": 31,
+            "time": "0:31"
+          },
+          {
+            "sec": 115,
+            "time": "1:55"
+          },
+          {
+            "sec": 123,
+            "time": "2:03"
+          },
+          {
+            "sec": 326,
+            "time": "5:26"
+          },
+          {
+            "sec": 330,
+            "time": "5:30"
+          },
+          {
+            "sec": 334,
+            "time": "5:34"
+          },
+          {
+            "sec": 342,
+            "time": "5:42"
+          },
+          {
+            "sec": 345,
+            "time": "5:45"
+          }
+        ],
+        "Caustic Waves": [
+          {
+            "sec": 48,
+            "time": "0:48"
+          },
+          {
+            "sec": 100,
+            "time": "1:40"
+          },
+          {
+            "sec": 417,
+            "time": "6:57"
+          },
+          {
+            "sec": 472,
+            "time": "7:52"
+          },
+          {
+            "sec": 522,
+            "time": "8:42"
+          }
+        ],
+        "Call of the Serpent": [
+          {
+            "sec": 76,
+            "time": "1:16"
+          },
+          {
+            "sec": 313,
+            "time": "5:13"
+          },
+          {
+            "sec": 371,
+            "time": "6:11"
+          },
+          {
+            "sec": 401,
+            "time": "6:41"
+          },
+          {
+            "sec": 446,
+            "time": "7:26"
+          },
+          {
+            "sec": 506,
+            "time": "8:26"
+          }
+        ],
+        "Rage of the Shackled": [
+          {
+            "sec": 136,
+            "time": "2:16"
+          },
+          {
+            "sec": 285,
+            "time": "4:45"
+          }
+        ],
+        "Serpent’s Bite": [
+          {
+            "sec": 392,
+            "time": "6:32"
+          },
+          {
+            "sec": 463,
+            "time": "7:43"
+          },
+          {
+            "sec": 500,
+            "time": "8:20"
+          }
+        ],
+        "Circling Prey": [
+          {
+            "sec": 430,
+            "time": "7:10"
+          },
+          {
+            "sec": 481,
+            "time": "8:01"
+          }
+        ],
+        "Submerge": [
+          {
+            "sec": 433,
+            "time": "7:13"
+          },
+          {
+            "sec": 485,
+            "time": "8:05"
+          }
+        ]
+      }
+    }
+  ]
+}

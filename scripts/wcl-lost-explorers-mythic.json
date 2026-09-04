@@ -1,0 +1,33 @@
+{
+  "kills": [
+    {
+      "code": "yLdbhz9PkTF1MpBa",
+      "fightId": 34,
+      "duration": 323,
+      "url": "https://www.warcraftlogs.com/reports/yLdbhz9PkTF1MpBa?fight=34",
+      "title": "\"why is this moron asking for logs during heroic splits\""
+    },
+    {
+      "code": "T3qJCY84tBDy1n2x",
+      "fightId": 30,
+      "duration": 334,
+      "url": "https://www.warcraftlogs.com/reports/T3qJCY84tBDy1n2x?fight=30",
+      "title": "The Venomous Abyss"
+    },
+    {
+      "code": "LPb3YxXqHcRZpy1t",
+      "fightId": 36,
+      "duration": 336,
+      "url": "https://www.warcraftlogs.com/reports/LPb3YxXqHcRZpy1t?fight=36",
+      "title": "The Venomous Abyss"
+    },
+    {
+      "code": "QABFyfVxPHgmv7k8",
+      "fightId": 67,
+      "duration": 337,
+      "url": "https://www.warcraftlogs.com/reports/QABFyfVxPHgmv7k8?fight=67",
+      "title": "The Venomous Abyss"
+    }
+  ],
+  "windowCount": 18
+}

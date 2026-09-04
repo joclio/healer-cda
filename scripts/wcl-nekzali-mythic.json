@@ -1,0 +1,1010 @@
+{
+  "kills": [
+    {
+      "code": "9wd3qxabQtJMz7fW",
+      "fightID": 20,
+      "duration": 383,
+      "title": "The Venomous Abyss",
+      "url": "https://www.warcraftlogs.com/reports/9wd3qxabQtJMz7fW?fight=20",
+      "casts": [
+        {
+          "sec": 2.994,
+          "spellId": 1293664,
+          "name": "Soulcoil Ignition"
+        },
+        {
+          "sec": 2.994,
+          "spellId": 1297624,
+          "name": "Ritual Burn"
+        },
+        {
+          "sec": 2.995,
+          "spellId": 1285681,
+          "name": "Soulcoil Ignition"
+        },
+        {
+          "sec": 4.996,
+          "spellId": 1297624,
+          "name": "Ritual Burn"
+        },
+        {
+          "sec": 6.999,
+          "spellId": 1297624,
+          "name": "Ritual Burn"
+        },
+        {
+          "sec": 34.028,
+          "spellId": 1284103,
+          "name": "Possession Barrage"
+        },
+        {
+          "sec": 52.622,
+          "spellId": 1287533,
+          "name": "Gravebound Advance"
+        },
+        {
+          "sec": 55.177,
+          "spellId": 1287533,
+          "name": "Gravebound Advance"
+        },
+        {
+          "sec": 69.99,
+          "spellId": 1284103,
+          "name": "Possession Barrage"
+        },
+        {
+          "sec": 77.567,
+          "spellId": 1293660,
+          "name": "Soulcoil Ignition"
+        },
+        {
+          "sec": 77.567,
+          "spellId": 1293664,
+          "name": "Soulcoil Ignition"
+        },
+        {
+          "sec": 78.534,
+          "spellId": 1297624,
+          "name": "Ritual Burn"
+        },
+        {
+          "sec": 78.536,
+          "spellId": 1285681,
+          "name": "Soulcoil Ignition"
+        },
+        {
+          "sec": 80.537,
+          "spellId": 1297624,
+          "name": "Ritual Burn"
+        },
+        {
+          "sec": 82.55,
+          "spellId": 1297624,
+          "name": "Ritual Burn"
+        },
+        {
+          "sec": 105.018,
+          "spellId": 1284103,
+          "name": "Possession Barrage"
+        },
+        {
+          "sec": 121.238,
+          "spellId": 1287533,
+          "name": "Gravebound Advance"
+        },
+        {
+          "sec": 123.629,
+          "spellId": 1287533,
+          "name": "Gravebound Advance"
+        },
+        {
+          "sec": 141.028,
+          "spellId": 1284103,
+          "name": "Possession Barrage"
+        },
+        {
+          "sec": 143.086,
+          "spellId": 1295124,
+          "name": "Ritual of Awakening"
+        },
+        {
+          "sec": 153.544,
+          "spellId": 1289902,
+          "name": "Soul Transfer"
+        },
+        {
+          "sec": 160.533,
+          "spellId": 1293211,
+          "name": "Soul Transfer"
+        },
+        {
+          "sec": 168.537,
+          "spellId": 1292248,
+          "name": "Soul Transfer"
+        },
+        {
+          "sec": 171.542,
+          "spellId": 1294742,
+          "name": "Hungering Pyre"
+        },
+        {
+          "sec": 179.054,
+          "spellId": 1289855,
+          "name": "Hungering Pyre"
+        },
+        {
+          "sec": 195.726,
+          "spellId": 1287533,
+          "name": "Gravebound Advance"
+        },
+        {
+          "sec": 198.174,
+          "spellId": 1287533,
+          "name": "Gravebound Advance"
+        },
+        {
+          "sec": 206.571,
+          "spellId": 1294742,
+          "name": "Hungering Pyre"
+        },
+        {
+          "sec": 214.068,
+          "spellId": 1289855,
+          "name": "Hungering Pyre"
+        },
+        {
+          "sec": 230.212,
+          "spellId": 1292248,
+          "name": "Soul Transfer"
+        },
+        {
+          "sec": 233.238,
+          "spellId": 1294742,
+          "name": "Hungering Pyre"
+        },
+        {
+          "sec": 240.748,
+          "spellId": 1289855,
+          "name": "Hungering Pyre"
+        },
+        {
+          "sec": 257.454,
+          "spellId": 1287533,
+          "name": "Gravebound Advance"
+        },
+        {
+          "sec": 283.873,
+          "spellId": 1297624,
+          "name": "Ritual Burn"
+        },
+        {
+          "sec": 283.874,
+          "spellId": 1299673,
+          "name": "Invoke"
+        },
+        {
+          "sec": 300.986,
+          "spellId": 1287533,
+          "name": "Gravebound Advance"
+        },
+        {
+          "sec": 303.472,
+          "spellId": 1287533,
+          "name": "Gravebound Advance"
+        },
+        {
+          "sec": 316.837,
+          "spellId": 1284103,
+          "name": "Possession Barrage"
+        },
+        {
+          "sec": 331.86,
+          "spellId": 1297624,
+          "name": "Ritual Burn"
+        },
+        {
+          "sec": 331.861,
+          "spellId": 1299673,
+          "name": "Invoke"
+        },
+        {
+          "sec": 341.017,
+          "spellId": 1287533,
+          "name": "Gravebound Advance"
+        },
+        {
+          "sec": 343.405,
+          "spellId": 145629,
+          "name": "Anti-Magic Zone"
+        },
+        {
+          "sec": 343.527,
+          "spellId": 1287533,
+          "name": "Gravebound Advance"
+        },
+        {
+          "sec": 344.848,
+          "spellId": 1284103,
+          "name": "Possession Barrage"
+        },
+        {
+          "sec": 347.135,
+          "spellId": 145629,
+          "name": "Anti-Magic Zone"
+        },
+        {
+          "sec": 349.264,
+          "spellId": 145629,
+          "name": "Anti-Magic Zone"
+        },
+        {
+          "sec": 351.447,
+          "spellId": 145629,
+          "name": "Anti-Magic Zone"
+        },
+        {
+          "sec": 363.879,
+          "spellId": 1297624,
+          "name": "Ritual Burn"
+        },
+        {
+          "sec": 363.88,
+          "spellId": 1299673,
+          "name": "Invoke"
+        },
+        {
+          "sec": 381.015,
+          "spellId": 1287533,
+          "name": "Gravebound Advance"
+        }
+      ]
+    },
+    {
+      "code": "xYD24WwFbrM9B3PA",
+      "fightID": 12,
+      "duration": 386,
+      "title": "The Venomous Abyss",
+      "url": "https://www.warcraftlogs.com/reports/xYD24WwFbrM9B3PA?fight=12",
+      "casts": [
+        {
+          "sec": 3.009,
+          "spellId": 1293664,
+          "name": "Soulcoil Ignition"
+        },
+        {
+          "sec": 3.042,
+          "spellId": 1297624,
+          "name": "Ritual Burn"
+        },
+        {
+          "sec": 3.043,
+          "spellId": 1285681,
+          "name": "Soulcoil Ignition"
+        },
+        {
+          "sec": 6.044,
+          "spellId": 1297624,
+          "name": "Ritual Burn"
+        },
+        {
+          "sec": 34,
+          "spellId": 1284103,
+          "name": "Possession Barrage"
+        },
+        {
+          "sec": 69.994,
+          "spellId": 1284103,
+          "name": "Possession Barrage"
+        },
+        {
+          "sec": 76.948,
+          "spellId": 1293660,
+          "name": "Soulcoil Ignition"
+        },
+        {
+          "sec": 76.948,
+          "spellId": 1293664,
+          "name": "Soulcoil Ignition"
+        },
+        {
+          "sec": 77.748,
+          "spellId": 1297624,
+          "name": "Ritual Burn"
+        },
+        {
+          "sec": 77.753,
+          "spellId": 1285681,
+          "name": "Soulcoil Ignition"
+        },
+        {
+          "sec": 80.744,
+          "spellId": 1297624,
+          "name": "Ritual Burn"
+        },
+        {
+          "sec": 105.015,
+          "spellId": 1284103,
+          "name": "Possession Barrage"
+        },
+        {
+          "sec": 121.15,
+          "spellId": 1287533,
+          "name": "Gravebound Advance"
+        },
+        {
+          "sec": 123.648,
+          "spellId": 1287533,
+          "name": "Gravebound Advance"
+        },
+        {
+          "sec": 141.013,
+          "spellId": 1284103,
+          "name": "Possession Barrage"
+        },
+        {
+          "sec": 147.472,
+          "spellId": 1293660,
+          "name": "Soulcoil Ignition"
+        },
+        {
+          "sec": 147.472,
+          "spellId": 1293664,
+          "name": "Soulcoil Ignition"
+        },
+        {
+          "sec": 148.113,
+          "spellId": 1297624,
+          "name": "Ritual Burn"
+        },
+        {
+          "sec": 148.114,
+          "spellId": 1285681,
+          "name": "Soulcoil Ignition"
+        },
+        {
+          "sec": 159.926,
+          "spellId": 1289902,
+          "name": "Soul Transfer"
+        },
+        {
+          "sec": 166.898,
+          "spellId": 1293211,
+          "name": "Soul Transfer"
+        },
+        {
+          "sec": 174.91,
+          "spellId": 1292248,
+          "name": "Soul Transfer"
+        },
+        {
+          "sec": 177.921,
+          "spellId": 1294742,
+          "name": "Hungering Pyre"
+        },
+        {
+          "sec": 185.441,
+          "spellId": 1289855,
+          "name": "Hungering Pyre"
+        },
+        {
+          "sec": 203.292,
+          "spellId": 1287533,
+          "name": "Gravebound Advance"
+        },
+        {
+          "sec": 226.686,
+          "spellId": 1292248,
+          "name": "Soul Transfer"
+        },
+        {
+          "sec": 229.691,
+          "spellId": 1294742,
+          "name": "Hungering Pyre"
+        },
+        {
+          "sec": 237.189,
+          "spellId": 1289855,
+          "name": "Hungering Pyre"
+        },
+        {
+          "sec": 253.887,
+          "spellId": 1287533,
+          "name": "Gravebound Advance"
+        },
+        {
+          "sec": 256.407,
+          "spellId": 1287533,
+          "name": "Gravebound Advance"
+        },
+        {
+          "sec": 282.329,
+          "spellId": 1297624,
+          "name": "Ritual Burn"
+        },
+        {
+          "sec": 282.33,
+          "spellId": 1299673,
+          "name": "Invoke"
+        },
+        {
+          "sec": 299.502,
+          "spellId": 1287533,
+          "name": "Gravebound Advance"
+        },
+        {
+          "sec": 301.971,
+          "spellId": 1287533,
+          "name": "Gravebound Advance"
+        },
+        {
+          "sec": 315.305,
+          "spellId": 1284103,
+          "name": "Possession Barrage"
+        },
+        {
+          "sec": 330.299,
+          "spellId": 1297624,
+          "name": "Ritual Burn"
+        },
+        {
+          "sec": 330.3,
+          "spellId": 1299673,
+          "name": "Invoke"
+        },
+        {
+          "sec": 339.493,
+          "spellId": 1287533,
+          "name": "Gravebound Advance"
+        },
+        {
+          "sec": 342.01,
+          "spellId": 1287533,
+          "name": "Gravebound Advance"
+        },
+        {
+          "sec": 343.295,
+          "spellId": 1284103,
+          "name": "Possession Barrage"
+        },
+        {
+          "sec": 362.346,
+          "spellId": 1297624,
+          "name": "Ritual Burn"
+        },
+        {
+          "sec": 362.347,
+          "spellId": 1299673,
+          "name": "Invoke"
+        },
+        {
+          "sec": 379.427,
+          "spellId": 1287533,
+          "name": "Gravebound Advance"
+        }
+      ]
+    },
+    {
+      "code": "Rz8fMGCraYyP72pW",
+      "fightID": 24,
+      "duration": 387,
+      "title": "HEROIC SPLIT #15",
+      "url": "https://www.warcraftlogs.com/reports/Rz8fMGCraYyP72pW?fight=24",
+      "casts": [
+        {
+          "sec": 3,
+          "spellId": 1293664,
+          "name": "Soulcoil Ignition"
+        },
+        {
+          "sec": 3.001,
+          "spellId": 1297624,
+          "name": "Ritual Burn"
+        },
+        {
+          "sec": 3.002,
+          "spellId": 1285681,
+          "name": "Soulcoil Ignition"
+        },
+        {
+          "sec": 5.002,
+          "spellId": 1297624,
+          "name": "Ritual Burn"
+        },
+        {
+          "sec": 7.009,
+          "spellId": 1297624,
+          "name": "Ritual Burn"
+        },
+        {
+          "sec": 34.016,
+          "spellId": 1284103,
+          "name": "Possession Barrage"
+        },
+        {
+          "sec": 52.693,
+          "spellId": 1287533,
+          "name": "Gravebound Advance"
+        },
+        {
+          "sec": 55.184,
+          "spellId": 1287533,
+          "name": "Gravebound Advance"
+        },
+        {
+          "sec": 70.018,
+          "spellId": 1284103,
+          "name": "Possession Barrage"
+        },
+        {
+          "sec": 76.879,
+          "spellId": 1293660,
+          "name": "Soulcoil Ignition"
+        },
+        {
+          "sec": 76.879,
+          "spellId": 1293664,
+          "name": "Soulcoil Ignition"
+        },
+        {
+          "sec": 77.9,
+          "spellId": 1297624,
+          "name": "Ritual Burn"
+        },
+        {
+          "sec": 77.901,
+          "spellId": 1285681,
+          "name": "Soulcoil Ignition"
+        },
+        {
+          "sec": 79.913,
+          "spellId": 1297624,
+          "name": "Ritual Burn"
+        },
+        {
+          "sec": 105.06,
+          "spellId": 1284103,
+          "name": "Possession Barrage"
+        },
+        {
+          "sec": 121.136,
+          "spellId": 1287533,
+          "name": "Gravebound Advance"
+        },
+        {
+          "sec": 123.7,
+          "spellId": 1287533,
+          "name": "Gravebound Advance"
+        },
+        {
+          "sec": 142.3,
+          "spellId": 1295124,
+          "name": "Ritual of Awakening"
+        },
+        {
+          "sec": 152.759,
+          "spellId": 1289902,
+          "name": "Soul Transfer"
+        },
+        {
+          "sec": 159.749,
+          "spellId": 1293211,
+          "name": "Soul Transfer"
+        },
+        {
+          "sec": 167.781,
+          "spellId": 1292248,
+          "name": "Soul Transfer"
+        },
+        {
+          "sec": 170.751,
+          "spellId": 1294742,
+          "name": "Hungering Pyre"
+        },
+        {
+          "sec": 178.261,
+          "spellId": 1289855,
+          "name": "Hungering Pyre"
+        },
+        {
+          "sec": 196.135,
+          "spellId": 1287533,
+          "name": "Gravebound Advance"
+        },
+        {
+          "sec": 205.775,
+          "spellId": 1294742,
+          "name": "Hungering Pyre"
+        },
+        {
+          "sec": 225.712,
+          "spellId": 1292248,
+          "name": "Soul Transfer"
+        },
+        {
+          "sec": 228.726,
+          "spellId": 1294742,
+          "name": "Hungering Pyre"
+        },
+        {
+          "sec": 236.238,
+          "spellId": 1289855,
+          "name": "Hungering Pyre"
+        },
+        {
+          "sec": 250.773,
+          "spellId": 1287533,
+          "name": "Gravebound Advance"
+        },
+        {
+          "sec": 252.9,
+          "spellId": 1287533,
+          "name": "Gravebound Advance"
+        },
+        {
+          "sec": 263.744,
+          "spellId": 1294742,
+          "name": "Hungering Pyre"
+        },
+        {
+          "sec": 285.365,
+          "spellId": 1297624,
+          "name": "Ritual Burn"
+        },
+        {
+          "sec": 285.366,
+          "spellId": 1299673,
+          "name": "Invoke"
+        },
+        {
+          "sec": 302.544,
+          "spellId": 1287533,
+          "name": "Gravebound Advance"
+        },
+        {
+          "sec": 304.976,
+          "spellId": 1287533,
+          "name": "Gravebound Advance"
+        },
+        {
+          "sec": 318.387,
+          "spellId": 1284103,
+          "name": "Possession Barrage"
+        },
+        {
+          "sec": 333.367,
+          "spellId": 1297624,
+          "name": "Ritual Burn"
+        },
+        {
+          "sec": 333.368,
+          "spellId": 1299673,
+          "name": "Invoke"
+        },
+        {
+          "sec": 342.434,
+          "spellId": 1287533,
+          "name": "Gravebound Advance"
+        },
+        {
+          "sec": 345.027,
+          "spellId": 1287533,
+          "name": "Gravebound Advance"
+        },
+        {
+          "sec": 346.38,
+          "spellId": 1284103,
+          "name": "Possession Barrage"
+        },
+        {
+          "sec": 348.116,
+          "spellId": 145629,
+          "name": "Anti-Magic Zone"
+        },
+        {
+          "sec": 350.131,
+          "spellId": 145629,
+          "name": "Anti-Magic Zone"
+        },
+        {
+          "sec": 352.516,
+          "spellId": 145629,
+          "name": "Anti-Magic Zone"
+        },
+        {
+          "sec": 365.39,
+          "spellId": 1297624,
+          "name": "Ritual Burn"
+        },
+        {
+          "sec": 365.391,
+          "spellId": 1299673,
+          "name": "Invoke"
+        },
+        {
+          "sec": 382.557,
+          "spellId": 1287533,
+          "name": "Gravebound Advance"
+        },
+        {
+          "sec": 384.993,
+          "spellId": 1287533,
+          "name": "Gravebound Advance"
+        }
+      ]
+    },
+    {
+      "code": "Tjz2qdPMHQpxACV8",
+      "fightID": 11,
+      "duration": 389,
+      "title": "Tues Raid",
+      "url": "https://www.warcraftlogs.com/reports/Tjz2qdPMHQpxACV8?fight=11",
+      "casts": [
+        {
+          "sec": 3.001,
+          "spellId": 1293664,
+          "name": "Soulcoil Ignition"
+        },
+        {
+          "sec": 3.023,
+          "spellId": 1297624,
+          "name": "Ritual Burn"
+        },
+        {
+          "sec": 3.024,
+          "spellId": 1285681,
+          "name": "Soulcoil Ignition"
+        },
+        {
+          "sec": 5.045,
+          "spellId": 1297624,
+          "name": "Ritual Burn"
+        },
+        {
+          "sec": 29.754,
+          "spellId": 145629,
+          "name": "Anti-Magic Zone"
+        },
+        {
+          "sec": 32.293,
+          "spellId": 145629,
+          "name": "Anti-Magic Zone"
+        },
+        {
+          "sec": 34.001,
+          "spellId": 1284103,
+          "name": "Possession Barrage"
+        },
+        {
+          "sec": 36.355,
+          "spellId": 145629,
+          "name": "Anti-Magic Zone"
+        },
+        {
+          "sec": 70.028,
+          "spellId": 1284103,
+          "name": "Possession Barrage"
+        },
+        {
+          "sec": 77.242,
+          "spellId": 1293660,
+          "name": "Soulcoil Ignition"
+        },
+        {
+          "sec": 77.242,
+          "spellId": 1293664,
+          "name": "Soulcoil Ignition"
+        },
+        {
+          "sec": 78.256,
+          "spellId": 1297624,
+          "name": "Ritual Burn"
+        },
+        {
+          "sec": 78.256,
+          "spellId": 1285681,
+          "name": "Soulcoil Ignition"
+        },
+        {
+          "sec": 80.263,
+          "spellId": 1297624,
+          "name": "Ritual Burn"
+        },
+        {
+          "sec": 82.268,
+          "spellId": 1297624,
+          "name": "Ritual Burn"
+        },
+        {
+          "sec": 105.016,
+          "spellId": 1284103,
+          "name": "Possession Barrage"
+        },
+        {
+          "sec": 121.144,
+          "spellId": 1287533,
+          "name": "Gravebound Advance"
+        },
+        {
+          "sec": 123.695,
+          "spellId": 1287533,
+          "name": "Gravebound Advance"
+        },
+        {
+          "sec": 141.028,
+          "spellId": 1284103,
+          "name": "Possession Barrage"
+        },
+        {
+          "sec": 143.683,
+          "spellId": 1295124,
+          "name": "Ritual of Awakening"
+        },
+        {
+          "sec": 154.145,
+          "spellId": 1289902,
+          "name": "Soul Transfer"
+        },
+        {
+          "sec": 161.131,
+          "spellId": 1293211,
+          "name": "Soul Transfer"
+        },
+        {
+          "sec": 169.139,
+          "spellId": 1292248,
+          "name": "Soul Transfer"
+        },
+        {
+          "sec": 172.145,
+          "spellId": 1294742,
+          "name": "Hungering Pyre"
+        },
+        {
+          "sec": 179.646,
+          "spellId": 1289855,
+          "name": "Hungering Pyre"
+        },
+        {
+          "sec": 196.326,
+          "spellId": 1287533,
+          "name": "Gravebound Advance"
+        },
+        {
+          "sec": 207.172,
+          "spellId": 1294742,
+          "name": "Hungering Pyre"
+        },
+        {
+          "sec": 223.478,
+          "spellId": 1292248,
+          "name": "Soul Transfer"
+        },
+        {
+          "sec": 226.497,
+          "spellId": 1294742,
+          "name": "Hungering Pyre"
+        },
+        {
+          "sec": 233.997,
+          "spellId": 1289855,
+          "name": "Hungering Pyre"
+        },
+        {
+          "sec": 250.626,
+          "spellId": 1287533,
+          "name": "Gravebound Advance"
+        },
+        {
+          "sec": 253.066,
+          "spellId": 1287533,
+          "name": "Gravebound Advance"
+        },
+        {
+          "sec": 261.532,
+          "spellId": 1294742,
+          "name": "Hungering Pyre"
+        },
+        {
+          "sec": 269.043,
+          "spellId": 1289855,
+          "name": "Hungering Pyre"
+        },
+        {
+          "sec": 287.82,
+          "spellId": 1297624,
+          "name": "Ritual Burn"
+        },
+        {
+          "sec": 287.821,
+          "spellId": 1299673,
+          "name": "Invoke"
+        },
+        {
+          "sec": 320.806,
+          "spellId": 1284103,
+          "name": "Possession Barrage"
+        },
+        {
+          "sec": 335.805,
+          "spellId": 1297624,
+          "name": "Ritual Burn"
+        },
+        {
+          "sec": 335.82,
+          "spellId": 1299673,
+          "name": "Invoke"
+        },
+        {
+          "sec": 348.784,
+          "spellId": 1284103,
+          "name": "Possession Barrage"
+        },
+        {
+          "sec": 367.814,
+          "spellId": 1297624,
+          "name": "Ritual Burn"
+        },
+        {
+          "sec": 367.816,
+          "spellId": 1299673,
+          "name": "Invoke"
+        },
+        {
+          "sec": 384.956,
+          "spellId": 1287533,
+          "name": "Gravebound Advance"
+        },
+        {
+          "sec": 387.563,
+          "spellId": 1287533,
+          "name": "Gravebound Advance"
+        }
+      ]
+    }
+  ],
+  "consensus": {
+    "Soulcoil Ignition": [
+      3,
+      78,
+      147
+    ],
+    "Ritual Burn": [
+      5,
+      80,
+      285,
+      333,
+      365
+    ],
+    "Possession Barrage": [
+      34,
+      70,
+      105,
+      141,
+      318,
+      346
+    ],
+    "Gravebound Advance": [
+      54,
+      123,
+      196,
+      253,
+      303,
+      342,
+      384
+    ],
+    "Ritual of Awakening": [
+      143
+    ],
+    "Hungering Pyre": [
+      178,
+      207,
+      234,
+      264
+    ],
+    "Invoke": [
+      285,
+      333,
+      365
+    ]
+  }
+}

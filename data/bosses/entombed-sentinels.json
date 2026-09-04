@@ -1,0 +1,123 @@
+{
+  "id": "entombed-sentinels",
+  "name": "Entombed Sentinels",
+  "shortName": "Sentinels",
+  "encounterId": 3445,
+  "group": "raid",
+  "difficulty": "Heroic",
+  "order": 2,
+  "source": "WCL Heroic consensus — 3 speed kills (~3:46–3:48). Vitriolic Stasis ×2 only on these kills; Miasma/Injection cycle tighter than BigWigs.",
+  "sourceUrl": "https://www.warcraftlogs.com/reports/1bJP42hvznkwRTtH?fight=26",
+  "enrageSec": 240,
+  "enrageName": "Kill target (~4:00 speed)",
+  "windows": [
+    {
+      "id": "es-miasma1",
+      "timeSec": 18,
+      "ability": "Unstable Miasma #1",
+      "abilitySpellId": 1288232,
+      "trigger": "WCL 0:18",
+      "severity": "raid",
+      "category": "throughput",
+      "phase": 1,
+      "assignCd": true,
+      "note": "Soak — soft CD if the raid is low."
+    },
+    {
+      "id": "es-injection1",
+      "timeSec": 31,
+      "ability": "Bloodvenom Injection #1",
+      "abilitySpellId": 1284487,
+      "trigger": "WCL 0:31",
+      "severity": "tank",
+      "category": "external",
+      "phase": 1,
+      "assignCd": true,
+      "note": "Tank injection — external if needed. Repeats ~every 22s."
+    },
+    {
+      "id": "es-stasis1",
+      "timeSec": 46,
+      "ability": "Vitriolic Stasis #1",
+      "abilitySpellId": 1284588,
+      "trigger": "WCL 0:46",
+      "severity": "critical",
+      "category": "defensive",
+      "phase": 2,
+      "assignCd": true,
+      "note": "Main CD window — Helical Toxins / sequence-end."
+    },
+    {
+      "id": "es-miasma2",
+      "timeSec": 73,
+      "ability": "Unstable Miasma #2",
+      "abilitySpellId": 1288232,
+      "trigger": "WCL 1:13",
+      "severity": "raid",
+      "category": "throughput",
+      "phase": 1,
+      "assignCd": true,
+      "note": "Second soak cluster."
+    },
+    {
+      "id": "es-miasma3",
+      "timeSec": 115,
+      "ability": "Unstable Miasma #3",
+      "abilitySpellId": 1288232,
+      "trigger": "WCL 1:55",
+      "severity": "raid",
+      "category": "defensive",
+      "phase": 1,
+      "assignCd": true,
+      "note": "Mid-fight soak into Contaminate."
+    },
+    {
+      "id": "es-stasis2",
+      "timeSec": 146,
+      "ability": "Vitriolic Stasis #2",
+      "abilitySpellId": 1284588,
+      "trigger": "WCL 2:26",
+      "severity": "critical",
+      "category": "throughput",
+      "phase": 2,
+      "assignCd": true,
+      "note": "Second Stasis — major CD. Fast kills often end after this + last Miasma."
+    },
+    {
+      "id": "es-injection2",
+      "timeSec": 166,
+      "ability": "Bloodvenom Injection (post-Stasis)",
+      "abilitySpellId": 1284487,
+      "trigger": "WCL 2:46",
+      "severity": "tank",
+      "category": "external",
+      "phase": 1,
+      "assignCd": true,
+      "note": "Post-Stasis tank spike."
+    },
+    {
+      "id": "es-miasma4",
+      "timeSec": 175,
+      "ability": "Unstable Miasma #4",
+      "abilitySpellId": 1288232,
+      "trigger": "WCL 2:55",
+      "severity": "raid",
+      "category": "defensive",
+      "phase": 1,
+      "assignCd": true,
+      "note": "Late soak on ~3:45–3:50 kills."
+    },
+    {
+      "id": "es-miasma5",
+      "timeSec": 216,
+      "ability": "Unstable Miasma #5",
+      "abilitySpellId": 1288232,
+      "trigger": "WCL 3:36",
+      "severity": "raid",
+      "category": "throughput",
+      "phase": 1,
+      "assignCd": true,
+      "note": "Final Miasma before kill on speed clears."
+    }
+  ]
+}

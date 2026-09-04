@@ -1,0 +1,33 @@
+{
+  "kills": [
+    {
+      "code": "VyHQnkGAmbPxfF2J",
+      "fightId": 11,
+      "duration": 340,
+      "url": "https://www.warcraftlogs.com/reports/VyHQnkGAmbPxfF2J?fight=11",
+      "title": "The Venomous Abyss"
+    },
+    {
+      "code": "TdFyZxQ7ArN28KvH",
+      "fightId": 53,
+      "duration": 345,
+      "url": "https://www.warcraftlogs.com/reports/TdFyZxQ7ArN28KvH?fight=53",
+      "title": "miffic"
+    },
+    {
+      "code": "3x1DNpyz6TGbJKRj",
+      "fightId": 37,
+      "duration": 347,
+      "url": "https://www.warcraftlogs.com/reports/3x1DNpyz6TGbJKRj?fight=37",
+      "title": "The Venomous Abyss"
+    },
+    {
+      "code": "mB76JGAYWQyr8wkR",
+      "fightId": 7,
+      "duration": 367,
+      "url": "https://www.warcraftlogs.com/reports/mB76JGAYWQyr8wkR?fight=7",
+      "title": "wtf"
+    }
+  ],
+  "windowCount": 12
+}
