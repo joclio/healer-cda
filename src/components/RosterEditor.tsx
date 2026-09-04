@@ -39,10 +39,10 @@ function rowGrid(kind: RowKind, reordering: boolean): string {
   const cols =
     kind === "healer"
       ? reordering
-        ? "sm:grid-cols-[3.25rem_minmax(0,1fr)_7rem_9rem_4.25rem]"
+        ? "sm:grid-cols-[6.5rem_minmax(0,1fr)_7rem_9rem_4.25rem]"
         : "sm:grid-cols-[minmax(0,1fr)_7rem_9rem_4.25rem]"
       : reordering
-        ? "sm:grid-cols-[3.25rem_minmax(0,1fr)_9rem_4.25rem]"
+        ? "sm:grid-cols-[6.5rem_minmax(0,1fr)_9rem_4.25rem]"
         : "sm:grid-cols-[minmax(0,1fr)_9rem_4.25rem]";
   return [
     "flex flex-col gap-2 rounded-md border border-white/10 bg-white/[0.04] px-3 py-2 sm:grid sm:items-center sm:gap-2 sm:px-2",
@@ -54,10 +54,10 @@ function colHeader(kind: RowKind, reordering: boolean): string {
   const cols =
     kind === "healer"
       ? reordering
-        ? "grid-cols-[3.25rem_minmax(0,1fr)_7rem_9rem_4.25rem]"
+        ? "grid-cols-[6.5rem_minmax(0,1fr)_7rem_9rem_4.25rem]"
         : "grid-cols-[minmax(0,1fr)_7rem_9rem_4.25rem]"
       : reordering
-        ? "grid-cols-[3.25rem_minmax(0,1fr)_9rem_4.25rem]"
+        ? "grid-cols-[6.5rem_minmax(0,1fr)_9rem_4.25rem]"
         : "grid-cols-[minmax(0,1fr)_9rem_4.25rem]";
   return [
     "mb-1 hidden items-center gap-2 px-2 text-[10px] font-semibold uppercase tracking-wider text-white/35 sm:grid",
@@ -107,6 +107,10 @@ function moveItemAt<T>(list: T[], from: number, to: number): T[] {
   return next;
 }
 
+function moveItem<T>(list: T[], index: number, dir: -1 | 1): T[] {
+  return moveItemAt(list, index, index + dir);
+}
+
 type DragKind = "healer" | "tank" | "utility";
 
 type UndoState =
@@ -154,6 +158,10 @@ export function RosterEditor({
   const [undo, setUndo] = useState<UndoState | null>(null);
   const [reordering, setReordering] = useState(false);
   const [dragging, setDragging] = useState<{
+    kind: DragKind;
+    id: string;
+  } | null>(null);
+  const [dropTarget, setDropTarget] = useState<{
     kind: DragKind;
     id: string;
   } | null>(null);
@@ -363,27 +371,69 @@ export function RosterEditor({
     return t.class ? TANK_CLASS_COLOR[t.class] : "#94a3b8";
   }
 
-  function dragHandle(kind: DragKind, id: string) {
+  function moveButtons(
+    index: number,
+    total: number,
+    onMove: (dir: -1 | 1) => void,
+  ) {
     return (
-      <button
-        type="button"
-        draggable
-        aria-label="Drag to reorder"
-        title="Drag to reorder"
-        onDragStart={(e) => {
-          setDragging({ kind, id });
-          e.dataTransfer.effectAllowed = "move";
-          e.dataTransfer.setData("text/plain", `${kind}:${id}`);
-          const row = e.currentTarget.closest("li");
-          if (row instanceof HTMLElement) {
-            e.dataTransfer.setDragImage(row, 28, 24);
-          }
-        }}
-        onDragEnd={() => setDragging(null)}
-        className="cursor-grab touch-none self-center rounded px-1.5 py-1 text-sm leading-none text-white/40 hover:bg-white/10 hover:text-white active:cursor-grabbing"
-      >
-        ⠿
-      </button>
+      <div className="flex flex-col gap-0.5">
+        <button
+          type="button"
+          aria-label="Move up"
+          disabled={index === 0}
+          onClick={() => onMove(-1)}
+          className="rounded px-1 py-0.5 text-[10px] leading-none text-white/45 hover:bg-white/10 hover:text-white disabled:opacity-25"
+        >
+          ↑
+        </button>
+        <button
+          type="button"
+          aria-label="Move down"
+          disabled={index >= total - 1}
+          onClick={() => onMove(1)}
+          className="rounded px-1 py-0.5 text-[10px] leading-none text-white/45 hover:bg-white/10 hover:text-white disabled:opacity-25"
+        >
+          ↓
+        </button>
+      </div>
+    );
+  }
+
+  function reorderControls(
+    kind: DragKind,
+    id: string,
+    index: number,
+    total: number,
+    onMove: (dir: -1 | 1) => void,
+  ) {
+    return (
+      <div className="flex items-center gap-0.5 self-center">
+        <button
+          type="button"
+          draggable
+          aria-label="Drag to reorder"
+          title="Drag to reorder"
+          onDragStart={(e) => {
+            setDragging({ kind, id });
+            setDropTarget(null);
+            e.dataTransfer.effectAllowed = "move";
+            e.dataTransfer.setData("text/plain", `${kind}:${id}`);
+            const row = e.currentTarget.closest("li");
+            if (row instanceof HTMLElement) {
+              e.dataTransfer.setDragImage(row, 28, 24);
+            }
+          }}
+          onDragEnd={() => {
+            setDragging(null);
+            setDropTarget(null);
+          }}
+          className="cursor-grab touch-none rounded px-1.5 py-1 text-sm leading-none text-white/40 hover:bg-white/10 hover:text-white active:cursor-grabbing"
+        >
+          ⠿
+        </button>
+        {moveButtons(index, total, onMove)}
+      </div>
     );
   }
 
@@ -394,19 +444,34 @@ export function RosterEditor({
     onReorder: (from: number, to: number) => void,
   ) {
     const isDragging = dragging?.kind === kind && dragging.id === id;
+    const isDropTarget = dropTarget?.kind === kind && dropTarget.id === id;
     return {
       onDragOver: (e: DragEvent<HTMLLIElement>) => {
         e.preventDefault();
         e.dataTransfer.dropEffect = "move";
         if (!dragging || dragging.kind !== kind || dragging.id === id) return;
-        const from = list.findIndex((x) => x.id === dragging.id);
+        if (!isDropTarget) setDropTarget({ kind, id });
+      },
+      onDrop: (e: DragEvent<HTMLLIElement>) => {
+        e.preventDefault();
+        setDropTarget(null);
+        setDragging(null);
+        const raw = e.dataTransfer.getData("text/plain");
+        const sep = raw.indexOf(":");
+        if (sep < 0) return;
+        const fromKind = raw.slice(0, sep);
+        const fromId = raw.slice(sep + 1);
+        if (fromKind !== kind || !fromId || fromId === id) return;
+        const from = list.findIndex((x) => x.id === fromId);
         const to = list.findIndex((x) => x.id === id);
         if (from < 0 || to < 0 || from === to) return;
         onReorder(from, to);
       },
       className: isDragging
         ? "opacity-40 ring-1 ring-teal-400/60"
-        : undefined,
+        : isDropTarget
+          ? "border-teal-400/70 bg-teal-500/10"
+          : undefined,
     };
   }
 
@@ -495,7 +560,7 @@ export function RosterEditor({
             <h2 className="text-sm font-medium text-white">Edit roster</h2>
             <p className="mt-1 text-sm text-white/55">
               {reordering
-                ? "Drag rows to set assign priority · top healers get CDs first"
+                ? "Drag or ↑↓ to set assign priority · top healers get CDs first"
                 : "Browser save · list order = assign priority"}
             </p>
           </div>
@@ -504,7 +569,10 @@ export function RosterEditor({
               type="button"
               onClick={() => {
                 setReordering((v) => {
-                  if (v) setDragging(null);
+                  if (v) {
+                    setDragging(null);
+                    setDropTarget(null);
+                  }
                   return !v;
                 });
               }}
@@ -594,7 +662,7 @@ export function RosterEditor({
           </div>
 
           <ul className="space-y-1.5">
-            {poolHealers.map((h) => {
+            {poolHealers.map((h, i) => {
               const cls = SPEC_TO_CLASS[h.spec];
               const classSpecs = specsForClass(cls);
               const drag = reordering
@@ -609,8 +677,12 @@ export function RosterEditor({
                     .filter(Boolean)
                     .join(" ")}
                   onDragOver={drag?.onDragOver}
+                  onDrop={drag?.onDrop}
                 >
-                  {reordering && dragHandle("healer", h.id)}
+                  {reordering &&
+                    reorderControls("healer", h.id, i, poolHealers.length, (dir) =>
+                      onPoolHealersChange(moveItem(poolHealers, i, dir)),
+                    )}
                   <div className="flex min-w-0 flex-col gap-1">
                     <span className={MOBILE_LABEL}>Name</span>
                     <div className="flex min-w-0 items-center gap-2">
@@ -705,7 +777,7 @@ export function RosterEditor({
             <p className="text-sm text-white/45">No tanks yet.</p>
           ) : (
             <ul className="space-y-1.5">
-              {poolTanks.map((t) => {
+              {poolTanks.map((t, i) => {
                 const drag = reordering
                   ? rowDragProps("tank", t.id, poolTanks, (from, to) =>
                       onPoolTanksChange(moveItemAt(poolTanks, from, to)),
@@ -718,8 +790,12 @@ export function RosterEditor({
                       .filter(Boolean)
                       .join(" ")}
                     onDragOver={drag?.onDragOver}
+                    onDrop={drag?.onDrop}
                   >
-                    {reordering && dragHandle("tank", t.id)}
+                    {reordering &&
+                      reorderControls("tank", t.id, i, poolTanks.length, (dir) =>
+                        onPoolTanksChange(moveItem(poolTanks, i, dir)),
+                      )}
                     <div className="flex min-w-0 flex-col gap-1">
                       <span className={MOBILE_LABEL}>Name</span>
                       <div className="flex min-w-0 items-center gap-2">
@@ -796,7 +872,7 @@ export function RosterEditor({
             <p className="text-sm text-white/45">No utility casters yet.</p>
           ) : (
             <ul className="space-y-1.5">
-              {poolUtilities.map((u) => {
+              {poolUtilities.map((u, i) => {
                 const drag = reordering
                   ? rowDragProps("utility", u.id, poolUtilities, (from, to) =>
                       onPoolUtilitiesChange(
@@ -811,8 +887,19 @@ export function RosterEditor({
                       .filter(Boolean)
                       .join(" ")}
                     onDragOver={drag?.onDragOver}
+                    onDrop={drag?.onDrop}
                   >
-                    {reordering && dragHandle("utility", u.id)}
+                    {reordering &&
+                      reorderControls(
+                        "utility",
+                        u.id,
+                        i,
+                        poolUtilities.length,
+                        (dir) =>
+                          onPoolUtilitiesChange(
+                            moveItem(poolUtilities, i, dir),
+                          ),
+                      )}
                     <div className="flex min-w-0 flex-col gap-1">
                       <span className={MOBILE_LABEL}>Name</span>
                       <div className="flex min-w-0 items-center gap-2">

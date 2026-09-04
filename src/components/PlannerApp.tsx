@@ -15,6 +15,7 @@ import { autoAssign, autoAssignPersonals } from "@/domain/autoAssign";
 import { withTimeOverrides } from "@/domain/time";
 import {
   defaultNoteWindowIds,
+  isUtilityClass,
   type Assignment,
   type Boss,
   type Healer,
@@ -73,14 +74,20 @@ function loadPlanSlice(
   plans: SavedPlans,
   id: string,
   boss: Boss,
+  validUtilityIds?: Set<string>,
 ): SavedPlan {
   const saved = plans[id];
   if (!saved) return emptyPlan(boss);
   const validWindows = new Set(boss.windows.map((w) => w.id));
   return {
-    assignments: (saved.assignments ?? []).filter((a) =>
-      validWindows.has(a.windowId),
-    ),
+    assignments: (saved.assignments ?? []).filter((a) => {
+      if (!validWindows.has(a.windowId)) return false;
+      if (a.spellId === "smoke-bomb") return false;
+      if (a.utilityId && validUtilityIds && !validUtilityIds.has(a.utilityId)) {
+        return false;
+      }
+      return true;
+    }),
     noteWindowIds:
       saved.noteWindowIds !== undefined
         ? pruneIds(saved.noteWindowIds, validWindows)
@@ -92,6 +99,36 @@ function loadPlanSlice(
       ),
     ),
   };
+}
+
+function sanitizeUtilities(raw: unknown): UtilityCaster[] {
+  if (!Array.isArray(raw)) return [];
+  return raw.filter(
+    (u): u is UtilityCaster =>
+      !!u &&
+      typeof u === "object" &&
+      typeof (u as UtilityCaster).id === "string" &&
+      typeof (u as UtilityCaster).name === "string" &&
+      isUtilityClass((u as UtilityCaster).class),
+  );
+}
+
+/** Drop removed classes (e.g. rogue) and smoke-bomb rows from persisted plans. */
+function prunePersistedPlans(validUtilityIds: Set<string>) {
+  const plans = readSavedPlans();
+  let dirty = false;
+  for (const [bossKey, plan] of Object.entries(plans)) {
+    const next = (plan.assignments ?? []).filter((a) => {
+      if (a.spellId === "smoke-bomb") return false;
+      if (a.utilityId && !validUtilityIds.has(a.utilityId)) return false;
+      return true;
+    });
+    if (next.length !== (plan.assignments ?? []).length) {
+      plans[bossKey] = { ...plan, assignments: next };
+      dirty = true;
+    }
+  }
+  if (dirty) localStorage.setItem(PLANS_KEY, JSON.stringify(plans));
 }
 
 function readSavedPlans(): SavedPlans {
@@ -137,11 +174,25 @@ export function PlannerApp() {
       const rawTanks = localStorage.getItem(TANKS_KEY);
       if (rawTanks) setPoolTanks(JSON.parse(rawTanks) as Tank[]);
       const rawUtilities = localStorage.getItem(UTILITIES_KEY);
-      if (rawUtilities) {
-        setPoolUtilities(JSON.parse(rawUtilities) as UtilityCaster[]);
-      }
+      const utilities = sanitizeUtilities(
+        rawUtilities ? JSON.parse(rawUtilities) : [],
+      );
+      setPoolUtilities(utilities);
+      const utilityIds = new Set(utilities.map((u) => u.id));
+      prunePersistedPlans(utilityIds);
+
       const rawPicks = localStorage.getItem(FIGHT_PICKS_KEY);
-      if (rawPicks) setFightPicks(JSON.parse(rawPicks) as FightPicks);
+      if (rawPicks) {
+        const picks = JSON.parse(rawPicks) as FightPicks;
+        const next: FightPicks = {};
+        for (const [id, pick] of Object.entries(picks)) {
+          next[id] = {
+            ...pick,
+            utilityIds: pick.utilityIds?.filter((uid) => utilityIds.has(uid)),
+          };
+        }
+        setFightPicks(next);
+      }
       setLastBossId(localStorage.getItem(LAST_BOSS_KEY));
     } catch {
       /* ignore */
@@ -331,7 +382,14 @@ export function PlannerApp() {
         });
       }
       setBossId(b.id);
-      applyPlanSlice(loadPlanSlice(readSavedPlans(), b.id, b));
+      applyPlanSlice(
+        loadPlanSlice(
+          readSavedPlans(),
+          b.id,
+          b,
+          new Set(poolUtilities.map((u) => u.id)),
+        ),
+      );
     }
     setLastBossId(b.id);
     if (goRoster) setStep("roster");
