@@ -15,9 +15,9 @@ Open [http://localhost:3000](http://localhost:3000).
 
 ## Raid lead flow
 
-1. **Boss** — pick a fight and difficulty (Heroic / Mythic where available). First click selects; second click (or the H/M chip) continues to roster.
-2. **Roster** — healers (name + spec) and tanks. Saved in your browser; paste from WowAudit-style lists is supported.
-3. **Plan** — **Auto-assign CDs** fills healer spells and suggested personals. Tweak rows, set tank targets on externals, then **Copy NSRT**.
+1. **Boss** — pick a fight, then **Heroic** / **Mythic** (or click the selected card again) to go to roster.
+2. **Roster** — healers (name + spec), tanks, and **raid utilities**. Paste WowAudit Main Roster to import healers/tanks plus Warrior / DK / DH / Rogue DPS for Rally, AMZ, Darkness, and Smoke Bomb.
+3. **Plan** — first visit auto-assigns; later visits restore your saved plan. **Auto-assign CDs** asks before replacing manual work. Tweak rows, set tank targets, then **Copy NSRT**.
 4. In-game: `/ns` → Shared Notes → Import → paste.
 
 ### Plan screen tips
@@ -26,8 +26,10 @@ Open [http://localhost:3000](http://localhost:3000).
 - **Note · N** chooses which boss abilities appear in the copied note (row checkboxes).
 - Edit any window time as `mm:ss` if your pull differs; re-auto-assign if readiness looks wrong.
 - Sticky header keeps **Copy NSRT** available while you scroll.
+- Matching tanks (Warrior / DK / DH) can cast utility CDs without a separate utility entry.
+- Raid personals only auto-suggest when a window has `suggestPersonals` (or soft-CD wording) — bare “soak” notes no longer force personals.
 
-Each plan row is **boss ability → healer CD(s) and/or raid personals**.
+Each plan row is **boss ability → healer CD(s), raid utilities, and/or raid personals**.
 
 ## Timers
 
@@ -43,8 +45,9 @@ Heroic timers lean on **BigWigs** first-cycle cast bars / guides; several fights
 
 ## Scope
 
-- Healers, tank externals, raid personals
-- Local-first (no accounts, no WCL login required to use the planner)
+- Healers, tank externals, raid personals, tank/DPS raid utilities (Rally, AMZ, Darkness, Smoke Bomb)
+- Local-first (no accounts). The planner never needs Warcraft Logs login; WCL is only used offline in optional `scripts/` when rebuilding timer JSON.
 - NSRT + readable text export
+- Plans (assignments, notes, timers) persist in this browser per boss
 
 In-game companion addon is planned later; NSRT notes cover pull reminders for now.

@@ -4,25 +4,32 @@ import { useEffect, useRef, useState } from "react";
 import { getSpell, SPELLS } from "@/data/catalog";
 import {
   assignOrMoveSpell,
+  assignOrMoveUtility,
   listAssignOptions,
+  listUtilityAssignOptions,
   uncoveredWindows,
   windowSuggestsPersonals,
   type AssignOption,
+  type UtilityAssignOption,
 } from "@/domain/autoAssign";
 import { formatTime, parseTimeInput, sortedWindows } from "@/domain/time";
 import {
   SPEC_CLASS_COLOR,
+  UTILITY_CLASS_COLOR,
+  isUtilityClass,
   timelineHorizonSec,
   type Assignment,
   type Boss,
   type Healer,
   type Tank,
+  type UtilityCaster,
 } from "@/domain/types";
 
 interface Props {
   boss: Boss;
   roster: Healer[];
   tanks: Tank[];
+  utilities: UtilityCaster[];
   assignments: Assignment[];
   noteWindowIds: string[];
   personalWindowIds: string[];
@@ -47,16 +54,20 @@ function abilityLabel(boss: Boss, windowId: string): string {
 function CdAssignSelect({
   boss,
   options,
+  utilityOptions,
   personalsOn,
   suggestPersonals,
   onPick,
+  onPickUtility,
   onPickPersonals,
 }: {
   boss: Boss;
   options: AssignOption[];
+  utilityOptions: UtilityAssignOption[];
   personalsOn: boolean;
   suggestPersonals: boolean;
   onPick: (healerId: string, spellId: string) => void;
+  onPickUtility: (utilityId: string, spellId: string) => void;
   onPickPersonals: () => void;
 }) {
   const [open, setOpen] = useState(false);
@@ -64,6 +75,9 @@ function CdAssignSelect({
   const available = options.filter((o) => !o.onThisWindow);
   const readyOpts = available.filter((o) => o.ready);
   const busyOpts = available.filter((o) => !o.ready);
+  const utilAvailable = utilityOptions.filter((o) => !o.onThisWindow);
+  const utilReady = utilAvailable.filter((o) => o.ready);
+  const utilBusy = utilAvailable.filter((o) => !o.ready);
 
   useEffect(() => {
     if (!open) return;
@@ -74,7 +88,8 @@ function CdAssignSelect({
     return () => document.removeEventListener("mousedown", onDoc);
   }, [open]);
 
-  const empty = available.length === 0 && personalsOn;
+  const empty =
+    available.length === 0 && utilAvailable.length === 0 && personalsOn;
 
   function renderOpt(opt: AssignOption) {
     const from = opt.conflicts
@@ -94,6 +109,39 @@ function CdAssignSelect({
       >
         <span className="w-full truncate text-xs">
           → {opt.healer.name} — {opt.spell.name}
+        </span>
+        {!opt.ready && (
+          <span className="w-full truncate text-[10px] text-amber-200/40">
+            on CD
+            {from ? ` @ ${from}` : ""}
+            {opt.readyAtSec != null
+              ? ` · ready ${formatTime(opt.readyAtSec)}`
+              : ""}{" "}
+            · move
+          </span>
+        )}
+      </button>
+    );
+  }
+
+  function renderUtil(opt: UtilityAssignOption) {
+    const from = opt.conflicts
+      .map((c) => abilityLabel(boss, c.windowId))
+      .join(", ");
+    return (
+      <button
+        key={`u-${opt.caster.id}|${opt.spell.id}`}
+        type="button"
+        onClick={() => {
+          onPickUtility(opt.caster.id, opt.spell.id);
+          setOpen(false);
+        }}
+        className={`flex w-full flex-col items-start gap-0.5 border-b border-white/5 px-2 py-1.5 text-left last:border-0 hover:bg-white/5 ${
+          opt.ready ? "text-violet-100/90" : "text-white/30"
+        }`}
+      >
+        <span className="w-full truncate text-xs">
+          → {opt.caster.name} — {opt.spell.name}
         </span>
         {!opt.ready && (
           <span className="w-full truncate text-[10px] text-amber-200/40">
@@ -145,6 +193,15 @@ function CdAssignSelect({
             </div>
           ) : (
             <>
+              {(utilReady.length > 0 || utilBusy.length > 0) && (
+                <>
+                  <div className="px-2 py-1 text-[9px] font-semibold uppercase tracking-wider text-violet-300/50">
+                    Raid utility
+                  </div>
+                  {utilReady.map(renderUtil)}
+                  {utilBusy.map(renderUtil)}
+                </>
+              )}
               {readyOpts.length > 0 && (
                 <>
                   <div className="px-2 py-1 text-[9px] font-semibold uppercase tracking-wider text-white/30">
@@ -173,6 +230,7 @@ export function Timeline({
   boss,
   roster,
   tanks,
+  utilities,
   assignments,
   noteWindowIds,
   personalWindowIds,
@@ -187,12 +245,14 @@ export function Timeline({
   const [howToOpen, setHowToOpen] = useState(false);
   const [cdOnly, setCdOnly] = useState(true);
   const [notesOpen, setNotesOpen] = useState(false);
+  const [menuBossId, setMenuBossId] = useState(boss.id);
   const notesRef = useRef<HTMLDivElement>(null);
-  useEffect(() => {
+  if (boss.id !== menuBossId) {
+    setMenuBossId(boss.id);
     setSourceOpen(false);
     setHowToOpen(false);
     setNotesOpen(false);
-  }, [boss.id]);
+  }
   useEffect(() => {
     if (!notesOpen) return;
     function onDoc(e: MouseEvent) {
@@ -234,6 +294,18 @@ export function Timeline({
     if (!window) return;
     onChange(
       assignOrMoveSpell(assignments, window, healerId, spellId, tanks, SPELLS),
+    );
+  }
+
+  function assignUtilityToWindow(
+    windowId: string,
+    utilityId: string,
+    spellId: string,
+  ) {
+    const window = boss.windows.find((w) => w.id === windowId);
+    if (!window) return;
+    onChange(
+      assignOrMoveUtility(assignments, window, utilityId, spellId, SPELLS),
     );
   }
 
@@ -536,7 +608,7 @@ export function Timeline({
             Note
           </span>
           <span>Boss ability</span>
-          <span>Healer CDs / raid personals</span>
+          <span>Healer CDs / utilities / personals</span>
         </div>
         {visibleWindows.map((w) => {
           const assigned = assignments.filter((a) => a.windowId === w.id);
@@ -545,6 +617,14 @@ export function Timeline({
           const personals = personalSet.has(w.id);
           const options = listAssignOptions(
             roster,
+            assignments,
+            w.id,
+            w.timeSec,
+            SPELLS,
+          );
+          const utilityOptions = listUtilityAssignOptions(
+            utilities,
+            tanks,
             assignments,
             w.id,
             w.timeSec,
@@ -669,27 +749,51 @@ export function Timeline({
                   </div>
                 )}
                 {assigned.map((a) => {
-                  const healer = roster.find((h) => h.id === a.healerId);
+                  const healer = a.healerId
+                    ? roster.find((h) => h.id === a.healerId)
+                    : undefined;
+                  const util =
+                    a.utilityId != null
+                      ? utilities.find((u) => u.id === a.utilityId)
+                      : undefined;
+                  const tankCaster =
+                    a.utilityId != null && !util
+                      ? tanks.find((t) => t.id === a.utilityId)
+                      : undefined;
                   const spell = getSpell(a.spellId);
                   const isExternal = spell?.kind === "tankExternal";
+                  const isUtility = spell?.kind === "raidUtility";
+                  const casterName =
+                    healer?.name ?? util?.name ?? tankCaster?.name ?? "?";
+                  const casterColor = healer
+                    ? SPEC_CLASS_COLOR[healer.spec]
+                    : util
+                      ? UTILITY_CLASS_COLOR[util.class]
+                      : tankCaster?.class && isUtilityClass(tankCaster.class)
+                        ? UTILITY_CLASS_COLOR[tankCaster.class]
+                        : undefined;
                   return (
                     <div
                       key={a.id}
                       id={`assignment-${a.id}`}
-                      className="min-w-0 space-y-1 rounded-md border border-teal-500/20 bg-teal-500/10 px-2 py-1.5 text-sm"
+                      className={`min-w-0 space-y-1 rounded-md border px-2 py-1.5 text-sm ${
+                        isUtility
+                          ? "border-violet-500/25 bg-violet-500/10"
+                          : "border-teal-500/20 bg-teal-500/10"
+                      }`}
                     >
                       <div className="flex items-start justify-between gap-2">
                         <div className="min-w-0 truncate">
-                          <span className="text-teal-200">{spell?.name}</span>
-                          <span className="text-white/35"> → </span>
                           <span
-                            style={{
-                              color: healer
-                                ? SPEC_CLASS_COLOR[healer.spec]
-                                : undefined,
-                            }}
+                            className={
+                              isUtility ? "text-violet-200" : "text-teal-200"
+                            }
                           >
-                            {healer?.name}
+                            {spell?.name}
+                          </span>
+                          <span className="text-white/35"> → </span>
+                          <span style={{ color: casterColor }}>
+                            {casterName}
                           </span>
                         </div>
                         <button
@@ -736,10 +840,14 @@ export function Timeline({
                     <CdAssignSelect
                       boss={boss}
                       options={options}
+                      utilityOptions={utilityOptions}
                       personalsOn={personals}
                       suggestPersonals={windowSuggestsPersonals(w)}
                       onPick={(healerId, spellId) =>
                         assignToWindow(w.id, healerId, spellId)
+                      }
+                      onPickUtility={(utilityId, spellId) =>
+                        assignUtilityToWindow(w.id, utilityId, spellId)
                       }
                       onPickPersonals={() => togglePersonals(w.id)}
                     />

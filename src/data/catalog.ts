@@ -1,5 +1,6 @@
 import type { Boss, Spell } from "@/domain/types";
 import healers from "../../data/spells/healers.json";
+import raidUtilities from "../../data/spells/raid-utilities.json";
 import nekzali from "../../data/bosses/nekzali.json";
 import nekzaliMythic from "../../data/bosses/nekzali-mythic.json";
 import entombedSentinels from "../../data/bosses/entombed-sentinels.json";
@@ -16,7 +17,9 @@ import coiledAltar from "../../data/bosses/coiled-altar.json";
 import ulatek from "../../data/bosses/ulatek.json";
 import nymrissa from "../../data/bosses/nymrissa.json";
 
-export const SPELLS = healers as Spell[];
+export const HEALER_SPELLS = healers as Spell[];
+export const RAID_UTILITY_SPELLS = raidUtilities as Spell[];
+export const SPELLS = [...HEALER_SPELLS, ...RAID_UTILITY_SPELLS];
 
 export const BOSSES = [
   nekzali,
@@ -42,8 +45,4 @@ export function getBoss(id: string): Boss | undefined {
 
 export function getSpell(id: string): Spell | undefined {
   return SPELLS.find((s) => s.id === id);
-}
-
-export function spellsForSpec(spec: string): Spell[] {
-  return SPELLS.filter((s) => s.specs.includes(spec as Spell["specs"][number]));
 }

@@ -9,32 +9,41 @@ interface Props {
   boss: Boss;
 }
 
+async function copyText(body: string): Promise<boolean> {
+  try {
+    await navigator.clipboard.writeText(body);
+    return true;
+  } catch {
+    return false;
+  }
+}
+
 /** Compact Copy NSRT for the plan header. */
 export function CopyNsrtButton({ plan, boss }: Props) {
-  const [copied, setCopied] = useState(false);
+  const [label, setLabel] = useState("Copy NSRT");
   return (
     <button
       type="button"
       onClick={async () => {
-        await navigator.clipboard.writeText(toNsrtNote(plan, boss));
-        setCopied(true);
-        setTimeout(() => setCopied(false), 1500);
+        const ok = await copyText(toNsrtNote(plan, boss));
+        setLabel(ok ? "Copied NSRT" : "Copy failed");
+        setTimeout(() => setLabel("Copy NSRT"), 1500);
       }}
       className="rounded-md bg-teal-500 px-3 py-1.5 text-sm font-medium text-slate-950 hover:bg-teal-400"
     >
-      {copied ? "Copied NSRT" : "Copy NSRT"}
+      {label}
     </button>
   );
 }
 
 export function ExportPanel({ plan, boss }: Props) {
   const [open, setOpen] = useState(false);
-  const [copied, setCopied] = useState(false);
+  const [label, setLabel] = useState("Copy text");
 
-  async function copyText() {
-    await navigator.clipboard.writeText(toTextNote(plan, boss));
-    setCopied(true);
-    setTimeout(() => setCopied(false), 1500);
+  async function onCopyText() {
+    const ok = await copyText(toTextNote(plan, boss));
+    setLabel(ok ? "Copied" : "Copy failed");
+    setTimeout(() => setLabel("Copy text"), 1500);
   }
 
   const text = toTextNote(plan, boss);
@@ -52,10 +61,10 @@ export function ExportPanel({ plan, boss }: Props) {
         </button>
         <button
           type="button"
-          onClick={copyText}
+          onClick={onCopyText}
           className="rounded-md bg-white/10 px-3 py-1 text-xs text-white hover:bg-white/15"
         >
-          {copied ? "Copied" : "Copy text"}
+          {label}
         </button>
       </div>
       {open && (

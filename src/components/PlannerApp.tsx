@@ -1,6 +1,11 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
+import {
+  useEffect,
+  useMemo,
+  useState,
+  useSyncExternalStore,
+} from "react";
 import { BossPicker } from "@/components/BossPicker";
 import { CopyNsrtButton, ExportPanel } from "@/components/ExportPanel";
 import { RosterEditor } from "@/components/RosterEditor";
@@ -14,26 +19,37 @@ import {
   type Boss,
   type Healer,
   type Tank,
+  type UtilityCaster,
 } from "@/domain/types";
 
 const ROSTER_KEY = "healer-cda-roster";
 const TANKS_KEY = "healer-cda-tanks";
+const UTILITIES_KEY = "healer-cda-utilities";
 const FIGHT_PICKS_KEY = "healer-cda-fight-picks";
+const PLANS_KEY = "healer-cda-plans";
 const LAST_BOSS_KEY = "healer-cda-last-boss";
 
 type Step = "boss" | "roster" | "plan";
 
 type FightPicks = Record<
   string,
-  { healerIds: string[]; tankIds: string[] }
+  { healerIds: string[]; tankIds: string[]; utilityIds?: string[] }
 >;
+
+type SavedPlan = {
+  assignments: Assignment[];
+  noteWindowIds: string[];
+  personalWindowIds: string[];
+  timeOverrides: Record<string, number>;
+};
+
+type SavedPlans = Record<string, SavedPlan>;
 
 function pruneIds(ids: string[], valid: Set<string>): string[] {
   return ids.filter((id) => valid.has(id));
 }
 
 function defaultTankIds(pool: Tank[], saved: string[] | undefined): string[] {
-  // ≤2 tanks: always use all (no picker).
   if (pool.length > 0 && pool.length < 3) return pool.map((t) => t.id);
   if (saved === undefined) return pool.map((t) => t.id);
   const valid = new Set(pool.map((t) => t.id));
@@ -44,11 +60,58 @@ function defaultTankIds(pool: Tank[], saved: string[] | undefined): string[] {
   return pruned;
 }
 
+function emptyPlan(boss: Boss): SavedPlan {
+  return {
+    assignments: [],
+    noteWindowIds: defaultNoteWindowIds(boss),
+    personalWindowIds: [],
+    timeOverrides: {},
+  };
+}
+
+function loadPlanSlice(
+  plans: SavedPlans,
+  id: string,
+  boss: Boss,
+): SavedPlan {
+  const saved = plans[id];
+  if (!saved) return emptyPlan(boss);
+  const validWindows = new Set(boss.windows.map((w) => w.id));
+  return {
+    assignments: (saved.assignments ?? []).filter((a) =>
+      validWindows.has(a.windowId),
+    ),
+    noteWindowIds: pruneIds(saved.noteWindowIds ?? [], validWindows),
+    personalWindowIds: pruneIds(saved.personalWindowIds ?? [], validWindows),
+    timeOverrides: Object.fromEntries(
+      Object.entries(saved.timeOverrides ?? {}).filter(([wid]) =>
+        validWindows.has(wid),
+      ),
+    ),
+  };
+}
+
+function readSavedPlans(): SavedPlans {
+  try {
+    const raw = localStorage.getItem(PLANS_KEY);
+    return raw ? (JSON.parse(raw) as SavedPlans) : {};
+  } catch {
+    return {};
+  }
+}
+
+function writePlanForBoss(bossId: string, slice: SavedPlan) {
+  const plans = readSavedPlans();
+  plans[bossId] = slice;
+  localStorage.setItem(PLANS_KEY, JSON.stringify(plans));
+}
+
 export function PlannerApp() {
   const [step, setStep] = useState<Step>("boss");
   const [bossId, setBossId] = useState<string | null>(null);
   const [poolHealers, setPoolHealers] = useState<Healer[]>([]);
   const [poolTanks, setPoolTanks] = useState<Tank[]>([]);
+  const [poolUtilities, setPoolUtilities] = useState<UtilityCaster[]>([]);
   const [fightPicks, setFightPicks] = useState<FightPicks>({});
   const [lastBossId, setLastBossId] = useState<string | null>(null);
   const [assignments, setAssignments] = useState<Assignment[]>([]);
@@ -58,13 +121,22 @@ export function PlannerApp() {
     {},
   );
   const [hydrated, setHydrated] = useState(false);
+  const isClient = useSyncExternalStore(
+    () => () => {},
+    () => true,
+    () => false,
+  );
 
-  useEffect(() => {
+  if (isClient && !hydrated) {
     try {
       const rawRoster = localStorage.getItem(ROSTER_KEY);
       if (rawRoster) setPoolHealers(JSON.parse(rawRoster) as Healer[]);
       const rawTanks = localStorage.getItem(TANKS_KEY);
       if (rawTanks) setPoolTanks(JSON.parse(rawTanks) as Tank[]);
+      const rawUtilities = localStorage.getItem(UTILITIES_KEY);
+      if (rawUtilities) {
+        setPoolUtilities(JSON.parse(rawUtilities) as UtilityCaster[]);
+      }
       const rawPicks = localStorage.getItem(FIGHT_PICKS_KEY);
       if (rawPicks) setFightPicks(JSON.parse(rawPicks) as FightPicks);
       setLastBossId(localStorage.getItem(LAST_BOSS_KEY));
@@ -72,7 +144,7 @@ export function PlannerApp() {
       /* ignore */
     }
     setHydrated(true);
-  }, []);
+  }
 
   useEffect(() => {
     if (!hydrated) return;
@@ -86,6 +158,11 @@ export function PlannerApp() {
 
   useEffect(() => {
     if (!hydrated) return;
+    localStorage.setItem(UTILITIES_KEY, JSON.stringify(poolUtilities));
+  }, [poolUtilities, hydrated]);
+
+  useEffect(() => {
+    if (!hydrated) return;
     localStorage.setItem(FIGHT_PICKS_KEY, JSON.stringify(fightPicks));
   }, [fightPicks, hydrated]);
 
@@ -94,6 +171,24 @@ export function PlannerApp() {
     if (lastBossId) localStorage.setItem(LAST_BOSS_KEY, lastBossId);
     else localStorage.removeItem(LAST_BOSS_KEY);
   }, [lastBossId, hydrated]);
+
+  /** Persist live plan editors for the current boss (no React state echo). */
+  useEffect(() => {
+    if (!hydrated || !bossId) return;
+    writePlanForBoss(bossId, {
+      assignments,
+      noteWindowIds,
+      personalWindowIds,
+      timeOverrides,
+    });
+  }, [
+    assignments,
+    noteWindowIds,
+    personalWindowIds,
+    timeOverrides,
+    bossId,
+    hydrated,
+  ]);
 
   const healerIdSet = useMemo(
     () => new Set(poolHealers.map((h) => h.id)),
@@ -139,26 +234,69 @@ export function PlannerApp() {
     return poolTanks.filter((t) => activeTankIds.includes(t.id));
   }, [poolTanks, activeTankIds]);
 
-  function setActiveHealerIds(ids: string[]) {
-    if (!bossId) return;
-    setFightPicks((prev) => ({
-      ...prev,
-      [bossId]: {
-        healerIds: ids,
-        tankIds: prev[bossId]?.tankIds ?? activeTankIds,
-      },
-    }));
-  }
+  const utilityIdSet = useMemo(
+    () => new Set(poolUtilities.map((u) => u.id)),
+    [poolUtilities],
+  );
 
-  function setActiveTankIds(ids: string[]) {
+  const activeUtilityIds = useMemo(() => {
+    if (!bossId) return [] as string[];
+    const saved = fightPicks[bossId]?.utilityIds;
+    if (saved !== undefined) {
+      const pruned = pruneIds(saved, utilityIdSet);
+      if (
+        pruned.length === 0 &&
+        saved.length > 0 &&
+        poolUtilities.length > 0
+      ) {
+        return poolUtilities.map((u) => u.id);
+      }
+      return pruned;
+    }
+    if (lastBossId && lastBossId !== bossId) {
+      const fromLast = fightPicks[lastBossId]?.utilityIds;
+      if (fromLast) {
+        const pruned = pruneIds(fromLast, utilityIdSet);
+        if (pruned.length > 0) return pruned;
+      }
+    }
+    return poolUtilities.map((u) => u.id);
+  }, [bossId, fightPicks, utilityIdSet, poolUtilities, lastBossId]);
+
+  const utilities = useMemo(
+    () => poolUtilities.filter((u) => activeUtilityIds.includes(u.id)),
+    [poolUtilities, activeUtilityIds],
+  );
+
+  function fightPickPatch(
+    patch: Partial<{
+      healerIds: string[];
+      tankIds: string[];
+      utilityIds: string[];
+    }>,
+  ) {
     if (!bossId) return;
     setFightPicks((prev) => ({
       ...prev,
       [bossId]: {
         healerIds: prev[bossId]?.healerIds ?? activeHealerIds,
-        tankIds: ids,
+        tankIds: prev[bossId]?.tankIds ?? activeTankIds,
+        utilityIds: prev[bossId]?.utilityIds ?? activeUtilityIds,
+        ...patch,
       },
     }));
+  }
+
+  function setActiveHealerIds(ids: string[]) {
+    fightPickPatch({ healerIds: ids });
+  }
+
+  function setActiveTankIds(ids: string[]) {
+    fightPickPatch({ tankIds: ids });
+  }
+
+  function setActiveUtilityIds(ids: string[]) {
+    fightPickPatch({ utilityIds: ids });
   }
 
   const baseBoss: Boss | undefined = useMemo(
@@ -171,23 +309,30 @@ export function PlannerApp() {
     [baseBoss, timeOverrides],
   );
 
+  function applyPlanSlice(slice: SavedPlan, bossForDefaults: Boss) {
+    setAssignments(slice.assignments);
+    setNoteWindowIds(
+      slice.noteWindowIds.length > 0
+        ? slice.noteWindowIds
+        : defaultNoteWindowIds(bossForDefaults),
+    );
+    setPersonalWindowIds(slice.personalWindowIds);
+    setTimeOverrides(slice.timeOverrides);
+  }
+
   function selectBoss(b: Boss, goRoster = false) {
     const switching = bossId != null && b.id !== bossId;
-    if (
-      switching &&
-      (assignments.length > 0 || Object.keys(timeOverrides).length > 0)
-    ) {
-      const ok = window.confirm(
-        "Switching fight clears the current plan and timer edits. Continue?",
-      );
-      if (!ok) return;
-    }
     if (switching || bossId == null) {
+      if (bossId) {
+        writePlanForBoss(bossId, {
+          assignments,
+          noteWindowIds,
+          personalWindowIds,
+          timeOverrides,
+        });
+      }
       setBossId(b.id);
-      setAssignments([]);
-      setTimeOverrides({});
-      setNoteWindowIds(defaultNoteWindowIds(b));
-      setPersonalWindowIds([]);
+      applyPlanSlice(loadPlanSlice(readSavedPlans(), b.id, b), b);
     }
     setLastBossId(b.id);
     if (goRoster) setStep("roster");
@@ -195,7 +340,7 @@ export function PlannerApp() {
 
   function applyAutoAssign() {
     if (!boss) return;
-    const next = autoAssign(boss, roster, SPELLS, tanks);
+    const next = autoAssign(boss, roster, SPELLS, tanks, undefined, utilities);
     setAssignments(next);
     const personals = autoAssignPersonals(boss);
     setPersonalWindowIds(personals);
@@ -204,6 +349,8 @@ export function PlannerApp() {
         const base = prev.length > 0 ? prev : defaultNoteWindowIds(boss);
         return [...new Set([...base, ...personals])];
       });
+    } else if (noteWindowIds.length === 0) {
+      setNoteWindowIds(defaultNoteWindowIds(boss));
     }
   }
 
@@ -214,14 +361,27 @@ export function PlannerApp() {
       [bossId]: {
         healerIds: activeHealerIds,
         tankIds: activeTankIds,
+        utilityIds: activeUtilityIds,
       },
     }));
     setLastBossId(bossId);
-    applyAutoAssign();
+    if (assignments.length === 0) {
+      applyAutoAssign();
+    } else if (noteWindowIds.length === 0) {
+      setNoteWindowIds(defaultNoteWindowIds(boss));
+    }
     setStep("plan");
   }
 
   function runAutoAssign() {
+    if (
+      assignments.length > 0 &&
+      !window.confirm(
+        "Replace current assignments and suggested personals with a fresh auto-assign?",
+      )
+    ) {
+      return;
+    }
     applyAutoAssign();
   }
 
@@ -239,6 +399,7 @@ export function PlannerApp() {
         bossId: boss.id,
         roster,
         tanks,
+        utilities,
         assignments,
         noteWindowIds,
         personalWindowIds,
@@ -261,8 +422,8 @@ export function PlannerApp() {
           Healer CDA
         </h1>
         <p className="mt-3 max-w-xl text-sm leading-relaxed text-white/55">
-          Full fight timeline to enrage, assign raid CDs and tank externals,
-          choose what goes in the note, then copy for NSRT.
+          Full fight timeline to enrage, assign healer CDs, tank externals, and
+          raid utilities, then copy for NSRT.
         </p>
       </header>
 
@@ -313,12 +474,16 @@ export function PlannerApp() {
             bossName={`${boss.shortName} (${boss.difficulty})`}
             poolHealers={poolHealers}
             poolTanks={poolTanks}
+            poolUtilities={poolUtilities}
             activeHealerIds={activeHealerIds}
             activeTankIds={activeTankIds}
+            activeUtilityIds={activeUtilityIds}
             onPoolHealersChange={setPoolHealers}
             onPoolTanksChange={setPoolTanks}
+            onPoolUtilitiesChange={setPoolUtilities}
             onActiveHealerIdsChange={setActiveHealerIds}
             onActiveTankIdsChange={setActiveTankIds}
+            onActiveUtilityIdsChange={setActiveUtilityIds}
           />
           <div className="flex justify-end gap-2">
             <button
@@ -334,7 +499,9 @@ export function PlannerApp() {
               disabled={roster.length === 0}
               className="rounded-md bg-teal-500 px-4 py-2 text-sm font-semibold text-slate-950 hover:bg-teal-400 disabled:opacity-40"
             >
-              Auto-assign & continue
+              {assignments.length === 0
+                ? "Auto-assign & continue"
+                : "Continue to plan"}
             </button>
           </div>
         </div>
@@ -342,8 +509,8 @@ export function PlannerApp() {
 
       {step === "plan" && boss && plan && (
         <div className="space-y-8">
-          <div className="sticky top-0 z-20 space-y-2 bg-[#050b10]/90 py-1 backdrop-blur-md">
-            <div className="rounded-lg border border-white/10 bg-[#0a1218]/95 px-4 py-3 text-sm text-white/70 shadow-lg shadow-black/20">
+          <div className="sticky top-0 z-20 -mx-4 space-y-2 bg-[#071018] px-4 py-2 sm:-mx-6 sm:px-6">
+            <div className="rounded-lg border border-white/10 bg-[#0c1820] px-4 py-3 text-sm text-white/70">
               <div className="flex flex-wrap items-start justify-between gap-3">
                 <div className="min-w-0 space-y-1">
                   <div>
@@ -418,6 +585,7 @@ export function PlannerApp() {
             boss={boss}
             roster={roster}
             tanks={tanks}
+            utilities={utilities}
             assignments={assignments}
             noteWindowIds={noteWindowIds}
             personalWindowIds={personalWindowIds}

@@ -1,0 +1,61 @@
+---
+description: Expert PR review for Healer CDA (Next 16, React 19, TS, Tailwind 4, Vitest). Use when reviewing PRs, diffs, or merge readiness.
+alwaysApply: false
+---
+
+# PR review — Healer CDA
+
+Review as a senior on this stack. Read the diff first. Prefer blocking issues over style nits. Assume Ponytail: reject unnecessary abstractions and new deps.
+
+## Verdict format
+
+Lead with one of: **Approve** · **Approve with nits** · **Request changes**.
+
+Then:
+
+1. Summary (1–2 sentences — what the PR does)
+2. Blocking issues (if any)
+3. Non-blocking nits
+4. Test plan gaps
+
+Cite paths; skip praise filler.
+
+## Blocking checks
+
+### Architecture
+
+- [ ] Domain (`src/domain/`) stays pure — no React, DOM, `localStorage`, `fetch`, or `@/data/catalog` imports (pass `Spell[]` / data in)
+- [ ] Export formatting stays in `src/export/` — not rebuilt inside components
+- [ ] UI owns persistence and presentation only
+- [ ] No new backend, auth, accounts, or required WCL login
+- [ ] No new runtime dependency unless the PR proves browser/stdlib cannot cover it
+- [ ] App code under `src/app/` (not a second root `app/`)
+
+### Next / React / Tailwind
+
+- [ ] Pages stay thin; interaction in `src/components/`
+- [ ] `"use client"` only where state/effects/browser APIs need it
+- [ ] `localStorage` reads/writes gated by hydration (no SSR mismatch)
+- [ ] Imports use `@/…`; TypeScript `strict` still holds
+- [ ] Tailwind utilities + existing tokens; no second theme / UI kit
+- [ ] Next 16 APIs match `node_modules/next/dist/docs/` (don’t rubber-stamp outdated patterns)
+
+### Domain / data / export
+
+- [ ] Shared shapes extended in `src/domain/types.ts`, not forked in UI
+- [ ] Times stay `timeSec` (seconds); `m:ss` only at UI/export edges
+- [ ] New/changed boss JSON: required window fields (`id`, `timeSec`, `ability`, `trigger`, `severity`, `category`); registered in `catalog.ts`
+- [ ] `assignCd: false` for info rows; personals flagged appropriately
+- [ ] Timer `source` / `sourceUrl` updated when timers change
+- [ ] Auto-assign / cooldown / uncover behavior: colocated Vitest updated when logic changes
+
+## Non-blocking (nits)
+
+- Redundant `"use client"` under an already-client parent
+- Duplicated helpers that already exist (`formatTime`, catalog lookups)
+- Inline `style` for static colors (dynamic geometry / class colors OK)
+- Over-large components that could stay as-is if the diff is already minimal
+
+## Product sense
+
+Reject scope creep: healers, tank externals, raid personals, local-first NSRT export. Prefer JSON timer edits over new infra. Smallest correct diff wins.

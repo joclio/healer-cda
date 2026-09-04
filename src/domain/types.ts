@@ -7,18 +7,32 @@ export type HealerSpec =
   | "holy-paladin"
   | "preservation";
 
-export type SpellKind = "raidThroughput" | "raidDefensive" | "tankExternal";
+export type SpellKind =
+  | "raidThroughput"
+  | "raidDefensive"
+  | "tankExternal"
+  | "raidUtility";
 
 export type WindowSeverity = "tank" | "raid" | "critical";
 export type WindowCategory = "throughput" | "defensive" | "external";
 
 export type BossGroup = "raid" | "lair";
 
+/** Classes that bring tank/DPS raid utility CDs (Rally, AMZ, Darkness, …). */
+export type UtilityClass =
+  | "warrior"
+  | "death-knight"
+  | "demon-hunter"
+  | "rogue";
+
 export interface Spell {
   id: string;
   spellId: number;
   name: string;
-  specs: HealerSpec[];
+  /** Healer specs that can cast this (healer CDs). */
+  specs?: HealerSpec[];
+  /** Classes that can cast this (raid utilities). */
+  classes?: UtilityClass[];
   kind: SpellKind;
   cooldownSec: number;
   durationSec: number;
@@ -127,10 +141,19 @@ export const TANK_CLASS_COLOR: Record<TankClass, string> = {
   "demon-hunter": "#A330C9",
 };
 
+export interface UtilityCaster {
+  id: string;
+  name: string;
+  class: UtilityClass;
+}
+
 export interface Assignment {
   id: string;
   windowId: string;
-  healerId: string;
+  /** Healer assignee (healer CDs / externals). */
+  healerId?: string;
+  /** Utility / tank assignee (raid utility CDs). */
+  utilityId?: string;
   spellId: string;
   timeSec: number;
   /** Target tank when the spell is a tank external. */
@@ -141,11 +164,40 @@ export interface Plan {
   bossId: string;
   roster: Healer[];
   tanks: Tank[];
+  utilities: UtilityCaster[];
   assignments: Assignment[];
   /** Window ids that should appear in exported notes. */
   noteWindowIds: string[];
   /** Windows where the whole raid uses personal defensives. */
   personalWindowIds: string[];
+}
+
+export const UTILITY_CLASS_LABELS: Record<UtilityClass, string> = {
+  warrior: "Warrior",
+  "death-knight": "Death Knight",
+  "demon-hunter": "Demon Hunter",
+  rogue: "Rogue",
+};
+
+export const UTILITY_CLASS_COLOR: Record<UtilityClass, string> = {
+  warrior: "#C69B6D",
+  "death-knight": "#C41E3A",
+  "demon-hunter": "#A330C9",
+  rogue: "#FFF468",
+};
+
+export function isUtilityClass(cls: string | undefined): cls is UtilityClass {
+  return (
+    cls === "warrior" ||
+    cls === "death-knight" ||
+    cls === "demon-hunter" ||
+    cls === "rogue"
+  );
+}
+
+/** Assignee id for cooldown tracking (healer or utility). */
+export function assignmentAssigneeId(a: Assignment): string | undefined {
+  return a.utilityId ?? a.healerId;
 }
 
 export const SPEC_LABELS: Record<HealerSpec, string> = {
@@ -219,11 +271,6 @@ export function specsForClass(cls: HealerClass): HealerSpec[] {
   return (Object.keys(SPEC_TO_CLASS) as HealerSpec[]).filter(
     (s) => SPEC_TO_CLASS[s] === cls,
   );
-}
-
-/** Default CD windows from boss data (`assignCd` defaults true). */
-export function defaultCdWindowIds(boss: Boss): string[] {
-  return boss.windows.filter((w) => w.assignCd !== false).map((w) => w.id);
 }
 
 /** Default windows to export: CD rows, or explicit includeInNote. */

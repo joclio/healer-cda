@@ -69,6 +69,7 @@
       "category": "throughput",
       "phase": 2,
       "assignCd": true,
+      "suggestPersonals": true,
       "note": "Group soak on tank — first Pyre / mid-fight push."
     },
     {

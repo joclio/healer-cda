@@ -1,11 +1,13 @@
-import type { HealerSpec, TankClass } from "@/domain/types";
+import type { HealerSpec, TankClass, UtilityClass } from "@/domain/types";
 
 export type PastedHealer = { name: string; spec: HealerSpec };
 export type PastedTank = { name: string; class: TankClass };
+export type PastedUtility = { name: string; class: UtilityClass };
 
 export type PasteRosterResult = {
   healers: PastedHealer[];
   tanks: PastedTank[];
+  utilities: PastedUtility[];
   skipped: number;
   note: string;
 };
@@ -45,9 +47,11 @@ const SPEC_ALIASES: Record<string, HealerSpec> = {
 
 const HEALER_ROLE = /^(heal|healer|healing|hps)$/i;
 const TANK_ROLE = /^(tank|tanks|tanking)$/i;
+const DPS_ROLE = /^(dps|damage|rdps|mdps|melee|ranged)$/i;
 const HEALER_SECTION = /^healers?\s*\(\d+\)$/i;
 const TANK_SECTION = /^tanks?\s*\(\d+\)$/i;
 const RANGED_SECTION = /^ranged\s*\(\d+\)$/i;
+const MELEE_SECTION = /^melee\s*\(\d+\)$/i;
 const NAME_HEADER = /^name$/i;
 const CLASS_HEADER = /^class$/i;
 
@@ -67,6 +71,14 @@ const TANK_CLASSES = new Set([
   "monk",
   "druid",
   "demon hunter",
+]);
+
+/** Classes that bring raid utility CDs we track. */
+const UTILITY_CLASS_NAMES = new Set([
+  "warrior",
+  "death knight",
+  "demon hunter",
+  "rogue",
 ]);
 
 function norm(s: string): string {
@@ -156,7 +168,22 @@ function resolveTankClass(classRaw: string): TankClass | null {
   return null;
 }
 
-function findCol(grid: string[][], re: RegExp): { row: number; col: number } | null {
+function resolveUtilityClass(
+  classRaw: string,
+  specRaw = "",
+): UtilityClass | null {
+  const s = `${norm(classRaw)} ${norm(specRaw)}`;
+  if (s.includes("death")) return "death-knight";
+  if (s.includes("demon")) return "demon-hunter";
+  if (s.includes("warrior")) return "warrior";
+  if (s.includes("rogue")) return "rogue";
+  return null;
+}
+
+function findCol(
+  grid: string[][],
+  re: RegExp,
+): { row: number; col: number } | null {
   for (let r = 0; r < grid.length; r++) {
     for (let c = 0; c < grid[r].length; c++) {
       if (re.test(grid[r][c] ?? "")) return { row: r, col: c };
@@ -171,6 +198,29 @@ function looksLikeWowAuditRoster(grid: string[][]): boolean {
   );
 }
 
+/** Parse Name/Class pairs from a WowAudit role column band. */
+function parseNameClassBand(
+  grid: string[][],
+  startRow: number,
+  endRow: number,
+  lo: number,
+  hi: number,
+  onPair: (name: string, cls: string) => void,
+): void {
+  let pastNameHeader = false;
+  for (let r = startRow; r < endRow; r++) {
+    const row = grid[r];
+    const slice = compact(row.slice(lo, hi));
+    if (slice.some((c) => NAME_HEADER.test(c) || CLASS_HEADER.test(c))) {
+      pastNameHeader = true;
+      continue;
+    }
+    if (!pastNameHeader) continue;
+    if (slice.length < 2) continue;
+    onPair(slice[0], slice[1]);
+  }
+}
+
 /**
  * WowAudit Main Roster: Healers / Ranged / Melee columns + Tanks block.
  * Uses column ranges so empty healer slots don't pull in ranged names.
@@ -178,47 +228,79 @@ function looksLikeWowAuditRoster(grid: string[][]): boolean {
 function parseWowAuditMainRoster(grid: string[][]): PasteRosterResult {
   const healers: PastedHealer[] = [];
   const tanks: PastedTank[] = [];
+  const utilities: PastedUtility[] = [];
   const seenHeal = new Set<string>();
   const seenTank = new Set<string>();
+  const seenUtil = new Set<string>();
   let skipped = 0;
 
   const healerHdr = findCol(grid, HEALER_SECTION);
   const rangedHdr = findCol(grid, RANGED_SECTION);
+  const meleeHdr = findCol(grid, MELEE_SECTION);
   const tankHdr = findCol(grid, TANK_SECTION);
+  const endRow = tankHdr ? tankHdr.row : grid.length;
 
   if (healerHdr) {
     const lo = Math.max(0, healerHdr.col - 1);
     const hi = rangedHdr ? rangedHdr.col : lo + 6;
-    let pastNameHeader = false;
-
-    for (let r = healerHdr.row + 1; r < grid.length; r++) {
-      if (tankHdr && r >= tankHdr.row) break;
-      const row = grid[r];
-      const slice = compact(row.slice(lo, hi));
-      if (slice.some((c) => NAME_HEADER.test(c))) {
-        pastNameHeader = true;
-        continue;
-      }
-      if (!pastNameHeader) continue;
-      if (slice.length < 2) continue;
-
-      const name = slice[0];
-      const cls = slice[1];
+    parseNameClassBand(grid, healerHdr.row + 1, endRow, lo, hi, (name, cls) => {
       if (!HEALER_CLASSES.has(norm(cls))) {
         skipped++;
-        continue;
+        return;
       }
       const spec = resolveSpec("", cls);
       if (!spec) {
         skipped++;
-        continue;
+        return;
       }
       const key = name.toLowerCase();
       if (!seenHeal.has(key)) {
         healers.push({ name, spec });
         seenHeal.add(key);
       }
+    });
+  }
+
+  function addUtilityFromDps(name: string, cls: string) {
+    if (!UTILITY_CLASS_NAMES.has(norm(cls))) {
+      skipped++;
+      return;
     }
+    const utilityClass = resolveUtilityClass(cls);
+    if (!utilityClass) {
+      skipped++;
+      return;
+    }
+    const key = name.toLowerCase();
+    if (seenHeal.has(key) || seenTank.has(key) || seenUtil.has(key)) return;
+    utilities.push({ name, class: utilityClass });
+    seenUtil.add(key);
+  }
+
+  if (rangedHdr) {
+    const lo = Math.max(0, rangedHdr.col - 1);
+    const hi = meleeHdr ? meleeHdr.col : lo + 6;
+    parseNameClassBand(
+      grid,
+      rangedHdr.row + 1,
+      endRow,
+      lo,
+      hi,
+      addUtilityFromDps,
+    );
+  }
+
+  if (meleeHdr) {
+    const lo = Math.max(0, meleeHdr.col - 1);
+    const hi = lo + 8;
+    parseNameClassBand(
+      grid,
+      meleeHdr.row + 1,
+      endRow,
+      lo,
+      hi,
+      addUtilityFromDps,
+    );
   }
 
   if (tankHdr) {
@@ -259,8 +341,9 @@ function parseWowAuditMainRoster(grid: string[][]): PasteRosterResult {
   return {
     healers,
     tanks,
+    utilities,
     skipped,
-    note: `WowAudit Main Roster: ${healers.length} healers, ${tanks.length} tanks. Specs default from class — edit Disc/Holy after.`,
+    note: `WowAudit Main Roster: ${healers.length} healers, ${tanks.length} tanks, ${utilities.length} raid utilities (Warrior/DK/DH/Rogue DPS). Specs default from class — edit Disc/Holy after.`,
   };
 }
 
@@ -305,9 +388,11 @@ function parseFlatTable(lines: string[]): PasteRosterResult {
 
   const healers: PastedHealer[] = [];
   const tanks: PastedTank[] = [];
+  const utilities: PastedUtility[] = [];
   let skipped = 0;
   const seenHeal = new Set<string>();
   const seenTank = new Set<string>();
+  const seenUtil = new Set<string>();
 
   for (const row of rows) {
     const name = (row[nameIdx] ?? "").trim();
@@ -347,6 +432,17 @@ function parseFlatTable(lines: string[]): PasteRosterResult {
       continue;
     }
 
+    if (role && DPS_ROLE.test(role)) {
+      const utilityClass = resolveUtilityClass(className, specName);
+      if (utilityClass && !seenUtil.has(key) && !seenTank.has(key)) {
+        utilities.push({ name, class: utilityClass });
+        seenUtil.add(key);
+      } else {
+        skipped++;
+      }
+      continue;
+    }
+
     if (role) {
       skipped++;
       continue;
@@ -373,6 +469,15 @@ function parseFlatTable(lines: string[]): PasteRosterResult {
       continue;
     }
 
+    const utilityClass = resolveUtilityClass(className, specName);
+    if (utilityClass) {
+      if (!seenUtil.has(key) && !seenTank.has(key)) {
+        utilities.push({ name, class: utilityClass });
+        seenUtil.add(key);
+      }
+      continue;
+    }
+
     skipped++;
   }
 
@@ -388,8 +493,9 @@ function parseFlatTable(lines: string[]): PasteRosterResult {
   return {
     healers,
     tanks,
+    utilities,
     skipped,
-    note: `Parsed ${healers.length} healers, ${tanks.length} tanks (${cols}; skipped ${skipped}).`,
+    note: `Parsed ${healers.length} healers, ${tanks.length} tanks, ${utilities.length} raid utilities (${cols}; skipped ${skipped}).`,
   };
 }
 
@@ -402,13 +508,25 @@ export function parseRosterPaste(raw: string): PasteRosterResult {
     .filter((l) => l.trim().length > 0);
 
   if (lines.length === 0) {
-    return { healers: [], tanks: [], skipped: 0, note: "Empty paste." };
+    return {
+      healers: [],
+      tanks: [],
+      utilities: [],
+      skipped: 0,
+      note: "Empty paste.",
+    };
   }
 
   const grid = lines.map(splitLine);
   if (looksLikeWowAuditRoster(grid)) {
     const result = parseWowAuditMainRoster(grid);
-    if (result.healers.length > 0 || result.tanks.length > 0) return result;
+    if (
+      result.healers.length > 0 ||
+      result.tanks.length > 0 ||
+      result.utilities.length > 0
+    ) {
+      return result;
+    }
   }
 
   return parseFlatTable(lines);

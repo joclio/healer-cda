@@ -213,6 +213,7 @@
       "category": "defensive",
       "phase": 2,
       "assignCd": true,
+      "suggestPersonals": true,
       "note": "Dense coil soak cluster. Soft CD / throughput if the raid is dripping from Rage."
     },
     {

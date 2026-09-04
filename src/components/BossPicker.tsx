@@ -70,14 +70,9 @@ export function BossPicker({ selectedId, lastBossId, onSelect }: Props) {
 
       {lair.length > 0 && (
         <section>
-          <div className="mb-2 flex flex-wrap items-baseline gap-2">
-            <h2 className="text-xs font-semibold uppercase tracking-[0.2em] text-amber-300/70">
-              Also
-            </h2>
-            <span className="text-[11px] text-white/35">
-              Tidebound Grotto
-            </span>
-          </div>
+          <h2 className="mb-3 text-xs font-semibold uppercase tracking-[0.2em] text-teal-300/70">
+            Raid — Tidebound Grotto
+          </h2>
           <div className="grid grid-cols-1 gap-3 sm:grid-cols-2 lg:grid-cols-4">
             {lair.map((slot) => (
               <BossSlotCard
@@ -168,14 +163,14 @@ function BossSlotCard({
             active={selectedId === slot.mythic.id}
             onClick={() => onSelect(slot.mythic!, true)}
           />
-        ) : slot.group === "raid" ? (
+        ) : (
           <span
             className="rounded-md border border-dashed border-white/10 px-2 py-1 text-[11px] text-white/30"
             title="No Mythic kills on WCL yet"
           >
             Mythic soon
           </span>
-        ) : null}
+        )}
       </div>
     </div>
   );

@@ -78,10 +78,10 @@
       "abilitySpellId": 1296094,
       "trigger": "WCL 1:19",
       "severity": "raid",
-      "category": "defensive",
+      "category": "throughput",
       "phase": 2,
       "assignCd": true,
-      "note": "Into Dark Whispers / late fight."
+      "note": "Empowered slam pressure."
     },
     {
       "id": "lem-mighty-thud2",
@@ -90,10 +90,10 @@
       "abilitySpellId": 1296094,
       "trigger": "WCL 1:51",
       "severity": "raid",
-      "category": "throughput",
+      "category": "defensive",
       "phase": 2,
       "assignCd": true,
-      "note": "Empowered slam pressure."
+      "note": "Into Dark Whispers / late fight."
     },
     {
       "id": "lem-dark-whispers1",

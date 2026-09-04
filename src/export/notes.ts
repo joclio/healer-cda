@@ -1,14 +1,42 @@
 import { getSpell } from "@/data/catalog";
 import { formatTime } from "@/domain/time";
-import type { Assignment, Boss, Healer, Plan, Tank } from "@/domain/types";
+import type {
+  Assignment,
+  Boss,
+  Healer,
+  Plan,
+  Tank,
+  UtilityCaster,
+} from "@/domain/types";
 
-function healerName(roster: Healer[], id: string): string {
+function healerName(roster: Healer[], id: string | undefined): string {
+  if (!id) return "?";
   return roster.find((h) => h.id === id)?.name ?? id;
 }
 
 function tankName(tanks: Tank[], id: string | undefined): string | null {
   if (!id) return null;
   return tanks.find((t) => t.id === id)?.name ?? id;
+}
+
+function utilityName(
+  utilities: UtilityCaster[],
+  tanks: Tank[],
+  id: string | undefined,
+): string {
+  if (!id) return "?";
+  return (
+    utilities.find((u) => u.id === id)?.name ??
+    tanks.find((t) => t.id === id)?.name ??
+    id
+  );
+}
+
+function assigneeName(plan: Plan, a: Assignment): string {
+  if (a.utilityId) {
+    return utilityName(plan.utilities ?? [], plan.tanks, a.utilityId);
+  }
+  return healerName(plan.roster, a.healerId);
 }
 
 function noteWindows(plan: Plan, boss: Boss) {
@@ -49,11 +77,13 @@ export function toTextNote(plan: Plan, boss: Boss): string {
           ? " (Tank)"
           : spell?.kind === "raidDefensive"
             ? " (DR)"
-            : "";
+            : spell?.kind === "raidUtility"
+              ? " (Raid)"
+              : "";
       const onTank = tankName(plan.tanks, a.tankId);
       const target = onTank ? ` → ${onTank}` : "";
       lines.push(
-        `         → ${spell?.name ?? a.spellId}${tag} — ${healerName(plan.roster, a.healerId)}${target}`,
+        `         → ${spell?.name ?? a.spellId}${tag} — ${assigneeName(plan, a)}${target}`,
       );
     }
   }
@@ -109,20 +139,20 @@ export function toNsrtNote(plan: Plan, boss: Boss): string {
 
     for (const a of assigned) {
       const spell = getSpell(a.spellId);
-      const healer = healerName(plan.roster, a.healerId);
+      const who = assigneeName(plan, a);
       const onTank = tankName(plan.tanks, a.tankId);
       const text = spell
         ? onTank
-          ? `${healer} ${spell.name} → ${onTank} @ ${window.ability}`
-          : `${healer} ${spell.name} @ ${window.ability}`
-        : `${healer} ${a.spellId}`;
+          ? `${who} ${spell.name} → ${onTank} @ ${window.ability}`
+          : `${who} ${spell.name} @ ${window.ability}`
+        : `${who} ${a.spellId}`;
 
       lines.push(
         [
           `EncounterID:${boss.encounterId}`,
           `time:${a.timeSec}`,
           `ph:${phase}`,
-          `tag:{${healer}}`,
+          `tag:{${who}}`,
           spell ? `spellid:${spell.spellId}` : null,
           `text:${text}`,
           `countdown:5`,
@@ -134,14 +164,4 @@ export function toNsrtNote(plan: Plan, boss: Boss): string {
   }
 
   return lines.join("\n");
-}
-
-export function assignmentLabel(
-  a: Assignment,
-  roster: Healer[],
-): { spellName: string; healerName: string } {
-  return {
-    spellName: getSpell(a.spellId)?.name ?? a.spellId,
-    healerName: healerName(roster, a.healerId),
-  };
 }

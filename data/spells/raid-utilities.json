@@ -1,0 +1,38 @@
+[
+  {
+    "id": "rallying-cry",
+    "spellId": 97462,
+    "name": "Rallying Cry",
+    "classes": ["warrior"],
+    "kind": "raidUtility",
+    "cooldownSec": 180,
+    "durationSec": 10
+  },
+  {
+    "id": "anti-magic-zone",
+    "spellId": 51052,
+    "name": "Anti-Magic Zone",
+    "classes": ["death-knight"],
+    "kind": "raidUtility",
+    "cooldownSec": 120,
+    "durationSec": 10
+  },
+  {
+    "id": "darkness",
+    "spellId": 196718,
+    "name": "Darkness",
+    "classes": ["demon-hunter"],
+    "kind": "raidUtility",
+    "cooldownSec": 180,
+    "durationSec": 8
+  },
+  {
+    "id": "smoke-bomb",
+    "spellId": 212182,
+    "name": "Smoke Bomb",
+    "classes": ["rogue"],
+    "kind": "raidUtility",
+    "cooldownSec": 180,
+    "durationSec": 5
+  }
+]
