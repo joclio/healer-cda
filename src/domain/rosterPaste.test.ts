@@ -22,9 +22,8 @@ describe("parseRosterPaste", () => {
     expect(r.tanks).toEqual([{ name: "Eglantina", class: "warrior" }]);
     expect(r.utilities).toEqual([
       { name: "AmzBoy", class: "death-knight" },
-      { name: "Smoke", class: "rogue" },
     ]);
-    expect(r.skipped).toBe(1);
+    expect(r.skipped).toBe(2);
   });
 
   it("parses headerless name + spec lines", () => {
@@ -74,8 +73,6 @@ describe("parseRosterPaste", () => {
       { name: "Wargyu", class: "warrior" },
       { name: "Mamuthe", class: "death-knight" },
       { name: "Zilbag", class: "death-knight" },
-      { name: "Neroditty", class: "rogue" },
-      { name: "Fefalas", class: "rogue" },
       { name: "Maeliel", class: "demon-hunter" },
     ]);
   });

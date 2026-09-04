@@ -57,6 +57,14 @@ export function utilityCastersForAssign(
   return out;
 }
 
+/** Ids that may appear as Assignment.utilityId (DPS utilities + matching tanks). */
+export function utilityAssigneeIds(
+  utilities: UtilityCaster[],
+  tanks: Tank[],
+): Set<string> {
+  return new Set(utilityCastersForAssign(utilities, tanks).map((c) => c.id));
+}
+
 /** Two uses of the same CD conflict if closer than the cooldown. */
 export function cooldownConflict(
   timeA: number,

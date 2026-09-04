@@ -1,12 +1,16 @@
 /**
- * Compare planner boss windows vs WCL Heroic kill cast consensus.
+ * Compare planner boss windows vs current WCL speed-kill cast consensus.
+ * Uses Heroic rankings for Heroic JSON, Mythic rankings for *-mythic.json.
  * Usage: node scripts/wcl-compare-bosses.mjs [killsPerBoss=4]
  */
 import fs from "fs";
 import path from "path";
 
 const KILLS = Number(process.argv[2] || 4);
-const DIFFICULTY = 4;
+
+function difficultyFor(boss) {
+  return boss.difficulty === "Mythic" ? 5 : 4;
+}
 
 function loadEnv() {
   for (const file of [".env.local", ".env"]) {
@@ -69,7 +73,7 @@ function median(nums) {
   return a.length % 2 ? a[mid] : Math.round((a[mid - 1] + a[mid]) / 2);
 }
 
-async function rankingKills(token, encounterID) {
+async function rankingKills(token, encounterID, difficulty) {
   const rank = await gql(
     token,
     `query($id:Int!,$d:Int!){
@@ -80,7 +84,7 @@ async function rankingKills(token, encounterID) {
         }
       }
     }`,
-    { id: encounterID, d: DIFFICULTY },
+    { id: encounterID, d: difficulty },
   );
   const fr = rank.worldData.encounter.fightRankings;
   return {
@@ -185,15 +189,6 @@ function timesForSpell(kills, spellId) {
   );
 }
 
-function consensusNth(killLists, n) {
-  const vals = [];
-  for (const list of killLists) {
-    if (list[n] != null) vals.push(list[n]);
-  }
-  if (!vals.length) return null;
-  return { median: median(vals), min: Math.min(...vals), max: Math.max(...vals), n: vals.length };
-}
-
 const bosses = fs
   .readdirSync("data/bosses")
   .filter((f) => f.endsWith(".json"))
@@ -205,15 +200,25 @@ const token = await getToken();
 const out = {};
 
 for (const boss of bosses) {
-  console.log(`\n######## ${boss.name} (${boss.encounterId}) ########`);
+  const difficulty = difficultyFor(boss);
+  const diffLabel = difficulty === 5 ? "Mythic" : "Heroic";
+  console.log(
+    `\n######## ${boss.name} (${boss.encounterId}) [${diffLabel} / ${boss.file}] ########`,
+  );
   let ranking;
   try {
-    ranking = await rankingKills(token, boss.encounterId);
+    ranking = await rankingKills(token, boss.encounterId, difficulty);
   } catch (e) {
     console.log("  rankings failed:", e.message.slice(0, 200));
     continue;
   }
-  console.log(`  WCL name: ${ranking.name} — fetching ${ranking.rows.length} speed kills…`);
+  if (!ranking.rows.length) {
+    console.log(`  No ${diffLabel} rankings — skip`);
+    continue;
+  }
+  console.log(
+    `  WCL name: ${ranking.name} — fetching ${ranking.rows.length} ${diffLabel} speed kills…`,
+  );
 
   const kills = [];
   for (const row of ranking.rows) {
@@ -248,6 +253,35 @@ for (const boss of bosses) {
 
   console.log("\n  --- Planner vs WCL median ---");
   const diffs = [];
+
+  // Cluster cast times per spell across kills (same logic as sequence dump).
+  const clustersBySpell = new Map();
+  for (const w of boss.windows) {
+    if (!w.abilitySpellId || clustersBySpell.has(w.abilitySpellId)) continue;
+    const allTimes = [];
+    for (const list of timesForSpell(kills, w.abilitySpellId)) {
+      allTimes.push(...list);
+    }
+    allTimes.sort((a, b) => a - b);
+    const clusters = [];
+    for (const t of allTimes) {
+      const last = clusters[clusters.length - 1];
+      if (last && Math.abs(median(last) - t) < 12) last.push(t);
+      else clusters.push([t]);
+    }
+    clustersBySpell.set(
+      w.abilitySpellId,
+      clusters
+        .filter((c) => c.length >= Math.ceil(kills.length * 0.5))
+        .map((c, i) => ({
+          i,
+          med: median(c),
+          vals: c,
+          spread: Math.max(...c) - Math.min(...c),
+        })),
+    );
+  }
+
   for (const w of boss.windows) {
     if (!w.abilitySpellId) {
       console.log(
@@ -255,30 +289,14 @@ for (const boss of bosses) {
       );
       continue;
     }
-    const lists = timesForSpell(kills, w.abilitySpellId);
-    // Match planner time to nearest cast of same spell within ±45s across kills, using occurrence index
-    // Find which occurrence index is closest to planner timeSec
-    const allOcc = [];
-    for (const list of lists) {
-      list.forEach((t, i) => allOcc.push({ i, t }));
-    }
-    // Prefer occurrence whose median is closest to planner
-    const byIndex = new Map();
-    for (const list of lists) {
-      list.forEach((t, i) => {
-        if (!byIndex.has(i)) byIndex.set(i, []);
-        byIndex.get(i).push(t);
-      });
-    }
+    const clusters = clustersBySpell.get(w.abilitySpellId) || [];
     let best = null;
-    for (const [i, vals] of byIndex) {
-      const med = median(vals);
-      const delta = Math.abs(med - w.timeSec);
-      if (!best || delta < best.delta) best = { i, med, delta, vals };
+    for (const c of clusters) {
+      const delta = Math.abs(c.med - w.timeSec);
+      if (!best || delta < best.delta) best = { ...c, delta };
     }
 
     if (!best) {
-      // try name match fuzzy from first kill casts
       console.log(
         `  ${fmt(w.timeSec).padStart(5)}  ${w.ability.padEnd(40)}  NO WCL casts for ${w.abilitySpellId}`,
       );
@@ -286,11 +304,10 @@ for (const boss of bosses) {
       continue;
     }
 
-    const spread = Math.max(...best.vals) - Math.min(...best.vals);
     const flag =
       best.delta > 8 ? "DIFF" : best.delta > 3 ? "~" : "ok";
     console.log(
-      `  ${fmt(w.timeSec).padStart(5)}→${fmt(best.med).padStart(5)}  Δ${String(best.delta).padStart(3)}s  [${flag}]  ${w.ability}  (occ#${best.i + 1}, spread ${spread}s, n=${best.vals.length})`,
+      `  ${fmt(w.timeSec).padStart(5)}→${fmt(best.med).padStart(5)}  Δ${String(best.delta).padStart(3)}s  [${flag}]  ${w.ability}  (occ#${best.i + 1}, spread ${best.spread}s, n=${best.vals.length})`,
     );
     diffs.push({
       window: w,
@@ -298,7 +315,7 @@ for (const boss of bosses) {
       wclMedian: best.med,
       delta: best.delta,
       occ: best.i,
-      spread,
+      spread: best.spread,
     });
   }
 

@@ -14,8 +14,8 @@
     "name": "Anti-Magic Zone",
     "classes": ["death-knight"],
     "kind": "raidUtility",
-    "cooldownSec": 120,
-    "durationSec": 10
+    "cooldownSec": 180,
+    "durationSec": 8
   },
   {
     "id": "darkness",
@@ -25,14 +25,5 @@
     "kind": "raidUtility",
     "cooldownSec": 180,
     "durationSec": 8
-  },
-  {
-    "id": "smoke-bomb",
-    "spellId": 212182,
-    "name": "Smoke Bomb",
-    "classes": ["rogue"],
-    "kind": "raidUtility",
-    "cooldownSec": 180,
-    "durationSec": 5
   }
 ]
