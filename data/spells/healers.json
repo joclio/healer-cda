@@ -122,7 +122,7 @@
     "name": "Blessing of Sacrifice",
     "specs": ["holy-paladin"],
     "kind": "tankExternal",
-    "cooldownSec": 60,
+    "cooldownSec": 120,
     "durationSec": 12
   },
   {
@@ -140,7 +140,7 @@
     "name": "Rewind",
     "specs": ["preservation"],
     "kind": "raidThroughput",
-    "cooldownSec": 240,
+    "cooldownSec": 180,
     "durationSec": 0
   },
   {

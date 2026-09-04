@@ -1,4 +1,489 @@
 {
+  "nekzali-mythic": {
+    "file": "nekzali-mythic.json",
+    "encounterId": 3470,
+    "kills": [
+      {
+        "code": "9wd3qxabQtJMz7fW",
+        "fightId": 20,
+        "duration": 383,
+        "url": "https://www.warcraftlogs.com/reports/9wd3qxabQtJMz7fW?fight=20",
+        "title": "The Venomous Abyss"
+      },
+      {
+        "code": "xYD24WwFbrM9B3PA",
+        "fightId": 12,
+        "duration": 386,
+        "url": "https://www.warcraftlogs.com/reports/xYD24WwFbrM9B3PA?fight=12",
+        "title": "The Venomous Abyss"
+      },
+      {
+        "code": "Rz8fMGCraYyP72pW",
+        "fightId": 24,
+        "duration": 387,
+        "url": "https://www.warcraftlogs.com/reports/Rz8fMGCraYyP72pW?fight=24",
+        "title": "HEROIC SPLIT #15"
+      },
+      {
+        "code": "Tjz2qdPMHQpxACV8",
+        "fightId": 11,
+        "duration": 389,
+        "url": "https://www.warcraftlogs.com/reports/Tjz2qdPMHQpxACV8?fight=11",
+        "title": "Tues Raid"
+      }
+    ],
+    "diffs": [
+      {
+        "window": {
+          "id": "nkm-ign1",
+          "timeSec": 3,
+          "ability": "Soulcoil Ignition #1",
+          "abilitySpellId": 1285681,
+          "trigger": "WCL 0:03",
+          "severity": "critical",
+          "category": "throughput",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Opener ignition — overlaps Ritual Burn."
+        },
+        "status": "ok",
+        "wclMedian": 3,
+        "delta": 0,
+        "occ": 0,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "nkm-burn1",
+          "timeSec": 5,
+          "ability": "Ritual Burn #1",
+          "abilitySpellId": 1297624,
+          "trigger": "WCL 0:05",
+          "severity": "raid",
+          "category": "defensive",
+          "phase": 1,
+          "assignCd": false,
+          "note": "Paired with opener Ignition."
+        },
+        "status": "ok",
+        "wclMedian": 5,
+        "delta": 0,
+        "occ": 1,
+        "spread": 1
+      },
+      {
+        "window": {
+          "id": "nkm-barrage1",
+          "timeSec": 34,
+          "ability": "Possession Barrage #1",
+          "abilitySpellId": 1284103,
+          "trigger": "WCL 0:34",
+          "severity": "tank",
+          "category": "external",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Tank frontal — ~36s cycle in P1."
+        },
+        "status": "ok",
+        "wclMedian": 34,
+        "delta": 0,
+        "occ": 0,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "nkm-barrage2",
+          "timeSec": 70,
+          "ability": "Possession Barrage #2",
+          "abilitySpellId": 1284103,
+          "trigger": "WCL 1:10",
+          "severity": "tank",
+          "category": "external",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Second barrage into Ignition #2."
+        },
+        "status": "ok",
+        "wclMedian": 70,
+        "delta": 0,
+        "occ": 1,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "nkm-ign2",
+          "timeSec": 78,
+          "ability": "Soulcoil Ignition #2",
+          "abilitySpellId": 1285681,
+          "trigger": "WCL 1:18",
+          "severity": "critical",
+          "category": "defensive",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Second Ignition + Ritual Burn (~1:20)."
+        },
+        "status": "ok",
+        "wclMedian": 78,
+        "delta": 0,
+        "occ": 1,
+        "spread": 1
+      },
+      {
+        "window": {
+          "id": "nkm-barrage3",
+          "timeSec": 105,
+          "ability": "Possession Barrage #3",
+          "abilitySpellId": 1284103,
+          "trigger": "WCL 1:45",
+          "severity": "tank",
+          "category": "external",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Third barrage."
+        },
+        "status": "ok",
+        "wclMedian": 105,
+        "delta": 0,
+        "occ": 2,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "nkm-barrage4",
+          "timeSec": 141,
+          "ability": "Possession Barrage #4",
+          "abilitySpellId": 1284103,
+          "trigger": "WCL 2:21",
+          "severity": "tank",
+          "category": "external",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Into Ritual of Awakening / intermission."
+        },
+        "status": "ok",
+        "wclMedian": 141,
+        "delta": 0,
+        "occ": 3,
+        "spread": 177
+      },
+      {
+        "window": {
+          "id": "nkm-awaken",
+          "timeSec": 143,
+          "ability": "Ritual of Awakening",
+          "abilitySpellId": 1295124,
+          "trigger": "WCL 2:23",
+          "severity": "critical",
+          "category": "throughput",
+          "phase": 2,
+          "assignCd": true,
+          "note": "Intermission start — Awakening into Hungering Pyre sets."
+        },
+        "status": "ok",
+        "wclMedian": 143,
+        "delta": 0,
+        "occ": 0,
+        "spread": 2
+      },
+      {
+        "window": {
+          "id": "nkm-pyre1",
+          "timeSec": 178,
+          "ability": "Hungering Pyre #1",
+          "abilitySpellId": 1294742,
+          "trigger": "WCL 2:58",
+          "severity": "critical",
+          "category": "defensive",
+          "phase": 2,
+          "assignCd": true,
+          "suggestPersonals": true,
+          "note": "First Pyre soak cluster."
+        },
+        "status": "~",
+        "wclMedian": 172,
+        "delta": 6,
+        "occ": 0,
+        "spread": 7
+      },
+      {
+        "window": {
+          "id": "nkm-pyre2",
+          "timeSec": 207,
+          "ability": "Hungering Pyre #2",
+          "abilitySpellId": 1294742,
+          "trigger": "WCL 3:27",
+          "severity": "critical",
+          "category": "throughput",
+          "phase": 2,
+          "assignCd": true,
+          "note": "Second Pyre."
+        },
+        "status": "ok",
+        "wclMedian": 207,
+        "delta": 0,
+        "occ": 1,
+        "spread": 24
+      },
+      {
+        "window": {
+          "id": "nkm-pyre3",
+          "timeSec": 234,
+          "ability": "Hungering Pyre #3",
+          "abilitySpellId": 1294742,
+          "trigger": "WCL 3:54",
+          "severity": "critical",
+          "category": "defensive",
+          "phase": 2,
+          "assignCd": true,
+          "note": "Third Pyre — into Stage 2."
+        },
+        "status": "~",
+        "wclMedian": 229,
+        "delta": 5,
+        "occ": 2,
+        "spread": 7
+      },
+      {
+        "window": {
+          "id": "nkm-pyre4",
+          "timeSec": 264,
+          "ability": "Hungering Pyre #4",
+          "abilitySpellId": 1294742,
+          "trigger": "WCL 4:24 (slower kills)",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 2,
+          "assignCd": true,
+          "note": "Fourth Pyre on some kills before first Invoke."
+        },
+        "status": "ok",
+        "wclMedian": 263,
+        "delta": 1,
+        "occ": 3,
+        "spread": 2
+      },
+      {
+        "window": {
+          "id": "nkm-invoke1",
+          "timeSec": 285,
+          "ability": "Invoke #1 (+ Ritual Burn)",
+          "abilitySpellId": 1299673,
+          "trigger": "WCL 4:45",
+          "severity": "critical",
+          "category": "defensive",
+          "phase": 3,
+          "assignCd": true,
+          "note": "Stage 2 — Invoke overlaps Ritual Burn. Lust here."
+        },
+        "status": "ok",
+        "wclMedian": 285,
+        "delta": 0,
+        "occ": 0,
+        "spread": 6
+      },
+      {
+        "window": {
+          "id": "nkm-barrage5",
+          "timeSec": 318,
+          "ability": "Possession Barrage #5",
+          "abilitySpellId": 1284103,
+          "trigger": "WCL 5:18",
+          "severity": "tank",
+          "category": "external",
+          "phase": 3,
+          "assignCd": true,
+          "note": "Stage 2 tank frontal."
+        },
+        "status": "ok",
+        "wclMedian": 319,
+        "delta": 1,
+        "occ": 4,
+        "spread": 31
+      },
+      {
+        "window": {
+          "id": "nkm-invoke2",
+          "timeSec": 333,
+          "ability": "Invoke #2 (+ Ritual Burn)",
+          "abilitySpellId": 1299673,
+          "trigger": "WCL 5:33",
+          "severity": "critical",
+          "category": "throughput",
+          "phase": 3,
+          "assignCd": true,
+          "note": "Second Invoke."
+        },
+        "status": "ok",
+        "wclMedian": 333,
+        "delta": 0,
+        "occ": 1,
+        "spread": 6
+      },
+      {
+        "window": {
+          "id": "nkm-barrage6",
+          "timeSec": 346,
+          "ability": "Possession Barrage #6",
+          "abilitySpellId": 1284103,
+          "trigger": "WCL 5:46",
+          "severity": "tank",
+          "category": "external",
+          "phase": 3,
+          "assignCd": true,
+          "note": "Late barrage into final Invoke."
+        },
+        "status": "ok",
+        "wclMedian": 345,
+        "delta": 1,
+        "occ": 5,
+        "spread": 6
+      },
+      {
+        "window": {
+          "id": "nkm-invoke3",
+          "timeSec": 365,
+          "ability": "Invoke #3 (+ Ritual Burn)",
+          "abilitySpellId": 1299673,
+          "trigger": "WCL 6:05",
+          "severity": "critical",
+          "category": "defensive",
+          "phase": 3,
+          "assignCd": true,
+          "note": "Final Invoke — leftover raid CDs into ~6:25 kill."
+        },
+        "status": "ok",
+        "wclMedian": 365,
+        "delta": 0,
+        "occ": 2,
+        "spread": 6
+      }
+    ],
+    "sequences": [
+      {
+        "spellId": 1293664,
+        "name": "Soulcoil Ignition",
+        "occ": [
+          3,
+          77
+        ]
+      },
+      {
+        "spellId": 1285681,
+        "name": "Soulcoil Ignition",
+        "occ": [
+          3,
+          78
+        ]
+      },
+      {
+        "spellId": 1297624,
+        "name": "Ritual Burn",
+        "occ": [
+          5,
+          80,
+          285,
+          333,
+          365
+        ]
+      },
+      {
+        "spellId": 145629,
+        "name": "Anti-Magic Zone",
+        "occ": [
+          32,
+          349
+        ]
+      },
+      {
+        "spellId": 1284103,
+        "name": "Possession Barrage",
+        "occ": [
+          34,
+          70,
+          105,
+          141,
+          318,
+          346
+        ]
+      },
+      {
+        "spellId": 1287533,
+        "name": "Gravebound Advance",
+        "occ": [
+          54,
+          123,
+          196,
+          253,
+          303,
+          342,
+          384
+        ]
+      },
+      {
+        "spellId": 1293660,
+        "name": "Soulcoil Ignition",
+        "occ": [
+          77
+        ]
+      },
+      {
+        "spellId": 1295124,
+        "name": "Ritual of Awakening",
+        "occ": [
+          143
+        ]
+      },
+      {
+        "spellId": 1289902,
+        "name": "Soul Transfer",
+        "occ": [
+          154
+        ]
+      },
+      {
+        "spellId": 1293211,
+        "name": "Soul Transfer",
+        "occ": [
+          161
+        ]
+      },
+      {
+        "spellId": 1292248,
+        "name": "Soul Transfer",
+        "occ": [
+          169,
+          227
+        ]
+      },
+      {
+        "spellId": 1294742,
+        "name": "Hungering Pyre",
+        "occ": [
+          172,
+          207,
+          230,
+          263
+        ]
+      },
+      {
+        "spellId": 1289855,
+        "name": "Hungering Pyre",
+        "occ": [
+          180,
+          237
+        ]
+      },
+      {
+        "spellId": 1299673,
+        "name": "Invoke",
+        "occ": [
+          285,
+          333,
+          365
+        ]
+      }
+    ]
+  },
   "nekzali": {
     "file": "nekzali.json",
     "encounterId": 3470,
@@ -23,6 +508,13 @@
         "duration": 227,
         "url": "https://www.warcraftlogs.com/reports/dnFMLRmgZXy6bY7r?fight=4",
         "title": "LE TRINKET UEEEEEEEEEEEEEEE"
+      },
+      {
+        "code": "1bJP42hvznkwRTtH",
+        "fightId": 6,
+        "duration": 228,
+        "url": "https://www.warcraftlogs.com/reports/1bJP42hvznkwRTtH?fight=6",
+        "title": "The Venomous Abyss"
       }
     ],
     "diffs": [
@@ -32,11 +524,12 @@
           "timeSec": 3,
           "ability": "Soulcoil Ignition #1",
           "abilitySpellId": 1285681,
-          "trigger": "BW pull bar 3s → then 74.5s / 70.5s",
+          "trigger": "WCL 0:03",
           "severity": "critical",
           "category": "throughput",
           "phase": 1,
-          "note": "Primary healer CD. Heroic: Soulcoil Rite + Ritual Burn overlap."
+          "assignCd": true,
+          "note": "Opener ignition. Heroic: overlaps Ritual Burn."
         },
         "status": "ok",
         "wclMedian": 3,
@@ -46,135 +539,156 @@
       },
       {
         "window": {
-          "id": "nk-tank1",
-          "timeSec": 45,
-          "ability": "Possession Barrage (tank)",
-          "abilitySpellId": 1292036,
-          "trigger": "first Barrage ~36s; external after stacks",
+          "id": "nk-burn1",
+          "timeSec": 5,
+          "ability": "Ritual Burn #1",
+          "abilitySpellId": 1297624,
+          "trigger": "WCL 0:05",
+          "severity": "raid",
+          "category": "defensive",
+          "phase": 1,
+          "assignCd": false,
+          "note": "Paired with opener Ignition — usually covered by the same CD."
+        },
+        "status": "ok",
+        "wclMedian": 5,
+        "delta": 0,
+        "occ": 1,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "nk-barrage1",
+          "timeSec": 34,
+          "ability": "Possession Barrage #1",
+          "abilitySpellId": 1284103,
+          "trigger": "WCL 0:34",
           "severity": "tank",
           "category": "external",
           "phase": 1,
-          "note": "Tank frontal — not a raid CD. External if needed."
-        },
-        "status": "missing"
-      },
-      {
-        "window": {
-          "id": "nk-ign2",
-          "timeSec": 78,
-          "ability": "Soulcoil Ignition #2",
-          "abilitySpellId": 1285681,
-          "trigger": "3 + 74.5s",
-          "severity": "critical",
-          "category": "defensive",
-          "phase": 1
+          "assignCd": true,
+          "note": "Tank frontal — external if stacks are high."
         },
         "status": "ok",
-        "wclMedian": 75,
-        "delta": 3,
-        "occ": 1,
+        "wclMedian": 34,
+        "delta": 0,
+        "occ": 0,
         "spread": 0
       },
       {
         "window": {
-          "id": "nk-ign3",
-          "timeSec": 148,
-          "ability": "Soulcoil Ignition #3",
-          "abilitySpellId": 1285681,
-          "trigger": "78 + 70.5s",
-          "severity": "critical",
-          "category": "throughput",
-          "phase": 1
-        },
-        "status": "DIFF",
-        "wclMedian": 75,
-        "delta": 73,
-        "occ": 1,
-        "spread": 0
-      },
-      {
-        "window": {
-          "id": "nk-ign4",
-          "timeSec": 219,
-          "ability": "Soulcoil Ignition #4 / 100 Energy",
-          "abilitySpellId": 1285681,
-          "trigger": "148 + 70.5s (or earlier if Amani hit the well)",
+          "id": "nk-burn2",
+          "timeSec": 76,
+          "ability": "Ritual Burn #2",
+          "abilitySpellId": 1297624,
+          "trigger": "WCL 1:16",
           "severity": "critical",
           "category": "defensive",
           "phase": 1,
-          "note": "4th Ignition = 100 Energy unless adds fed the well. Edit if your pace differs."
+          "assignCd": true,
+          "note": "Second major burn window."
         },
-        "status": "DIFF",
-        "wclMedian": 75,
-        "delta": 144,
-        "occ": 1,
+        "status": "ok",
+        "wclMedian": 77,
+        "delta": 1,
+        "occ": 4,
         "spread": 0
       },
       {
         "window": {
-          "id": "nk-pyre",
-          "timeSec": 230,
-          "ability": "Hungering Pyre (Intermission)",
-          "abilitySpellId": 1305421,
-          "trigger": "edit — intermission at ~50% HP",
+          "id": "nk-pyre1",
+          "timeSec": 99,
+          "ability": "Hungering Pyre #1",
+          "abilitySpellId": 1294742,
+          "trigger": "WCL 1:39",
           "severity": "critical",
           "category": "throughput",
           "phase": 2,
-          "note": "Group soak on tank. Slide to your intermission."
+          "assignCd": true,
+          "suggestPersonals": true,
+          "note": "Group soak on tank — first Pyre / mid-fight push."
         },
-        "status": "missing"
+        "status": "ok",
+        "wclMedian": 99,
+        "delta": 0,
+        "occ": 0,
+        "spread": 4
+      },
+      {
+        "window": {
+          "id": "nk-pyre2",
+          "timeSec": 134,
+          "ability": "Hungering Pyre #2",
+          "abilitySpellId": 1294742,
+          "trigger": "WCL 2:14",
+          "severity": "critical",
+          "category": "defensive",
+          "phase": 2,
+          "assignCd": true,
+          "note": "Second Pyre before Stage 2 Invoke."
+        },
+        "status": "ok",
+        "wclMedian": 135,
+        "delta": 1,
+        "occ": 1,
+        "spread": 6
       },
       {
         "window": {
           "id": "nk-invoke1",
-          "timeSec": 270,
-          "ability": "Invoke #1 (Stage 2)",
+          "timeSec": 161,
+          "ability": "Invoke #1 (+ Ritual Burn)",
           "abilitySpellId": 1299673,
-          "trigger": "edit S2 start; BW Invoke ~13s into S2, then ~32s",
+          "trigger": "WCL 2:41",
           "severity": "critical",
-          "category": "defensive",
+          "category": "throughput",
           "phase": 3,
-          "note": "Soulcoil Rite no longer drops — damage ramps. Lust on S2."
+          "assignCd": true,
+          "note": "Stage 2 — Invoke overlaps Ritual Burn. Lust here on many kills."
+        },
+        "status": "ok",
+        "wclMedian": 161,
+        "delta": 0,
+        "occ": 0,
+        "spread": 2
+      },
+      {
+        "window": {
+          "id": "nk-barrage2",
+          "timeSec": 194,
+          "ability": "Possession Barrage #2",
+          "abilitySpellId": 1284103,
+          "trigger": "WCL 3:14",
+          "severity": "tank",
+          "category": "external",
+          "phase": 3,
+          "assignCd": true,
+          "note": "Late tank frontal."
         },
         "status": "DIFF",
-        "wclMedian": 209,
-        "delta": 61,
-        "occ": 1,
-        "spread": 0
+        "wclMedian": 222,
+        "delta": 28,
+        "occ": 2,
+        "spread": 26
       },
       {
         "window": {
           "id": "nk-invoke2",
-          "timeSec": 302,
-          "ability": "Invoke #2",
+          "timeSec": 209,
+          "ability": "Invoke #2 (+ Ritual Burn)",
           "abilitySpellId": 1299673,
-          "trigger": "+32s",
-          "severity": "critical",
-          "category": "throughput",
-          "phase": 3
-        },
-        "status": "DIFF",
-        "wclMedian": 209,
-        "delta": 93,
-        "occ": 1,
-        "spread": 0
-      },
-      {
-        "window": {
-          "id": "nk-invoke3",
-          "timeSec": 334,
-          "ability": "Invoke #3",
-          "abilitySpellId": 1299673,
-          "trigger": "+32s",
+          "trigger": "WCL 3:29",
           "severity": "critical",
           "category": "defensive",
-          "phase": 3
+          "phase": 3,
+          "assignCd": true,
+          "note": "Second Invoke — leftover raid CDs on slower kills."
         },
-        "status": "DIFF",
+        "status": "ok",
         "wclMedian": 209,
-        "delta": 125,
+        "delta": 0,
         "occ": 1,
-        "spread": 0
+        "spread": 2
       }
     ],
     "sequences": [
@@ -207,6 +721,7 @@
         "name": "Possession Barrage",
         "occ": [
           34,
+          70,
           194,
           222
         ]
@@ -216,15 +731,15 @@
         "name": "Gravebound Advance",
         "occ": [
           53,
-          179,
-          220
+          180,
+          221
         ]
       },
       {
         "spellId": 1295124,
         "name": "Ritual of Awakening",
         "occ": [
-          70
+          71
         ]
       },
       {
@@ -245,7 +760,8 @@
         "spellId": 145629,
         "name": "Anti-Magic Zone",
         "occ": [
-          96
+          96,
+          226
         ]
       },
       {
@@ -253,7 +769,7 @@
         "name": "Soul Transfer",
         "occ": [
           96,
-          131
+          132
         ]
       },
       {
@@ -261,14 +777,14 @@
         "name": "Hungering Pyre",
         "occ": [
           99,
-          134
+          135
         ]
       },
       {
         "spellId": 1289855,
         "name": "Hungering Pyre",
         "occ": [
-          106,
+          107,
           141
         ]
       },
@@ -278,6 +794,430 @@
         "occ": [
           161,
           209
+        ]
+      }
+    ]
+  },
+  "entombed-sentinels-mythic": {
+    "file": "entombed-sentinels-mythic.json",
+    "encounterId": 3445,
+    "kills": [
+      {
+        "code": "VyHQnkGAmbPxfF2J",
+        "fightId": 11,
+        "duration": 340,
+        "url": "https://www.warcraftlogs.com/reports/VyHQnkGAmbPxfF2J?fight=11",
+        "title": "The Venomous Abyss"
+      },
+      {
+        "code": "TdFyZxQ7ArN28KvH",
+        "fightId": 53,
+        "duration": 345,
+        "url": "https://www.warcraftlogs.com/reports/TdFyZxQ7ArN28KvH?fight=53",
+        "title": "miffic"
+      },
+      {
+        "code": "3x1DNpyz6TGbJKRj",
+        "fightId": 37,
+        "duration": 347,
+        "url": "https://www.warcraftlogs.com/reports/3x1DNpyz6TGbJKRj?fight=37",
+        "title": "The Venomous Abyss"
+      },
+      {
+        "code": "mB76JGAYWQyr8wkR",
+        "fightId": 7,
+        "duration": 367,
+        "url": "https://www.warcraftlogs.com/reports/mB76JGAYWQyr8wkR?fight=7",
+        "title": "wtf"
+      }
+    ],
+    "diffs": [
+      {
+        "window": {
+          "id": "esm-unstable-miasma1",
+          "timeSec": 18,
+          "ability": "Unstable Miasma #1",
+          "abilitySpellId": 1288232,
+          "trigger": "WCL 0:18",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Soak — soft CD if the raid is low."
+        },
+        "status": "ok",
+        "wclMedian": 18,
+        "delta": 0,
+        "occ": 0,
+        "spread": 1
+      },
+      {
+        "window": {
+          "id": "esm-vitriolic-stasis1",
+          "timeSec": 46,
+          "ability": "Vitriolic Stasis #1",
+          "abilitySpellId": 1284588,
+          "trigger": "WCL 0:46",
+          "severity": "critical",
+          "category": "defensive",
+          "phase": 2,
+          "assignCd": true,
+          "note": "Main CD window — Helical Toxins / sequence-end."
+        },
+        "status": "ok",
+        "wclMedian": 46,
+        "delta": 0,
+        "occ": 0,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "esm-bloodvenom-injecti3",
+          "timeSec": 63,
+          "ability": "Bloodvenom Injection #3",
+          "abilitySpellId": 1284487,
+          "trigger": "WCL 1:03",
+          "severity": "tank",
+          "category": "external",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Tank injection — external if needed. Repeats ~every 22s."
+        },
+        "status": "ok",
+        "wclMedian": 63,
+        "delta": 0,
+        "occ": 2,
+        "spread": 4
+      },
+      {
+        "window": {
+          "id": "esm-unstable-miasma2",
+          "timeSec": 73,
+          "ability": "Unstable Miasma #2",
+          "abilitySpellId": 1288232,
+          "trigger": "WCL 1:13",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Extra Mythic occurrence vs Heroic timeline."
+        },
+        "status": "ok",
+        "wclMedian": 73,
+        "delta": 0,
+        "occ": 1,
+        "spread": 3
+      },
+      {
+        "window": {
+          "id": "esm-unstable-miasma3",
+          "timeSec": 114,
+          "ability": "Unstable Miasma #3",
+          "abilitySpellId": 1288232,
+          "trigger": "WCL 1:54",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 1,
+          "assignCd": true,
+          "suggestPersonals": true,
+          "note": "Second soak cluster."
+        },
+        "status": "ok",
+        "wclMedian": 114,
+        "delta": 0,
+        "occ": 2,
+        "spread": 2
+      },
+      {
+        "window": {
+          "id": "esm-vitriolic-stasis2",
+          "timeSec": 146,
+          "ability": "Vitriolic Stasis #2",
+          "abilitySpellId": 1284588,
+          "trigger": "WCL 2:26",
+          "severity": "critical",
+          "category": "defensive",
+          "phase": 2,
+          "assignCd": true,
+          "note": "Extra Mythic occurrence vs Heroic timeline."
+        },
+        "status": "ok",
+        "wclMedian": 146,
+        "delta": 0,
+        "occ": 1,
+        "spread": 3
+      },
+      {
+        "window": {
+          "id": "esm-unstable-miasma4",
+          "timeSec": 175,
+          "ability": "Unstable Miasma #4",
+          "abilitySpellId": 1288232,
+          "trigger": "WCL 2:55",
+          "severity": "raid",
+          "category": "defensive",
+          "phase": 1,
+          "assignCd": true,
+          "suggestPersonals": true,
+          "note": "Mid-fight soak into Contaminate."
+        },
+        "status": "ok",
+        "wclMedian": 175,
+        "delta": 0,
+        "occ": 3,
+        "spread": 5
+      },
+      {
+        "window": {
+          "id": "esm-unstable-miasma5",
+          "timeSec": 216,
+          "ability": "Unstable Miasma #5",
+          "abilitySpellId": 1288232,
+          "trigger": "WCL 3:36",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Extra Mythic occurrence vs Heroic timeline."
+        },
+        "status": "ok",
+        "wclMedian": 216,
+        "delta": 0,
+        "occ": 4,
+        "spread": 5
+      },
+      {
+        "window": {
+          "id": "esm-vitriolic-stasis3",
+          "timeSec": 248,
+          "ability": "Vitriolic Stasis #3",
+          "abilitySpellId": 1284588,
+          "trigger": "WCL 4:08",
+          "severity": "critical",
+          "category": "throughput",
+          "phase": 2,
+          "assignCd": true,
+          "note": "Second Stasis — major CD. Fast kills often end after this + last Miasma."
+        },
+        "status": "ok",
+        "wclMedian": 248,
+        "delta": 0,
+        "occ": 2,
+        "spread": 4
+      },
+      {
+        "window": {
+          "id": "esm-bloodvenom-injecti11",
+          "timeSec": 267,
+          "ability": "Bloodvenom Injection #11",
+          "abilitySpellId": 1284487,
+          "trigger": "WCL 4:27",
+          "severity": "tank",
+          "category": "external",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Post-Stasis tank spike."
+        },
+        "status": "ok",
+        "wclMedian": 267,
+        "delta": 0,
+        "occ": 10,
+        "spread": 4
+      },
+      {
+        "window": {
+          "id": "esm-unstable-miasma6",
+          "timeSec": 277,
+          "ability": "Unstable Miasma #6",
+          "abilitySpellId": 1288232,
+          "trigger": "WCL 4:37",
+          "severity": "raid",
+          "category": "defensive",
+          "phase": 1,
+          "assignCd": true,
+          "suggestPersonals": true,
+          "note": "Late soak on ~3:45–3:50 kills."
+        },
+        "status": "ok",
+        "wclMedian": 277,
+        "delta": 0,
+        "occ": 5,
+        "spread": 5
+      },
+      {
+        "window": {
+          "id": "esm-unstable-miasma7",
+          "timeSec": 318,
+          "ability": "Unstable Miasma #7",
+          "abilitySpellId": 1288232,
+          "trigger": "WCL 5:18",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Final Miasma before kill on speed clears."
+        },
+        "status": "ok",
+        "wclMedian": 318,
+        "delta": 0,
+        "occ": 6,
+        "spread": 6
+      }
+    ],
+    "sequences": [
+      {
+        "spellId": 1284458,
+        "name": "Empowering Slam",
+        "occ": [
+          6,
+          29,
+          62,
+          84,
+          106,
+          128,
+          163,
+          185,
+          207,
+          229,
+          266,
+          288,
+          309,
+          332
+        ]
+      },
+      {
+        "spellId": 1284487,
+        "name": "Bloodvenom Injection",
+        "occ": [
+          9,
+          31,
+          63,
+          86,
+          108,
+          130,
+          166,
+          189,
+          210,
+          233,
+          267,
+          290,
+          312,
+          334
+        ]
+      },
+      {
+        "spellId": 1284251,
+        "name": "Venom Coagulation",
+        "occ": [
+          12,
+          68,
+          120,
+          170,
+          222,
+          271,
+          324
+        ]
+      },
+      {
+        "spellId": 1284434,
+        "name": "Toxic Droplets",
+        "occ": [
+          15,
+          71,
+          103,
+          136,
+          172,
+          205,
+          238,
+          274,
+          307,
+          339
+        ]
+      },
+      {
+        "spellId": 1288232,
+        "name": "Unstable Miasma",
+        "occ": [
+          18,
+          73,
+          114,
+          175,
+          216,
+          277,
+          318
+        ]
+      },
+      {
+        "spellId": 1284257,
+        "name": "Contaminate",
+        "occ": [
+          18,
+          74,
+          126,
+          175,
+          228,
+          277,
+          330
+        ]
+      },
+      {
+        "spellId": 145629,
+        "name": "Anti-Magic Zone",
+        "occ": [
+          23,
+          79,
+          226,
+          326
+        ]
+      },
+      {
+        "spellId": 1296878,
+        "name": "Shifting Protovenom",
+        "occ": [
+          36,
+          95,
+          136,
+          197,
+          238,
+          299,
+          339
+        ]
+      },
+      {
+        "spellId": 1284483,
+        "name": "Blighted Blood",
+        "occ": [
+          42,
+          98,
+          200,
+          302
+        ]
+      },
+      {
+        "spellId": 1284606,
+        "name": "Vitriolic Stasis",
+        "occ": [
+          46,
+          146,
+          248
+        ]
+      },
+      {
+        "spellId": 1284588,
+        "name": "Vitriolic Stasis",
+        "occ": [
+          46,
+          146,
+          248
+        ]
+      },
+      {
+        "spellId": 1297724,
+        "name": "Concealing Shadows",
+        "occ": [
+          49,
+          149,
+          251
         ]
       }
     ]
@@ -306,41 +1246,51 @@
         "duration": 228,
         "url": "https://www.warcraftlogs.com/reports/7qCMJYNmQcBX9T13?fight=8",
         "title": "H"
+      },
+      {
+        "code": "aq2DbAfJpH1KRLPX",
+        "fightId": 8,
+        "duration": 234,
+        "url": "https://www.warcraftlogs.com/reports/aq2DbAfJpH1KRLPX?fight=8",
+        "title": "The Venomous Abyss"
       }
     ],
     "diffs": [
       {
         "window": {
           "id": "es-miasma1",
-          "timeSec": 16,
+          "timeSec": 18,
           "ability": "Unstable Miasma #1",
           "abilitySpellId": 1288232,
-          "trigger": "set bar ~16s",
+          "trigger": "WCL 0:18",
           "severity": "raid",
           "category": "throughput",
           "phase": 1,
+          "assignCd": true,
           "note": "Soak — soft CD if the raid is low."
         },
         "status": "ok",
         "wclMedian": 18,
-        "delta": 2,
+        "delta": 0,
         "occ": 0,
         "spread": 1
       },
       {
         "window": {
           "id": "es-injection1",
-          "timeSec": 30,
-          "ability": "Bloodvenom Injection",
+          "timeSec": 31,
+          "ability": "Bloodvenom Injection #1",
           "abilitySpellId": 1284487,
-          "trigger": "tank mid-set",
+          "trigger": "WCL 0:31",
           "severity": "tank",
           "category": "external",
-          "phase": 1
+          "phase": 1,
+          "assignCd": true,
+          "note": "Tank injection — external if needed. Repeats ~every 22s."
         },
         "status": "ok",
         "wclMedian": 31,
-        "delta": 1,
+        "delta": 0,
         "occ": 1,
         "spread": 1
       },
@@ -350,11 +1300,12 @@
           "timeSec": 46,
           "ability": "Vitriolic Stasis #1",
           "abilitySpellId": 1284588,
-          "trigger": "first intermission 46s from pull; then every 91s",
+          "trigger": "WCL 0:46",
           "severity": "critical",
           "category": "defensive",
           "phase": 2,
-          "note": "Helical Toxins / sequence-end — main CD window."
+          "assignCd": true,
+          "note": "Main CD window — Helical Toxins / sequence-end."
         },
         "status": "ok",
         "wclMedian": 46,
@@ -364,54 +1315,120 @@
       },
       {
         "window": {
+          "id": "es-miasma2",
+          "timeSec": 73,
+          "ability": "Unstable Miasma #2",
+          "abilitySpellId": 1288232,
+          "trigger": "WCL 1:13",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 1,
+          "assignCd": true,
+          "suggestPersonals": true,
+          "note": "Second soak cluster."
+        },
+        "status": "ok",
+        "wclMedian": 74,
+        "delta": 1,
+        "occ": 1,
+        "spread": 5
+      },
+      {
+        "window": {
+          "id": "es-miasma3",
+          "timeSec": 115,
+          "ability": "Unstable Miasma #3",
+          "abilitySpellId": 1288232,
+          "trigger": "WCL 1:55",
+          "severity": "raid",
+          "category": "defensive",
+          "phase": 1,
+          "assignCd": true,
+          "suggestPersonals": true,
+          "note": "Mid-fight soak into Contaminate."
+        },
+        "status": "ok",
+        "wclMedian": 116,
+        "delta": 1,
+        "occ": 2,
+        "spread": 5
+      },
+      {
+        "window": {
           "id": "es-stasis2",
-          "timeSec": 137,
+          "timeSec": 146,
           "ability": "Vitriolic Stasis #2",
           "abilitySpellId": 1284588,
-          "trigger": "46 + 91s",
+          "trigger": "WCL 2:26",
           "severity": "critical",
           "category": "throughput",
-          "phase": 2
+          "phase": 2,
+          "assignCd": true,
+          "note": "Second Stasis — major CD. Fast kills often end after this + last Miasma."
         },
-        "status": "DIFF",
-        "wclMedian": 146,
-        "delta": 9,
+        "status": "ok",
+        "wclMedian": 147,
+        "delta": 1,
         "occ": 1,
-        "spread": 1
+        "spread": 4
       },
       {
         "window": {
           "id": "es-injection2",
-          "timeSec": 160,
-          "ability": "Bloodvenom Injection #2",
+          "timeSec": 166,
+          "ability": "Bloodvenom Injection (post-Stasis)",
           "abilitySpellId": 1284487,
-          "trigger": "post-swap tank spike",
+          "trigger": "WCL 2:46",
           "severity": "tank",
           "category": "external",
-          "phase": 1
+          "phase": 1,
+          "assignCd": true,
+          "note": "Post-Stasis tank spike."
         },
-        "status": "~",
+        "status": "ok",
         "wclMedian": 166,
-        "delta": 6,
+        "delta": 0,
         "occ": 6,
-        "spread": 1
+        "spread": 3
       },
       {
         "window": {
-          "id": "es-stasis3",
-          "timeSec": 228,
-          "ability": "Vitriolic Stasis #3",
-          "abilitySpellId": 1284588,
-          "trigger": "137 + 91s",
-          "severity": "critical",
+          "id": "es-miasma4",
+          "timeSec": 175,
+          "ability": "Unstable Miasma #4",
+          "abilitySpellId": 1288232,
+          "trigger": "WCL 2:55",
+          "severity": "raid",
           "category": "defensive",
-          "phase": 2
+          "phase": 1,
+          "assignCd": true,
+          "suggestPersonals": true,
+          "note": "Late soak on ~3:45–3:50 kills."
         },
-        "status": "DIFF",
-        "wclMedian": 146,
-        "delta": 82,
-        "occ": 1,
-        "spread": 1
+        "status": "ok",
+        "wclMedian": 175,
+        "delta": 0,
+        "occ": 3,
+        "spread": 2
+      },
+      {
+        "window": {
+          "id": "es-miasma5",
+          "timeSec": 216,
+          "ability": "Unstable Miasma #5",
+          "abilitySpellId": 1288232,
+          "trigger": "WCL 3:36",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Final Miasma before kill on speed clears."
+        },
+        "status": "ok",
+        "wclMedian": 216,
+        "delta": 0,
+        "occ": 4,
+        "spread": 3
       }
     ],
     "sequences": [
@@ -421,10 +1438,10 @@
         "occ": [
           6,
           28,
-          62,
-          85,
-          106,
-          128,
+          63,
+          86,
+          108,
+          130,
           164,
           186,
           208
@@ -436,13 +1453,13 @@
         "occ": [
           8,
           31,
-          63,
-          86,
-          108,
-          130,
+          64,
+          87,
+          109,
+          131,
           166,
-          188,
-          210
+          189,
+          211
         ]
       },
       {
@@ -452,7 +1469,7 @@
           12,
           68,
           120,
-          169,
+          170,
           222
         ]
       },
@@ -462,9 +1479,9 @@
         "occ": [
           15,
           71,
-          103,
-          172,
-          205
+          104,
+          173,
+          206
         ]
       },
       {
@@ -472,8 +1489,8 @@
         "name": "Unstable Miasma",
         "occ": [
           18,
-          73,
-          115,
+          74,
+          116,
           175,
           216
         ]
@@ -485,8 +1502,8 @@
           18,
           74,
           126,
-          175,
-          227
+          176,
+          228
         ]
       },
       {
@@ -494,6 +1511,7 @@
         "name": "Anti-Magic Zone",
         "occ": [
           24,
+          186,
           224
         ]
       },
@@ -501,9 +1519,9 @@
         "spellId": 1284483,
         "name": "Blighted Blood",
         "occ": [
-          42,
+          43,
           98,
-          200
+          201
         ]
       },
       {
@@ -511,7 +1529,7 @@
         "name": "Vitriolic Stasis",
         "occ": [
           46,
-          146
+          147
         ]
       },
       {
@@ -519,7 +1537,643 @@
         "name": "Vitriolic Stasis",
         "occ": [
           46,
-          146
+          147
+        ]
+      }
+    ]
+  },
+  "lost-explorers-mythic": {
+    "file": "lost-explorers-mythic.json",
+    "encounterId": 3497,
+    "kills": [
+      {
+        "code": "yLdbhz9PkTF1MpBa",
+        "fightId": 34,
+        "duration": 323,
+        "url": "https://www.warcraftlogs.com/reports/yLdbhz9PkTF1MpBa?fight=34",
+        "title": "\"why is this moron asking for logs during heroic splits\""
+      },
+      {
+        "code": "T3qJCY84tBDy1n2x",
+        "fightId": 30,
+        "duration": 334,
+        "url": "https://www.warcraftlogs.com/reports/T3qJCY84tBDy1n2x?fight=30",
+        "title": "The Venomous Abyss"
+      },
+      {
+        "code": "LPb3YxXqHcRZpy1t",
+        "fightId": 36,
+        "duration": 336,
+        "url": "https://www.warcraftlogs.com/reports/LPb3YxXqHcRZpy1t?fight=36",
+        "title": "The Venomous Abyss"
+      },
+      {
+        "code": "QABFyfVxPHgmv7k8",
+        "fightId": 67,
+        "duration": 337,
+        "url": "https://www.warcraftlogs.com/reports/QABFyfVxPHgmv7k8?fight=67",
+        "title": "The Venomous Abyss"
+      }
+    ],
+    "diffs": [
+      {
+        "window": {
+          "id": "lem-shell-spin1",
+          "timeSec": 22,
+          "ability": "Shell Spin #1",
+          "abilitySpellId": 1296062,
+          "trigger": "WCL 0:22",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Extra Mythic occurrence vs Heroic timeline."
+        },
+        "status": "ok",
+        "wclMedian": 22,
+        "delta": 0,
+        "occ": 0,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "lem-shredding-shards1",
+          "timeSec": 30,
+          "ability": "Shredding Shards #1",
+          "abilitySpellId": 1295854,
+          "trigger": "WCL 0:30",
+          "severity": "tank",
+          "category": "external",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Tank shards — external if needed."
+        },
+        "status": "ok",
+        "wclMedian": 30,
+        "delta": 0,
+        "occ": 0,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "lem-shell-spin2",
+          "timeSec": 38,
+          "ability": "Shell Spin #2",
+          "abilitySpellId": 1296062,
+          "trigger": "WCL 0:38",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Unempowered spin — soft raid damage."
+        },
+        "status": "ok",
+        "wclMedian": 38,
+        "delta": 0,
+        "occ": 1,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "lem-shell-spin3",
+          "timeSec": 53,
+          "ability": "Shell Spin #3",
+          "abilitySpellId": 1296062,
+          "trigger": "WCL 0:53",
+          "severity": "raid",
+          "category": "defensive",
+          "phase": 1,
+          "assignCd": false,
+          "note": "Quick follow-up spin."
+        },
+        "status": "ok",
+        "wclMedian": 53,
+        "delta": 0,
+        "occ": 2,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "lem-mor-zahi-s-command1",
+          "timeSec": 64,
+          "ability": "Mor’zahi’s Command #1",
+          "abilitySpellId": 1296975,
+          "trigger": "WCL 1:04",
+          "severity": "critical",
+          "category": "defensive",
+          "phase": 2,
+          "assignCd": true,
+          "note": "Main CD during empowered turtle."
+        },
+        "status": "ok",
+        "wclMedian": 64,
+        "delta": 0,
+        "occ": 0,
+        "spread": 4
+      },
+      {
+        "window": {
+          "id": "lem-mighty-thud1",
+          "timeSec": 79,
+          "ability": "Mighty Thud #1",
+          "abilitySpellId": 1296094,
+          "trigger": "WCL 1:19",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 2,
+          "assignCd": true,
+          "note": "Empowered slam pressure."
+        },
+        "status": "ok",
+        "wclMedian": 79,
+        "delta": 0,
+        "occ": 0,
+        "spread": 5
+      },
+      {
+        "window": {
+          "id": "lem-mighty-thud2",
+          "timeSec": 111,
+          "ability": "Mighty Thud #2",
+          "abilitySpellId": 1296094,
+          "trigger": "WCL 1:51",
+          "severity": "raid",
+          "category": "defensive",
+          "phase": 2,
+          "assignCd": true,
+          "note": "Into Dark Whispers / late fight."
+        },
+        "status": "ok",
+        "wclMedian": 111,
+        "delta": 0,
+        "occ": 1,
+        "spread": 5
+      },
+      {
+        "window": {
+          "id": "lem-dark-whispers1",
+          "timeSec": 124,
+          "ability": "Dark Whispers #1",
+          "abilitySpellId": 1301667,
+          "trigger": "WCL 2:04",
+          "severity": "critical",
+          "category": "throughput",
+          "phase": 3,
+          "assignCd": true,
+          "note": "Extra Mythic occurrence vs Heroic timeline."
+        },
+        "status": "ok",
+        "wclMedian": 124,
+        "delta": 0,
+        "occ": 0,
+        "spread": 4
+      },
+      {
+        "window": {
+          "id": "lem-shell-spin4",
+          "timeSec": 148,
+          "ability": "Shell Spin #4",
+          "abilitySpellId": 1296062,
+          "trigger": "WCL 2:28",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Extra Mythic occurrence vs Heroic timeline."
+        },
+        "status": "ok",
+        "wclMedian": 148,
+        "delta": 0,
+        "occ": 3,
+        "spread": 5
+      },
+      {
+        "window": {
+          "id": "lem-shredding-shards3",
+          "timeSec": 156,
+          "ability": "Shredding Shards #3",
+          "abilitySpellId": 1295854,
+          "trigger": "WCL 2:36",
+          "severity": "tank",
+          "category": "external",
+          "phase": 2,
+          "assignCd": true,
+          "note": "Second shards set."
+        },
+        "status": "ok",
+        "wclMedian": 156,
+        "delta": 0,
+        "occ": 2,
+        "spread": 5
+      },
+      {
+        "window": {
+          "id": "lem-shell-spin5",
+          "timeSec": 166,
+          "ability": "Shell Spin #5",
+          "abilitySpellId": 1296062,
+          "trigger": "WCL 2:46",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Extra Mythic occurrence vs Heroic timeline."
+        },
+        "status": "ok",
+        "wclMedian": 164,
+        "delta": 2,
+        "occ": 4,
+        "spread": 5
+      },
+      {
+        "window": {
+          "id": "lem-shell-spin6",
+          "timeSec": 181,
+          "ability": "Shell Spin #6",
+          "abilitySpellId": 1296062,
+          "trigger": "WCL 3:01",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Extra Mythic occurrence vs Heroic timeline."
+        },
+        "status": "ok",
+        "wclMedian": 179,
+        "delta": 2,
+        "occ": 5,
+        "spread": 5
+      },
+      {
+        "window": {
+          "id": "lem-shell-spin7",
+          "timeSec": 207,
+          "ability": "Shell Spin #7",
+          "abilitySpellId": 1296062,
+          "trigger": "WCL 3:27",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Extra Mythic occurrence vs Heroic timeline."
+        },
+        "status": "ok",
+        "wclMedian": 207,
+        "delta": 0,
+        "occ": 6,
+        "spread": 9
+      },
+      {
+        "window": {
+          "id": "lem-shell-spin8",
+          "timeSec": 235,
+          "ability": "Shell Spin #8",
+          "abilitySpellId": 1296062,
+          "trigger": "WCL 3:55",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Extra Mythic occurrence vs Heroic timeline."
+        },
+        "status": "ok",
+        "wclMedian": 235,
+        "delta": 0,
+        "occ": 7,
+        "spread": 7
+      },
+      {
+        "window": {
+          "id": "lem-dark-whispers2",
+          "timeSec": 248,
+          "ability": "Dark Whispers #2",
+          "abilitySpellId": 1301667,
+          "trigger": "WCL 4:08",
+          "severity": "critical",
+          "category": "throughput",
+          "phase": 3,
+          "assignCd": true,
+          "note": "Late mid-fight pressure before kill on ~2:30–3:00 clears."
+        },
+        "status": "ok",
+        "wclMedian": 248,
+        "delta": 0,
+        "occ": 1,
+        "spread": 8
+      },
+      {
+        "window": {
+          "id": "lem-shell-spin9",
+          "timeSec": 274,
+          "ability": "Shell Spin #9",
+          "abilitySpellId": 1296062,
+          "trigger": "WCL 4:34",
+          "severity": "raid",
+          "category": "defensive",
+          "phase": 3,
+          "assignCd": true,
+          "note": "Late spins on kills that stretch past ~2:20."
+        },
+        "status": "ok",
+        "wclMedian": 272,
+        "delta": 2,
+        "occ": 8,
+        "spread": 7
+      },
+      {
+        "window": {
+          "id": "lem-shredding-shards5",
+          "timeSec": 280,
+          "ability": "Shredding Shards #5",
+          "abilitySpellId": 1295854,
+          "trigger": "WCL 4:40",
+          "severity": "tank",
+          "category": "external",
+          "phase": 3,
+          "assignCd": true,
+          "note": "Final shards on slower speed kills."
+        },
+        "status": "ok",
+        "wclMedian": 280,
+        "delta": 0,
+        "occ": 4,
+        "spread": 7
+      },
+      {
+        "window": {
+          "id": "lem-shell-spin10",
+          "timeSec": 300,
+          "ability": "Shell Spin #10",
+          "abilitySpellId": 1296062,
+          "trigger": "WCL 5:00",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Extra Mythic occurrence vs Heroic timeline."
+        },
+        "status": "ok",
+        "wclMedian": 303,
+        "delta": 3,
+        "occ": 10,
+        "spread": 7
+      }
+    ],
+    "sequences": [
+      {
+        "spellId": 1292796,
+        "name": "Creepy Flames",
+        "occ": [
+          0
+        ]
+      },
+      {
+        "spellId": 1297075,
+        "name": "Final Ascension",
+        "occ": [
+          0,
+          125,
+          249
+        ]
+      },
+      {
+        "spellId": 1296025,
+        "name": "Blink Nova",
+        "occ": [
+          10,
+          41,
+          136,
+          167,
+          209,
+          260,
+          291
+        ]
+      },
+      {
+        "spellId": 1296021,
+        "name": "Blink Nova",
+        "occ": [
+          17,
+          48,
+          143,
+          174,
+          216,
+          267,
+          298
+        ]
+      },
+      {
+        "spellId": 1296062,
+        "name": "Shell Spin",
+        "occ": [
+          22,
+          38,
+          53,
+          148,
+          164,
+          179,
+          207,
+          235,
+          274,
+          290,
+          305
+        ]
+      },
+      {
+        "spellId": 1291933,
+        "name": "Throw Junk",
+        "occ": [
+          25,
+          56,
+          92,
+          123,
+          152,
+          183,
+          201,
+          226,
+          275,
+          306,
+          330
+        ]
+      },
+      {
+        "spellId": 1291934,
+        "name": "Throw Junk",
+        "occ": [
+          27,
+          56,
+          92,
+          123,
+          153,
+          182,
+          201,
+          226,
+          276,
+          306,
+          330
+        ]
+      },
+      {
+        "spellId": 1295854,
+        "name": "Shredding Shards",
+        "occ": [
+          30,
+          96,
+          156,
+          220,
+          280
+        ]
+      },
+      {
+        "spellId": 1306137,
+        "name": "Throw Junk",
+        "occ": [
+          31,
+          157,
+          281
+        ]
+      },
+      {
+        "spellId": 1306145,
+        "name": "Throw Junk",
+        "occ": [
+          31,
+          157,
+          281
+        ]
+      },
+      {
+        "spellId": 1310616,
+        "name": "Shredding Shards",
+        "occ": [
+          32,
+          98,
+          158,
+          222,
+          281
+        ]
+      },
+      {
+        "spellId": 145629,
+        "name": "Anti-Magic Zone",
+        "occ": [
+          52,
+          175,
+          267
+        ]
+      },
+      {
+        "spellId": 1292758,
+        "name": "Evil Eyes",
+        "occ": [
+          61,
+          185,
+          309
+        ]
+      },
+      {
+        "spellId": 1296975,
+        "name": "Mor'zahi's Command",
+        "occ": [
+          64
+        ]
+      },
+      {
+        "spellId": 1296094,
+        "name": "Mighty Thud",
+        "occ": [
+          79,
+          111
+        ]
+      },
+      {
+        "spellId": 1296135,
+        "name": "Mighty Thud",
+        "occ": [
+          82,
+          114
+        ]
+      },
+      {
+        "spellId": 1296095,
+        "name": "Mighty Thud",
+        "occ": [
+          82,
+          114
+        ]
+      },
+      {
+        "spellId": 1296133,
+        "name": "Mighty Thud",
+        "occ": [
+          82,
+          114
+        ]
+      },
+      {
+        "spellId": 1301667,
+        "name": "Dark Whispers",
+        "occ": [
+          124,
+          248
+        ]
+      },
+      {
+        "spellId": 1297022,
+        "name": "Mor'zahi's Command",
+        "occ": [
+          186
+        ]
+      },
+      {
+        "spellId": 1295891,
+        "name": "Frostfire Volley",
+        "occ": [
+          201,
+          228
+        ]
+      },
+      {
+        "spellId": 1310028,
+        "name": "Relic Rupture",
+        "occ": [
+          217,
+          246
+        ]
+      },
+      {
+        "spellId": 1286922,
+        "name": "Icebound Flames",
+        "occ": [
+          235
+        ]
+      },
+      {
+        "spellId": 1297024,
+        "name": "Mor'zahi's Command",
+        "occ": [
+          309
+        ]
+      },
+      {
+        "spellId": 1292779,
+        "name": "Final Ascension",
+        "occ": [
+          315
+        ]
+      },
+      {
+        "spellId": 1292105,
+        "name": "Mushroom Toss",
+        "occ": [
+          321
+        ]
+      },
+      {
+        "spellId": 1292104,
+        "name": "Mushroom Toss",
+        "occ": [
+          321
         ]
       }
     ]
@@ -548,32 +2202,47 @@
         "duration": 184,
         "url": "https://www.warcraftlogs.com/reports/kwZm3h1QLybHgMAp?fight=20",
         "title": "big logs"
+      },
+      {
+        "code": "dNmL64hDjGf3pHry",
+        "fightId": 4,
+        "duration": 186,
+        "url": "https://www.warcraftlogs.com/reports/dNmL64hDjGf3pHry?fight=4",
+        "title": "Non-Optional Optional Tek Raid"
       }
     ],
     "diffs": [
       {
         "window": {
           "id": "le-shell1",
-          "timeSec": 18,
+          "timeSec": 22,
           "ability": "Shell Spin #1",
-          "abilitySpellId": 1291759,
-          "trigger": "unempowered ~18s",
+          "abilitySpellId": 1296062,
+          "trigger": "WCL 0:22",
           "severity": "raid",
           "category": "throughput",
-          "phase": 1
+          "phase": 1,
+          "assignCd": true,
+          "note": "Unempowered spin — soft raid damage."
         },
-        "status": "missing"
+        "status": "ok",
+        "wclMedian": 22,
+        "delta": 0,
+        "occ": 0,
+        "spread": 5
       },
       {
         "window": {
           "id": "le-shards1",
           "timeSec": 30,
-          "ability": "Shredding Shards",
+          "ability": "Shredding Shards #1",
           "abilitySpellId": 1295854,
-          "trigger": "tank ~30s",
+          "trigger": "WCL 0:30",
           "severity": "tank",
           "category": "external",
-          "phase": 1
+          "phase": 1,
+          "assignCd": true,
+          "note": "Tank shards — external if needed."
         },
         "status": "ok",
         "wclMedian": 30,
@@ -583,55 +2252,155 @@
       },
       {
         "window": {
+          "id": "le-shell2",
+          "timeSec": 38,
+          "ability": "Shell Spin #2",
+          "abilitySpellId": 1296062,
+          "trigger": "WCL 0:38",
+          "severity": "raid",
+          "category": "defensive",
+          "phase": 1,
+          "assignCd": false,
+          "note": "Quick follow-up spin."
+        },
+        "status": "ok",
+        "wclMedian": 38,
+        "delta": 0,
+        "occ": 1,
+        "spread": 5
+      },
+      {
+        "window": {
           "id": "le-empower1",
-          "timeSec": 75,
-          "ability": "Mor’zahi’s Command (Empower #1)",
-          "abilitySpellId": 1297022,
-          "trigger": "edit to first empower",
+          "timeSec": 61,
+          "ability": "Mor’zahi’s Command (Empower)",
+          "abilitySpellId": 1296975,
+          "trigger": "WCL 1:01",
           "severity": "critical",
           "category": "defensive",
           "phase": 2,
+          "assignCd": true,
           "note": "Main CD during empowered turtle."
         },
-        "status": "DIFF",
-        "wclMedian": 56,
-        "delta": 19,
+        "status": "ok",
+        "wclMedian": 60,
+        "delta": 1,
         "occ": 0,
-        "spread": 0
+        "spread": 3
       },
       {
         "window": {
-          "id": "le-empower2",
-          "timeSec": 160,
-          "ability": "Mor’zahi’s Command (Empower #2)",
-          "abilitySpellId": 1297022,
-          "trigger": "edit to second empower",
+          "id": "le-thud1",
+          "timeSec": 76,
+          "ability": "Mighty Thud #1",
+          "abilitySpellId": 1296094,
+          "trigger": "WCL 1:16",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 2,
+          "assignCd": true,
+          "note": "Empowered slam pressure."
+        },
+        "status": "ok",
+        "wclMedian": 76,
+        "delta": 0,
+        "occ": 0,
+        "spread": 4
+      },
+      {
+        "window": {
+          "id": "le-shards2",
+          "timeSec": 91,
+          "ability": "Shredding Shards #2",
+          "abilitySpellId": 1295854,
+          "trigger": "WCL 1:31",
+          "severity": "tank",
+          "category": "external",
+          "phase": 2,
+          "assignCd": true,
+          "note": "Second shards set."
+        },
+        "status": "ok",
+        "wclMedian": 92,
+        "delta": 1,
+        "occ": 1,
+        "spread": 6
+      },
+      {
+        "window": {
+          "id": "le-thud2",
+          "timeSec": 108,
+          "ability": "Mighty Thud #2",
+          "abilitySpellId": 1296094,
+          "trigger": "WCL 1:48",
+          "severity": "raid",
+          "category": "defensive",
+          "phase": 2,
+          "assignCd": true,
+          "note": "Into Dark Whispers / late fight."
+        },
+        "status": "ok",
+        "wclMedian": 108,
+        "delta": 0,
+        "occ": 1,
+        "spread": 4
+      },
+      {
+        "window": {
+          "id": "le-whispers",
+          "timeSec": 119,
+          "ability": "Dark Whispers",
+          "abilitySpellId": 1301667,
+          "trigger": "WCL 1:59",
           "severity": "critical",
           "category": "throughput",
-          "phase": 3
+          "phase": 3,
+          "assignCd": true,
+          "note": "Late mid-fight pressure before kill on ~2:30–3:00 clears."
         },
-        "status": "DIFF",
-        "wclMedian": 56,
-        "delta": 104,
+        "status": "ok",
+        "wclMedian": 120,
+        "delta": 1,
         "occ": 0,
-        "spread": 0
+        "spread": 6
       },
       {
         "window": {
-          "id": "le-finale",
-          "timeSec": 240,
-          "ability": "Final Ascension",
-          "abilitySpellId": 1292779,
-          "trigger": "late unempowered 60s bar",
-          "severity": "critical",
+          "id": "le-shell3",
+          "timeSec": 143,
+          "ability": "Shell Spin (late)",
+          "abilitySpellId": 1296062,
+          "trigger": "WCL 2:23",
+          "severity": "raid",
           "category": "defensive",
-          "phase": 1
+          "phase": 3,
+          "assignCd": true,
+          "note": "Late spins on kills that stretch past ~2:20."
         },
-        "status": "DIFF",
-        "wclMedian": 184,
-        "delta": 56,
-        "occ": 0,
-        "spread": 0
+        "status": "ok",
+        "wclMedian": 144,
+        "delta": 1,
+        "occ": 3,
+        "spread": 68
+      },
+      {
+        "window": {
+          "id": "le-shards3",
+          "timeSec": 153,
+          "ability": "Shredding Shards #3",
+          "abilitySpellId": 1295854,
+          "trigger": "WCL 2:33",
+          "severity": "tank",
+          "category": "external",
+          "phase": 3,
+          "assignCd": true,
+          "note": "Final shards on slower speed kills."
+        },
+        "status": "ok",
+        "wclMedian": 153,
+        "delta": 0,
+        "occ": 2,
+        "spread": 4
       }
     ],
     "sequences": [
@@ -640,7 +2409,7 @@
         "name": "Final Ascension",
         "occ": [
           0,
-          120
+          121
         ]
       },
       {
@@ -664,7 +2433,8 @@
         "occ": [
           10,
           41,
-          131
+          132,
+          163
         ]
       },
       {
@@ -673,7 +2443,7 @@
         "occ": [
           17,
           48,
-          138
+          139
         ]
       },
       {
@@ -683,7 +2453,7 @@
           22,
           38,
           53,
-          143,
+          144,
           161
         ]
       },
@@ -703,7 +2473,7 @@
         "spellId": 1291934,
         "name": "Throw Junk",
         "occ": [
-          26,
+          27,
           54,
           71,
           88,
@@ -716,7 +2486,7 @@
         "name": "Shredding Shards",
         "occ": [
           30,
-          91,
+          92,
           153
         ]
       },
@@ -725,7 +2495,7 @@
         "name": "Shredding Shards",
         "occ": [
           31,
-          93,
+          94,
           155
         ]
       },
@@ -749,14 +2519,15 @@
         "spellId": 1292758,
         "name": "Evil Eyes",
         "occ": [
-          56
+          57,
+          169
         ]
       },
       {
         "spellId": 1296975,
         "name": "Mor'zahi's Command",
         "occ": [
-          61
+          60
         ]
       },
       {
@@ -795,7 +2566,594 @@
         "spellId": 1301667,
         "name": "Dark Whispers",
         "occ": [
-          119
+          120
+        ]
+      },
+      {
+        "spellId": 1310028,
+        "name": "Relic Rupture",
+        "occ": [
+          169
+        ]
+      }
+    ]
+  },
+  "vashnik-mythic": {
+    "file": "vashnik-mythic.json",
+    "encounterId": 3455,
+    "kills": [
+      {
+        "code": "VT3bLxDpX61gZQRt",
+        "fightId": 7,
+        "duration": 349,
+        "url": "https://www.warcraftlogs.com/reports/VT3bLxDpX61gZQRt?fight=7",
+        "title": "The Venomous Abyss"
+      },
+      {
+        "code": "v67n3QmTMbcLkPgF",
+        "fightId": 11,
+        "duration": 363,
+        "url": "https://www.warcraftlogs.com/reports/v67n3QmTMbcLkPgF?fight=11",
+        "title": "The Venomous Abyss"
+      },
+      {
+        "code": "TdFyZxQ7ArN28KvH",
+        "fightId": 58,
+        "duration": 373,
+        "url": "https://www.warcraftlogs.com/reports/TdFyZxQ7ArN28KvH?fight=58",
+        "title": "miffic"
+      },
+      {
+        "code": "T7HC9RKNd4nGvyPh",
+        "fightId": 13,
+        "duration": 381,
+        "url": "https://www.warcraftlogs.com/reports/T7HC9RKNd4nGvyPh?fight=13",
+        "title": "The Venomous Abyss"
+      }
+    ],
+    "diffs": [
+      {
+        "window": {
+          "id": "vm-dripping-fangs1",
+          "timeSec": 10,
+          "ability": "Dripping Fangs #1",
+          "abilitySpellId": 1280935,
+          "trigger": "WCL 0:10",
+          "severity": "tank",
+          "category": "external",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Tank fangs — repeats ~every 28s."
+        },
+        "status": "ok",
+        "wclMedian": 10,
+        "delta": 0,
+        "occ": 0,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "vm-imbibe1",
+          "timeSec": 24,
+          "ability": "Imbibe #1",
+          "abilitySpellId": 1284663,
+          "trigger": "WCL 0:24",
+          "severity": "critical",
+          "category": "defensive",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Major infection / fountain pressure."
+        },
+        "status": "ok",
+        "wclMedian": 24,
+        "delta": 0,
+        "occ": 0,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "vm-malignant-catalyst1",
+          "timeSec": 30,
+          "ability": "Malignant Catalyst #1",
+          "abilitySpellId": 1282509,
+          "trigger": "WCL 0:30",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Extra Mythic occurrence vs Heroic timeline."
+        },
+        "status": "ok",
+        "wclMedian": 30,
+        "delta": 0,
+        "occ": 0,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "vm-caustic-surge1",
+          "timeSec": 42,
+          "ability": "Caustic Surge #1",
+          "abilitySpellId": 1285979,
+          "trigger": "WCL 0:42",
+          "severity": "raid",
+          "category": "defensive",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Extra Mythic occurrence vs Heroic timeline."
+        },
+        "status": "~",
+        "wclMedian": 38,
+        "delta": 4,
+        "occ": 0,
+        "spread": 10
+      },
+      {
+        "window": {
+          "id": "vm-malignant-catalyst2",
+          "timeSec": 69,
+          "ability": "Malignant Catalyst #2",
+          "abilitySpellId": 1282509,
+          "trigger": "WCL 1:09",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Raid DoT / spread pressure after Imbibe."
+        },
+        "status": "ok",
+        "wclMedian": 69,
+        "delta": 0,
+        "occ": 1,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "vm-caustic-surge2",
+          "timeSec": 70,
+          "ability": "Caustic Surge #2",
+          "abilitySpellId": 1285979,
+          "trigger": "WCL 1:10",
+          "severity": "raid",
+          "category": "defensive",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Raid-wide surge."
+        },
+        "status": "ok",
+        "wclMedian": 70,
+        "delta": 0,
+        "occ": 2,
+        "spread": 19
+      },
+      {
+        "window": {
+          "id": "vm-imbibe2",
+          "timeSec": 108,
+          "ability": "Imbibe #2",
+          "abilitySpellId": 1284663,
+          "trigger": "WCL 1:48",
+          "severity": "critical",
+          "category": "defensive",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Extra Mythic occurrence vs Heroic timeline."
+        },
+        "status": "ok",
+        "wclMedian": 108,
+        "delta": 0,
+        "occ": 1,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "vm-malignant-catalyst3",
+          "timeSec": 114,
+          "ability": "Malignant Catalyst #3",
+          "abilitySpellId": 1282509,
+          "trigger": "WCL 1:54",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Second Catalyst."
+        },
+        "status": "ok",
+        "wclMedian": 114,
+        "delta": 0,
+        "occ": 2,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "vm-dripping-fangs5",
+          "timeSec": 123,
+          "ability": "Dripping Fangs #5",
+          "abilitySpellId": 1280935,
+          "trigger": "WCL 2:03",
+          "severity": "tank",
+          "category": "external",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Third fangs — mid-set tank check."
+        },
+        "status": "ok",
+        "wclMedian": 123,
+        "delta": 0,
+        "occ": 4,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "vm-caustic-surge3",
+          "timeSec": 132,
+          "ability": "Caustic Surge #3",
+          "abilitySpellId": 1285979,
+          "trigger": "WCL 2:12",
+          "severity": "raid",
+          "category": "defensive",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Extra Mythic occurrence vs Heroic timeline."
+        },
+        "status": "ok",
+        "wclMedian": 131,
+        "delta": 1,
+        "occ": 3,
+        "spread": 9
+      },
+      {
+        "window": {
+          "id": "vm-malignant-catalyst4",
+          "timeSec": 153,
+          "ability": "Malignant Catalyst #4",
+          "abilitySpellId": 1282509,
+          "trigger": "WCL 2:33",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Extra Mythic occurrence vs Heroic timeline."
+        },
+        "status": "ok",
+        "wclMedian": 153,
+        "delta": 0,
+        "occ": 3,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "vm-caustic-surge4",
+          "timeSec": 162,
+          "ability": "Caustic Surge #4",
+          "abilitySpellId": 1285979,
+          "trigger": "WCL 2:42",
+          "severity": "raid",
+          "category": "defensive",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Extra Mythic occurrence vs Heroic timeline."
+        },
+        "status": "ok",
+        "wclMedian": 162,
+        "delta": 0,
+        "occ": 5,
+        "spread": 13
+      },
+      {
+        "window": {
+          "id": "vm-imbibe3",
+          "timeSec": 192,
+          "ability": "Imbibe #3",
+          "abilitySpellId": 1284663,
+          "trigger": "WCL 3:12",
+          "severity": "critical",
+          "category": "defensive",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Second Imbibe — major CD."
+        },
+        "status": "ok",
+        "wclMedian": 192,
+        "delta": 0,
+        "occ": 2,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "vm-malignant-catalyst5",
+          "timeSec": 198,
+          "ability": "Malignant Catalyst #5",
+          "abilitySpellId": 1282509,
+          "trigger": "WCL 3:18",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Into Caustic Surge #2."
+        },
+        "status": "ok",
+        "wclMedian": 198,
+        "delta": 0,
+        "occ": 4,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "vm-caustic-surge5",
+          "timeSec": 221,
+          "ability": "Caustic Surge #5",
+          "abilitySpellId": 1285979,
+          "trigger": "WCL 3:41",
+          "severity": "raid",
+          "category": "defensive",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Second surge."
+        },
+        "status": "~",
+        "wclMedian": 227,
+        "delta": 6,
+        "occ": 7,
+        "spread": 12
+      },
+      {
+        "window": {
+          "id": "vm-malignant-catalyst6",
+          "timeSec": 237,
+          "ability": "Malignant Catalyst #6",
+          "abilitySpellId": 1282509,
+          "trigger": "WCL 3:57",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Extra Mythic occurrence vs Heroic timeline."
+        },
+        "status": "ok",
+        "wclMedian": 237,
+        "delta": 0,
+        "occ": 5,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "vm-caustic-surge6",
+          "timeSec": 248,
+          "ability": "Caustic Surge #6",
+          "abilitySpellId": 1285979,
+          "trigger": "WCL 4:08",
+          "severity": "raid",
+          "category": "defensive",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Extra Mythic occurrence vs Heroic timeline."
+        },
+        "status": "ok",
+        "wclMedian": 248,
+        "delta": 0,
+        "occ": 8,
+        "spread": 13
+      },
+      {
+        "window": {
+          "id": "vm-imbibe4",
+          "timeSec": 276,
+          "ability": "Imbibe #4",
+          "abilitySpellId": 1284663,
+          "trigger": "WCL 4:36",
+          "severity": "critical",
+          "category": "defensive",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Extra Mythic occurrence vs Heroic timeline."
+        },
+        "status": "ok",
+        "wclMedian": 276,
+        "delta": 0,
+        "occ": 3,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "vm-malignant-catalyst7",
+          "timeSec": 282,
+          "ability": "Malignant Catalyst #7",
+          "abilitySpellId": 1282509,
+          "trigger": "WCL 4:42",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Late Catalyst."
+        },
+        "status": "ok",
+        "wclMedian": 282,
+        "delta": 0,
+        "occ": 6,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "vm-caustic-surge7",
+          "timeSec": 309,
+          "ability": "Caustic Surge #7",
+          "abilitySpellId": 1285979,
+          "trigger": "WCL 5:09",
+          "severity": "raid",
+          "category": "defensive",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Extra Mythic occurrence vs Heroic timeline."
+        },
+        "status": "~",
+        "wclMedian": 304,
+        "delta": 5,
+        "occ": 9,
+        "spread": 11
+      },
+      {
+        "window": {
+          "id": "vm-malignant-catalyst8",
+          "timeSec": 321,
+          "ability": "Malignant Catalyst #8",
+          "abilitySpellId": 1282509,
+          "trigger": "WCL 5:21",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Extra Mythic occurrence vs Heroic timeline."
+        },
+        "status": "ok",
+        "wclMedian": 321,
+        "delta": 0,
+        "occ": 7,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "vm-caustic-surge8",
+          "timeSec": 335,
+          "ability": "Caustic Surge #8",
+          "abilitySpellId": 1285979,
+          "trigger": "WCL 5:35",
+          "severity": "raid",
+          "category": "defensive",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Extra Mythic occurrence vs Heroic timeline."
+        },
+        "status": "ok",
+        "wclMedian": 335,
+        "delta": 0,
+        "occ": 11,
+        "spread": 7
+      },
+      {
+        "window": {
+          "id": "vm-imbibe5",
+          "timeSec": 360,
+          "ability": "Imbibe #5",
+          "abilitySpellId": 1284663,
+          "trigger": "WCL 6:00",
+          "severity": "critical",
+          "category": "defensive",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Third Imbibe — leftover CDs on ~3:35 kills."
+        },
+        "status": "ok",
+        "wclMedian": 360,
+        "delta": 0,
+        "occ": 4,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "vm-malignant-catalyst9",
+          "timeSec": 366,
+          "ability": "Malignant Catalyst #9",
+          "abilitySpellId": 1282509,
+          "trigger": "WCL 6:06",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Final Catalyst into kill."
+        },
+        "status": "ok",
+        "wclMedian": 366,
+        "delta": 0,
+        "occ": 8,
+        "spread": 0
+      }
+    ],
+    "sequences": [
+      {
+        "spellId": 1280935,
+        "name": "Dripping Fangs",
+        "occ": [
+          10,
+          39,
+          66,
+          94,
+          123,
+          150,
+          178,
+          207,
+          234,
+          262,
+          291,
+          318,
+          346
+        ]
+      },
+      {
+        "spellId": 1284663,
+        "name": "Imbibe",
+        "occ": [
+          24,
+          108,
+          192,
+          276,
+          360
+        ]
+      },
+      {
+        "spellId": 1282509,
+        "name": "Malignant Catalyst",
+        "occ": [
+          30,
+          69,
+          114,
+          153,
+          198,
+          237,
+          282,
+          321,
+          366
+        ]
+      },
+      {
+        "spellId": 1282516,
+        "name": "Malignant Catalyst",
+        "occ": [
+          35,
+          74,
+          119,
+          158,
+          203,
+          242,
+          287,
+          326,
+          371
+        ]
+      },
+      {
+        "spellId": 1285979,
+        "name": "Caustic Surge",
+        "occ": [
+          42,
+          61,
+          74,
+          131,
+          159,
+          218,
+          235,
+          249,
+          308,
+          333
+        ]
+      },
+      {
+        "spellId": 145629,
+        "name": "Anti-Magic Zone",
+        "occ": [
+          107,
+          191,
+          277,
+          361
         ]
       }
     ]
@@ -824,52 +3182,91 @@
         "duration": 222,
         "url": "https://www.warcraftlogs.com/reports/t1PWCqd4TMG6YpQK?fight=32",
         "title": "Mythic+ Season 2"
+      },
+      {
+        "code": "LFfA9x6cknpHgVhJ",
+        "fightId": 26,
+        "duration": 224,
+        "url": "https://www.warcraftlogs.com/reports/LFfA9x6cknpHgVhJ?fight=26",
+        "title": "The Venomous Abyss"
       }
     ],
     "diffs": [
       {
         "window": {
           "id": "va-fangs1",
-          "timeSec": 8,
+          "timeSec": 10,
           "ability": "Dripping Fangs #1",
           "abilitySpellId": 1280935,
-          "trigger": "pull 8s; gap 29s",
+          "trigger": "WCL 0:10",
           "severity": "tank",
           "category": "external",
-          "phase": 1
+          "phase": 1,
+          "assignCd": true,
+          "note": "Tank fangs — repeats ~every 28s."
         },
         "status": "ok",
         "wclMedian": 10,
-        "delta": 2,
+        "delta": 0,
         "occ": 0,
         "spread": 0
       },
       {
         "window": {
           "id": "va-imbibe1",
-          "timeSec": 20,
+          "timeSec": 24,
           "ability": "Imbibe #1",
-          "abilitySpellId": 1283164,
-          "trigger": "pull 20s; every 84s",
+          "abilitySpellId": 1284663,
+          "trigger": "WCL 0:24",
           "severity": "critical",
           "category": "defensive",
           "phase": 1,
+          "assignCd": true,
           "note": "Major infection / fountain pressure."
         },
-        "status": "missing"
+        "status": "ok",
+        "wclMedian": 24,
+        "delta": 0,
+        "occ": 0,
+        "spread": 0
       },
       {
         "window": {
-          "id": "va-infect1",
-          "timeSec": 52,
-          "ability": "Adaptive Infection #1",
-          "abilitySpellId": 1282117,
-          "trigger": "52s; gap 32s",
-          "severity": "critical",
+          "id": "va-catalyst1",
+          "timeSec": 30,
+          "ability": "Malignant Catalyst #1",
+          "abilitySpellId": 1282509,
+          "trigger": "WCL 0:30",
+          "severity": "raid",
           "category": "throughput",
-          "phase": 1
+          "phase": 1,
+          "assignCd": true,
+          "note": "Raid DoT / spread pressure after Imbibe."
         },
-        "status": "missing"
+        "status": "ok",
+        "wclMedian": 30,
+        "delta": 0,
+        "occ": 0,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "va-surge1",
+          "timeSec": 37,
+          "ability": "Caustic Surge #1",
+          "abilitySpellId": 1285979,
+          "trigger": "WCL 0:37",
+          "severity": "raid",
+          "category": "defensive",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Raid-wide surge."
+        },
+        "status": "~",
+        "wclMedian": 41,
+        "delta": 4,
+        "occ": 0,
+        "spread": 12
       },
       {
         "window": {
@@ -877,10 +3274,12 @@
           "timeSec": 66,
           "ability": "Dripping Fangs #3",
           "abilitySpellId": 1280935,
-          "trigger": "8 + 29 + 29s",
+          "trigger": "WCL 1:06",
           "severity": "tank",
           "category": "external",
-          "phase": 1
+          "phase": 1,
+          "assignCd": true,
+          "note": "Third fangs — mid-set tank check."
         },
         "status": "ok",
         "wclMedian": 66,
@@ -890,42 +3289,136 @@
       },
       {
         "window": {
-          "id": "va-infect2",
-          "timeSec": 84,
-          "ability": "Adaptive Infection #2",
-          "abilitySpellId": 1282117,
-          "trigger": "52 + 32s",
-          "severity": "critical",
-          "category": "defensive",
-          "phase": 1
+          "id": "va-catalyst2",
+          "timeSec": 69,
+          "ability": "Malignant Catalyst #2",
+          "abilitySpellId": 1282509,
+          "trigger": "WCL 1:09",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Second Catalyst."
         },
-        "status": "missing"
+        "status": "ok",
+        "wclMedian": 69,
+        "delta": 0,
+        "occ": 1,
+        "spread": 0
       },
       {
         "window": {
           "id": "va-imbibe2",
-          "timeSec": 104,
+          "timeSec": 108,
           "ability": "Imbibe #2",
-          "abilitySpellId": 1283164,
-          "trigger": "20 + 84s",
+          "abilitySpellId": 1284663,
+          "trigger": "WCL 1:48",
           "severity": "critical",
-          "category": "throughput",
-          "phase": 1
+          "category": "defensive",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Second Imbibe — major CD."
         },
-        "status": "missing"
+        "status": "ok",
+        "wclMedian": 108,
+        "delta": 0,
+        "occ": 1,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "va-catalyst3",
+          "timeSec": 114,
+          "ability": "Malignant Catalyst #3",
+          "abilitySpellId": 1282509,
+          "trigger": "WCL 1:54",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Into Caustic Surge #2."
+        },
+        "status": "ok",
+        "wclMedian": 114,
+        "delta": 0,
+        "occ": 2,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "va-surge2",
+          "timeSec": 126,
+          "ability": "Caustic Surge #2",
+          "abilitySpellId": 1285979,
+          "trigger": "WCL 2:06",
+          "severity": "raid",
+          "category": "defensive",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Second surge."
+        },
+        "status": "ok",
+        "wclMedian": 126,
+        "delta": 0,
+        "occ": 1,
+        "spread": 84
+      },
+      {
+        "window": {
+          "id": "va-catalyst4",
+          "timeSec": 153,
+          "ability": "Malignant Catalyst #4",
+          "abilitySpellId": 1282509,
+          "trigger": "WCL 2:33",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Late Catalyst."
+        },
+        "status": "ok",
+        "wclMedian": 153,
+        "delta": 0,
+        "occ": 3,
+        "spread": 0
       },
       {
         "window": {
           "id": "va-imbibe3",
-          "timeSec": 188,
+          "timeSec": 192,
           "ability": "Imbibe #3",
-          "abilitySpellId": 1283164,
-          "trigger": "104 + 84s",
+          "abilitySpellId": 1284663,
+          "trigger": "WCL 3:12",
           "severity": "critical",
           "category": "defensive",
-          "phase": 1
+          "phase": 1,
+          "assignCd": true,
+          "note": "Third Imbibe — leftover CDs on ~3:35 kills."
         },
-        "status": "missing"
+        "status": "ok",
+        "wclMedian": 192,
+        "delta": 0,
+        "occ": 2,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "va-catalyst5",
+          "timeSec": 198,
+          "ability": "Malignant Catalyst #5",
+          "abilitySpellId": 1282509,
+          "trigger": "WCL 3:18",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Final Catalyst into kill."
+        },
+        "status": "ok",
+        "wclMedian": 198,
+        "delta": 0,
+        "occ": 4,
+        "spread": 0
       }
     ],
     "sequences": [
@@ -978,8 +3471,642 @@
         "spellId": 1285979,
         "name": "Caustic Surge",
         "occ": [
-          37,
-          126
+          45,
+          130,
+          213
+        ]
+      }
+    ]
+  },
+  "sszorak-mythic": {
+    "file": "sszorak-mythic.json",
+    "encounterId": 3420,
+    "kills": [
+      {
+        "code": "h4GKpPrQbnY7Wfmd",
+        "fightId": 13,
+        "duration": 360,
+        "url": "https://www.warcraftlogs.com/reports/h4GKpPrQbnY7Wfmd?fight=13",
+        "title": "week 3.2"
+      },
+      {
+        "code": "7PG6Wdjzmf1MLQ4a",
+        "fightId": 1,
+        "duration": 362,
+        "url": "https://www.warcraftlogs.com/reports/7PG6Wdjzmf1MLQ4a?fight=1",
+        "title": "The Venomous Abyss"
+      },
+      {
+        "code": "aDrAXfN9yBjYFHgc",
+        "fightId": 22,
+        "duration": 366,
+        "url": "https://www.warcraftlogs.com/reports/aDrAXfN9yBjYFHgc?fight=22",
+        "title": "Snowblind's Wrath Will Be Swift"
+      },
+      {
+        "code": "yRpcDAbhkwPxjngz",
+        "fightId": 19,
+        "duration": 368,
+        "url": "https://www.warcraftlogs.com/reports/yRpcDAbhkwPxjngz?fight=19",
+        "title": "raid"
+      }
+    ],
+    "diffs": [
+      {
+        "window": {
+          "id": "sm-mutilate1",
+          "timeSec": 8,
+          "ability": "Mutilate #1",
+          "abilitySpellId": 1277031,
+          "trigger": "WCL 0:08",
+          "severity": "tank",
+          "category": "external",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Tank combo — external if needed."
+        },
+        "status": "ok",
+        "wclMedian": 8,
+        "delta": 0,
+        "occ": 0,
+        "spread": 4
+      },
+      {
+        "window": {
+          "id": "sm-tempest1",
+          "timeSec": 19,
+          "ability": "Tempest #1",
+          "abilitySpellId": 1287072,
+          "trigger": "WCL 0:19",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Early raid weather pressure."
+        },
+        "status": "ok",
+        "wclMedian": 19,
+        "delta": 0,
+        "occ": 0,
+        "spread": 9
+      },
+      {
+        "window": {
+          "id": "sm-venomous-surge1",
+          "timeSec": 29,
+          "ability": "Venomous Surge #1",
+          "abilitySpellId": 1305959,
+          "trigger": "WCL 0:29",
+          "severity": "raid",
+          "category": "defensive",
+          "phase": 1,
+          "assignCd": true,
+          "note": "First surge."
+        },
+        "status": "ok",
+        "wclMedian": 29,
+        "delta": 0,
+        "occ": 0,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "sm-raging-crosswinds1",
+          "timeSec": 39,
+          "ability": "Raging Crosswinds #1",
+          "abilitySpellId": 1285419,
+          "trigger": "WCL 0:39",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Extra Mythic occurrence vs Heroic timeline."
+        },
+        "status": "ok",
+        "wclMedian": 39,
+        "delta": 0,
+        "occ": 0,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "sm-tempest2",
+          "timeSec": 65,
+          "ability": "Tempest #2",
+          "abilitySpellId": 1287072,
+          "trigger": "WCL 1:05",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Extra Mythic occurrence vs Heroic timeline."
+        },
+        "status": "ok",
+        "wclMedian": 65,
+        "delta": 0,
+        "occ": 1,
+        "spread": 8
+      },
+      {
+        "window": {
+          "id": "sm-venomous-surge2",
+          "timeSec": 76,
+          "ability": "Venomous Surge #2",
+          "abilitySpellId": 1305959,
+          "trigger": "WCL 1:16",
+          "severity": "raid",
+          "category": "defensive",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Extra Mythic occurrence vs Heroic timeline."
+        },
+        "status": "ok",
+        "wclMedian": 76,
+        "delta": 0,
+        "occ": 1,
+        "spread": 1
+      },
+      {
+        "window": {
+          "id": "sm-raging-crosswinds2",
+          "timeSec": 86,
+          "ability": "Raging Crosswinds #2",
+          "abilitySpellId": 1285419,
+          "trigger": "WCL 1:26",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Crosswinds soak / dodge damage."
+        },
+        "status": "ok",
+        "wclMedian": 86,
+        "delta": 0,
+        "occ": 1,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "sm-dig-in1",
+          "timeSec": 100,
+          "ability": "Dig In #1",
+          "abilitySpellId": 1286033,
+          "trigger": "WCL 1:40",
+          "severity": "critical",
+          "category": "defensive",
+          "phase": 2,
+          "assignCd": true,
+          "note": "Extra Mythic occurrence vs Heroic timeline."
+        },
+        "status": "ok",
+        "wclMedian": 100,
+        "delta": 0,
+        "occ": 0,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "sm-tempest3",
+          "timeSec": 144,
+          "ability": "Tempest #3",
+          "abilitySpellId": 1287072,
+          "trigger": "WCL 2:24",
+          "severity": "raid",
+          "category": "defensive",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Into second Surge."
+        },
+        "status": "ok",
+        "wclMedian": 144,
+        "delta": 0,
+        "occ": 2,
+        "spread": 9
+      },
+      {
+        "window": {
+          "id": "sm-venomous-surge3",
+          "timeSec": 156,
+          "ability": "Venomous Surge #3",
+          "abilitySpellId": 1305959,
+          "trigger": "WCL 2:36",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Second surge before Dig In."
+        },
+        "status": "ok",
+        "wclMedian": 156,
+        "delta": 0,
+        "occ": 2,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "sm-raging-crosswinds3",
+          "timeSec": 166,
+          "ability": "Raging Crosswinds #3",
+          "abilitySpellId": 1285419,
+          "trigger": "WCL 2:46",
+          "severity": "raid",
+          "category": "defensive",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Into Dig In."
+        },
+        "status": "ok",
+        "wclMedian": 166,
+        "delta": 0,
+        "occ": 2,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "sm-tempest4",
+          "timeSec": 189,
+          "ability": "Tempest #4",
+          "abilitySpellId": 1287072,
+          "trigger": "WCL 3:09",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Extra Mythic occurrence vs Heroic timeline."
+        },
+        "status": "ok",
+        "wclMedian": 189,
+        "delta": 0,
+        "occ": 3,
+        "spread": 8
+      },
+      {
+        "window": {
+          "id": "sm-mutilate4",
+          "timeSec": 193,
+          "ability": "Mutilate #4",
+          "abilitySpellId": 1277031,
+          "trigger": "WCL 3:13",
+          "severity": "tank",
+          "category": "external",
+          "phase": 2,
+          "assignCd": true,
+          "note": "Post-Dig tank check."
+        },
+        "status": "ok",
+        "wclMedian": 195,
+        "delta": 2,
+        "occ": 7,
+        "spread": 9
+      },
+      {
+        "window": {
+          "id": "sm-venomous-surge4",
+          "timeSec": 203,
+          "ability": "Venomous Surge #4",
+          "abilitySpellId": 1305959,
+          "trigger": "WCL 3:23",
+          "severity": "raid",
+          "category": "defensive",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Extra Mythic occurrence vs Heroic timeline."
+        },
+        "status": "ok",
+        "wclMedian": 203,
+        "delta": 0,
+        "occ": 3,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "sm-raging-crosswinds4",
+          "timeSec": 213,
+          "ability": "Raging Crosswinds #4",
+          "abilitySpellId": 1285419,
+          "trigger": "WCL 3:33",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Extra Mythic occurrence vs Heroic timeline."
+        },
+        "status": "ok",
+        "wclMedian": 213,
+        "delta": 0,
+        "occ": 3,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "sm-dig-in2",
+          "timeSec": 227,
+          "ability": "Dig In #2",
+          "abilitySpellId": 1286033,
+          "trigger": "WCL 3:47",
+          "severity": "critical",
+          "category": "defensive",
+          "phase": 2,
+          "assignCd": true,
+          "note": "Mid-fight phase break — primary raid CD window (replaces old Howling Maelstrom placeholder)."
+        },
+        "status": "ok",
+        "wclMedian": 227,
+        "delta": 0,
+        "occ": 1,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "sm-tempest5",
+          "timeSec": 273,
+          "ability": "Tempest #5",
+          "abilitySpellId": 1287072,
+          "trigger": "WCL 4:33",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 2,
+          "assignCd": true,
+          "note": "Late Tempest."
+        },
+        "status": "ok",
+        "wclMedian": 271,
+        "delta": 2,
+        "occ": 4,
+        "spread": 8
+      },
+      {
+        "window": {
+          "id": "sm-venomous-surge5",
+          "timeSec": 283,
+          "ability": "Venomous Surge #5",
+          "abilitySpellId": 1305959,
+          "trigger": "WCL 4:43",
+          "severity": "raid",
+          "category": "defensive",
+          "phase": 2,
+          "assignCd": true,
+          "note": "Third surge."
+        },
+        "status": "ok",
+        "wclMedian": 283,
+        "delta": 0,
+        "occ": 4,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "sm-raging-crosswinds5",
+          "timeSec": 293,
+          "ability": "Raging Crosswinds #5",
+          "abilitySpellId": 1285419,
+          "trigger": "WCL 4:53",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 2,
+          "assignCd": true,
+          "note": "Late Crosswinds."
+        },
+        "status": "ok",
+        "wclMedian": 293,
+        "delta": 0,
+        "occ": 4,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "sm-tempest6",
+          "timeSec": 318,
+          "ability": "Tempest #6",
+          "abilitySpellId": 1287072,
+          "trigger": "WCL 5:18",
+          "severity": "raid",
+          "category": "defensive",
+          "phase": 2,
+          "assignCd": true,
+          "note": "Into final Surge on ~4:00 kills."
+        },
+        "status": "ok",
+        "wclMedian": 318,
+        "delta": 0,
+        "occ": 5,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "sm-venomous-surge6",
+          "timeSec": 330,
+          "ability": "Venomous Surge #6",
+          "abilitySpellId": 1305959,
+          "trigger": "WCL 5:30",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 2,
+          "assignCd": true,
+          "note": "Final surge — leftover CDs."
+        },
+        "status": "ok",
+        "wclMedian": 330,
+        "delta": 0,
+        "occ": 5,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "sm-raging-crosswinds6",
+          "timeSec": 340,
+          "ability": "Raging Crosswinds #6",
+          "abilitySpellId": 1285419,
+          "trigger": "WCL 5:40",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Extra Mythic occurrence vs Heroic timeline."
+        },
+        "status": "ok",
+        "wclMedian": 340,
+        "delta": 0,
+        "occ": 5,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "sm-dig-in3",
+          "timeSec": 354,
+          "ability": "Dig In #3",
+          "abilitySpellId": 1286033,
+          "trigger": "WCL 5:54",
+          "severity": "critical",
+          "category": "defensive",
+          "phase": 2,
+          "assignCd": true,
+          "note": "Extra Mythic occurrence vs Heroic timeline."
+        },
+        "status": "ok",
+        "wclMedian": 354,
+        "delta": 0,
+        "occ": 2,
+        "spread": 0
+      }
+    ],
+    "sequences": [
+      {
+        "spellId": 1277031,
+        "name": "Mutilate",
+        "occ": [
+          12,
+          61,
+          135,
+          152,
+          191,
+          273,
+          322
+        ]
+      },
+      {
+        "spellId": 1277027,
+        "name": "Mutilate",
+        "occ": [
+          12,
+          61,
+          135,
+          152,
+          191,
+          273,
+          322
+        ]
+      },
+      {
+        "spellId": 1287072,
+        "name": "Tempest",
+        "occ": [
+          19,
+          65,
+          144,
+          189,
+          271,
+          318
+        ]
+      },
+      {
+        "spellId": 1277101,
+        "name": "Ravage",
+        "occ": [
+          21,
+          55,
+          71,
+          146,
+          182,
+          197,
+          266,
+          279,
+          313
+        ]
+      },
+      {
+        "spellId": 1277002,
+        "name": "Ravage",
+        "occ": [
+          21,
+          55,
+          71,
+          146,
+          182,
+          197,
+          266,
+          279,
+          313
+        ]
+      },
+      {
+        "spellId": 1305959,
+        "name": "Venomous Surge",
+        "occ": [
+          29,
+          76,
+          156,
+          203,
+          283,
+          330
+        ]
+      },
+      {
+        "spellId": 1285419,
+        "name": "Raging Crosswinds",
+        "occ": [
+          39,
+          86,
+          166,
+          213,
+          293,
+          340
+        ]
+      },
+      {
+        "spellId": 1285453,
+        "name": "Raging Crosswinds",
+        "occ": [
+          40,
+          87,
+          167,
+          214,
+          294,
+          341
+        ]
+      },
+      {
+        "spellId": 1285425,
+        "name": "Raging Crosswinds",
+        "occ": [
+          40,
+          87,
+          167,
+          214,
+          294,
+          341
+        ]
+      },
+      {
+        "spellId": 1297111,
+        "name": "Raging Crosswinds",
+        "occ": [
+          40,
+          87,
+          167,
+          214,
+          294,
+          341
+        ]
+      },
+      {
+        "spellId": 1297096,
+        "name": "Raging Crosswinds",
+        "occ": [
+          40,
+          87,
+          167,
+          214,
+          294,
+          341
+        ]
+      },
+      {
+        "spellId": 145629,
+        "name": "Anti-Magic Zone",
+        "occ": [
+          71,
+          136,
+          276
+        ]
+      },
+      {
+        "spellId": 1286033,
+        "name": "Dig In",
+        "occ": [
+          100,
+          227,
+          354
         ]
       }
     ]
@@ -1008,21 +4135,53 @@
         "duration": 251,
         "url": "https://www.warcraftlogs.com/reports/A4Pf6nadhcrgLCbq?fight=15",
         "title": "The Venomous Abyss"
+      },
+      {
+        "code": "mg3A6KqbCvdkJ4VR",
+        "fightId": 11,
+        "duration": 251,
+        "url": "https://www.warcraftlogs.com/reports/mg3A6KqbCvdkJ4VR?fight=11",
+        "title": "The Venomous Abyss"
       }
     ],
     "diffs": [
       {
         "window": {
-          "id": "sz-predator1",
-          "timeSec": 5,
-          "ability": "Apex Predator #1",
-          "abilitySpellId": 1277025,
-          "trigger": "~5–6s",
+          "id": "sz-mutilate1",
+          "timeSec": 15,
+          "ability": "Mutilate #1",
+          "abilitySpellId": 1277031,
+          "trigger": "WCL 0:15",
           "severity": "tank",
           "category": "external",
-          "phase": 1
+          "phase": 1,
+          "assignCd": true,
+          "note": "Tank combo — external if needed."
         },
-        "status": "missing"
+        "status": "~",
+        "wclMedian": 11,
+        "delta": 4,
+        "occ": 0,
+        "spread": 4
+      },
+      {
+        "window": {
+          "id": "sz-tempest1",
+          "timeSec": 17,
+          "ability": "Tempest #1",
+          "abilitySpellId": 1287072,
+          "trigger": "WCL 0:17",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Early raid weather pressure."
+        },
+        "status": "ok",
+        "wclMedian": 17,
+        "delta": 0,
+        "occ": 0,
+        "spread": 4
       },
       {
         "window": {
@@ -1030,10 +4189,12 @@
           "timeSec": 32,
           "ability": "Venomous Surge #1",
           "abilitySpellId": 1305959,
-          "trigger": "~29–36s",
+          "trigger": "WCL 0:32",
           "severity": "raid",
-          "category": "throughput",
-          "phase": 1
+          "category": "defensive",
+          "phase": 1,
+          "assignCd": true,
+          "note": "First surge."
         },
         "status": "ok",
         "wclMedian": 32,
@@ -1043,60 +4204,212 @@
       },
       {
         "window": {
-          "id": "sz-maelstrom1",
-          "timeSec": 100,
-          "ability": "Howling Maelstrom #1",
-          "abilitySpellId": 1285732,
-          "trigger": "long bar ~100s",
-          "severity": "critical",
-          "category": "defensive",
+          "id": "sz-cross1",
+          "timeSec": 43,
+          "ability": "Raging Crosswinds #1",
+          "abilitySpellId": 1285419,
+          "trigger": "WCL 0:43",
+          "severity": "raid",
+          "category": "throughput",
           "phase": 1,
-          "note": "Primary raid CD."
+          "assignCd": true,
+          "note": "Crosswinds soak / dodge damage."
         },
-        "status": "missing"
+        "status": "ok",
+        "wclMedian": 43,
+        "delta": 0,
+        "occ": 0,
+        "spread": 0
       },
       {
         "window": {
-          "id": "sz-predator2",
-          "timeSec": 55,
-          "ability": "Apex Predator #2",
-          "abilitySpellId": 1277025,
-          "trigger": "mid rotation",
-          "severity": "tank",
-          "category": "external",
-          "phase": 1
+          "id": "sz-tempest2",
+          "timeSec": 69,
+          "ability": "Tempest #2",
+          "abilitySpellId": 1287072,
+          "trigger": "WCL 1:09",
+          "severity": "raid",
+          "category": "defensive",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Into second Surge."
         },
-        "status": "missing"
+        "status": "ok",
+        "wclMedian": 71,
+        "delta": 2,
+        "occ": 1,
+        "spread": 8
       },
       {
         "window": {
           "id": "sz-surge2",
-          "timeSec": 120,
-          "ability": "Venomous Surge (post-maelstrom)",
+          "timeSec": 84,
+          "ability": "Venomous Surge #2",
           "abilitySpellId": 1305959,
-          "trigger": "after first Maelstrom",
+          "trigger": "WCL 1:24",
           "severity": "raid",
           "category": "throughput",
-          "phase": 1
+          "phase": 1,
+          "assignCd": true,
+          "note": "Second surge before Dig In."
         },
-        "status": "DIFF",
+        "status": "ok",
         "wclMedian": 84,
-        "delta": 36,
+        "delta": 0,
         "occ": 1,
         "spread": 0
       },
       {
         "window": {
-          "id": "sz-maelstrom2",
-          "timeSec": 211,
-          "ability": "Howling Maelstrom #2",
-          "abilitySpellId": 1285732,
-          "trigger": "~100 + ~111s",
+          "id": "sz-cross2",
+          "timeSec": 95,
+          "ability": "Raging Crosswinds #2",
+          "abilitySpellId": 1285419,
+          "trigger": "WCL 1:35",
+          "severity": "raid",
+          "category": "defensive",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Into Dig In."
+        },
+        "status": "ok",
+        "wclMedian": 95,
+        "delta": 0,
+        "occ": 1,
+        "spread": 1
+      },
+      {
+        "window": {
+          "id": "sz-dig",
+          "timeSec": 111,
+          "ability": "Dig In (phase)",
+          "abilitySpellId": 1286033,
+          "trigger": "WCL 1:51",
           "severity": "critical",
           "category": "defensive",
-          "phase": 1
+          "phase": 2,
+          "assignCd": true,
+          "note": "Mid-fight phase break — primary raid CD window (replaces old Howling Maelstrom placeholder)."
         },
-        "status": "missing"
+        "status": "ok",
+        "wclMedian": 111,
+        "delta": 0,
+        "occ": 0,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "sz-mutilate2",
+          "timeSec": 151,
+          "ability": "Mutilate #2",
+          "abilitySpellId": 1277031,
+          "trigger": "WCL 2:31",
+          "severity": "tank",
+          "category": "external",
+          "phase": 2,
+          "assignCd": true,
+          "note": "Post-Dig tank check."
+        },
+        "status": "ok",
+        "wclMedian": 149,
+        "delta": 2,
+        "occ": 4,
+        "spread": 12
+      },
+      {
+        "window": {
+          "id": "sz-tempest3",
+          "timeSec": 159,
+          "ability": "Tempest #3",
+          "abilitySpellId": 1287072,
+          "trigger": "WCL 2:39",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 2,
+          "assignCd": true,
+          "note": "Late Tempest."
+        },
+        "status": "ok",
+        "wclMedian": 157,
+        "delta": 2,
+        "occ": 2,
+        "spread": 4
+      },
+      {
+        "window": {
+          "id": "sz-surge3",
+          "timeSec": 170,
+          "ability": "Venomous Surge #3",
+          "abilitySpellId": 1305959,
+          "trigger": "WCL 2:50",
+          "severity": "raid",
+          "category": "defensive",
+          "phase": 2,
+          "assignCd": true,
+          "note": "Third surge."
+        },
+        "status": "ok",
+        "wclMedian": 170,
+        "delta": 0,
+        "occ": 2,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "sz-cross3",
+          "timeSec": 181,
+          "ability": "Raging Crosswinds #3",
+          "abilitySpellId": 1285419,
+          "trigger": "WCL 3:01",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 2,
+          "assignCd": true,
+          "note": "Late Crosswinds."
+        },
+        "status": "ok",
+        "wclMedian": 181,
+        "delta": 0,
+        "occ": 2,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "sz-tempest4",
+          "timeSec": 211,
+          "ability": "Tempest #4",
+          "abilitySpellId": 1287072,
+          "trigger": "WCL 3:31",
+          "severity": "raid",
+          "category": "defensive",
+          "phase": 2,
+          "assignCd": true,
+          "note": "Into final Surge on ~4:00 kills."
+        },
+        "status": "ok",
+        "wclMedian": 209,
+        "delta": 2,
+        "occ": 3,
+        "spread": 8
+      },
+      {
+        "window": {
+          "id": "sz-surge4",
+          "timeSec": 223,
+          "ability": "Venomous Surge #4",
+          "abilitySpellId": 1305959,
+          "trigger": "WCL 3:43",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 2,
+          "assignCd": true,
+          "note": "Final surge — leftover CDs."
+        },
+        "status": "ok",
+        "wclMedian": 223,
+        "delta": 0,
+        "occ": 3,
+        "spread": 0
       }
     ],
     "sequences": [
@@ -1104,11 +4417,12 @@
         "spellId": 1277101,
         "name": "Ravage",
         "occ": [
-          13,
+          9,
           25,
-          61,
+          65,
           77,
-          155,
+          151,
+          163,
           199,
           215
         ]
@@ -1117,11 +4431,12 @@
         "spellId": 1277002,
         "name": "Ravage",
         "occ": [
-          13,
+          9,
           25,
-          61,
+          65,
           77,
-          155,
+          151,
+          163,
           199,
           215
         ]
@@ -1131,8 +4446,9 @@
         "name": "Mutilate",
         "occ": [
           15,
-          69,
+          65,
           151,
+          163,
           203
         ]
       },
@@ -1141,8 +4457,9 @@
         "name": "Mutilate",
         "occ": [
           15,
-          69,
+          65,
           151,
+          163,
           203
         ]
       },
@@ -1151,9 +4468,9 @@
         "name": "Tempest",
         "occ": [
           17,
-          69,
-          159,
-          211
+          71,
+          157,
+          209
         ]
       },
       {
@@ -1209,7 +4526,623 @@
         "spellId": 1286033,
         "name": "Dig In",
         "occ": [
-          111
+          111,
+          249
+        ]
+      }
+    ]
+  },
+  "twin-fangs-mythic": {
+    "file": "twin-fangs-mythic.json",
+    "encounterId": 3421,
+    "kills": [
+      {
+        "code": "hpq8F2H6KLxBg4mG",
+        "fightId": 8,
+        "duration": 416,
+        "url": "https://www.warcraftlogs.com/reports/hpq8F2H6KLxBg4mG?fight=8",
+        "title": "raid"
+      },
+      {
+        "code": "4d7gGMRCjArnzWaT",
+        "fightId": 39,
+        "duration": 426,
+        "url": "https://www.warcraftlogs.com/reports/4d7gGMRCjArnzWaT?fight=39",
+        "title": "B2"
+      },
+      {
+        "code": "9rMa7Z1JBNDqxnPz",
+        "fightId": 37,
+        "duration": 427,
+        "url": "https://www.warcraftlogs.com/reports/9rMa7Z1JBNDqxnPz?fight=37",
+        "title": "The Venomous Abyss"
+      },
+      {
+        "code": "bX9r7nMgCf8Gzd26",
+        "fightId": 17,
+        "duration": 430,
+        "url": "https://www.warcraftlogs.com/reports/bX9r7nMgCf8Gzd26?fight=17",
+        "title": "Cancel Tactyks, he is a cyberbully"
+      }
+    ],
+    "diffs": [
+      {
+        "window": {
+          "id": "tfm-caustic-deluge1",
+          "timeSec": 9,
+          "ability": "Caustic Deluge #1",
+          "abilitySpellId": 1289192,
+          "trigger": "WCL 0:09",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 1,
+          "assignCd": true,
+          "note": "First deluge set."
+        },
+        "status": "ok",
+        "wclMedian": 9,
+        "delta": 0,
+        "occ": 0,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "tfm-stone-breaker1",
+          "timeSec": 28,
+          "ability": "Stone Breaker #1",
+          "abilitySpellId": 1288538,
+          "trigger": "WCL 0:28",
+          "severity": "tank",
+          "category": "external",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Tank breaker."
+        },
+        "status": "ok",
+        "wclMedian": 28,
+        "delta": 0,
+        "occ": 1,
+        "spread": 1
+      },
+      {
+        "window": {
+          "id": "tfm-ravenous-feast1",
+          "timeSec": 61,
+          "ability": "Ravenous Feast #1",
+          "abilitySpellId": 1290516,
+          "trigger": "WCL 1:01",
+          "severity": "critical",
+          "category": "throughput",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Extra Mythic occurrence vs Heroic timeline."
+        },
+        "status": "ok",
+        "wclMedian": 61,
+        "delta": 0,
+        "occ": 0,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "tfm-caustic-deluge2",
+          "timeSec": 70,
+          "ability": "Caustic Deluge #2",
+          "abilitySpellId": 1289192,
+          "trigger": "WCL 1:10",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Extra Mythic occurrence vs Heroic timeline."
+        },
+        "status": "ok",
+        "wclMedian": 70,
+        "delta": 0,
+        "occ": 1,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "tfm-ravenous-feast2",
+          "timeSec": 122,
+          "ability": "Ravenous Feast #2",
+          "abilitySpellId": 1290516,
+          "trigger": "WCL 2:02",
+          "severity": "critical",
+          "category": "throughput",
+          "phase": 1,
+          "assignCd": true,
+          "suggestPersonals": true,
+          "note": "Soak — major CD."
+        },
+        "status": "ok",
+        "wclMedian": 122,
+        "delta": 0,
+        "occ": 1,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "tfm-sanguine-storm1",
+          "timeSec": 136,
+          "ability": "Sanguine Storm #1",
+          "abilitySpellId": 1306872,
+          "trigger": "WCL 2:16",
+          "severity": "critical",
+          "category": "defensive",
+          "phase": 2,
+          "assignCd": true,
+          "note": "Extra Mythic occurrence vs Heroic timeline."
+        },
+        "status": "ok",
+        "wclMedian": 136,
+        "delta": 0,
+        "occ": 0,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "tfm-vile-flood1",
+          "timeSec": 140,
+          "ability": "Vile Flood #1",
+          "abilitySpellId": 1294293,
+          "trigger": "WCL 2:20",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 2,
+          "assignCd": false,
+          "note": "Extra Mythic occurrence vs Heroic timeline."
+        },
+        "status": "ok",
+        "wclMedian": 140,
+        "delta": 0,
+        "occ": 0,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "tfm-caustic-deluge3",
+          "timeSec": 164,
+          "ability": "Caustic Deluge #3",
+          "abilitySpellId": 1289192,
+          "trigger": "WCL 2:44",
+          "severity": "raid",
+          "category": "defensive",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Second deluge after Feast."
+        },
+        "status": "ok",
+        "wclMedian": 164,
+        "delta": 0,
+        "occ": 2,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "tfm-stone-breaker3",
+          "timeSec": 183,
+          "ability": "Stone Breaker #3",
+          "abilitySpellId": 1288538,
+          "trigger": "WCL 3:03",
+          "severity": "tank",
+          "category": "external",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Second breaker."
+        },
+        "status": "ok",
+        "wclMedian": 183,
+        "delta": 0,
+        "occ": 7,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "tfm-ravenous-feast3",
+          "timeSec": 216,
+          "ability": "Ravenous Feast #3",
+          "abilitySpellId": 1290516,
+          "trigger": "WCL 3:36",
+          "severity": "critical",
+          "category": "throughput",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Second feast into intermission."
+        },
+        "status": "ok",
+        "wclMedian": 216,
+        "delta": 0,
+        "occ": 2,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "tfm-caustic-deluge4",
+          "timeSec": 225,
+          "ability": "Caustic Deluge #4",
+          "abilitySpellId": 1289192,
+          "trigger": "WCL 3:45",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Extra Mythic occurrence vs Heroic timeline."
+        },
+        "status": "ok",
+        "wclMedian": 225,
+        "delta": 0,
+        "occ": 3,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "tfm-ravenous-feast4",
+          "timeSec": 277,
+          "ability": "Ravenous Feast #4",
+          "abilitySpellId": 1290516,
+          "trigger": "WCL 4:37",
+          "severity": "critical",
+          "category": "throughput",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Extra Mythic occurrence vs Heroic timeline."
+        },
+        "status": "ok",
+        "wclMedian": 277,
+        "delta": 0,
+        "occ": 3,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "tfm-sanguine-storm2",
+          "timeSec": 291,
+          "ability": "Sanguine Storm #2",
+          "abilitySpellId": 1306872,
+          "trigger": "WCL 4:51",
+          "severity": "critical",
+          "category": "defensive",
+          "phase": 2,
+          "assignCd": true,
+          "note": "Intermission — Vile Flood follows ~2:34. Major raid CD."
+        },
+        "status": "ok",
+        "wclMedian": 291,
+        "delta": 0,
+        "occ": 1,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "tfm-vile-flood2",
+          "timeSec": 295,
+          "ability": "Vile Flood #2",
+          "abilitySpellId": 1294293,
+          "trigger": "WCL 4:55",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 2,
+          "assignCd": false,
+          "note": "Paired with Sanguine Storm."
+        },
+        "status": "ok",
+        "wclMedian": 295,
+        "delta": 0,
+        "occ": 1,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "tfm-caustic-deluge5",
+          "timeSec": 319,
+          "ability": "Caustic Deluge #5",
+          "abilitySpellId": 1289192,
+          "trigger": "WCL 5:19",
+          "severity": "raid",
+          "category": "defensive",
+          "phase": 3,
+          "assignCd": true,
+          "note": "Post-intermission deluge."
+        },
+        "status": "ok",
+        "wclMedian": 319,
+        "delta": 0,
+        "occ": 4,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "tfm-stone-breaker5",
+          "timeSec": 338,
+          "ability": "Stone Breaker #5",
+          "abilitySpellId": 1288538,
+          "trigger": "WCL 5:38",
+          "severity": "tank",
+          "category": "external",
+          "phase": 3,
+          "assignCd": true,
+          "note": "Late breaker."
+        },
+        "status": "ok",
+        "wclMedian": 338,
+        "delta": 0,
+        "occ": 13,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "tfm-ravenous-feast5",
+          "timeSec": 371,
+          "ability": "Ravenous Feast #5",
+          "abilitySpellId": 1290516,
+          "trigger": "WCL 6:11",
+          "severity": "critical",
+          "category": "throughput",
+          "phase": 3,
+          "assignCd": true,
+          "note": "Third feast on ~4:30–5:00 kills."
+        },
+        "status": "ok",
+        "wclMedian": 371,
+        "delta": 0,
+        "occ": 4,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "tfm-caustic-deluge6",
+          "timeSec": 380,
+          "ability": "Caustic Deluge #6",
+          "abilitySpellId": 1289192,
+          "trigger": "WCL 6:20",
+          "severity": "raid",
+          "category": "defensive",
+          "phase": 3,
+          "assignCd": true,
+          "note": "Final deluge into kill."
+        },
+        "status": "ok",
+        "wclMedian": 380,
+        "delta": 0,
+        "occ": 5,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "tfm-stone-breaker6",
+          "timeSec": 399,
+          "ability": "Stone Breaker #6",
+          "abilitySpellId": 1288538,
+          "trigger": "WCL 6:39",
+          "severity": "tank",
+          "category": "external",
+          "phase": 3,
+          "assignCd": true,
+          "note": "Last breaker on slower speed kills."
+        },
+        "status": "ok",
+        "wclMedian": 399,
+        "delta": 0,
+        "occ": 16,
+        "spread": 0
+      }
+    ],
+    "sequences": [
+      {
+        "spellId": 1303230,
+        "name": "Blood Torrent",
+        "occ": [
+          9,
+          70,
+          164,
+          225,
+          319,
+          380
+        ]
+      },
+      {
+        "spellId": 1289192,
+        "name": "Caustic Deluge",
+        "occ": [
+          9,
+          70,
+          164,
+          225,
+          319,
+          380
+        ]
+      },
+      {
+        "spellId": 1310360,
+        "name": "Envenomed",
+        "occ": [
+          11,
+          72,
+          166,
+          227,
+          321,
+          382
+        ]
+      },
+      {
+        "spellId": 1289994,
+        "name": "Caustic Deluge",
+        "occ": [
+          13,
+          74,
+          168,
+          229,
+          323,
+          384,
+          415
+        ]
+      },
+      {
+        "spellId": 1303378,
+        "name": "Barbed Bulwark",
+        "occ": [
+          13,
+          74,
+          168,
+          229,
+          323,
+          384
+        ]
+      },
+      {
+        "spellId": 1289201,
+        "name": "Caustic Globule",
+        "occ": [
+          17,
+          77,
+          172,
+          233,
+          326,
+          388,
+          419
+        ]
+      },
+      {
+        "spellId": 1290336,
+        "name": "Eternal Venom",
+        "occ": [
+          17,
+          42,
+          77,
+          103,
+          121,
+          140,
+          172,
+          197,
+          233,
+          258,
+          282,
+          298,
+          326,
+          352,
+          387,
+          413
+        ]
+      },
+      {
+        "spellId": 1289092,
+        "name": "Stone Breaker",
+        "occ": [
+          28,
+          89,
+          183,
+          244,
+          338,
+          399
+        ]
+      },
+      {
+        "spellId": 1288538,
+        "name": "Stone Breaker",
+        "occ": [
+          28,
+          89,
+          183,
+          244,
+          338,
+          399
+        ]
+      },
+      {
+        "spellId": 1308356,
+        "name": "Rouse the Brood",
+        "occ": [
+          36,
+          97,
+          191,
+          252,
+          346,
+          407
+        ]
+      },
+      {
+        "spellId": 1291404,
+        "name": "Venomous Emergence",
+        "occ": [
+          36,
+          97,
+          191,
+          252,
+          346,
+          407
+        ]
+      },
+      {
+        "spellId": 1291478,
+        "name": "Corrosive Spit",
+        "occ": [
+          42,
+          105,
+          197,
+          258,
+          352,
+          415
+        ]
+      },
+      {
+        "spellId": 1290809,
+        "name": "Coiling Ichor",
+        "occ": [
+          43,
+          104,
+          198,
+          259,
+          353,
+          414
+        ]
+      },
+      {
+        "spellId": 1290956,
+        "name": "Stir the Depths",
+        "occ": [
+          47,
+          108,
+          202,
+          263,
+          357,
+          418
+        ]
+      },
+      {
+        "spellId": 1290516,
+        "name": "Ravenous Feast",
+        "occ": [
+          61,
+          122,
+          216,
+          277,
+          371
+        ]
+      },
+      {
+        "spellId": 145629,
+        "name": "Anti-Magic Zone",
+        "occ": [
+          65,
+          279
+        ]
+      },
+      {
+        "spellId": 1306872,
+        "name": "Sanguine Storm",
+        "occ": [
+          136,
+          291
+        ]
+      },
+      {
+        "spellId": 1294293,
+        "name": "Vile Flood",
+        "occ": [
+          140,
+          295
         ]
       }
     ]
@@ -1238,107 +5171,263 @@
         "duration": 294,
         "url": "https://www.warcraftlogs.com/reports/67c4hVAtKDCHfWTM?fight=23",
         "title": "The Venomous Abyss"
+      },
+      {
+        "code": "7qCMJYNmQcBX9T13",
+        "fightId": 26,
+        "duration": 299,
+        "url": "https://www.warcraftlogs.com/reports/7qCMJYNmQcBX9T13?fight=26",
+        "title": "H"
       }
     ],
     "diffs": [
       {
         "window": {
           "id": "tf-deluge1",
-          "timeSec": 9,
+          "timeSec": 10,
           "ability": "Caustic Deluge #1",
           "abilitySpellId": 1289192,
-          "trigger": "Heroic 9s",
+          "trigger": "WCL 0:10",
           "severity": "raid",
           "category": "throughput",
-          "phase": 1
+          "phase": 1,
+          "assignCd": true,
+          "note": "First deluge set."
         },
         "status": "ok",
         "wclMedian": 10,
-        "delta": 1,
+        "delta": 0,
         "occ": 0,
         "spread": 0
       },
       {
         "window": {
           "id": "tf-stone1",
-          "timeSec": 20,
+          "timeSec": 29,
           "ability": "Stone Breaker #1",
           "abilitySpellId": 1288538,
-          "trigger": "Heroic ~20s",
+          "trigger": "WCL 0:29",
           "severity": "tank",
           "category": "external",
-          "phase": 1
+          "phase": 1,
+          "assignCd": true,
+          "note": "Tank breaker."
         },
-        "status": "~",
-        "wclMedian": 26,
-        "delta": 6,
-        "occ": 0,
-        "spread": 1
+        "status": "ok",
+        "wclMedian": 29,
+        "delta": 0,
+        "occ": 1,
+        "spread": 0
       },
       {
         "window": {
           "id": "tf-feast1",
-          "timeSec": 63,
+          "timeSec": 68,
           "ability": "Ravenous Feast #1",
           "abilitySpellId": 1290516,
-          "trigger": "Heroic 63s",
+          "trigger": "WCL 1:08",
           "severity": "critical",
           "category": "throughput",
           "phase": 1,
+          "assignCd": true,
+          "suggestPersonals": true,
           "note": "Soak — major CD."
         },
-        "status": "~",
+        "status": "ok",
         "wclMedian": 68,
-        "delta": 5,
+        "delta": 0,
         "occ": 0,
         "spread": 0
       },
       {
         "window": {
           "id": "tf-deluge2",
-          "timeSec": 68,
+          "timeSec": 78,
           "ability": "Caustic Deluge #2",
           "abilitySpellId": 1289192,
-          "trigger": "rotate set ~68s",
+          "trigger": "WCL 1:18",
           "severity": "raid",
           "category": "defensive",
-          "phase": 1
+          "phase": 1,
+          "assignCd": true,
+          "note": "Second deluge after Feast."
         },
-        "status": "DIFF",
+        "status": "ok",
         "wclMedian": 78,
-        "delta": 10,
+        "delta": 0,
         "occ": 1,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "tf-stone2",
+          "timeSec": 97,
+          "ability": "Stone Breaker #2",
+          "abilitySpellId": 1288538,
+          "trigger": "WCL 1:37",
+          "severity": "tank",
+          "category": "external",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Second breaker."
+        },
+        "status": "ok",
+        "wclMedian": 97,
+        "delta": 0,
+        "occ": 4,
         "spread": 0
       },
       {
         "window": {
           "id": "tf-feast2",
-          "timeSec": 120,
+          "timeSec": 135,
           "ability": "Ravenous Feast #2",
           "abilitySpellId": 1290516,
-          "trigger": "second feast in cycle",
+          "trigger": "WCL 2:15",
           "severity": "critical",
           "category": "throughput",
-          "phase": 1
+          "phase": 1,
+          "assignCd": true,
+          "note": "Second feast into intermission."
         },
-        "status": "DIFF",
+        "status": "ok",
         "wclMedian": 135,
-        "delta": 15,
+        "delta": 0,
         "occ": 1,
         "spread": 0
       },
       {
         "window": {
-          "id": "tf-submerge",
-          "timeSec": 144,
-          "ability": "Submerge",
-          "abilitySpellId": 1308556,
-          "trigger": "Heroic 144s",
+          "id": "tf-storm",
+          "timeSec": 150,
+          "ability": "Sanguine Storm (intermission)",
+          "abilitySpellId": 1306872,
+          "trigger": "WCL 2:30",
           "severity": "critical",
           "category": "defensive",
-          "phase": 2
+          "phase": 2,
+          "assignCd": true,
+          "note": "Intermission — Vile Flood follows ~2:34. Major raid CD."
         },
-        "status": "missing"
+        "status": "ok",
+        "wclMedian": 150,
+        "delta": 0,
+        "occ": 0,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "tf-flood",
+          "timeSec": 154,
+          "ability": "Vile Flood",
+          "abilitySpellId": 1294293,
+          "trigger": "WCL 2:34",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 2,
+          "assignCd": false,
+          "note": "Paired with Sanguine Storm."
+        },
+        "status": "ok",
+        "wclMedian": 154,
+        "delta": 0,
+        "occ": 0,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "tf-deluge3",
+          "timeSec": 179,
+          "ability": "Caustic Deluge #3",
+          "abilitySpellId": 1289192,
+          "trigger": "WCL 2:59",
+          "severity": "raid",
+          "category": "defensive",
+          "phase": 3,
+          "assignCd": true,
+          "note": "Post-intermission deluge."
+        },
+        "status": "ok",
+        "wclMedian": 179,
+        "delta": 0,
+        "occ": 2,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "tf-stone3",
+          "timeSec": 199,
+          "ability": "Stone Breaker #3",
+          "abilitySpellId": 1288538,
+          "trigger": "WCL 3:19",
+          "severity": "tank",
+          "category": "external",
+          "phase": 3,
+          "assignCd": true,
+          "note": "Late breaker."
+        },
+        "status": "ok",
+        "wclMedian": 199,
+        "delta": 0,
+        "occ": 7,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "tf-feast3",
+          "timeSec": 237,
+          "ability": "Ravenous Feast #3",
+          "abilitySpellId": 1290516,
+          "trigger": "WCL 3:57",
+          "severity": "critical",
+          "category": "throughput",
+          "phase": 3,
+          "assignCd": true,
+          "note": "Third feast on ~4:30–5:00 kills."
+        },
+        "status": "ok",
+        "wclMedian": 237,
+        "delta": 0,
+        "occ": 2,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "tf-deluge4",
+          "timeSec": 247,
+          "ability": "Caustic Deluge #4",
+          "abilitySpellId": 1289192,
+          "trigger": "WCL 4:07",
+          "severity": "raid",
+          "category": "defensive",
+          "phase": 3,
+          "assignCd": true,
+          "note": "Final deluge into kill."
+        },
+        "status": "ok",
+        "wclMedian": 247,
+        "delta": 0,
+        "occ": 3,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "tf-stone4",
+          "timeSec": 267,
+          "ability": "Stone Breaker #4",
+          "abilitySpellId": 1288538,
+          "trigger": "WCL 4:27",
+          "severity": "tank",
+          "category": "external",
+          "phase": 3,
+          "assignCd": true,
+          "note": "Last breaker on slower speed kills."
+        },
+        "status": "ok",
+        "wclMedian": 267,
+        "delta": 0,
+        "occ": 10,
+        "spread": 0
       }
     ],
     "sequences": [
@@ -1378,7 +5467,7 @@
         "occ": [
           16,
           83,
-          186,
+          185,
           254
         ]
       },
@@ -1390,11 +5479,11 @@
           46,
           83,
           109,
-          154,
-          168,
-          186,
+          136,
+          159,
+          185,
           215,
-          252,
+          253,
           277,
           290
         ]
@@ -1508,6 +5597,13 @@
         "duration": 342,
         "url": "https://www.warcraftlogs.com/reports/6mQtrPjpcFKvZgLa?fight=3",
         "title": "2026-09-03(Thursday) - Farm"
+      },
+      {
+        "code": "Q8ZJDFXnqjC2VpMK",
+        "fightId": 5,
+        "duration": 351,
+        "url": "https://www.warcraftlogs.com/reports/Q8ZJDFXnqjC2VpMK?fight=5",
+        "title": "The Venomous Abyss"
       }
     ],
     "diffs": [
@@ -1517,10 +5613,12 @@
           "timeSec": 23,
           "ability": "Sever #1",
           "abilitySpellId": 1299684,
-          "trigger": "log SPELL_CAST_SUCCESS",
+          "trigger": "WCL 0:23",
           "severity": "tank",
           "category": "external",
-          "phase": 1
+          "phase": 1,
+          "assignCd": true,
+          "note": "Tank sever."
         },
         "status": "ok",
         "wclMedian": 23,
@@ -1531,18 +5629,19 @@
       {
         "window": {
           "id": "ca-guillotine1",
-          "timeSec": 43,
+          "timeSec": 46,
           "ability": "Guillotine #1",
           "abilitySpellId": 1283489,
-          "trigger": "log cast start 0:43 / success 0:47",
+          "trigger": "WCL 0:46",
           "severity": "critical",
           "category": "throughput",
           "phase": 1,
-          "note": "Your healers: Aura Mastery ~0:51."
+          "assignCd": true,
+          "note": "First Guillotine — major raid CD."
         },
         "status": "ok",
         "wclMedian": 46,
-        "delta": 3,
+        "delta": 0,
         "occ": 0,
         "spread": 0
       },
@@ -1552,10 +5651,12 @@
           "timeSec": 60,
           "ability": "Sever #2",
           "abilitySpellId": 1299684,
-          "trigger": "log 1:00",
+          "trigger": "WCL 1:00",
           "severity": "tank",
           "category": "external",
-          "phase": 1
+          "phase": 1,
+          "assignCd": true,
+          "note": "Second sever."
         },
         "status": "ok",
         "wclMedian": 60,
@@ -1565,15 +5666,35 @@
       },
       {
         "window": {
+          "id": "ca-sever3",
+          "timeSec": 77,
+          "ability": "Sever #3",
+          "abilitySpellId": 1299684,
+          "trigger": "WCL 1:17",
+          "severity": "tank",
+          "category": "external",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Into Fangs."
+        },
+        "status": "ok",
+        "wclMedian": 77,
+        "delta": 0,
+        "occ": 3,
+        "spread": 0
+      },
+      {
+        "window": {
           "id": "ca-fangs2",
           "timeSec": 85,
-          "ability": "Fangs of the Coiled Altar #2",
+          "ability": "Fangs of the Coiled Altar",
           "abilitySpellId": 1282487,
-          "trigger": "log 1:25 (+ Deluge 1:27)",
+          "trigger": "WCL 1:25 (+ Toxic Deluge ~1:27)",
           "severity": "critical",
           "category": "defensive",
           "phase": 1,
-          "note": "Your healers: Revival ~1:07, Divine Hymn ~1:30."
+          "assignCd": true,
+          "note": "Fangs + Deluge — major CD before Stage 2."
         },
         "status": "ok",
         "wclMedian": 85,
@@ -1584,137 +5705,192 @@
       {
         "window": {
           "id": "ca-p2",
-          "timeSec": 133,
+          "timeSec": 121,
           "ability": "Dreadmarch (Stage 2)",
           "abilitySpellId": 1285643,
-          "trigger": "log 2:13 — P2 start (Spiritcackle 2:18)",
+          "trigger": "WCL 2:01",
           "severity": "critical",
           "category": "throughput",
           "phase": 2,
-          "note": "Your healers: Spirit Link / Tranquility ~1:58–2:00."
+          "assignCd": true,
+          "note": "Stage 2 start — Spiritcackle / add pressure follows."
         },
-        "status": "DIFF",
-        "wclMedian": 119,
-        "delta": 14,
+        "status": "ok",
+        "wclMedian": 121,
+        "delta": 0,
         "occ": 0,
         "spread": 116
       },
       {
         "window": {
           "id": "ca-soulsever1",
-          "timeSec": 163,
+          "timeSec": 151,
           "ability": "Soul Sever #1",
           "abilitySpellId": 1286620,
-          "trigger": "log 2:43",
+          "trigger": "WCL 2:31",
           "severity": "tank",
           "category": "external",
-          "phase": 2
+          "phase": 2,
+          "assignCd": true,
+          "note": "Stage 2 tank sever."
         },
-        "status": "DIFF",
-        "wclMedian": 149,
-        "delta": 14,
+        "status": "ok",
+        "wclMedian": 151,
+        "delta": 0,
         "occ": 0,
         "spread": 116
       },
       {
         "window": {
-          "id": "ca-nightfall1",
-          "timeSec": 195,
-          "ability": "Eternal Nightfall #1",
-          "abilitySpellId": 1286918,
-          "trigger": "log CAST_START 3:15",
-          "severity": "critical",
+          "id": "ca-dread2",
+          "timeSec": 157,
+          "ability": "Dreadmarch #2",
+          "abilitySpellId": 1285643,
+          "trigger": "WCL 2:37",
+          "severity": "raid",
           "category": "defensive",
           "phase": 2,
-          "note": "Your healers: Ascendance ~3:19."
+          "assignCd": true,
+          "note": "Second Dreadmarch pulse."
         },
-        "status": "missing"
+        "status": "ok",
+        "wclMedian": 157,
+        "delta": 0,
+        "occ": 1,
+        "spread": 115
+      },
+      {
+        "window": {
+          "id": "ca-soulsever2",
+          "timeSec": 182,
+          "ability": "Soul Sever #2",
+          "abilitySpellId": 1286620,
+          "trigger": "WCL 3:02",
+          "severity": "tank",
+          "category": "external",
+          "phase": 2,
+          "assignCd": true,
+          "note": "Into Soulbinding."
+        },
+        "status": "ok",
+        "wclMedian": 182,
+        "delta": 0,
+        "occ": 1,
+        "spread": 115
       },
       {
         "window": {
           "id": "ca-inter",
-          "timeSec": 253,
+          "timeSec": 202,
           "ability": "Soulbinding Intermission",
           "abilitySpellId": 1304032,
-          "trigger": "log 4:13",
-          "severity": "raid",
+          "trigger": "WCL 3:22",
+          "severity": "critical",
           "category": "defensive",
           "phase": 3,
-          "note": "Your healers stacked Hymn/AM ~4:27–4:30 into the push."
+          "assignCd": true,
+          "note": "Intermission — stack raid CDs into the push."
         },
-        "status": "DIFF",
-        "wclMedian": 197,
-        "delta": 56,
+        "status": "ok",
+        "wclMedian": 201,
+        "delta": 1,
         "occ": 0,
         "spread": 76
       },
       {
         "window": {
           "id": "ca-defile1",
-          "timeSec": 293,
-          "ability": "Defilement of the Coiled Altar #1",
+          "timeSec": 240,
+          "ability": "Defilement of the Coiled Altar",
           "abilitySpellId": 1298381,
-          "trigger": "log 4:53 (Grim Guillotine 5:10)",
+          "trigger": "WCL 4:00",
           "severity": "critical",
           "category": "throughput",
           "phase": 4,
-          "note": "Your healers: Revival ~5:03."
+          "assignCd": true,
+          "note": "Post-intermission Defilement."
         },
-        "status": "DIFF",
-        "wclMedian": 274,
-        "delta": 19,
-        "occ": 1,
-        "spread": 0
-      },
-      {
-        "window": {
-          "id": "ca-nightfall2",
-          "timeSec": 332,
-          "ability": "Eternal Nightfall #2 + Deluge",
-          "abilitySpellId": 1286918,
-          "trigger": "log Nightfall START 5:32 / Deluge 5:42",
-          "severity": "critical",
-          "category": "defensive",
-          "phase": 4,
-          "note": "Your healers: Tranquility ~5:42."
-        },
-        "status": "missing"
-      },
-      {
-        "window": {
-          "id": "ca-defile2",
-          "timeSec": 399,
-          "ability": "Defilement of the Coiled Altar #2",
-          "abilitySpellId": 1298381,
-          "trigger": "log 6:39",
-          "severity": "critical",
-          "category": "throughput",
-          "phase": 4,
-          "note": "Your healers: Divine Hymn ~6:46, Ascendance ~7:15."
-        },
-        "status": "DIFF",
-        "wclMedian": 274,
-        "delta": 125,
-        "occ": 1,
-        "spread": 0
-      },
-      {
-        "window": {
-          "id": "ca-grim2",
-          "timeSec": 480,
-          "ability": "Grim Guillotine #2",
-          "abilitySpellId": 1299266,
-          "trigger": "log 8:00",
-          "severity": "critical",
-          "category": "defensive",
-          "phase": 4,
-          "note": "Your healers: Aura Mastery ~7:51, Spirit Link ~8:14."
-        },
-        "status": "DIFF",
-        "wclMedian": 253,
-        "delta": 227,
+        "status": "ok",
+        "wclMedian": 240,
+        "delta": 0,
         "occ": 0,
         "spread": 76
+      },
+      {
+        "window": {
+          "id": "ca-grim1",
+          "timeSec": 257,
+          "ability": "Grim Guillotine",
+          "abilitySpellId": 1299266,
+          "trigger": "WCL 4:17",
+          "severity": "critical",
+          "category": "defensive",
+          "phase": 4,
+          "assignCd": true,
+          "note": "Grim Guillotine — major CD."
+        },
+        "status": "ok",
+        "wclMedian": 257,
+        "delta": 0,
+        "occ": 0,
+        "spread": 76
+      },
+      {
+        "window": {
+          "id": "ca-blight1",
+          "timeSec": 272,
+          "ability": "Blighted Sever #1",
+          "abilitySpellId": 1307292,
+          "trigger": "WCL 4:32",
+          "severity": "tank",
+          "category": "external",
+          "phase": 4,
+          "assignCd": true,
+          "note": "Late tank sever."
+        },
+        "status": "~",
+        "wclMedian": 276,
+        "delta": 4,
+        "occ": 0,
+        "spread": 76
+      },
+      {
+        "window": {
+          "id": "ca-dread3",
+          "timeSec": 303,
+          "ability": "Dreadmarch #3",
+          "abilitySpellId": 1285643,
+          "trigger": "WCL 5:03",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 4,
+          "assignCd": true,
+          "note": "Late Dreadmarch on ~5:40 kills."
+        },
+        "status": "ok",
+        "wclMedian": 303,
+        "delta": 0,
+        "occ": 2,
+        "spread": 215
+      },
+      {
+        "window": {
+          "id": "ca-blight2",
+          "timeSec": 309,
+          "ability": "Blighted Sever #2",
+          "abilitySpellId": 1307292,
+          "trigger": "WCL 5:09",
+          "severity": "tank",
+          "category": "external",
+          "phase": 4,
+          "assignCd": true,
+          "note": "Final tank check into kill."
+        },
+        "status": "ok",
+        "wclMedian": 309,
+        "delta": 0,
+        "occ": 3,
+        "spread": 0
       }
     ],
     "sequences": [
@@ -1733,8 +5909,9 @@
           2,
           45,
           87,
-          242,
-          280
+          245,
+          280,
+          294
         ]
       },
       {
@@ -1745,17 +5922,25 @@
           30,
           56,
           88,
-          119,
-          140,
+          120,
+          141,
           156,
           172,
-          187,
+          186,
           202,
-          246,
-          266,
-          296,
-          325,
-          338
+          250,
+          270,
+          301,
+          327,
+          343
+        ]
+      },
+      {
+        "spellId": 1283290,
+        "name": "Noxious Ground",
+        "occ": [
+          9,
+          96
         ]
       },
       {
@@ -1778,11 +5963,11 @@
         "spellId": 1285017,
         "name": "Axegrinder",
         "occ": [
-          20,
+          22,
           53,
           70,
-          136,
-          150
+          137,
+          156
         ]
       },
       {
@@ -1823,9 +6008,9 @@
         "occ": [
           49,
           127,
-          159,
+          161,
           237,
-          306,
+          310,
           332
         ]
       },
@@ -1834,7 +6019,7 @@
         "name": "Anti-Magic Zone",
         "occ": [
           50,
-          109,
+          110,
           144,
           159,
           313,
@@ -1842,44 +6027,37 @@
         ]
       },
       {
-        "spellId": 1283290,
-        "name": "Noxious Ground",
-        "occ": [
-          96
-        ]
-      },
-      {
         "spellId": 1288624,
         "name": "Dreadful Presence",
         "occ": [
-          113
+          115
         ]
       },
       {
         "spellId": 1285643,
         "name": "Dreadmarch",
         "occ": [
-          121,
-          157,
-          303
+          122,
+          159,
+          306
         ]
       },
       {
         "spellId": 1286441,
         "name": "Spiritcackle",
         "occ": [
-          126,
-          159
+          128,
+          161
         ]
       },
       {
         "spellId": 1285911,
         "name": "Unnerving Fixation",
         "occ": [
-          128,
-          161,
+          129,
+          163,
           239,
-          308,
+          311,
           330
         ]
       },
@@ -1887,25 +6065,25 @@
         "spellId": 1308311,
         "name": "Retaliatory Malice",
         "occ": [
-          131,
-          164
+          132,
+          165
         ]
       },
       {
         "spellId": 1310882,
         "name": "Gloombomb",
         "occ": [
-          137,
-          175,
+          139,
+          177,
           273,
-          319
+          322
         ]
       },
       {
         "spellId": 1308011,
         "name": "Wail of Terror",
         "occ": [
-          142,
+          141,
           176
         ]
       },
@@ -1913,65 +6091,66 @@
         "spellId": 1286620,
         "name": "Soul Sever",
         "occ": [
-          151,
-          182
+          153,
+          184
         ]
       },
       {
         "spellId": 1304028,
         "name": "Deathguard",
         "occ": [
-          199
+          203
         ]
       },
       {
         "spellId": 1304032,
         "name": "Soulbinding",
         "occ": [
-          202
+          205
         ]
       },
       {
         "spellId": 1304033,
         "name": "Ghastly Regeneration",
         "occ": [
-          202
+          206
         ]
       },
       {
         "spellId": 1304498,
         "name": "Ghastly Regeneration",
         "occ": [
-          202
+          206
         ]
       },
       {
         "spellId": 1298381,
         "name": "Defilement of the Coiled Altar",
         "occ": [
-          240
+          243
         ]
       },
       {
         "spellId": 1299266,
         "name": "Grim Guillotine",
         "occ": [
-          257
+          260
         ]
       },
       {
         "spellId": 1299267,
         "name": "Grim Guillotine",
         "occ": [
-          261
+          264
         ]
       },
       {
         "spellId": 1307292,
         "name": "Blighted Sever",
         "occ": [
-          272,
-          309
+          276,
+          311,
+          343
         ]
       }
     ]
@@ -2000,9 +6179,265 @@
         "duration": 197,
         "url": "https://www.warcraftlogs.com/reports/Nz7BWcVtvy6gmXbH?fight=74",
         "title": "The Venomous Abyss"
+      },
+      {
+        "code": "HdrWC6pLtxDb3whX",
+        "fightId": 1,
+        "duration": 199,
+        "url": "https://www.warcraftlogs.com/reports/HdrWC6pLtxDb3whX?fight=1",
+        "title": "The Venomous Abyss"
       }
     ],
-    "diffs": [],
+    "diffs": [
+      {
+        "window": {
+          "id": "ny-rain1",
+          "timeSec": 10,
+          "ability": "Abyssal Rain #1",
+          "abilitySpellId": 1260837,
+          "trigger": "WCL 0:10",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Early rain."
+        },
+        "status": "ok",
+        "wclMedian": 10,
+        "delta": 0,
+        "occ": 0,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "ny-bubble1",
+          "timeSec": 18,
+          "ability": "Alluring Bubble #1",
+          "abilitySpellId": 1257717,
+          "trigger": "WCL 0:18 (impacts ~0:23–0:26)",
+          "severity": "raid",
+          "category": "defensive",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Stop Bubblefin Shorerunners — first bubble cycle."
+        },
+        "status": "ok",
+        "wclMedian": 18,
+        "delta": 0,
+        "occ": 0,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "ny-flurry1",
+          "timeSec": 29,
+          "ability": "Iceblade Flurry #1",
+          "abilitySpellId": 1282937,
+          "trigger": "WCL 0:29",
+          "severity": "tank",
+          "category": "external",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Tank flurry — repeats ~every 22s."
+        },
+        "status": "ok",
+        "wclMedian": 29,
+        "delta": 0,
+        "occ": 0,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "ny-frost1",
+          "timeSec": 37,
+          "ability": "Chilling Frost #1",
+          "abilitySpellId": 1313393,
+          "trigger": "WCL 0:37",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Raid frost pressure."
+        },
+        "status": "ok",
+        "wclMedian": 37,
+        "delta": 0,
+        "occ": 0,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "ny-rain2",
+          "timeSec": 43,
+          "ability": "Abyssal Rain #2",
+          "abilitySpellId": 1260837,
+          "trigger": "WCL 0:43",
+          "severity": "raid",
+          "category": "defensive",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Second rain."
+        },
+        "status": "ok",
+        "wclMedian": 43,
+        "delta": 0,
+        "occ": 1,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "ny-bubble2",
+          "timeSec": 70,
+          "ability": "Alluring Bubble #2",
+          "abilitySpellId": 1260012,
+          "trigger": "WCL 1:10",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Second bubble cycle."
+        },
+        "status": "ok",
+        "wclMedian": 70,
+        "delta": 0,
+        "occ": 1,
+        "spread": 1
+      },
+      {
+        "window": {
+          "id": "ny-rain3",
+          "timeSec": 87,
+          "ability": "Abyssal Rain #3",
+          "abilitySpellId": 1260837,
+          "trigger": "WCL 1:27",
+          "severity": "raid",
+          "category": "defensive",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Into Whirlpools."
+        },
+        "status": "ok",
+        "wclMedian": 87,
+        "delta": 0,
+        "occ": 2,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "ny-whirl",
+          "timeSec": 111,
+          "ability": "Swirling Whirlpools",
+          "abilitySpellId": 1258673,
+          "trigger": "WCL 1:51",
+          "severity": "critical",
+          "category": "throughput",
+          "phase": 2,
+          "assignCd": true,
+          "suggestPersonals": true,
+          "note": "Movement / soak — major mid-fight check before Pop!"
+        },
+        "status": "ok",
+        "wclMedian": 111,
+        "delta": 0,
+        "occ": 0,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "ny-pop",
+          "timeSec": 120,
+          "ability": "Pop!",
+          "abilitySpellId": 1258150,
+          "trigger": "WCL 2:00",
+          "severity": "critical",
+          "category": "defensive",
+          "phase": 2,
+          "assignCd": true,
+          "note": "Bubble pop damage — stack CDs."
+        },
+        "status": "ok",
+        "wclMedian": 120,
+        "delta": 0,
+        "occ": 0,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "ny-bubble3",
+          "timeSec": 128,
+          "ability": "Alluring Bubble #3",
+          "abilitySpellId": 1257717,
+          "trigger": "WCL 2:08 (impacts ~2:13–2:16)",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 2,
+          "assignCd": true,
+          "note": "Post-Pop bubble cycle."
+        },
+        "status": "ok",
+        "wclMedian": 128,
+        "delta": 0,
+        "occ": 1,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "ny-rain4",
+          "timeSec": 153,
+          "ability": "Abyssal Rain #4",
+          "abilitySpellId": 1260837,
+          "trigger": "WCL 2:33",
+          "severity": "raid",
+          "category": "defensive",
+          "phase": 2,
+          "assignCd": true,
+          "note": "Late rain."
+        },
+        "status": "ok",
+        "wclMedian": 153,
+        "delta": 0,
+        "occ": 3,
+        "spread": 0
+      },
+      {
+        "window": {
+          "id": "ny-bubble4",
+          "timeSec": 180,
+          "ability": "Alluring Bubble #4",
+          "abilitySpellId": 1260012,
+          "trigger": "WCL 3:00",
+          "severity": "raid",
+          "category": "throughput",
+          "phase": 2,
+          "assignCd": true,
+          "note": "Final bubble on ~3:15 kills."
+        },
+        "status": "ok",
+        "wclMedian": 180,
+        "delta": 0,
+        "occ": 3,
+        "spread": 1
+      },
+      {
+        "window": {
+          "id": "ny-frost2",
+          "timeSec": 191,
+          "ability": "Chilling Frost (late)",
+          "abilitySpellId": 1313393,
+          "trigger": "WCL 3:11",
+          "severity": "raid",
+          "category": "defensive",
+          "phase": 2,
+          "assignCd": true,
+          "note": "Late frost into kill."
+        },
+        "status": "ok",
+        "wclMedian": 191,
+        "delta": 0,
+        "occ": 3,
+        "spread": 0
+      }
+    ],
     "sequences": [
       {
         "spellId": 1260837,
@@ -2067,12 +6502,13 @@
         "spellId": 1257654,
         "name": "Lingering Frost",
         "occ": [
-          47,
+          48,
           65,
           90,
-          114,
-          157,
-          193
+          113,
+          161,
+          179,
+          194
         ]
       },
       {

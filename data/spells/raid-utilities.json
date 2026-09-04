@@ -14,8 +14,8 @@
     "name": "Anti-Magic Zone",
     "classes": ["death-knight"],
     "kind": "raidUtility",
-    "cooldownSec": 120,
-    "durationSec": 10
+    "cooldownSec": 180,
+    "durationSec": 8
   },
   {
     "id": "darkness",
