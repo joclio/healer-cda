@@ -6,6 +6,7 @@ import {
   autoAssignPersonals,
   cooldownConflict,
   uncoveredWindows,
+  utilityAssigneeIds,
 } from "@/domain/autoAssign";
 import type { Boss, Healer, Tank } from "@/domain/types";
 
@@ -154,6 +155,19 @@ describe("autoAssign", () => {
     );
     const rally = plan.find((a) => a.spellId === "rallying-cry");
     expect(rally?.utilityId).toBe("t1");
+  });
+
+  it("utilityAssigneeIds includes utility tanks so plan prune keeps them", () => {
+    const ids = utilityAssigneeIds(
+      [{ id: "u1", name: "BloodDK", class: "death-knight" }],
+      [
+        { id: "t1", name: "ProtWarr", class: "warrior" },
+        { id: "t2", name: "ProtPal", class: "paladin" },
+      ],
+    );
+    expect(ids.has("u1")).toBe(true);
+    expect(ids.has("t1")).toBe(true);
+    expect(ids.has("t2")).toBe(false);
   });
 
   it("treats raid personals as covering a CD window", () => {

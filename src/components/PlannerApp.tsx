@@ -11,7 +11,7 @@ import { CopyNsrtButton, CopyViserioButton, ExportPanel } from "@/components/Exp
 import { RosterEditor } from "@/components/RosterEditor";
 import { Timeline } from "@/components/Timeline";
 import { getBoss, getSpell, SPELLS } from "@/data/catalog";
-import { autoAssign, autoAssignPersonals } from "@/domain/autoAssign";
+import { autoAssign, autoAssignPersonals, utilityAssigneeIds } from "@/domain/autoAssign";
 import { withTimeOverrides } from "@/domain/time";
 import {
   defaultNoteWindowIds,
@@ -113,7 +113,8 @@ function sanitizeUtilities(raw: unknown): UtilityCaster[] {
   );
 }
 
-/** Drop removed classes (e.g. rogue) and smoke-bomb rows from persisted plans. */
+/** Drop removed classes (e.g. rogue) and smoke-bomb rows from persisted plans.
+ *  validUtilityIds must include tank casters (tank.id as utilityId). */
 function prunePersistedPlans(validUtilityIds: Set<string>) {
   const plans = readSavedPlans();
   let dirty = false;
@@ -172,23 +173,28 @@ export function PlannerApp() {
       const rawRoster = localStorage.getItem(ROSTER_KEY);
       if (rawRoster) setPoolHealers(JSON.parse(rawRoster) as Healer[]);
       const rawTanks = localStorage.getItem(TANKS_KEY);
-      if (rawTanks) setPoolTanks(JSON.parse(rawTanks) as Tank[]);
+      const tanks = rawTanks ? (JSON.parse(rawTanks) as Tank[]) : [];
+      if (rawTanks) setPoolTanks(tanks);
       const rawUtilities = localStorage.getItem(UTILITIES_KEY);
       const utilities = sanitizeUtilities(
         rawUtilities ? JSON.parse(rawUtilities) : [],
       );
       setPoolUtilities(utilities);
-      const utilityIds = new Set(utilities.map((u) => u.id));
-      prunePersistedPlans(utilityIds);
+      // Tank casters use tank.id as Assignment.utilityId — keep those assignees.
+      const assigneeIds = utilityAssigneeIds(utilities, tanks);
+      prunePersistedPlans(assigneeIds);
 
       const rawPicks = localStorage.getItem(FIGHT_PICKS_KEY);
       if (rawPicks) {
         const picks = JSON.parse(rawPicks) as FightPicks;
+        const utilityPoolIds = new Set(utilities.map((u) => u.id));
         const next: FightPicks = {};
         for (const [id, pick] of Object.entries(picks)) {
           next[id] = {
             ...pick,
-            utilityIds: pick.utilityIds?.filter((uid) => utilityIds.has(uid)),
+            utilityIds: pick.utilityIds?.filter((uid) =>
+              utilityPoolIds.has(uid),
+            ),
           };
         }
         setFightPicks(next);
@@ -387,7 +393,7 @@ export function PlannerApp() {
           readSavedPlans(),
           b.id,
           b,
-          new Set(poolUtilities.map((u) => u.id)),
+          utilityAssigneeIds(poolUtilities, poolTanks),
         ),
       );
     }
