@@ -1,0 +1,38 @@
+---
+description: Healer CDA architecture, layers, and product constraints
+alwaysApply: true
+---
+
+# Healer CDA stack
+
+Local-first Next.js planner: healer CD assignment → NSRT notes. No accounts, no WCL login, no backend.
+
+## Stack
+
+- **Next.js 16** App Router under `src/app/` (not root `app/`)
+- **React 19** + **TypeScript** (`strict`) + path alias `@/*` → `src/*`
+- **Tailwind CSS v4** via `@import "tailwindcss"` + `@tailwindcss/postcss`
+- **Vitest** (node) for domain logic; ESLint = `eslint-config-next`
+
+Read Next docs in `node_modules/next/dist/docs/` before using APIs — this Next version differs from older training data.
+
+## Layers (keep boundaries)
+
+| Layer | Path | Rule |
+| --- | --- | --- |
+| UI | `src/components/`, `src/app/` | Client UI, localStorage, presentation |
+| Domain | `src/domain/` | Pure TS: assign, time, types — no React, no DOM |
+| Data | `data/**/*.json` + `src/data/catalog.ts` | Boss/spell JSON; catalog only loads/types |
+| Export | `src/export/` | Plan → text / NSRT strings |
+
+```ts
+// ❌ BAD — domain imports React or localStorage
+// ✅ GOOD — autoAssign(boss, roster, tanks) stays pure; PlannerApp owns persistence
+```
+
+## Product constraints
+
+- Healers: raid CDs, tank externals, raid-wide personal CD calls
+- Prefer editing JSON timers / windows over new infra
+- Prefer browser APIs + existing helpers over new dependencies
+- Colocate tests next to domain: `*.test.ts`

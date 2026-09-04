@@ -1,0 +1,44 @@
+---
+description: Domain logic, JSON data, export, and Vitest practices
+globs: src/domain/**/*.ts,src/data/**/*.ts,src/export/**/*.ts,data/**/*.json,scripts/**/*.{js,mjs,ts}
+alwaysApply: false
+---
+
+# Domain / data / tests
+
+## Types & domain
+
+- Shared models live in `src/domain/types.ts` — extend there, don’t fork shapes in components
+- Domain functions are pure: inputs in, values out; no `fetch`, DOM, or storage
+- Prefer `interface` for object shapes; string-union aliases for IDs/enums already in types
+- Time is pull-relative **seconds** (`timeSec`); format `m:ss` only at export/UI edges
+
+```ts
+// ❌ BAD — mutate boss JSON inside auto-assign as a side effect
+// ✅ GOOD — return new Assignment[]; UI applies overrides via withTimeOverrides
+```
+
+## Boss / spell JSON
+
+- Canonical data: `data/bosses/*.json`, `data/spells/*.json`
+- Register new bosses in `src/data/catalog.ts` imports + `BOSSES` array
+- Windows need `id`, `timeSec`, `ability`, `trigger`, `severity`, `category`
+- Set `assignCd: false` for informational rows; `suggestPersonals: true` (or soak/soft-CD notes) for raid personals
+- Document timer source in `source` / `sourceUrl`
+
+## Export
+
+- NSRT + readable text only go through `src/export/` using catalog lookups
+- Don’t embed note formatting inside React components
+
+## Vitest
+
+- `npm test` / colocated `*.test.ts`; environment is **node**
+- Cover assign conflicts, uncovered windows, and edge timers with small fixture bosses
+- Import via `@/domain/...`; no component/DOM tests unless explicitly requested
+- Assert behavior, not implementation details
+
+```ts
+// ✅ GOOD
+expect(uncoveredWindows(boss, assignments)).toEqual([]);
+```

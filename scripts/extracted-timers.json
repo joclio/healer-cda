@@ -1,0 +1,1617 @@
+{
+  "3379": {
+    "name": "Nymrissa Wavecaller",
+    "diff": 15,
+    "pulls": 1,
+    "kills": 1,
+    "used": "kill",
+    "durationSec": 296,
+    "file": "WoWCombatLog-090126_210156.txt",
+    "timeline": [
+      {
+        "time": "0:10",
+        "sec": 10,
+        "spellId": 1260837,
+        "spellName": "Abyssal Rain",
+        "src": "Nymrissa Wavecaller"
+      },
+      {
+        "time": "0:18",
+        "sec": 18,
+        "spellId": 1257717,
+        "spellName": "Alluring Bubble",
+        "src": "Nymrissa Wavecaller"
+      },
+      {
+        "time": "0:23",
+        "sec": 23,
+        "spellId": 1284015,
+        "spellName": "Alluring Bubble",
+        "src": "Nymrissa Wavecaller"
+      },
+      {
+        "time": "0:29",
+        "sec": 29,
+        "spellId": 1282937,
+        "spellName": "Iceblade Flurry",
+        "src": "Nymrissa Wavecaller"
+      },
+      {
+        "time": "0:37",
+        "sec": 37,
+        "spellId": 1313393,
+        "spellName": "Chilling Frost",
+        "src": "Nymrissa Wavecaller"
+      },
+      {
+        "time": "0:43",
+        "sec": 43,
+        "spellId": 1260837,
+        "spellName": "Abyssal Rain",
+        "src": "Nymrissa Wavecaller"
+      },
+      {
+        "time": "0:44",
+        "sec": 44,
+        "spellId": 1257654,
+        "spellName": "Lingering Frost",
+        "src": "Nymrissa Wavecaller"
+      },
+      {
+        "time": "0:47",
+        "sec": 47,
+        "spellId": 1257654,
+        "spellName": "Lingering Frost",
+        "src": "Nymrissa Wavecaller"
+      },
+      {
+        "time": "0:51",
+        "sec": 51,
+        "spellId": 1282937,
+        "spellName": "Iceblade Flurry",
+        "src": "Nymrissa Wavecaller"
+      },
+      {
+        "time": "1:13",
+        "sec": 73,
+        "spellId": 1282937,
+        "spellName": "Iceblade Flurry",
+        "src": "Nymrissa Wavecaller"
+      },
+      {
+        "time": "1:21",
+        "sec": 81,
+        "spellId": 1313393,
+        "spellName": "Chilling Frost",
+        "src": "Nymrissa Wavecaller"
+      },
+      {
+        "time": "1:24",
+        "sec": 84,
+        "spellId": 1257654,
+        "spellName": "Lingering Frost",
+        "src": "Nymrissa Wavecaller"
+      },
+      {
+        "time": "1:27",
+        "sec": 87,
+        "spellId": 1260837,
+        "spellName": "Abyssal Rain",
+        "src": "Nymrissa Wavecaller"
+      },
+      {
+        "time": "1:28",
+        "sec": 88,
+        "spellId": 1257654,
+        "spellName": "Lingering Frost",
+        "src": "Nymrissa Wavecaller"
+      },
+      {
+        "time": "1:31",
+        "sec": 91,
+        "spellId": 1257654,
+        "spellName": "Lingering Frost",
+        "src": "Nymrissa Wavecaller"
+      },
+      {
+        "time": "1:35",
+        "sec": 95,
+        "spellId": 1282937,
+        "spellName": "Iceblade Flurry",
+        "src": "Nymrissa Wavecaller"
+      },
+      {
+        "time": "1:35",
+        "sec": 95,
+        "spellId": 1257654,
+        "spellName": "Lingering Frost",
+        "src": "Nymrissa Wavecaller"
+      },
+      {
+        "time": "1:51",
+        "sec": 111,
+        "spellId": 1258673,
+        "spellName": "Swirling Whirlpools",
+        "src": "Nymrissa Wavecaller"
+      },
+      {
+        "time": "2:08",
+        "sec": 128,
+        "spellId": 1257717,
+        "spellName": "Alluring Bubble",
+        "src": "Nymrissa Wavecaller"
+      },
+      {
+        "time": "2:13",
+        "sec": 133,
+        "spellId": 1284015,
+        "spellName": "Alluring Bubble",
+        "src": "Nymrissa Wavecaller"
+      },
+      {
+        "time": "2:19",
+        "sec": 139,
+        "spellId": 1282937,
+        "spellName": "Iceblade Flurry",
+        "src": "Nymrissa Wavecaller"
+      },
+      {
+        "time": "2:27",
+        "sec": 147,
+        "spellId": 1313393,
+        "spellName": "Chilling Frost",
+        "src": "Nymrissa Wavecaller"
+      },
+      {
+        "time": "2:33",
+        "sec": 153,
+        "spellId": 1260837,
+        "spellName": "Abyssal Rain",
+        "src": "Nymrissa Wavecaller"
+      },
+      {
+        "time": "2:34",
+        "sec": 154,
+        "spellId": 1257654,
+        "spellName": "Lingering Frost",
+        "src": "Nymrissa Wavecaller"
+      },
+      {
+        "time": "2:38",
+        "sec": 158,
+        "spellId": 1257654,
+        "spellName": "Lingering Frost",
+        "src": "Nymrissa Wavecaller"
+      },
+      {
+        "time": "2:41",
+        "sec": 161,
+        "spellId": 1282937,
+        "spellName": "Iceblade Flurry",
+        "src": "Nymrissa Wavecaller"
+      },
+      {
+        "time": "2:44",
+        "sec": 164,
+        "spellId": 1257654,
+        "spellName": "Lingering Frost",
+        "src": "Nymrissa Wavecaller"
+      },
+      {
+        "time": "3:03",
+        "sec": 183,
+        "spellId": 1282937,
+        "spellName": "Iceblade Flurry",
+        "src": "Nymrissa Wavecaller"
+      },
+      {
+        "time": "3:11",
+        "sec": 191,
+        "spellId": 1313393,
+        "spellName": "Chilling Frost",
+        "src": "Nymrissa Wavecaller"
+      },
+      {
+        "time": "3:13",
+        "sec": 193,
+        "spellId": 1257654,
+        "spellName": "Lingering Frost",
+        "src": "Nymrissa Wavecaller"
+      },
+      {
+        "time": "3:17",
+        "sec": 197,
+        "spellId": 1260837,
+        "spellName": "Abyssal Rain",
+        "src": "Nymrissa Wavecaller"
+      },
+      {
+        "time": "3:17",
+        "sec": 197,
+        "spellId": 1257654,
+        "spellName": "Lingering Frost",
+        "src": "Nymrissa Wavecaller"
+      },
+      {
+        "time": "3:25",
+        "sec": 205,
+        "spellId": 1282937,
+        "spellName": "Iceblade Flurry",
+        "src": "Nymrissa Wavecaller"
+      },
+      {
+        "time": "3:41",
+        "sec": 221,
+        "spellId": 1258673,
+        "spellName": "Swirling Whirlpools",
+        "src": "Nymrissa Wavecaller"
+      },
+      {
+        "time": "3:43",
+        "sec": 223,
+        "spellId": 1257654,
+        "spellName": "Lingering Frost",
+        "src": "Nymrissa Wavecaller"
+      },
+      {
+        "time": "3:51",
+        "sec": 231,
+        "spellId": 1257654,
+        "spellName": "Lingering Frost",
+        "src": "Nymrissa Wavecaller"
+      },
+      {
+        "time": "3:54",
+        "sec": 234,
+        "spellId": 1257654,
+        "spellName": "Lingering Frost",
+        "src": "Nymrissa Wavecaller"
+      },
+      {
+        "time": "3:58",
+        "sec": 238,
+        "spellId": 1257717,
+        "spellName": "Alluring Bubble",
+        "src": "Nymrissa Wavecaller"
+      },
+      {
+        "time": "4:03",
+        "sec": 243,
+        "spellId": 1284015,
+        "spellName": "Alluring Bubble",
+        "src": "Nymrissa Wavecaller"
+      },
+      {
+        "time": "4:09",
+        "sec": 249,
+        "spellId": 1282937,
+        "spellName": "Iceblade Flurry",
+        "src": "Nymrissa Wavecaller"
+      },
+      {
+        "time": "4:17",
+        "sec": 257,
+        "spellId": 1313393,
+        "spellName": "Chilling Frost",
+        "src": "Nymrissa Wavecaller"
+      },
+      {
+        "time": "4:23",
+        "sec": 263,
+        "spellId": 1260837,
+        "spellName": "Abyssal Rain",
+        "src": "Nymrissa Wavecaller"
+      },
+      {
+        "time": "4:23",
+        "sec": 263,
+        "spellId": 1257654,
+        "spellName": "Lingering Frost",
+        "src": "Nymrissa Wavecaller"
+      },
+      {
+        "time": "4:26",
+        "sec": 266,
+        "spellId": 1257654,
+        "spellName": "Lingering Frost",
+        "src": "Nymrissa Wavecaller"
+      },
+      {
+        "time": "4:31",
+        "sec": 271,
+        "spellId": 1282937,
+        "spellName": "Iceblade Flurry",
+        "src": "Nymrissa Wavecaller"
+      },
+      {
+        "time": "4:31",
+        "sec": 271,
+        "spellId": 1257654,
+        "spellName": "Lingering Frost",
+        "src": "Nymrissa Wavecaller"
+      },
+      {
+        "time": "4:53",
+        "sec": 293,
+        "spellId": 1282937,
+        "spellName": "Iceblade Flurry",
+        "src": "Nymrissa Wavecaller"
+      }
+    ]
+  },
+  "3420": {
+    "name": "Sszorak",
+    "diff": 15,
+    "pulls": 3,
+    "kills": 1,
+    "used": "kill",
+    "durationSec": 345,
+    "file": "WoWCombatLog-090126_210156.txt",
+    "timeline": [
+      {
+        "time": "0:09",
+        "sec": 9,
+        "spellId": 1277031,
+        "spellName": "Mutilate",
+        "src": "Sszorak"
+      },
+      {
+        "time": "0:09",
+        "sec": 9,
+        "spellId": 1277027,
+        "spellName": "Mutilate",
+        "src": "Sszorak"
+      },
+      {
+        "time": "0:13",
+        "sec": 13,
+        "spellId": 1287072,
+        "spellName": "Tempest",
+        "src": "Sszorak"
+      },
+      {
+        "time": "0:17",
+        "sec": 17,
+        "spellId": 1277101,
+        "spellName": "Ravage",
+        "src": "Sszorak"
+      },
+      {
+        "time": "0:17",
+        "sec": 17,
+        "spellId": 1277002,
+        "spellName": "Ravage",
+        "src": "Sszorak"
+      },
+      {
+        "time": "0:21",
+        "sec": 21,
+        "spellId": 1277101,
+        "spellName": "Ravage",
+        "src": "Sszorak"
+      },
+      {
+        "time": "0:21",
+        "sec": 21,
+        "spellId": 1277002,
+        "spellName": "Ravage",
+        "src": "Sszorak"
+      },
+      {
+        "time": "0:25",
+        "sec": 25,
+        "spellId": 1277031,
+        "spellName": "Mutilate",
+        "src": "Sszorak"
+      },
+      {
+        "time": "0:25",
+        "sec": 25,
+        "spellId": 1277027,
+        "spellName": "Mutilate",
+        "src": "Sszorak"
+      },
+      {
+        "time": "0:32",
+        "sec": 32,
+        "spellId": 1305959,
+        "spellName": "Venomous Surge",
+        "src": "Sszorak"
+      },
+      {
+        "time": "0:44",
+        "sec": 44,
+        "spellId": 1285453,
+        "spellName": "Raging Crosswinds",
+        "src": "Sszorak"
+      },
+      {
+        "time": "0:44",
+        "sec": 44,
+        "spellId": 1285425,
+        "spellName": "Raging Crosswinds",
+        "src": "Sszorak"
+      },
+      {
+        "time": "1:01",
+        "sec": 61,
+        "spellId": 1277101,
+        "spellName": "Ravage",
+        "src": "Sszorak"
+      },
+      {
+        "time": "1:01",
+        "sec": 61,
+        "spellId": 1277002,
+        "spellName": "Ravage",
+        "src": "Sszorak"
+      },
+      {
+        "time": "1:05",
+        "sec": 65,
+        "spellId": 1277031,
+        "spellName": "Mutilate",
+        "src": "Sszorak"
+      },
+      {
+        "time": "1:05",
+        "sec": 65,
+        "spellId": 1277027,
+        "spellName": "Mutilate",
+        "src": "Sszorak"
+      },
+      {
+        "time": "1:09",
+        "sec": 69,
+        "spellId": 1287072,
+        "spellName": "Tempest",
+        "src": "Sszorak"
+      },
+      {
+        "time": "1:13",
+        "sec": 73,
+        "spellId": 1277101,
+        "spellName": "Ravage",
+        "src": "Sszorak"
+      },
+      {
+        "time": "1:13",
+        "sec": 73,
+        "spellId": 1277002,
+        "spellName": "Ravage",
+        "src": "Sszorak"
+      },
+      {
+        "time": "1:17",
+        "sec": 77,
+        "spellId": 1277031,
+        "spellName": "Mutilate",
+        "src": "Sszorak"
+      },
+      {
+        "time": "1:17",
+        "sec": 77,
+        "spellId": 1277027,
+        "spellName": "Mutilate",
+        "src": "Sszorak"
+      },
+      {
+        "time": "1:24",
+        "sec": 84,
+        "spellId": 1305959,
+        "spellName": "Venomous Surge",
+        "src": "Sszorak"
+      },
+      {
+        "time": "1:36",
+        "sec": 96,
+        "spellId": 1285425,
+        "spellName": "Raging Crosswinds",
+        "src": "Sszorak"
+      },
+      {
+        "time": "1:36",
+        "sec": 96,
+        "spellId": 1285453,
+        "spellName": "Raging Crosswinds",
+        "src": "Sszorak"
+      },
+      {
+        "time": "1:51",
+        "sec": 111,
+        "spellId": 1286033,
+        "spellName": "Dig In",
+        "src": "Sszorak"
+      },
+      {
+        "time": "2:27",
+        "sec": 147,
+        "spellId": 1277101,
+        "spellName": "Ravage",
+        "src": "Sszorak"
+      },
+      {
+        "time": "2:27",
+        "sec": 147,
+        "spellId": 1277002,
+        "spellName": "Ravage",
+        "src": "Sszorak"
+      },
+      {
+        "time": "2:31",
+        "sec": 151,
+        "spellId": 1287072,
+        "spellName": "Tempest",
+        "src": "Sszorak"
+      },
+      {
+        "time": "2:35",
+        "sec": 155,
+        "spellId": 1277031,
+        "spellName": "Mutilate",
+        "src": "Sszorak"
+      },
+      {
+        "time": "2:35",
+        "sec": 155,
+        "spellId": 1277027,
+        "spellName": "Mutilate",
+        "src": "Sszorak"
+      },
+      {
+        "time": "2:39",
+        "sec": 159,
+        "spellId": 1277101,
+        "spellName": "Ravage",
+        "src": "Sszorak"
+      },
+      {
+        "time": "2:39",
+        "sec": 159,
+        "spellId": 1277002,
+        "spellName": "Ravage",
+        "src": "Sszorak"
+      },
+      {
+        "time": "2:43",
+        "sec": 163,
+        "spellId": 1277031,
+        "spellName": "Mutilate",
+        "src": "Sszorak"
+      },
+      {
+        "time": "2:43",
+        "sec": 163,
+        "spellId": 1277027,
+        "spellName": "Mutilate",
+        "src": "Sszorak"
+      },
+      {
+        "time": "2:50",
+        "sec": 170,
+        "spellId": 1305959,
+        "spellName": "Venomous Surge",
+        "src": "Sszorak"
+      },
+      {
+        "time": "3:02",
+        "sec": 182,
+        "spellId": 1285425,
+        "spellName": "Raging Crosswinds",
+        "src": "Sszorak"
+      },
+      {
+        "time": "3:02",
+        "sec": 182,
+        "spellId": 1285453,
+        "spellName": "Raging Crosswinds",
+        "src": "Sszorak"
+      },
+      {
+        "time": "3:19",
+        "sec": 199,
+        "spellId": 1277031,
+        "spellName": "Mutilate",
+        "src": "Sszorak"
+      },
+      {
+        "time": "3:19",
+        "sec": 199,
+        "spellId": 1277027,
+        "spellName": "Mutilate",
+        "src": "Sszorak"
+      },
+      {
+        "time": "3:23",
+        "sec": 203,
+        "spellId": 1287072,
+        "spellName": "Tempest",
+        "src": "Sszorak"
+      },
+      {
+        "time": "3:27",
+        "sec": 207,
+        "spellId": 1277031,
+        "spellName": "Mutilate",
+        "src": "Sszorak"
+      },
+      {
+        "time": "3:27",
+        "sec": 207,
+        "spellId": 1277027,
+        "spellName": "Mutilate",
+        "src": "Sszorak"
+      },
+      {
+        "time": "3:31",
+        "sec": 211,
+        "spellId": 1277101,
+        "spellName": "Ravage",
+        "src": "Sszorak"
+      },
+      {
+        "time": "3:31",
+        "sec": 211,
+        "spellId": 1277002,
+        "spellName": "Ravage",
+        "src": "Sszorak"
+      },
+      {
+        "time": "3:35",
+        "sec": 215,
+        "spellId": 1277101,
+        "spellName": "Ravage",
+        "src": "Sszorak"
+      },
+      {
+        "time": "3:35",
+        "sec": 215,
+        "spellId": 1277002,
+        "spellName": "Ravage",
+        "src": "Sszorak"
+      },
+      {
+        "time": "3:43",
+        "sec": 223,
+        "spellId": 1305959,
+        "spellName": "Venomous Surge",
+        "src": "Sszorak"
+      },
+      {
+        "time": "3:54",
+        "sec": 234,
+        "spellId": 1285453,
+        "spellName": "Raging Crosswinds",
+        "src": "Sszorak"
+      },
+      {
+        "time": "3:54",
+        "sec": 234,
+        "spellId": 1285425,
+        "spellName": "Raging Crosswinds",
+        "src": "Sszorak"
+      },
+      {
+        "time": "4:09",
+        "sec": 249,
+        "spellId": 1286033,
+        "spellName": "Dig In",
+        "src": "Sszorak"
+      },
+      {
+        "time": "4:45",
+        "sec": 285,
+        "spellId": 1277031,
+        "spellName": "Mutilate",
+        "src": "Sszorak"
+      },
+      {
+        "time": "4:45",
+        "sec": 285,
+        "spellId": 1277027,
+        "spellName": "Mutilate",
+        "src": "Sszorak"
+      },
+      {
+        "time": "4:49",
+        "sec": 289,
+        "spellId": 1277031,
+        "spellName": "Mutilate",
+        "src": "Sszorak"
+      },
+      {
+        "time": "4:49",
+        "sec": 289,
+        "spellId": 1277027,
+        "spellName": "Mutilate",
+        "src": "Sszorak"
+      },
+      {
+        "time": "4:53",
+        "sec": 293,
+        "spellId": 1277101,
+        "spellName": "Ravage",
+        "src": "Sszorak"
+      },
+      {
+        "time": "4:53",
+        "sec": 293,
+        "spellId": 1277002,
+        "spellName": "Ravage",
+        "src": "Sszorak"
+      },
+      {
+        "time": "4:57",
+        "sec": 297,
+        "spellId": 1287072,
+        "spellName": "Tempest",
+        "src": "Sszorak"
+      },
+      {
+        "time": "5:01",
+        "sec": 301,
+        "spellId": 1277101,
+        "spellName": "Ravage",
+        "src": "Sszorak"
+      },
+      {
+        "time": "5:01",
+        "sec": 301,
+        "spellId": 1277002,
+        "spellName": "Ravage",
+        "src": "Sszorak"
+      },
+      {
+        "time": "5:08",
+        "sec": 308,
+        "spellId": 1305959,
+        "spellName": "Venomous Surge",
+        "src": "Sszorak"
+      },
+      {
+        "time": "5:20",
+        "sec": 320,
+        "spellId": 1285453,
+        "spellName": "Raging Crosswinds",
+        "src": "Sszorak"
+      },
+      {
+        "time": "5:20",
+        "sec": 320,
+        "spellId": 1285425,
+        "spellName": "Raging Crosswinds",
+        "src": "Sszorak"
+      },
+      {
+        "time": "5:37",
+        "sec": 337,
+        "spellId": 1277101,
+        "spellName": "Ravage",
+        "src": "Sszorak"
+      },
+      {
+        "time": "5:37",
+        "sec": 337,
+        "spellId": 1277002,
+        "spellName": "Ravage",
+        "src": "Sszorak"
+      },
+      {
+        "time": "5:41",
+        "sec": 341,
+        "spellId": 1277031,
+        "spellName": "Mutilate",
+        "src": "Sszorak"
+      },
+      {
+        "time": "5:41",
+        "sec": 341,
+        "spellId": 1277027,
+        "spellName": "Mutilate",
+        "src": "Sszorak"
+      }
+    ]
+  },
+  "3421": {
+    "name": "The Twin Fangs",
+    "diff": 15,
+    "pulls": 1,
+    "kills": 1,
+    "used": "kill",
+    "durationSec": 485,
+    "file": "WoWCombatLog-090126_210156.txt",
+    "timeline": []
+  },
+  "3429": {
+    "name": "The Coiled Altar",
+    "diff": 15,
+    "pulls": 12,
+    "kills": 1,
+    "used": "kill",
+    "durationSec": 499,
+    "file": "WoWCombatLog-090226_210305.txt",
+    "timeline": [
+      {
+        "time": "1:58",
+        "sec": 118,
+        "spellId": 325174,
+        "spellName": "Spirit Link Totem",
+        "src": "Spirit Link Totem"
+      },
+      {
+        "time": "7:57",
+        "sec": 477,
+        "spellId": 58867,
+        "spellName": "Spirit Leap",
+        "src": "Spirit Wolf"
+      },
+      {
+        "time": "8:14",
+        "sec": 494,
+        "spellId": 325174,
+        "spellName": "Spirit Link Totem",
+        "src": "Spirit Link Totem"
+      }
+    ]
+  },
+  "3445": {
+    "name": "Entombed Sentinels",
+    "diff": 15,
+    "pulls": 2,
+    "kills": 1,
+    "used": "kill",
+    "durationSec": 329,
+    "file": "WoWCombatLog-090126_210156.txt",
+    "timeline": []
+  },
+  "3455": {
+    "name": "Vashnik the Malignant",
+    "diff": 15,
+    "pulls": 2,
+    "kills": 1,
+    "used": "kill",
+    "durationSec": 290,
+    "file": "WoWCombatLog-090126_210156.txt",
+    "timeline": [
+      {
+        "time": "0:10",
+        "sec": 10,
+        "spellId": 1280935,
+        "spellName": "Dripping Fangs",
+        "src": "Vashnik"
+      },
+      {
+        "time": "0:24",
+        "sec": 24,
+        "spellId": 1284663,
+        "spellName": "Imbibe",
+        "src": "Vashnik"
+      },
+      {
+        "time": "0:30",
+        "sec": 30,
+        "spellId": 1282509,
+        "spellName": "Malignant Catalyst",
+        "src": "Vashnik"
+      },
+      {
+        "time": "0:35",
+        "sec": 35,
+        "spellId": 1282516,
+        "spellName": "Malignant Catalyst",
+        "src": "Vashnik"
+      },
+      {
+        "time": "0:39",
+        "sec": 39,
+        "spellId": 1280935,
+        "spellName": "Dripping Fangs",
+        "src": "Vashnik"
+      },
+      {
+        "time": "1:06",
+        "sec": 66,
+        "spellId": 1280935,
+        "spellName": "Dripping Fangs",
+        "src": "Vashnik"
+      },
+      {
+        "time": "1:09",
+        "sec": 69,
+        "spellId": 1282509,
+        "spellName": "Malignant Catalyst",
+        "src": "Vashnik"
+      },
+      {
+        "time": "1:14",
+        "sec": 74,
+        "spellId": 1282516,
+        "spellName": "Malignant Catalyst",
+        "src": "Vashnik"
+      },
+      {
+        "time": "1:34",
+        "sec": 94,
+        "spellId": 1280935,
+        "spellName": "Dripping Fangs",
+        "src": "Vashnik"
+      },
+      {
+        "time": "1:48",
+        "sec": 108,
+        "spellId": 1284663,
+        "spellName": "Imbibe",
+        "src": "Vashnik"
+      },
+      {
+        "time": "1:54",
+        "sec": 114,
+        "spellId": 1282509,
+        "spellName": "Malignant Catalyst",
+        "src": "Vashnik"
+      },
+      {
+        "time": "1:59",
+        "sec": 119,
+        "spellId": 1282516,
+        "spellName": "Malignant Catalyst",
+        "src": "Vashnik"
+      },
+      {
+        "time": "2:03",
+        "sec": 123,
+        "spellId": 1280935,
+        "spellName": "Dripping Fangs",
+        "src": "Vashnik"
+      },
+      {
+        "time": "2:30",
+        "sec": 150,
+        "spellId": 1280935,
+        "spellName": "Dripping Fangs",
+        "src": "Vashnik"
+      },
+      {
+        "time": "2:33",
+        "sec": 153,
+        "spellId": 1282509,
+        "spellName": "Malignant Catalyst",
+        "src": "Vashnik"
+      },
+      {
+        "time": "2:38",
+        "sec": 158,
+        "spellId": 1282516,
+        "spellName": "Malignant Catalyst",
+        "src": "Vashnik"
+      },
+      {
+        "time": "2:58",
+        "sec": 178,
+        "spellId": 1280935,
+        "spellName": "Dripping Fangs",
+        "src": "Vashnik"
+      },
+      {
+        "time": "3:12",
+        "sec": 192,
+        "spellId": 1284663,
+        "spellName": "Imbibe",
+        "src": "Vashnik"
+      },
+      {
+        "time": "3:18",
+        "sec": 198,
+        "spellId": 1282509,
+        "spellName": "Malignant Catalyst",
+        "src": "Vashnik"
+      },
+      {
+        "time": "3:23",
+        "sec": 203,
+        "spellId": 1282516,
+        "spellName": "Malignant Catalyst",
+        "src": "Vashnik"
+      },
+      {
+        "time": "3:27",
+        "sec": 207,
+        "spellId": 1280935,
+        "spellName": "Dripping Fangs",
+        "src": "Vashnik"
+      },
+      {
+        "time": "3:54",
+        "sec": 234,
+        "spellId": 1280935,
+        "spellName": "Dripping Fangs",
+        "src": "Vashnik"
+      },
+      {
+        "time": "3:57",
+        "sec": 237,
+        "spellId": 1282509,
+        "spellName": "Malignant Catalyst",
+        "src": "Vashnik"
+      },
+      {
+        "time": "4:02",
+        "sec": 242,
+        "spellId": 1282516,
+        "spellName": "Malignant Catalyst",
+        "src": "Vashnik"
+      },
+      {
+        "time": "4:22",
+        "sec": 262,
+        "spellId": 1280935,
+        "spellName": "Dripping Fangs",
+        "src": "Vashnik"
+      },
+      {
+        "time": "4:36",
+        "sec": 276,
+        "spellId": 1284663,
+        "spellName": "Imbibe",
+        "src": "Vashnik"
+      },
+      {
+        "time": "4:42",
+        "sec": 282,
+        "spellId": 1282509,
+        "spellName": "Malignant Catalyst",
+        "src": "Vashnik"
+      },
+      {
+        "time": "4:47",
+        "sec": 287,
+        "spellId": 1282516,
+        "spellName": "Malignant Catalyst",
+        "src": "Vashnik"
+      }
+    ]
+  },
+  "3470": {
+    "name": "Nek'zali the Soulcoiler",
+    "diff": 15,
+    "pulls": 2,
+    "kills": 1,
+    "used": "kill",
+    "durationSec": 315,
+    "file": "WoWCombatLog-090126_210156.txt",
+    "timeline": [
+      {
+        "time": "0:03",
+        "sec": 3,
+        "spellId": 1293664,
+        "spellName": "Soulcoil Ignition",
+        "src": "Nek'zali the Soulcoiler"
+      },
+      {
+        "time": "0:03",
+        "sec": 3,
+        "spellId": 1297624,
+        "spellName": "Ritual Burn",
+        "src": "Nek'zali the Soulcoiler"
+      },
+      {
+        "time": "0:03",
+        "sec": 3,
+        "spellId": 1285681,
+        "spellName": "Soulcoil Ignition",
+        "src": "Nek'zali the Soulcoiler"
+      },
+      {
+        "time": "0:06",
+        "sec": 6,
+        "spellId": 1297624,
+        "spellName": "Ritual Burn",
+        "src": "Nek'zali the Soulcoiler"
+      },
+      {
+        "time": "0:34",
+        "sec": 34,
+        "spellId": 1284103,
+        "spellName": "Possession Barrage",
+        "src": "Nek'zali the Soulcoiler"
+      },
+      {
+        "time": "1:10",
+        "sec": 70,
+        "spellId": 1284103,
+        "spellName": "Possession Barrage",
+        "src": "Nek'zali the Soulcoiler"
+      },
+      {
+        "time": "1:15",
+        "sec": 75,
+        "spellId": 1293660,
+        "spellName": "Soulcoil Ignition",
+        "src": "Nek'zali the Soulcoiler"
+      },
+      {
+        "time": "1:15",
+        "sec": 75,
+        "spellId": 1293664,
+        "spellName": "Soulcoil Ignition",
+        "src": "Nek'zali the Soulcoiler"
+      },
+      {
+        "time": "1:16",
+        "sec": 76,
+        "spellId": 1297624,
+        "spellName": "Ritual Burn",
+        "src": "Nek'zali the Soulcoiler"
+      },
+      {
+        "time": "1:16",
+        "sec": 76,
+        "spellId": 1285681,
+        "spellName": "Soulcoil Ignition",
+        "src": "Nek'zali the Soulcoiler"
+      },
+      {
+        "time": "1:19",
+        "sec": 79,
+        "spellId": 1297624,
+        "spellName": "Ritual Burn",
+        "src": "Nek'zali the Soulcoiler"
+      },
+      {
+        "time": "1:41",
+        "sec": 101,
+        "spellId": 1295124,
+        "spellName": "Ritual of Awakening",
+        "src": "Nek'zali the Soulcoiler"
+      },
+      {
+        "time": "1:52",
+        "sec": 112,
+        "spellId": 1289902,
+        "spellName": "Soul Transfer",
+        "src": "Nek'zali the Soulcoiler"
+      },
+      {
+        "time": "3:41",
+        "sec": 221,
+        "spellId": 1297624,
+        "spellName": "Ritual Burn",
+        "src": "Nek'zali the Soulcoiler"
+      },
+      {
+        "time": "3:41",
+        "sec": 221,
+        "spellId": 1299673,
+        "spellName": "Invoke",
+        "src": "Nek'zali the Soulcoiler"
+      },
+      {
+        "time": "4:14",
+        "sec": 254,
+        "spellId": 1284103,
+        "spellName": "Possession Barrage",
+        "src": "Nek'zali the Soulcoiler"
+      },
+      {
+        "time": "4:29",
+        "sec": 269,
+        "spellId": 1297624,
+        "spellName": "Ritual Burn",
+        "src": "Nek'zali the Soulcoiler"
+      },
+      {
+        "time": "4:29",
+        "sec": 269,
+        "spellId": 1299673,
+        "spellName": "Invoke",
+        "src": "Nek'zali the Soulcoiler"
+      },
+      {
+        "time": "4:42",
+        "sec": 282,
+        "spellId": 1284103,
+        "spellName": "Possession Barrage",
+        "src": "Nek'zali the Soulcoiler"
+      },
+      {
+        "time": "5:01",
+        "sec": 301,
+        "spellId": 1297624,
+        "spellName": "Ritual Burn",
+        "src": "Nek'zali the Soulcoiler"
+      },
+      {
+        "time": "5:01",
+        "sec": 301,
+        "spellId": 1299673,
+        "spellName": "Invoke",
+        "src": "Nek'zali the Soulcoiler"
+      }
+    ]
+  },
+  "3492": {
+    "name": "Ula'tek",
+    "diff": 15,
+    "pulls": 31,
+    "kills": 0,
+    "used": "longest-wipe",
+    "durationSec": 547,
+    "file": "WoWCombatLog-090326_210408.txt",
+    "timeline": [
+      {
+        "time": "0:15",
+        "sec": 15,
+        "spellId": 1298367,
+        "spellName": "Mother's Wrath",
+        "src": "Ula'tek"
+      },
+      {
+        "time": "0:20",
+        "sec": 20,
+        "spellId": 1308927,
+        "spellName": "Spectral Coils",
+        "src": "Gore Rattle"
+      },
+      {
+        "time": "0:27",
+        "sec": 27,
+        "spellId": 1299010,
+        "spellName": "Spectral Coils",
+        "src": "Spectral Coil"
+      },
+      {
+        "time": "0:31",
+        "sec": 31,
+        "spellId": 1299010,
+        "spellName": "Spectral Coils",
+        "src": "Spectral Coil"
+      },
+      {
+        "time": "0:39",
+        "sec": 39,
+        "spellId": 1296301,
+        "spellName": "Mephitic Thrash",
+        "src": "Gore Rattle"
+      },
+      {
+        "time": "0:48",
+        "sec": 48,
+        "spellId": 1311807,
+        "spellName": "Caustic Waves",
+        "src": "Gore Rattle"
+      },
+      {
+        "time": "0:48",
+        "sec": 48,
+        "spellId": 1319282,
+        "spellName": "Caustic Waves",
+        "src": "Ula'tek"
+      },
+      {
+        "time": "0:51",
+        "sec": 51,
+        "spellId": 1298570,
+        "spellName": "Caustic Waves",
+        "src": "Gore Rattle"
+      },
+      {
+        "time": "1:04",
+        "sec": 64,
+        "spellId": 1292566,
+        "spellName": "Submerge",
+        "src": "Ula'tek"
+      },
+      {
+        "time": "1:16",
+        "sec": 76,
+        "spellId": 1304012,
+        "spellName": "Call of the Serpent",
+        "src": "Ula'tek"
+      },
+      {
+        "time": "1:22",
+        "sec": 82,
+        "spellId": 1298367,
+        "spellName": "Mother's Wrath",
+        "src": "Ula'tek"
+      },
+      {
+        "time": "1:31",
+        "sec": 91,
+        "spellId": 1296301,
+        "spellName": "Mephitic Thrash",
+        "src": "Gore Rattle"
+      },
+      {
+        "time": "1:40",
+        "sec": 100,
+        "spellId": 1319282,
+        "spellName": "Caustic Waves",
+        "src": "Ula'tek"
+      },
+      {
+        "time": "1:40",
+        "sec": 100,
+        "spellId": 1311807,
+        "spellName": "Caustic Waves",
+        "src": "Gore Rattle"
+      },
+      {
+        "time": "1:43",
+        "sec": 103,
+        "spellId": 1298570,
+        "spellName": "Caustic Waves",
+        "src": "Gore Rattle"
+      },
+      {
+        "time": "1:55",
+        "sec": 115,
+        "spellId": 1308927,
+        "spellName": "Spectral Coils",
+        "src": "Gore Rattle"
+      },
+      {
+        "time": "1:59",
+        "sec": 119,
+        "spellId": 1298367,
+        "spellName": "Mother's Wrath",
+        "src": "Ula'tek"
+      },
+      {
+        "time": "2:03",
+        "sec": 123,
+        "spellId": 1299010,
+        "spellName": "Spectral Coils",
+        "src": "Spectral Coil"
+      },
+      {
+        "time": "2:15",
+        "sec": 135,
+        "spellId": 1286860,
+        "spellName": "Rage of the Shackled",
+        "src": "Ula'tek"
+      },
+      {
+        "time": "3:10",
+        "sec": 190,
+        "spellId": 1301117,
+        "spellName": "Grasping Fangs",
+        "src": "Doomscale Warden"
+      },
+      {
+        "time": "3:16",
+        "sec": 196,
+        "spellId": 1301213,
+        "spellName": "Shadow Molt",
+        "src": "Doomscale Warden"
+      },
+      {
+        "time": "3:19",
+        "sec": 199,
+        "spellId": 1302950,
+        "spellName": "Writhing Gestation",
+        "src": "Doomscale Warden"
+      },
+      {
+        "time": "3:46",
+        "sec": 226,
+        "spellId": 1303410,
+        "spellName": "Defect: Weakened",
+        "src": "Weakened Doomscale"
+      },
+      {
+        "time": "4:07",
+        "sec": 247,
+        "spellId": 1303410,
+        "spellName": "Defect: Weakened",
+        "src": "Weakened Doomscale"
+      },
+      {
+        "time": "4:44",
+        "sec": 284,
+        "spellId": 1286860,
+        "spellName": "Rage of the Shackled",
+        "src": "Ula'tek"
+      },
+      {
+        "time": "5:13",
+        "sec": 313,
+        "spellId": 1304012,
+        "spellName": "Call of the Serpent",
+        "src": "Ula'tek"
+      },
+      {
+        "time": "5:26",
+        "sec": 326,
+        "spellId": 1299010,
+        "spellName": "Spectral Coils",
+        "src": "Spectral Coil"
+      },
+      {
+        "time": "5:30",
+        "sec": 330,
+        "spellId": 1299010,
+        "spellName": "Spectral Coils",
+        "src": "Spectral Coil"
+      },
+      {
+        "time": "5:34",
+        "sec": 334,
+        "spellId": 1299010,
+        "spellName": "Spectral Coils",
+        "src": "Spectral Coil"
+      },
+      {
+        "time": "5:42",
+        "sec": 342,
+        "spellId": 1299010,
+        "spellName": "Spectral Coils",
+        "src": "Spectral Coil"
+      },
+      {
+        "time": "6:11",
+        "sec": 371,
+        "spellId": 1300751,
+        "spellName": "Call of the Serpent",
+        "src": "Ula'tek"
+      },
+      {
+        "time": "6:17",
+        "sec": 377,
+        "spellId": 1298367,
+        "spellName": "Mother's Wrath",
+        "src": "Ula'tek"
+      },
+      {
+        "time": "6:32",
+        "sec": 392,
+        "spellId": 1295905,
+        "spellName": "Serpent's Bite",
+        "src": "Ula'tek"
+      },
+      {
+        "time": "6:41",
+        "sec": 401,
+        "spellId": 1300751,
+        "spellName": "Call of the Serpent",
+        "src": "Ula'tek"
+      },
+      {
+        "time": "6:57",
+        "sec": 417,
+        "spellId": 1292211,
+        "spellName": "Caustic Waves",
+        "src": "Ula'tek"
+      },
+      {
+        "time": "6:58",
+        "sec": 418,
+        "spellId": 1298570,
+        "spellName": "Caustic Waves",
+        "src": "Gore Rattle"
+      },
+      {
+        "time": "7:10",
+        "sec": 430,
+        "spellId": 1315341,
+        "spellName": "Circling Prey",
+        "src": "Ula'tek"
+      },
+      {
+        "time": "7:13",
+        "sec": 433,
+        "spellId": 1301512,
+        "spellName": "Submerge",
+        "src": "Ula'tek"
+      },
+      {
+        "time": "7:26",
+        "sec": 446,
+        "spellId": 1300751,
+        "spellName": "Call of the Serpent",
+        "src": "Ula'tek"
+      },
+      {
+        "time": "7:32",
+        "sec": 452,
+        "spellId": 1298367,
+        "spellName": "Mother's Wrath",
+        "src": "Ula'tek"
+      },
+      {
+        "time": "7:43",
+        "sec": 463,
+        "spellId": 1295905,
+        "spellName": "Serpent's Bite",
+        "src": "Ula'tek"
+      },
+      {
+        "time": "7:52",
+        "sec": 472,
+        "spellId": 1292211,
+        "spellName": "Caustic Waves",
+        "src": "Ula'tek"
+      },
+      {
+        "time": "7:53",
+        "sec": 473,
+        "spellId": 1298570,
+        "spellName": "Caustic Waves",
+        "src": "Gore Rattle"
+      },
+      {
+        "time": "8:01",
+        "sec": 481,
+        "spellId": 1315341,
+        "spellName": "Circling Prey",
+        "src": "Ula'tek"
+      },
+      {
+        "time": "8:05",
+        "sec": 485,
+        "spellId": 1301512,
+        "spellName": "Submerge",
+        "src": "Ula'tek"
+      },
+      {
+        "time": "8:20",
+        "sec": 500,
+        "spellId": 1295905,
+        "spellName": "Serpent's Bite",
+        "src": "Ula'tek"
+      },
+      {
+        "time": "8:26",
+        "sec": 506,
+        "spellId": 1300751,
+        "spellName": "Call of the Serpent",
+        "src": "Ula'tek"
+      },
+      {
+        "time": "8:42",
+        "sec": 522,
+        "spellId": 1292211,
+        "spellName": "Caustic Waves",
+        "src": "Ula'tek"
+      },
+      {
+        "time": "8:43",
+        "sec": 523,
+        "spellId": 1298570,
+        "spellName": "Caustic Waves",
+        "src": "Gore Rattle"
+      },
+      {
+        "time": "8:48",
+        "sec": 528,
+        "spellId": 1298367,
+        "spellName": "Mother's Wrath",
+        "src": "Ula'tek"
+      },
+      {
+        "time": "9:02",
+        "sec": 542,
+        "spellId": 1315341,
+        "spellName": "Circling Prey",
+        "src": "Ula'tek"
+      },
+      {
+        "time": "9:05",
+        "sec": 545,
+        "spellId": 1301512,
+        "spellName": "Submerge",
+        "src": "Ula'tek"
+      }
+    ]
+  },
+  "3497": {
+    "name": "The Lost Explorers",
+    "diff": 15,
+    "pulls": 1,
+    "kills": 1,
+    "used": "kill",
+    "durationSec": 305,
+    "file": "WoWCombatLog-090126_210156.txt",
+    "timeline": []
+  }
+}
