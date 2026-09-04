@@ -78,7 +78,6 @@ const UTILITY_CLASS_NAMES = new Set([
   "warrior",
   "death knight",
   "demon hunter",
-  "rogue",
 ]);
 
 function norm(s: string): string {
@@ -176,7 +175,6 @@ function resolveUtilityClass(
   if (s.includes("death")) return "death-knight";
   if (s.includes("demon")) return "demon-hunter";
   if (s.includes("warrior")) return "warrior";
-  if (s.includes("rogue")) return "rogue";
   return null;
 }
 
@@ -343,7 +341,7 @@ function parseWowAuditMainRoster(grid: string[][]): PasteRosterResult {
     tanks,
     utilities,
     skipped,
-    note: `WowAudit Main Roster: ${healers.length} healers, ${tanks.length} tanks, ${utilities.length} raid utilities (Warrior/DK/DH/Rogue DPS). Specs default from class — edit Disc/Holy after.`,
+    note: `WowAudit Main Roster: ${healers.length} healers, ${tanks.length} tanks, ${utilities.length} raid utilities (Warrior/DK/DH DPS). Specs default from class — edit Disc/Holy after.`,
   };
 }
 

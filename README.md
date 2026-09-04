@@ -16,7 +16,7 @@ Open [http://localhost:3000](http://localhost:3000).
 ## Raid lead flow
 
 1. **Boss** — pick a fight, then **Heroic** / **Mythic** (or click the selected card again) to go to roster.
-2. **Roster** — healers (name + spec), tanks, and **raid utilities**. Paste WowAudit Main Roster to import healers/tanks plus Warrior / DK / DH / Rogue DPS for Rally, AMZ, Darkness, and Smoke Bomb.
+2. **Roster** — healers (name + spec), tanks, and **raid utilities**. Paste WowAudit Main Roster to import healers/tanks plus Warrior / DK / DH DPS for Rally, AMZ, and Darkness.
 3. **Plan** — first visit auto-assigns; later visits restore your saved plan. **Auto-assign CDs** asks before replacing manual work. Tweak rows, set tank targets, then **Copy NSRT** (in-game) or **Copy Viserio** (paste into [Viserio Cooldowns](https://wowutils.com/viserio-cooldowns) CD → Import).
 4. In-game: `/ns` → Shared Notes → Import → paste.
 
@@ -45,7 +45,7 @@ Heroic timers lean on **BigWigs** first-cycle cast bars / guides; several fights
 
 ## Scope
 
-- Healers, tank externals, raid personals, tank/DPS raid utilities (Rally, AMZ, Darkness, Smoke Bomb)
+- Healers, tank externals, raid personals, tank/DPS raid utilities (Rally, AMZ, Darkness)
 - Local-first (no accounts). The planner never needs Warcraft Logs login; WCL is only used offline in optional `scripts/` when rebuilding timer JSON.
 - NSRT + readable text export
 - Plans (assignments, notes, timers) persist in this browser per boss

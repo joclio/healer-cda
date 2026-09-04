@@ -22,8 +22,7 @@ export type BossGroup = "raid" | "lair";
 export type UtilityClass =
   | "warrior"
   | "death-knight"
-  | "demon-hunter"
-  | "rogue";
+  | "demon-hunter";
 
 export interface Spell {
   id: string;
@@ -176,22 +175,19 @@ export const UTILITY_CLASS_LABELS: Record<UtilityClass, string> = {
   warrior: "Warrior",
   "death-knight": "Death Knight",
   "demon-hunter": "Demon Hunter",
-  rogue: "Rogue",
 };
 
 export const UTILITY_CLASS_COLOR: Record<UtilityClass, string> = {
   warrior: "#C69B6D",
   "death-knight": "#C41E3A",
   "demon-hunter": "#A330C9",
-  rogue: "#FFF468",
 };
 
 export function isUtilityClass(cls: string | undefined): cls is UtilityClass {
   return (
     cls === "warrior" ||
     cls === "death-knight" ||
-    cls === "demon-hunter" ||
-    cls === "rogue"
+    cls === "demon-hunter"
   );
 }
 
@@ -212,10 +208,10 @@ export const SPEC_LABELS: Record<HealerSpec, string> = {
 
 /** Compact labels for tight UI (edit selects, pick list). */
 export const SPEC_SHORT_LABELS: Record<HealerSpec, string> = {
-  "resto-druid": "Resto",
+  "resto-druid": "Restoration",
   "holy-priest": "Holy",
   "disc-priest": "Discipline",
-  "resto-shaman": "Resto",
+  "resto-shaman": "Restoration",
   mistweaver: "Mistweaver",
   "holy-paladin": "Holy",
   preservation: "Preservation",

@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { useEffect, useState, type DragEvent } from "react";
 import { parseRosterPaste } from "@/domain/rosterPaste";
 import {
   DEFAULT_SPEC_FOR_CLASS,
@@ -91,15 +91,23 @@ function newId(prefix: string): string {
     : `${prefix}-${Date.now()}`;
 }
 
-function moveItem<T>(list: T[], index: number, dir: -1 | 1): T[] {
-  const j = index + dir;
-  if (j < 0 || j >= list.length) return list;
+function moveItemAt<T>(list: T[], from: number, to: number): T[] {
+  if (
+    from === to ||
+    from < 0 ||
+    to < 0 ||
+    from >= list.length ||
+    to >= list.length
+  ) {
+    return list;
+  }
   const next = [...list];
-  const tmp = next[index];
-  next[index] = next[j];
-  next[j] = tmp;
+  const [item] = next.splice(from, 1);
+  next.splice(to, 0, item);
   return next;
 }
+
+type DragKind = "healer" | "tank" | "utility";
 
 type UndoState =
   | { kind: "healer"; item: Healer; index: number }
@@ -145,6 +153,10 @@ export function RosterEditor({
   const [verifySpecs, setVerifySpecs] = useState(false);
   const [undo, setUndo] = useState<UndoState | null>(null);
   const [reordering, setReordering] = useState(false);
+  const [dragging, setDragging] = useState<{
+    kind: DragKind;
+    id: string;
+  } | null>(null);
 
   const activeHealerSet = new Set(activeHealerIds);
   const activeTankSet = new Set(activeTankIds);
@@ -351,33 +363,51 @@ export function RosterEditor({
     return t.class ? TANK_CLASS_COLOR[t.class] : "#94a3b8";
   }
 
-  function moveButtons(
-    index: number,
-    total: number,
-    onMove: (dir: -1 | 1) => void,
-  ) {
+  function dragHandle(kind: DragKind, id: string) {
     return (
-      <div className="flex gap-0.5">
-        <button
-          type="button"
-          aria-label="Move up"
-          disabled={index === 0}
-          onClick={() => onMove(-1)}
-          className="rounded px-1.5 py-0.5 text-xs text-white/45 hover:bg-white/10 hover:text-white disabled:opacity-25"
-        >
-          ↑
-        </button>
-        <button
-          type="button"
-          aria-label="Move down"
-          disabled={index >= total - 1}
-          onClick={() => onMove(1)}
-          className="rounded px-1.5 py-0.5 text-xs text-white/45 hover:bg-white/10 hover:text-white disabled:opacity-25"
-        >
-          ↓
-        </button>
-      </div>
+      <button
+        type="button"
+        draggable
+        aria-label="Drag to reorder"
+        title="Drag to reorder"
+        onDragStart={(e) => {
+          setDragging({ kind, id });
+          e.dataTransfer.effectAllowed = "move";
+          e.dataTransfer.setData("text/plain", `${kind}:${id}`);
+          const row = e.currentTarget.closest("li");
+          if (row instanceof HTMLElement) {
+            e.dataTransfer.setDragImage(row, 28, 24);
+          }
+        }}
+        onDragEnd={() => setDragging(null)}
+        className="cursor-grab touch-none self-center rounded px-1.5 py-1 text-sm leading-none text-white/40 hover:bg-white/10 hover:text-white active:cursor-grabbing"
+      >
+        ⠿
+      </button>
     );
+  }
+
+  function rowDragProps(
+    kind: DragKind,
+    id: string,
+    list: { id: string }[],
+    onReorder: (from: number, to: number) => void,
+  ) {
+    const isDragging = dragging?.kind === kind && dragging.id === id;
+    return {
+      onDragOver: (e: DragEvent<HTMLLIElement>) => {
+        e.preventDefault();
+        e.dataTransfer.dropEffect = "move";
+        if (!dragging || dragging.kind !== kind || dragging.id === id) return;
+        const from = list.findIndex((x) => x.id === dragging.id);
+        const to = list.findIndex((x) => x.id === id);
+        if (from < 0 || to < 0 || from === to) return;
+        onReorder(from, to);
+      },
+      className: isDragging
+        ? "opacity-40 ring-1 ring-teal-400/60"
+        : undefined,
+    };
   }
 
   function pastePanel() {
@@ -465,14 +495,19 @@ export function RosterEditor({
             <h2 className="text-sm font-medium text-white">Edit roster</h2>
             <p className="mt-1 text-sm text-white/55">
               {reordering
-                ? "↑↓ sets assign priority · top healers get CDs first"
+                ? "Drag rows to set assign priority · top healers get CDs first"
                 : "Browser save · list order = assign priority"}
             </p>
           </div>
           <div className="flex flex-wrap items-center gap-2">
             <button
               type="button"
-              onClick={() => setReordering((v) => !v)}
+              onClick={() => {
+                setReordering((v) => {
+                  if (v) setDragging(null);
+                  return !v;
+                });
+              }}
               className={`rounded-md border px-3 py-1.5 text-sm ${
                 reordering
                   ? "border-teal-500/40 bg-teal-500/10 text-teal-200"
@@ -559,15 +594,23 @@ export function RosterEditor({
           </div>
 
           <ul className="space-y-1.5">
-            {poolHealers.map((h, i) => {
+            {poolHealers.map((h) => {
               const cls = SPEC_TO_CLASS[h.spec];
               const classSpecs = specsForClass(cls);
+              const drag = reordering
+                ? rowDragProps("healer", h.id, poolHealers, (from, to) =>
+                    onPoolHealersChange(moveItemAt(poolHealers, from, to)),
+                  )
+                : null;
               return (
-                <li key={h.id} className={healerGrid}>
-                  {reordering &&
-                    moveButtons(i, poolHealers.length, (dir) =>
-                      onPoolHealersChange(moveItem(poolHealers, i, dir)),
-                    )}
+                <li
+                  key={h.id}
+                  className={[healerGrid, drag?.className]
+                    .filter(Boolean)
+                    .join(" ")}
+                  onDragOver={drag?.onDragOver}
+                >
+                  {reordering && dragHandle("healer", h.id)}
                   <div className="flex min-w-0 flex-col gap-1">
                     <span className={MOBILE_LABEL}>Name</span>
                     <div className="flex min-w-0 items-center gap-2">
@@ -662,54 +705,64 @@ export function RosterEditor({
             <p className="text-sm text-white/45">No tanks yet.</p>
           ) : (
             <ul className="space-y-1.5">
-              {poolTanks.map((t, i) => (
-                <li key={t.id} className={tankGrid}>
-                  {reordering &&
-                    moveButtons(i, poolTanks.length, (dir) =>
-                      onPoolTanksChange(moveItem(poolTanks, i, dir)),
-                    )}
-                  <div className="flex min-w-0 flex-col gap-1">
-                    <span className={MOBILE_LABEL}>Name</span>
-                    <div className="flex min-w-0 items-center gap-2">
-                      {colorDot(tankColor(t))}
-                      <input
-                        value={t.name}
-                        onChange={(e) =>
-                          updateTank(t.id, { name: e.target.value })
-                        }
-                        className={`min-w-0 ${FIELD}`}
-                        placeholder="Name"
-                      />
-                    </div>
-                  </div>
-                  <div className="flex flex-col gap-1">
-                    <span className={MOBILE_LABEL}>Class</span>
-                    <select
-                      value={t.class ?? "warrior"}
-                      onChange={(e) =>
-                        updateTank(t.id, {
-                          class: e.target.value as TankClass,
-                        })
-                      }
-                      className={FIELD}
-                      title="Class"
-                    >
-                      {TANK_CLASSES.map((c) => (
-                        <option key={c} value={c}>
-                          {TANK_CLASS_LABELS[c]}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                  <button
-                    type="button"
-                    onClick={() => removeTank(t.id)}
-                    className="justify-self-end rounded-md px-2 py-1 text-sm text-rose-300 hover:bg-rose-500/10 sm:self-center"
+              {poolTanks.map((t) => {
+                const drag = reordering
+                  ? rowDragProps("tank", t.id, poolTanks, (from, to) =>
+                      onPoolTanksChange(moveItemAt(poolTanks, from, to)),
+                    )
+                  : null;
+                return (
+                  <li
+                    key={t.id}
+                    className={[tankGrid, drag?.className]
+                      .filter(Boolean)
+                      .join(" ")}
+                    onDragOver={drag?.onDragOver}
                   >
-                    Remove
-                  </button>
-                </li>
-              ))}
+                    {reordering && dragHandle("tank", t.id)}
+                    <div className="flex min-w-0 flex-col gap-1">
+                      <span className={MOBILE_LABEL}>Name</span>
+                      <div className="flex min-w-0 items-center gap-2">
+                        {colorDot(tankColor(t))}
+                        <input
+                          value={t.name}
+                          onChange={(e) =>
+                            updateTank(t.id, { name: e.target.value })
+                          }
+                          className={`min-w-0 ${FIELD}`}
+                          placeholder="Name"
+                        />
+                      </div>
+                    </div>
+                    <div className="flex flex-col gap-1">
+                      <span className={MOBILE_LABEL}>Class</span>
+                      <select
+                        value={t.class ?? "warrior"}
+                        onChange={(e) =>
+                          updateTank(t.id, {
+                            class: e.target.value as TankClass,
+                          })
+                        }
+                        className={FIELD}
+                        title="Class"
+                      >
+                        {TANK_CLASSES.map((c) => (
+                          <option key={c} value={c}>
+                            {TANK_CLASS_LABELS[c]}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => removeTank(t.id)}
+                      className="justify-self-end rounded-md px-2 py-1 text-sm text-rose-300 hover:bg-rose-500/10 sm:self-center"
+                    >
+                      Remove
+                    </button>
+                  </li>
+                );
+              })}
             </ul>
           )}
           <div className="flex justify-end">
@@ -728,7 +781,7 @@ export function RosterEditor({
             Raid utilities ({poolUtilities.length})
           </h3>
           <p className="text-xs text-white/40">
-            DPS (or anyone) who brings Rally, AMZ, Darkness, Smoke Bomb. Matching
+            DPS (or anyone) who brings Rally, AMZ, or Darkness. Matching
             tanks are offered automatically.
           </p>
 
@@ -743,54 +796,66 @@ export function RosterEditor({
             <p className="text-sm text-white/45">No utility casters yet.</p>
           ) : (
             <ul className="space-y-1.5">
-              {poolUtilities.map((u, i) => (
-                <li key={u.id} className={tankGrid}>
-                  {reordering &&
-                    moveButtons(i, poolUtilities.length, (dir) =>
-                      onPoolUtilitiesChange(moveItem(poolUtilities, i, dir)),
-                    )}
-                  <div className="flex min-w-0 flex-col gap-1">
-                    <span className={MOBILE_LABEL}>Name</span>
-                    <div className="flex min-w-0 items-center gap-2">
-                      {colorDot(UTILITY_CLASS_COLOR[u.class])}
-                      <input
-                        value={u.name}
-                        onChange={(e) =>
-                          updateUtility(u.id, { name: e.target.value })
-                        }
-                        className={`min-w-0 ${FIELD}`}
-                        placeholder="Name"
-                      />
-                    </div>
-                  </div>
-                  <div className="flex flex-col gap-1">
-                    <span className={MOBILE_LABEL}>Class</span>
-                    <select
-                      value={u.class}
-                      onChange={(e) =>
-                        updateUtility(u.id, {
-                          class: e.target.value as UtilityClass,
-                        })
-                      }
-                      className={FIELD}
-                      title="Class"
-                    >
-                      {UTILITY_CLASSES.map((c) => (
-                        <option key={c} value={c}>
-                          {UTILITY_CLASS_LABELS[c]}
-                        </option>
-                      ))}
-                    </select>
-                  </div>
-                  <button
-                    type="button"
-                    onClick={() => removeUtility(u.id)}
-                    className="justify-self-end rounded-md px-2 py-1 text-sm text-rose-300 hover:bg-rose-500/10 sm:self-center"
+              {poolUtilities.map((u) => {
+                const drag = reordering
+                  ? rowDragProps("utility", u.id, poolUtilities, (from, to) =>
+                      onPoolUtilitiesChange(
+                        moveItemAt(poolUtilities, from, to),
+                      ),
+                    )
+                  : null;
+                return (
+                  <li
+                    key={u.id}
+                    className={[tankGrid, drag?.className]
+                      .filter(Boolean)
+                      .join(" ")}
+                    onDragOver={drag?.onDragOver}
                   >
-                    Remove
-                  </button>
-                </li>
-              ))}
+                    {reordering && dragHandle("utility", u.id)}
+                    <div className="flex min-w-0 flex-col gap-1">
+                      <span className={MOBILE_LABEL}>Name</span>
+                      <div className="flex min-w-0 items-center gap-2">
+                        {colorDot(UTILITY_CLASS_COLOR[u.class])}
+                        <input
+                          value={u.name}
+                          onChange={(e) =>
+                            updateUtility(u.id, { name: e.target.value })
+                          }
+                          className={`min-w-0 ${FIELD}`}
+                          placeholder="Name"
+                        />
+                      </div>
+                    </div>
+                    <div className="flex flex-col gap-1">
+                      <span className={MOBILE_LABEL}>Class</span>
+                      <select
+                        value={u.class}
+                        onChange={(e) =>
+                          updateUtility(u.id, {
+                            class: e.target.value as UtilityClass,
+                          })
+                        }
+                        className={FIELD}
+                        title="Class"
+                      >
+                        {UTILITY_CLASSES.map((c) => (
+                          <option key={c} value={c}>
+                            {UTILITY_CLASS_LABELS[c]}
+                          </option>
+                        ))}
+                      </select>
+                    </div>
+                    <button
+                      type="button"
+                      onClick={() => removeUtility(u.id)}
+                      className="justify-self-end rounded-md px-2 py-1 text-sm text-rose-300 hover:bg-rose-500/10 sm:self-center"
+                    >
+                      Remove
+                    </button>
+                  </li>
+                );
+              })}
             </ul>
           )}
           <div className="flex justify-end">
@@ -981,8 +1046,7 @@ export function RosterEditor({
           <div>
             <h2 className="text-sm font-medium text-white">Raid utilities</h2>
             <p className="mt-0.5 text-sm text-white/55">
-              {activeUtilityIds.length} selected · Rally / AMZ / Darkness /
-              Smoke Bomb
+              {activeUtilityIds.length} selected · Rally / AMZ / Darkness
             </p>
           </div>
           <div className="flex flex-wrap gap-2 text-xs">
