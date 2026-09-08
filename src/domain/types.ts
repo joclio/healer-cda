@@ -191,6 +191,10 @@ export function isUtilityClass(cls: string | undefined): cls is UtilityClass {
   );
 }
 
+export function isTankClass(cls: string | undefined): cls is TankClass {
+  return cls != null && cls in TANK_CLASS_LABELS;
+}
+
 /** Assignee id for cooldown tracking (healer or utility). */
 export function assignmentAssigneeId(a: Assignment): string | undefined {
   return a.utilityId ?? a.healerId;
@@ -205,6 +209,10 @@ export const SPEC_LABELS: Record<HealerSpec, string> = {
   "holy-paladin": "Holy Paladin",
   preservation: "Preservation Evoker",
 };
+
+export function isHealerSpec(spec: string | undefined): spec is HealerSpec {
+  return spec != null && spec in SPEC_LABELS;
+}
 
 /** Compact labels for tight UI (edit selects, pick list). */
 export const SPEC_SHORT_LABELS: Record<HealerSpec, string> = {

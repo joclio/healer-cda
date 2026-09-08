@@ -39,3 +39,10 @@ yarn-error.log*
 # typescript
 *.tsbuildinfo
 next-env.d.ts
+
+# offline WCL / log scrape outputs (scripts/)
+scripts/*.log
+scripts/*.txt
+scripts/wcl-*.json
+scripts/extracted-timers.json
+scripts/ulatek-timeline.json
