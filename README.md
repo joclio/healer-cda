@@ -4,14 +4,21 @@ Local-first healer cooldown planner for **World of Warcraft: Midnight Season 2**
 
 Assign raid CDs, tank externals, and whole-raid personals, then **Copy NSRT** into Northern Sky Raid Tools.
 
+## Requirements
+
+1. Install [Node.js 20.9+](https://nodejs.org) (LTS is fine). npm is included.
+2. Open a new terminal and check: `node -v` should print `v20.9` or newer.
+
 ## Quick start
+
+From this repo:
 
 ```bash
 npm install
 npm run dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000).
+Open [http://localhost:3000](http://localhost:3000). Leave that terminal running while you use the app. If the page does not load, the terminal will show the port (usually `3000`).
 
 ## Raid lead flow
 
