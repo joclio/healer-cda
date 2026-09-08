@@ -1,5 +1,5 @@
 import { describe, expect, it } from "vitest";
-import { applyPlanFile, parsePlanFile, toPlanFile } from "@/domain/planFile";
+import { applyPlanFile, parsePlanFile, planSkipNotice, toPlanFile } from "@/domain/planFile";
 import type { Boss, Plan } from "@/domain/types";
 
 const boss: Boss = {
@@ -66,7 +66,8 @@ describe("plan file", () => {
     ]);
     expect(applied.plan.noteWindowIds).toEqual(["w1"]);
     expect(applied.plan.timeOverrides).toEqual({ w1: 45 });
-    expect(applied.skipped).toBe(0);
+    expect(applied.skippedNames).toBe(0);
+    expect(applied.skippedWindows).toBe(0);
   });
 
   it("counts assignments whose names are not on this roster", () => {
@@ -75,7 +76,35 @@ describe("plan file", () => {
     expect(applied.ok).toBe(true);
     if (!applied.ok) return;
     expect(applied.plan.assignments).toEqual([]);
-    expect(applied.skipped).toBe(1);
+    expect(applied.skippedNames).toBe(1);
+    expect(applied.skippedWindows).toBe(0);
+    expect(planSkipNotice(applied.skippedNames, applied.skippedWindows)).toBe(
+      "1 assignment skipped — 1 name not on this roster.",
+    );
+  });
+
+  it("counts a removed window separately from a missing name", () => {
+    const file = toPlanFile(plan, {});
+    file.assignments.push({
+      windowId: "gone",
+      spellId: "healing-tide-totem",
+      timeSec: 10,
+      healerName: "Nightmid",
+    });
+    const applied = applyPlanFile(
+      JSON.stringify(file),
+      boss,
+      [{ id: "healer-new", name: "Nightmid", spec: "resto-shaman" }],
+      [],
+      [],
+    );
+    expect(applied.ok).toBe(true);
+    if (!applied.ok) return;
+    expect(applied.skippedNames).toBe(0);
+    expect(applied.skippedWindows).toBe(1);
+    expect(planSkipNotice(applied.skippedNames, applied.skippedWindows)).toBe(
+      "1 assignment skipped — 1 unknown window.",
+    );
   });
 
   it("rejects a plan for a different boss", () => {

@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { CopyNsrtButton, CopyViserioButton } from "@/components/ExportPanel";
 import { getSpell } from "@/data/catalog";
+import { planSkipNotice } from "@/domain/planFile";
 import type { Boss, Plan } from "@/domain/types";
 
 interface Props {
@@ -15,7 +16,9 @@ interface Props {
   onDownloadPlan: () => void;
   onImportPlan: (
     raw: string,
-  ) => { ok: true; skipped: number } | { ok: false; error?: string };
+  ) =>
+    | { ok: true; skippedNames: number; skippedWindows: number }
+    | { ok: false; error?: string };
 }
 
 export function PlanHeader({
@@ -116,12 +119,12 @@ export function PlanHeader({
                 const result = onImportPlan(pasteText);
                 if (result.ok) {
                   setPasteError(null);
-                  if (result.skipped > 0) {
-                    setPasteNotice(
-                      result.skipped === 1
-                        ? "1 assignment skipped — name not on this roster."
-                        : `${result.skipped} assignments skipped — names not on this roster.`,
-                    );
+                  const notice = planSkipNotice(
+                    result.skippedNames,
+                    result.skippedWindows,
+                  );
+                  if (notice) {
+                    setPasteNotice(notice);
                     return;
                   }
                   setPasteOpen(false);

@@ -32,7 +32,7 @@ Open [http://localhost:3000](http://localhost:3000). Leave that terminal running
 - **CD windows only** (on by default) hides info-only abilities; turn it off to see the full cast list.
 - **Note · N** chooses which boss abilities appear in the copied note (row checkboxes).
 - Edit any window time as `mm:ss` if your pull differs; re-auto-assign if readiness looks wrong. **Reset timers** puts those times back to the boss JSON.
-- **Download plan** / **Paste plan** move the assignments, not just the copied note. Paste tells you how many rows were skipped when a name is not on this roster.
+- **Download plan** / **Paste plan** move the assignments, not just the copied note. Paste tells you how many rows were skipped, and whether that was a missing name or an unknown window.
 - Sticky header keeps **Copy NSRT** available while you scroll.
 - Matching tanks (Warrior / DK / DH) can cast utility CDs without a separate utility entry.
 - Raid personals only auto-suggest when a window has `suggestPersonals` (or soft-CD wording) — bare “soak” notes no longer force personals.

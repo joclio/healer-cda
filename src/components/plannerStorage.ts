@@ -1,3 +1,4 @@
+import { getBoss } from "@/data/catalog";
 import { defaultNoteWindowIds, isHealerSpec, isTankClass, isUtilityClass } from "@/domain/types";
 import type { Assignment, Boss, Healer, Tank, UtilityCaster } from "@/domain/types";
 
@@ -114,16 +115,21 @@ export function sanitizeUtilities(raw: unknown): UtilityCaster[] {
   );
 }
 
-function migratePlanSlice(raw: unknown): SavedPlan | null {
+function migratePlanSlice(raw: unknown, bossId: string): SavedPlan | null {
   if (!raw || typeof raw !== "object" || !Array.isArray((raw as SavedPlan).assignments)) {
     return null;
   }
   const slice = raw as Partial<SavedPlan>;
+  const boss = getBoss(bossId);
   return {
     assignments: (slice.assignments ?? []).filter(
       (a) => a && typeof a === "object" && a.spellId !== "smoke-bomb",
     ),
-    noteWindowIds: Array.isArray(slice.noteWindowIds) ? slice.noteWindowIds : [],
+    noteWindowIds: Array.isArray(slice.noteWindowIds)
+      ? slice.noteWindowIds
+      : boss
+        ? defaultNoteWindowIds(boss)
+        : [],
     personalWindowIds: Array.isArray(slice.personalWindowIds)
       ? slice.personalWindowIds
       : [],
@@ -138,7 +144,7 @@ function migratePlanMap(raw: object): SavedPlans {
   const out: SavedPlans = {};
   for (const [id, slice] of Object.entries(raw)) {
     if (id === "version" || id === "plans") continue;
-    const next = migratePlanSlice(slice);
+    const next = migratePlanSlice(slice, id);
     if (next) out[id] = next;
   }
   return out;

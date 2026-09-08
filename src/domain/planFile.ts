@@ -134,7 +134,9 @@ export function applyPlanFile(
   roster: Healer[],
   tanks: Tank[],
   utilities: UtilityCaster[],
-): { ok: true; plan: SavedPlanSlice; skipped: number } | { ok: false; error: string } {
+):
+  | { ok: true; plan: SavedPlanSlice; skippedNames: number; skippedWindows: number }
+  | { ok: false; error: string } {
   const file = parsePlanFile(raw);
   if (!file) return { ok: false, error: "That is not a healer-cda plan file." };
   if (file.bossId !== boss.id) {
@@ -144,11 +146,12 @@ export function applyPlanFile(
   const windows = new Set(boss.windows.map((w) => w.id));
   const sourceTime = new Map(boss.windows.map((w) => [w.id, w.timeSec]));
   const assignments: Assignment[] = [];
-  let skipped = 0;
+  let skippedNames = 0;
+  let skippedWindows = 0;
 
   for (const row of file.assignments) {
     if (!windows.has(row.windowId)) {
-      skipped++;
+      skippedWindows++;
       continue;
     }
     const healer = row.healerId || row.healerName
@@ -160,7 +163,7 @@ export function applyPlanFile(
       : undefined;
     const assigneeId = healer?.id ?? utility?.id;
     if (!assigneeId) {
-      skipped++;
+      skippedNames++;
       continue;
     }
     const tank = row.tankId || row.tankName
@@ -180,7 +183,8 @@ export function applyPlanFile(
 
   return {
     ok: true,
-    skipped,
+    skippedNames,
+    skippedWindows,
     plan: {
       assignments,
       noteWindowIds: file.noteWindowIds.filter((id) => windows.has(id)),
@@ -192,4 +196,21 @@ export function applyPlanFile(
       ),
     },
   };
+}
+
+/** Why paste dropped rows. Unknown windows are not blamed on roster names. */
+export function planSkipNotice(names: number, windows: number): string | null {
+  const parts: string[] = [];
+  if (names > 0) {
+    parts.push(
+      names === 1 ? "1 name not on this roster" : `${names} names not on this roster`,
+    );
+  }
+  if (windows > 0) {
+    parts.push(windows === 1 ? "1 unknown window" : `${windows} unknown windows`);
+  }
+  if (parts.length === 0) return null;
+  const total = names + windows;
+  const head = total === 1 ? "1 assignment skipped" : `${total} assignments skipped`;
+  return `${head} — ${parts.join(", ")}.`;
 }

@@ -386,7 +386,7 @@ export function PlannerApp() {
 
   function importPlan(
     raw: string,
-  ): { ok: true; skipped: number } | { ok: false; error?: string } {
+  ): { ok: true; skippedNames: number; skippedWindows: number } | { ok: false; error?: string } {
     if (!baseBoss) return { ok: false, error: "No fight selected." };
     if (
       (assignments.length > 0 ||
@@ -399,7 +399,11 @@ export function PlannerApp() {
     const applied = applyPlanFile(raw, baseBoss, roster, tanks, utilities);
     if (!applied.ok) return applied;
     applyPlanSlice(applied.plan);
-    return { ok: true, skipped: applied.skipped };
+    return {
+      ok: true,
+      skippedNames: applied.skippedNames,
+      skippedWindows: applied.skippedWindows,
+    };
   }
 
   function setWindowTime(windowId: string, timeSec: number) {
@@ -433,7 +437,7 @@ export function PlannerApp() {
     link.href = url;
     link.download = `${boss.id}-plan.json`;
     link.click();
-    URL.revokeObjectURL(url);
+    window.setTimeout(() => URL.revokeObjectURL(url), 1000);
   }
 
   return (
