@@ -63,13 +63,8 @@
       "id": "lem-mor-zahi-s-command1",
       "timeSec": 61,
       "ability": "Mor’zahi’s Command #1",
-<<<<<<< Updated upstream
-      "abilitySpellId": 1296975,
-      "trigger": "WCL 1:04",
-=======
       "abilitySpellId": 1297022,
       "trigger": "WCL 1:01",
->>>>>>> Stashed changes
       "severity": "critical",
       "category": "defensive",
       "phase": 2,
