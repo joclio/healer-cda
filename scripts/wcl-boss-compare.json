@@ -4,32 +4,32 @@
     "encounterId": 3470,
     "kills": [
       {
-        "code": "9wd3qxabQtJMz7fW",
-        "fightId": 20,
-        "duration": 383,
-        "url": "https://www.warcraftlogs.com/reports/9wd3qxabQtJMz7fW?fight=20",
+        "code": "fchR6GMk4YrDvFqV",
+        "fightId": 6,
+        "duration": 274,
+        "url": "https://www.warcraftlogs.com/reports/fchR6GMk4YrDvFqV?fight=6",
+        "title": "Mythic+ Season 2"
+      },
+      {
+        "code": "FzbhYBaLct1ykWnT",
+        "fightId": 29,
+        "duration": 274,
+        "url": "https://www.warcraftlogs.com/reports/FzbhYBaLct1ykWnT?fight=29",
         "title": "The Venomous Abyss"
       },
       {
-        "code": "xYD24WwFbrM9B3PA",
-        "fightId": 12,
-        "duration": 386,
-        "url": "https://www.warcraftlogs.com/reports/xYD24WwFbrM9B3PA?fight=12",
+        "code": "4GbJ8kfR9yLq2Ktd",
+        "fightId": 1,
+        "duration": 289,
+        "url": "https://www.warcraftlogs.com/reports/4GbJ8kfR9yLq2Ktd?fight=1",
         "title": "The Venomous Abyss"
       },
       {
-        "code": "Rz8fMGCraYyP72pW",
-        "fightId": 24,
-        "duration": 387,
-        "url": "https://www.warcraftlogs.com/reports/Rz8fMGCraYyP72pW?fight=24",
-        "title": "HEROIC SPLIT #15"
-      },
-      {
-        "code": "Tjz2qdPMHQpxACV8",
-        "fightId": 11,
-        "duration": 389,
-        "url": "https://www.warcraftlogs.com/reports/Tjz2qdPMHQpxACV8?fight=11",
-        "title": "Tues Raid"
+        "code": "ah9tCqgG4BHvxbTz",
+        "fightId": 7,
+        "duration": 291,
+        "url": "https://www.warcraftlogs.com/reports/ah9tCqgG4BHvxbTz?fight=7",
+        "title": "ula'tek, ula'tek, ula'tek, ula'tek, ula'tek, ula'tek, ula'tek, ula'tek, ula'tek, ula'tek, ula'tek"
       }
     ],
     "diffs": [
@@ -68,8 +68,8 @@
         "status": "ok",
         "wclMedian": 5,
         "delta": 0,
-        "occ": 1,
-        "spread": 1
+        "occ": 0,
+        "spread": 4
       },
       {
         "window": {
@@ -164,7 +164,7 @@
         "wclMedian": 141,
         "delta": 0,
         "occ": 3,
-        "spread": 177
+        "spread": 0
       },
       {
         "window": {
@@ -179,11 +179,7 @@
           "assignCd": true,
           "note": "Intermission start — Awakening into Hungering Pyre sets."
         },
-        "status": "ok",
-        "wclMedian": 143,
-        "delta": 0,
-        "occ": 0,
-        "spread": 2
+        "status": "missing"
       },
       {
         "window": {
@@ -199,11 +195,7 @@
           "suggestPersonals": true,
           "note": "First Pyre soak cluster."
         },
-        "status": "~",
-        "wclMedian": 172,
-        "delta": 6,
-        "occ": 0,
-        "spread": 7
+        "status": "missing"
       },
       {
         "window": {
@@ -218,11 +210,7 @@
           "assignCd": true,
           "note": "Second Pyre."
         },
-        "status": "ok",
-        "wclMedian": 207,
-        "delta": 0,
-        "occ": 1,
-        "spread": 24
+        "status": "missing"
       },
       {
         "window": {
@@ -237,11 +225,7 @@
           "assignCd": true,
           "note": "Third Pyre — into Stage 2."
         },
-        "status": "~",
-        "wclMedian": 229,
-        "delta": 5,
-        "occ": 2,
-        "spread": 7
+        "status": "missing"
       },
       {
         "window": {
@@ -256,11 +240,7 @@
           "assignCd": true,
           "note": "Fourth Pyre on some kills before first Invoke."
         },
-        "status": "ok",
-        "wclMedian": 263,
-        "delta": 1,
-        "occ": 3,
-        "spread": 2
+        "status": "missing"
       },
       {
         "window": {
@@ -275,11 +255,7 @@
           "assignCd": true,
           "note": "Stage 2 — Invoke overlaps Ritual Burn. Lust here."
         },
-        "status": "ok",
-        "wclMedian": 285,
-        "delta": 0,
-        "occ": 0,
-        "spread": 6
+        "status": "missing"
       },
       {
         "window": {
@@ -294,11 +270,8 @@
           "assignCd": true,
           "note": "Stage 2 tank frontal."
         },
-        "status": "ok",
-        "wclMedian": 319,
-        "delta": 1,
-        "occ": 4,
-        "spread": 31
+        "status": "beyond-sample",
+        "sampleDur": 282
       },
       {
         "window": {
@@ -313,11 +286,8 @@
           "assignCd": true,
           "note": "Second Invoke."
         },
-        "status": "ok",
-        "wclMedian": 333,
-        "delta": 0,
-        "occ": 1,
-        "spread": 6
+        "status": "beyond-sample",
+        "sampleDur": 282
       },
       {
         "window": {
@@ -332,11 +302,8 @@
           "assignCd": true,
           "note": "Late barrage into final Invoke."
         },
-        "status": "ok",
-        "wclMedian": 345,
-        "delta": 1,
-        "occ": 5,
-        "spread": 6
+        "status": "beyond-sample",
+        "sampleDur": 282
       },
       {
         "window": {
@@ -351,11 +318,8 @@
           "assignCd": true,
           "note": "Final Invoke — leftover raid CDs into ~6:25 kill."
         },
-        "status": "ok",
-        "wclMedian": 365,
-        "delta": 0,
-        "occ": 2,
-        "spread": 6
+        "status": "beyond-sample",
+        "sampleDur": 282
       }
     ],
     "sequences": [
@@ -364,7 +328,8 @@
         "name": "Soulcoil Ignition",
         "occ": [
           3,
-          77
+          77,
+          148
         ]
       },
       {
@@ -372,7 +337,8 @@
         "name": "Soulcoil Ignition",
         "occ": [
           3,
-          78
+          78,
+          149
         ]
       },
       {
@@ -380,18 +346,8 @@
         "name": "Ritual Burn",
         "occ": [
           5,
-          80,
-          285,
-          333,
-          365
-        ]
-      },
-      {
-        "spellId": 145629,
-        "name": "Anti-Magic Zone",
-        "occ": [
-          32,
-          349
+          79,
+          151
         ]
       },
       {
@@ -401,9 +357,14 @@
           34,
           70,
           105,
-          141,
-          318,
-          346
+          141
+        ]
+      },
+      {
+        "spellId": 145629,
+        "name": "Anti-Magic Zone",
+        "occ": [
+          34
         ]
       },
       {
@@ -411,75 +372,15 @@
         "name": "Gravebound Advance",
         "occ": [
           54,
-          123,
-          196,
-          253,
-          303,
-          342,
-          384
+          121
         ]
       },
       {
         "spellId": 1293660,
         "name": "Soulcoil Ignition",
         "occ": [
-          77
-        ]
-      },
-      {
-        "spellId": 1295124,
-        "name": "Ritual of Awakening",
-        "occ": [
-          143
-        ]
-      },
-      {
-        "spellId": 1289902,
-        "name": "Soul Transfer",
-        "occ": [
-          154
-        ]
-      },
-      {
-        "spellId": 1293211,
-        "name": "Soul Transfer",
-        "occ": [
-          161
-        ]
-      },
-      {
-        "spellId": 1292248,
-        "name": "Soul Transfer",
-        "occ": [
-          169,
-          227
-        ]
-      },
-      {
-        "spellId": 1294742,
-        "name": "Hungering Pyre",
-        "occ": [
-          172,
-          207,
-          230,
-          263
-        ]
-      },
-      {
-        "spellId": 1289855,
-        "name": "Hungering Pyre",
-        "occ": [
-          180,
-          237
-        ]
-      },
-      {
-        "spellId": 1299673,
-        "name": "Invoke",
-        "occ": [
-          285,
-          333,
-          365
+          77,
+          148
         ]
       }
     ]
@@ -489,32 +390,32 @@
     "encounterId": 3470,
     "kills": [
       {
-        "code": "1KgWGTBJzbfqcPAM",
-        "fightId": 6,
+        "code": "Ya14jmbFvnxrW3hq",
+        "fightId": 10,
         "duration": 169,
-        "url": "https://www.warcraftlogs.com/reports/1KgWGTBJzbfqcPAM?fight=6",
-        "title": "Mythic"
+        "url": "https://www.warcraftlogs.com/reports/Ya14jmbFvnxrW3hq?fight=10",
+        "title": "HC"
       },
       {
-        "code": "zQJ3FbXBAm1Cx7k2",
-        "fightId": 22,
-        "duration": 226,
-        "url": "https://www.warcraftlogs.com/reports/zQJ3FbXBAm1Cx7k2?fight=22",
+        "code": "m3BrqnxyaGXN9fHD",
+        "fightId": 2,
+        "duration": 173,
+        "url": "https://www.warcraftlogs.com/reports/m3BrqnxyaGXN9fHD?fight=2",
         "title": "The Venomous Abyss"
       },
       {
-        "code": "dnFMLRmgZXy6bY7r",
-        "fightId": 4,
-        "duration": 227,
-        "url": "https://www.warcraftlogs.com/reports/dnFMLRmgZXy6bY7r?fight=4",
-        "title": "LE TRINKET UEEEEEEEEEEEEEEE"
+        "code": "TQW4kKq2xCw6XNFL",
+        "fightId": 1,
+        "duration": 176,
+        "url": "https://www.warcraftlogs.com/reports/TQW4kKq2xCw6XNFL?fight=1",
+        "title": "The Venomous Abyss"
       },
       {
-        "code": "1bJP42hvznkwRTtH",
-        "fightId": 6,
-        "duration": 228,
-        "url": "https://www.warcraftlogs.com/reports/1bJP42hvznkwRTtH?fight=6",
-        "title": "The Venomous Abyss"
+        "code": "RQF8abTKJw1xXhN6",
+        "fightId": 47,
+        "duration": 212,
+        "url": "https://www.warcraftlogs.com/reports/RQF8abTKJw1xXhN6?fight=47",
+        "title": "Mythic+ Season 2"
       }
     ],
     "diffs": [
@@ -553,8 +454,8 @@
         "status": "ok",
         "wclMedian": 5,
         "delta": 0,
-        "occ": 1,
-        "spread": 0
+        "occ": 0,
+        "spread": 4
       },
       {
         "window": {
@@ -577,6 +478,25 @@
       },
       {
         "window": {
+          "id": "nk-barrage1b",
+          "timeSec": 70,
+          "ability": "Possession Barrage (mid)",
+          "abilitySpellId": 1284103,
+          "trigger": "WCL 1:10",
+          "severity": "tank",
+          "category": "external",
+          "phase": 1,
+          "assignCd": true,
+          "note": "Mid tank frontal — just before Ritual Burn #2."
+        },
+        "status": "ok",
+        "wclMedian": 70,
+        "delta": 0,
+        "occ": 1,
+        "spread": 0
+      },
+      {
+        "window": {
           "id": "nk-burn2",
           "timeSec": 76,
           "ability": "Ritual Burn #2",
@@ -591,8 +511,8 @@
         "status": "ok",
         "wclMedian": 77,
         "delta": 1,
-        "occ": 4,
-        "spread": 0
+        "occ": 1,
+        "spread": 6
       },
       {
         "window": {
@@ -608,11 +528,7 @@
           "suggestPersonals": true,
           "note": "Group soak on tank — first Pyre / mid-fight push."
         },
-        "status": "ok",
-        "wclMedian": 99,
-        "delta": 0,
-        "occ": 0,
-        "spread": 4
+        "status": "missing"
       },
       {
         "window": {
@@ -627,11 +543,7 @@
           "assignCd": true,
           "note": "Second Pyre before Stage 2 Invoke."
         },
-        "status": "ok",
-        "wclMedian": 135,
-        "delta": 1,
-        "occ": 1,
-        "spread": 6
+        "status": "missing"
       },
       {
         "window": {
@@ -646,11 +558,7 @@
           "assignCd": true,
           "note": "Stage 2 — Invoke overlaps Ritual Burn. Lust here on many kills."
         },
-        "status": "ok",
-        "wclMedian": 161,
-        "delta": 0,
-        "occ": 0,
-        "spread": 2
+        "status": "missing"
       },
       {
         "window": {
@@ -663,13 +571,9 @@
           "category": "external",
           "phase": 3,
           "assignCd": true,
-          "note": "Late tank frontal."
+          "note": "Late tank frontal before second Invoke."
         },
-        "status": "DIFF",
-        "wclMedian": 222,
-        "delta": 28,
-        "occ": 2,
-        "spread": 26
+        "status": "missing"
       },
       {
         "window": {
@@ -684,11 +588,24 @@
           "assignCd": true,
           "note": "Second Invoke — leftover raid CDs on slower kills."
         },
-        "status": "ok",
-        "wclMedian": 209,
-        "delta": 0,
-        "occ": 1,
-        "spread": 2
+        "status": "beyond-sample",
+        "sampleDur": 175
+      },
+      {
+        "window": {
+          "id": "nk-barrage4",
+          "timeSec": 222,
+          "ability": "Possession Barrage #4",
+          "abilitySpellId": 1284103,
+          "trigger": "WCL 3:42",
+          "severity": "tank",
+          "category": "external",
+          "phase": 3,
+          "assignCd": true,
+          "note": "Final tank frontal on ~3:45+ kills."
+        },
+        "status": "beyond-sample",
+        "sampleDur": 175
       }
     ],
     "sequences": [
@@ -696,14 +613,16 @@
         "spellId": 1293664,
         "name": "Soulcoil Ignition",
         "occ": [
-          3
+          3,
+          75
         ]
       },
       {
         "spellId": 1285681,
         "name": "Soulcoil Ignition",
         "occ": [
-          3
+          3,
+          75
         ]
       },
       {
@@ -711,9 +630,7 @@
         "name": "Ritual Burn",
         "occ": [
           5,
-          76,
-          161,
-          209
+          77
         ]
       },
       {
@@ -721,79 +638,28 @@
         "name": "Possession Barrage",
         "occ": [
           34,
-          70,
-          194,
-          222
+          70
         ]
       },
       {
         "spellId": 1287533,
         "name": "Gravebound Advance",
         "occ": [
-          53,
-          180,
-          221
+          53
         ]
       },
       {
-        "spellId": 1295124,
-        "name": "Ritual of Awakening",
+        "spellId": 1293660,
+        "name": "Soulcoil Ignition",
         "occ": [
-          71
-        ]
-      },
-      {
-        "spellId": 1289902,
-        "name": "Soul Transfer",
-        "occ": [
-          81
-        ]
-      },
-      {
-        "spellId": 1293211,
-        "name": "Soul Transfer",
-        "occ": [
-          88
+          75
         ]
       },
       {
         "spellId": 145629,
         "name": "Anti-Magic Zone",
         "occ": [
-          96,
-          226
-        ]
-      },
-      {
-        "spellId": 1292248,
-        "name": "Soul Transfer",
-        "occ": [
-          96,
-          132
-        ]
-      },
-      {
-        "spellId": 1294742,
-        "name": "Hungering Pyre",
-        "occ": [
-          99,
-          135
-        ]
-      },
-      {
-        "spellId": 1289855,
-        "name": "Hungering Pyre",
-        "occ": [
-          107,
-          141
-        ]
-      },
-      {
-        "spellId": 1299673,
-        "name": "Invoke",
-        "occ": [
-          161,
-          209
+          129
         ]
       }
     ]
@@ -803,32 +669,32 @@
     "encounterId": 3445,
     "kills": [
       {
-        "code": "VyHQnkGAmbPxfF2J",
-        "fightId": 11,
-        "duration": 340,
-        "url": "https://www.warcraftlogs.com/reports/VyHQnkGAmbPxfF2J?fight=11",
-        "title": "The Venomous Abyss"
+        "code": "q9HLwARXaxrMBCn4",
+        "fightId": 10,
+        "duration": 326,
+        "url": "https://www.warcraftlogs.com/reports/q9HLwARXaxrMBCn4?fight=10",
+        "title": "reclear mythic"
       },
       {
-        "code": "TdFyZxQ7ArN28KvH",
-        "fightId": 53,
-        "duration": 345,
-        "url": "https://www.warcraftlogs.com/reports/TdFyZxQ7ArN28KvH?fight=53",
-        "title": "miffic"
+        "code": "qPkwpLztTDJG6dBX",
+        "fightId": 69,
+        "duration": 334,
+        "url": "https://www.warcraftlogs.com/reports/qPkwpLztTDJG6dBX?fight=69",
+        "title": "Tsippaduppa"
       },
       {
-        "code": "3x1DNpyz6TGbJKRj",
-        "fightId": 37,
-        "duration": 347,
-        "url": "https://www.warcraftlogs.com/reports/3x1DNpyz6TGbJKRj?fight=37",
-        "title": "The Venomous Abyss"
+        "code": "G7H3dbPJZCjKctDN",
+        "fightId": 34,
+        "duration": 334,
+        "url": "https://www.warcraftlogs.com/reports/G7H3dbPJZCjKctDN?fight=34",
+        "title": "Venom_day12"
       },
       {
-        "code": "mB76JGAYWQyr8wkR",
-        "fightId": 7,
-        "duration": 367,
-        "url": "https://www.warcraftlogs.com/reports/mB76JGAYWQyr8wkR?fight=7",
-        "title": "wtf"
+        "code": "t8P1yFXxbDdrWQ9a",
+        "fightId": 57,
+        "duration": 334,
+        "url": "https://www.warcraftlogs.com/reports/t8P1yFXxbDdrWQ9a?fight=57",
+        "title": "nekzali"
       }
     ],
     "diffs": [
@@ -884,10 +750,10 @@
           "note": "Tank injection — external if needed. Repeats ~every 22s."
         },
         "status": "ok",
-        "wclMedian": 63,
-        "delta": 0,
+        "wclMedian": 65,
+        "delta": 2,
         "occ": 2,
-        "spread": 4
+        "spread": 3
       },
       {
         "window": {
@@ -903,8 +769,8 @@
           "note": "Extra Mythic occurrence vs Heroic timeline."
         },
         "status": "ok",
-        "wclMedian": 73,
-        "delta": 0,
+        "wclMedian": 74,
+        "delta": 1,
         "occ": 1,
         "spread": 3
       },
@@ -923,10 +789,10 @@
           "note": "Second soak cluster."
         },
         "status": "ok",
-        "wclMedian": 114,
-        "delta": 0,
+        "wclMedian": 116,
+        "delta": 2,
         "occ": 2,
-        "spread": 2
+        "spread": 3
       },
       {
         "window": {
@@ -942,8 +808,8 @@
           "note": "Extra Mythic occurrence vs Heroic timeline."
         },
         "status": "ok",
-        "wclMedian": 146,
-        "delta": 0,
+        "wclMedian": 147,
+        "delta": 1,
         "occ": 1,
         "spread": 3
       },
@@ -962,10 +828,10 @@
           "note": "Mid-fight soak into Contaminate."
         },
         "status": "ok",
-        "wclMedian": 175,
-        "delta": 0,
+        "wclMedian": 177,
+        "delta": 2,
         "occ": 3,
-        "spread": 5
+        "spread": 8
       },
       {
         "window": {
@@ -981,10 +847,10 @@
           "note": "Extra Mythic occurrence vs Heroic timeline."
         },
         "status": "ok",
-        "wclMedian": 216,
-        "delta": 0,
+        "wclMedian": 219,
+        "delta": 3,
         "occ": 4,
-        "spread": 5
+        "spread": 8
       },
       {
         "window": {
@@ -1000,10 +866,10 @@
           "note": "Second Stasis — major CD. Fast kills often end after this + last Miasma."
         },
         "status": "ok",
-        "wclMedian": 248,
-        "delta": 0,
+        "wclMedian": 251,
+        "delta": 3,
         "occ": 2,
-        "spread": 4
+        "spread": 6
       },
       {
         "window": {
@@ -1019,10 +885,10 @@
           "note": "Post-Stasis tank spike."
         },
         "status": "ok",
-        "wclMedian": 267,
-        "delta": 0,
+        "wclMedian": 270,
+        "delta": 3,
         "occ": 10,
-        "spread": 4
+        "spread": 9
       },
       {
         "window": {
@@ -1039,10 +905,10 @@
           "note": "Late soak on ~3:45–3:50 kills."
         },
         "status": "ok",
-        "wclMedian": 277,
-        "delta": 0,
+        "wclMedian": 279,
+        "delta": 2,
         "occ": 5,
-        "spread": 5
+        "spread": 9
       },
       {
         "window": {
@@ -1058,10 +924,10 @@
           "note": "Final Miasma before kill on speed clears."
         },
         "status": "ok",
-        "wclMedian": 318,
-        "delta": 0,
+        "wclMedian": 320,
+        "delta": 2,
         "occ": 6,
-        "spread": 6
+        "spread": 10
       }
     ],
     "sequences": [
@@ -1070,19 +936,18 @@
         "name": "Empowering Slam",
         "occ": [
           6,
-          29,
-          62,
-          84,
-          106,
-          128,
-          163,
-          185,
-          207,
-          229,
-          266,
-          288,
-          309,
-          332
+          28,
+          64,
+          86,
+          108,
+          130,
+          166,
+          188,
+          211,
+          233,
+          268,
+          290,
+          312
         ]
       },
       {
@@ -1091,18 +956,18 @@
         "occ": [
           9,
           31,
-          63,
-          86,
-          108,
-          130,
-          166,
-          189,
-          210,
-          233,
-          267,
-          290,
-          312,
-          334
+          65,
+          87,
+          109,
+          131,
+          168,
+          190,
+          213,
+          235,
+          270,
+          288,
+          310,
+          328
         ]
       },
       {
@@ -1110,12 +975,12 @@
         "name": "Venom Coagulation",
         "occ": [
           12,
-          68,
-          120,
-          170,
-          222,
-          271,
-          324
+          69,
+          121,
+          172,
+          224,
+          274,
+          329
         ]
       },
       {
@@ -1123,15 +988,14 @@
         "name": "Toxic Droplets",
         "occ": [
           15,
-          71,
-          103,
-          136,
-          172,
-          205,
-          238,
-          274,
-          307,
-          339
+          72,
+          104,
+          137,
+          175,
+          207,
+          240,
+          277,
+          310
         ]
       },
       {
@@ -1139,12 +1003,12 @@
         "name": "Unstable Miasma",
         "occ": [
           18,
-          73,
-          114,
-          175,
-          216,
-          277,
-          318
+          74,
+          116,
+          177,
+          219,
+          279,
+          320
         ]
       },
       {
@@ -1153,21 +1017,10 @@
         "occ": [
           18,
           74,
-          126,
-          175,
-          228,
-          277,
-          330
-        ]
-      },
-      {
-        "spellId": 145629,
-        "name": "Anti-Magic Zone",
-        "occ": [
-          23,
-          79,
-          226,
-          326
+          127,
+          178,
+          230,
+          280
         ]
       },
       {
@@ -1175,22 +1028,21 @@
         "name": "Shifting Protovenom",
         "occ": [
           36,
-          95,
-          136,
-          197,
-          238,
-          299,
-          339
+          96,
+          137,
+          200,
+          241,
+          301
         ]
       },
       {
         "spellId": 1284483,
         "name": "Blighted Blood",
         "occ": [
-          42,
-          98,
-          200,
-          302
+          43,
+          100,
+          202,
+          304
         ]
       },
       {
@@ -1198,8 +1050,8 @@
         "name": "Vitriolic Stasis",
         "occ": [
           46,
-          146,
-          248
+          147,
+          251
         ]
       },
       {
@@ -1207,8 +1059,8 @@
         "name": "Vitriolic Stasis",
         "occ": [
           46,
-          146,
-          248
+          147,
+          251
         ]
       },
       {
@@ -1216,8 +1068,18 @@
         "name": "Concealing Shadows",
         "occ": [
           49,
-          149,
-          251
+          150,
+          254
+        ]
+      },
+      {
+        "spellId": 145629,
+        "name": "Anti-Magic Zone",
+        "occ": [
+          122,
+          192,
+          226,
+          331
         ]
       }
     ]
@@ -1227,10 +1089,17 @@
     "encounterId": 3445,
     "kills": [
       {
-        "code": "1bJP42hvznkwRTtH",
-        "fightId": 26,
-        "duration": 226,
-        "url": "https://www.warcraftlogs.com/reports/1bJP42hvznkwRTtH?fight=26",
+        "code": "TB3PCjWDaRnyqr78",
+        "fightId": 44,
+        "duration": 220,
+        "url": "https://www.warcraftlogs.com/reports/TB3PCjWDaRnyqr78?fight=44",
+        "title": "The Venomous Abyss"
+      },
+      {
+        "code": "bxZHBcVmgLhwKn6Q",
+        "fightId": 18,
+        "duration": 220,
+        "url": "https://www.warcraftlogs.com/reports/bxZHBcVmgLhwKn6Q?fight=18",
         "title": "The Venomous Abyss"
       },
       {
@@ -1241,17 +1110,10 @@
         "title": "The Venomous Abyss"
       },
       {
-        "code": "7qCMJYNmQcBX9T13",
-        "fightId": 8,
+        "code": "vchN4FwbdK39P2jA",
+        "fightId": 10,
         "duration": 228,
-        "url": "https://www.warcraftlogs.com/reports/7qCMJYNmQcBX9T13?fight=8",
-        "title": "H"
-      },
-      {
-        "code": "aq2DbAfJpH1KRLPX",
-        "fightId": 8,
-        "duration": 234,
-        "url": "https://www.warcraftlogs.com/reports/aq2DbAfJpH1KRLPX?fight=8",
+        "url": "https://www.warcraftlogs.com/reports/vchN4FwbdK39P2jA?fight=10",
         "title": "The Venomous Abyss"
       }
     ],
@@ -1289,10 +1151,10 @@
           "note": "Tank injection — external if needed. Repeats ~every 22s."
         },
         "status": "ok",
-        "wclMedian": 31,
-        "delta": 0,
+        "wclMedian": 30,
+        "delta": 1,
         "occ": 1,
-        "spread": 1
+        "spread": 2
       },
       {
         "window": {
@@ -1328,10 +1190,10 @@
           "note": "Second soak cluster."
         },
         "status": "ok",
-        "wclMedian": 74,
+        "wclMedian": 72,
         "delta": 1,
         "occ": 1,
-        "spread": 5
+        "spread": 7
       },
       {
         "window": {
@@ -1348,10 +1210,10 @@
           "note": "Mid-fight soak into Contaminate."
         },
         "status": "ok",
-        "wclMedian": 116,
+        "wclMedian": 114,
         "delta": 1,
         "occ": 2,
-        "spread": 5
+        "spread": 8
       },
       {
         "window": {
@@ -1367,10 +1229,10 @@
           "note": "Second Stasis — major CD. Fast kills often end after this + last Miasma."
         },
         "status": "ok",
-        "wclMedian": 147,
-        "delta": 1,
+        "wclMedian": 146,
+        "delta": 0,
         "occ": 1,
-        "spread": 4
+        "spread": 6
       },
       {
         "window": {
@@ -1386,10 +1248,10 @@
           "note": "Post-Stasis tank spike."
         },
         "status": "ok",
-        "wclMedian": 166,
-        "delta": 0,
+        "wclMedian": 165,
+        "delta": 1,
         "occ": 6,
-        "spread": 3
+        "spread": 6
       },
       {
         "window": {
@@ -1409,7 +1271,7 @@
         "wclMedian": 175,
         "delta": 0,
         "occ": 3,
-        "spread": 2
+        "spread": 6
       },
       {
         "window": {
@@ -1428,7 +1290,7 @@
         "wclMedian": 216,
         "delta": 0,
         "occ": 4,
-        "spread": 3
+        "spread": 5
       }
     ],
     "sequences": [
@@ -1438,13 +1300,13 @@
         "occ": [
           6,
           28,
-          63,
-          86,
-          108,
-          130,
+          62,
+          84,
+          106,
+          128,
           164,
           186,
-          208
+          207
         ]
       },
       {
@@ -1452,14 +1314,14 @@
         "name": "Bloodvenom Injection",
         "occ": [
           8,
-          31,
-          64,
-          87,
-          109,
-          131,
-          166,
-          189,
-          211
+          30,
+          63,
+          86,
+          107,
+          130,
+          165,
+          187,
+          209
         ]
       },
       {
@@ -1467,10 +1329,10 @@
         "name": "Venom Coagulation",
         "occ": [
           12,
-          68,
+          67,
           120,
-          170,
-          222
+          169,
+          221
         ]
       },
       {
@@ -1478,10 +1340,10 @@
         "name": "Toxic Droplets",
         "occ": [
           15,
-          71,
-          104,
-          173,
-          206
+          70,
+          103,
+          172,
+          205
         ]
       },
       {
@@ -1489,8 +1351,8 @@
         "name": "Unstable Miasma",
         "occ": [
           18,
-          74,
-          116,
+          72,
+          114,
           175,
           216
         ]
@@ -1500,18 +1362,19 @@
         "name": "Contaminate",
         "occ": [
           18,
-          74,
+          73,
           126,
-          176,
-          228
+          175,
+          227
         ]
       },
       {
         "spellId": 145629,
         "name": "Anti-Magic Zone",
         "occ": [
-          24,
-          186,
+          25,
+          82,
+          119,
           224
         ]
       },
@@ -1521,7 +1384,7 @@
         "occ": [
           43,
           98,
-          201
+          199
         ]
       },
       {
@@ -1529,7 +1392,7 @@
         "name": "Vitriolic Stasis",
         "occ": [
           46,
-          147
+          146
         ]
       },
       {
@@ -1537,7 +1400,7 @@
         "name": "Vitriolic Stasis",
         "occ": [
           46,
-          147
+          146
         ]
       }
     ]
@@ -1547,32 +1410,32 @@
     "encounterId": 3497,
     "kills": [
       {
-        "code": "yLdbhz9PkTF1MpBa",
-        "fightId": 34,
-        "duration": 323,
-        "url": "https://www.warcraftlogs.com/reports/yLdbhz9PkTF1MpBa?fight=34",
-        "title": "\"why is this moron asking for logs during heroic splits\""
+        "code": "qPkwpLztTDJG6dBX",
+        "fightId": 82,
+        "duration": 303,
+        "url": "https://www.warcraftlogs.com/reports/qPkwpLztTDJG6dBX?fight=82",
+        "title": "Tsippaduppa"
       },
       {
-        "code": "T3qJCY84tBDy1n2x",
-        "fightId": 30,
-        "duration": 334,
-        "url": "https://www.warcraftlogs.com/reports/T3qJCY84tBDy1n2x?fight=30",
-        "title": "The Venomous Abyss"
+        "code": "zBqxmah9VykTQdpH",
+        "fightId": 15,
+        "duration": 304,
+        "url": "https://www.warcraftlogs.com/reports/zBqxmah9VykTQdpH?fight=15",
+        "title": "10/09"
       },
       {
-        "code": "LPb3YxXqHcRZpy1t",
-        "fightId": 36,
-        "duration": 336,
-        "url": "https://www.warcraftlogs.com/reports/LPb3YxXqHcRZpy1t?fight=36",
-        "title": "The Venomous Abyss"
+        "code": "ryC6DaHRMgNxjA18",
+        "fightId": 29,
+        "duration": 312,
+        "url": "https://www.warcraftlogs.com/reports/ryC6DaHRMgNxjA18?fight=29",
+        "title": "Reclear into Mythic Alter prog"
       },
       {
-        "code": "QABFyfVxPHgmv7k8",
-        "fightId": 67,
-        "duration": 337,
-        "url": "https://www.warcraftlogs.com/reports/QABFyfVxPHgmv7k8?fight=67",
-        "title": "The Venomous Abyss"
+        "code": "vHXRK1Tnk7rwFQxh",
+        "fightId": 43,
+        "duration": 313,
+        "url": "https://www.warcraftlogs.com/reports/vHXRK1Tnk7rwFQxh?fight=43",
+        "title": "Kroq'gar kinda slaps"
       }
     ],
     "diffs": [
@@ -1657,8 +1520,8 @@
           "id": "lem-mor-zahi-s-command1",
           "timeSec": 64,
           "ability": "Mor’zahi’s Command #1",
-          "abilitySpellId": 1296975,
-          "trigger": "WCL 1:04",
+          "abilitySpellId": 1297022,
+          "trigger": "WCL 1:02",
           "severity": "critical",
           "category": "defensive",
           "phase": 2,
@@ -1666,10 +1529,10 @@
           "note": "Main CD during empowered turtle."
         },
         "status": "ok",
-        "wclMedian": 64,
-        "delta": 0,
+        "wclMedian": 62,
+        "delta": 2,
         "occ": 0,
-        "spread": 4
+        "spread": 0
       },
       {
         "window": {
@@ -1684,11 +1547,7 @@
           "assignCd": true,
           "note": "Empowered slam pressure."
         },
-        "status": "ok",
-        "wclMedian": 79,
-        "delta": 0,
-        "occ": 0,
-        "spread": 5
+        "status": "missing"
       },
       {
         "window": {
@@ -1703,11 +1562,7 @@
           "assignCd": true,
           "note": "Into Dark Whispers / late fight."
         },
-        "status": "ok",
-        "wclMedian": 111,
-        "delta": 0,
-        "occ": 1,
-        "spread": 5
+        "status": "missing"
       },
       {
         "window": {
@@ -1723,10 +1578,10 @@
           "note": "Extra Mythic occurrence vs Heroic timeline."
         },
         "status": "ok",
-        "wclMedian": 124,
-        "delta": 0,
+        "wclMedian": 123,
+        "delta": 1,
         "occ": 0,
-        "spread": 4
+        "spread": 3
       },
       {
         "window": {
@@ -1744,8 +1599,8 @@
         "status": "ok",
         "wclMedian": 148,
         "delta": 0,
-        "occ": 3,
-        "spread": 5
+        "occ": 5,
+        "spread": 4
       },
       {
         "window": {
@@ -1764,7 +1619,7 @@
         "wclMedian": 156,
         "delta": 0,
         "occ": 2,
-        "spread": 5
+        "spread": 4
       },
       {
         "window": {
@@ -1782,8 +1637,8 @@
         "status": "ok",
         "wclMedian": 164,
         "delta": 2,
-        "occ": 4,
-        "spread": 5
+        "occ": 6,
+        "spread": 4
       },
       {
         "window": {
@@ -1801,8 +1656,8 @@
         "status": "ok",
         "wclMedian": 179,
         "delta": 2,
-        "occ": 5,
-        "spread": 5
+        "occ": 7,
+        "spread": 4
       },
       {
         "window": {
@@ -1817,11 +1672,11 @@
           "assignCd": true,
           "note": "Extra Mythic occurrence vs Heroic timeline."
         },
-        "status": "ok",
-        "wclMedian": 207,
-        "delta": 0,
-        "occ": 6,
-        "spread": 9
+        "status": "~",
+        "wclMedian": 213,
+        "delta": 6,
+        "occ": 8,
+        "spread": 1
       },
       {
         "window": {
@@ -1836,11 +1691,11 @@
           "assignCd": true,
           "note": "Extra Mythic occurrence vs Heroic timeline."
         },
-        "status": "ok",
-        "wclMedian": 235,
-        "delta": 0,
-        "occ": 7,
-        "spread": 7
+        "status": "~",
+        "wclMedian": 240,
+        "delta": 5,
+        "occ": 9,
+        "spread": 1
       },
       {
         "window": {
@@ -1859,7 +1714,7 @@
         "wclMedian": 248,
         "delta": 0,
         "occ": 1,
-        "spread": 8
+        "spread": 7
       },
       {
         "window": {
@@ -1875,10 +1730,10 @@
           "note": "Late spins on kills that stretch past ~2:20."
         },
         "status": "ok",
-        "wclMedian": 272,
-        "delta": 2,
-        "occ": 8,
-        "spread": 7
+        "wclMedian": 271,
+        "delta": 3,
+        "occ": 10,
+        "spread": 8
       },
       {
         "window": {
@@ -1894,10 +1749,10 @@
           "note": "Final shards on slower speed kills."
         },
         "status": "ok",
-        "wclMedian": 280,
-        "delta": 0,
+        "wclMedian": 279,
+        "delta": 1,
         "occ": 4,
-        "spread": 7
+        "spread": 8
       },
       {
         "window": {
@@ -1912,11 +1767,11 @@
           "assignCd": true,
           "note": "Extra Mythic occurrence vs Heroic timeline."
         },
-        "status": "ok",
-        "wclMedian": 303,
-        "delta": 3,
-        "occ": 10,
-        "spread": 7
+        "status": "DIFF",
+        "wclMedian": 291,
+        "delta": 9,
+        "occ": 11,
+        "spread": 16
       }
     ],
     "sequences": [
@@ -1932,8 +1787,8 @@
         "name": "Final Ascension",
         "occ": [
           0,
-          125,
-          249
+          124,
+          248
         ]
       },
       {
@@ -1942,11 +1797,12 @@
         "occ": [
           10,
           41,
+          85,
           136,
           167,
-          209,
-          260,
-          291
+          214,
+          259,
+          287
         ]
       },
       {
@@ -1955,11 +1811,11 @@
         "occ": [
           17,
           48,
+          92,
           143,
           174,
-          216,
-          267,
-          298
+          221,
+          266
         ]
       },
       {
@@ -1969,14 +1825,15 @@
           22,
           38,
           53,
+          81,
+          110,
           148,
           164,
           179,
-          207,
-          235,
-          274,
-          290,
-          305
+          213,
+          240,
+          271,
+          291
         ]
       },
       {
@@ -1985,15 +1842,13 @@
         "occ": [
           25,
           56,
-          92,
-          123,
-          152,
-          183,
-          201,
-          226,
-          275,
-          306,
-          330
+          76,
+          101,
+          150,
+          181,
+          208,
+          237,
+          274
         ]
       },
       {
@@ -2002,15 +1857,13 @@
         "occ": [
           27,
           56,
-          92,
-          123,
+          76,
+          101,
           153,
-          182,
-          201,
-          226,
-          276,
-          306,
-          330
+          181,
+          208,
+          237,
+          276
         ]
       },
       {
@@ -2020,8 +1873,8 @@
           30,
           96,
           156,
-          220,
-          280
+          219,
+          279
         ]
       },
       {
@@ -2030,7 +1883,7 @@
         "occ": [
           31,
           157,
-          281
+          280
         ]
       },
       {
@@ -2039,7 +1892,7 @@
         "occ": [
           31,
           157,
-          281
+          280
         ]
       },
       {
@@ -2047,9 +1900,9 @@
         "name": "Shredding Shards",
         "occ": [
           32,
-          98,
-          158,
-          222,
+          97,
+          157,
+          221,
           281
         ]
       },
@@ -2057,9 +1910,8 @@
         "spellId": 145629,
         "name": "Anti-Magic Zone",
         "occ": [
-          52,
-          175,
-          267
+          51,
+          271
         ]
       },
       {
@@ -2068,112 +1920,147 @@
         "occ": [
           61,
           185,
-          309
-        ]
-      },
-      {
-        "spellId": 1296975,
-        "name": "Mor'zahi's Command",
-        "occ": [
-          64
-        ]
-      },
-      {
-        "spellId": 1296094,
-        "name": "Mighty Thud",
-        "occ": [
-          79,
-          111
-        ]
-      },
-      {
-        "spellId": 1296135,
-        "name": "Mighty Thud",
-        "occ": [
-          82,
-          114
-        ]
-      },
-      {
-        "spellId": 1296095,
-        "name": "Mighty Thud",
-        "occ": [
-          82,
-          114
-        ]
-      },
-      {
-        "spellId": 1296133,
-        "name": "Mighty Thud",
-        "occ": [
-          82,
-          114
-        ]
-      },
-      {
-        "spellId": 1301667,
-        "name": "Dark Whispers",
-        "occ": [
-          124,
-          248
+          306
         ]
       },
       {
         "spellId": 1297022,
         "name": "Mor'zahi's Command",
         "occ": [
-          186
-        ]
-      },
-      {
-        "spellId": 1295891,
-        "name": "Frostfire Volley",
-        "occ": [
-          201,
-          228
-        ]
-      },
-      {
-        "spellId": 1310028,
-        "name": "Relic Rupture",
-        "occ": [
-          217,
-          246
-        ]
-      },
-      {
-        "spellId": 1286922,
-        "name": "Icebound Flames",
-        "occ": [
-          235
+          62,
+          191
         ]
       },
       {
         "spellId": 1297024,
         "name": "Mor'zahi's Command",
         "occ": [
-          309
+          65
         ]
       },
       {
-        "spellId": 1292779,
-        "name": "Final Ascension",
+        "spellId": 1295891,
+        "name": "Frostfire Volley",
         "occ": [
-          315
+          77,
+          104,
+          206,
+          233
         ]
       },
       {
         "spellId": 1292105,
         "name": "Mushroom Toss",
         "occ": [
-          321
+          77,
+          109
         ]
       },
       {
         "spellId": 1292104,
         "name": "Mushroom Toss",
         "occ": [
-          321
+          77,
+          109
+        ]
+      },
+      {
+        "spellId": 1297625,
+        "name": "Explosive Surprise",
+        "occ": [
+          80,
+          112
+        ]
+      },
+      {
+        "spellId": 1299855,
+        "name": "Bounce",
+        "occ": [
+          80,
+          112
+        ]
+      },
+      {
+        "spellId": 1296249,
+        "name": "Explosive Surprise",
+        "occ": [
+          90,
+          122
+        ]
+      },
+      {
+        "spellId": 1310028,
+        "name": "Relic Rupture",
+        "occ": [
+          119
+        ]
+      },
+      {
+        "spellId": 1301667,
+        "name": "Dark Whispers",
+        "occ": [
+          123,
+          248
+        ]
+      },
+      {
+        "spellId": 1296975,
+        "name": "Mor'zahi's Command",
+        "occ": [
+          184
+        ]
+      },
+      {
+        "spellId": 1292779,
+        "name": "Final Ascension",
+        "occ": [
+          190
+        ]
+      },
+      {
+        "spellId": 1296094,
+        "name": "Mighty Thud",
+        "occ": [
+          199,
+          231
+        ]
+      },
+      {
+        "spellId": 1296135,
+        "name": "Mighty Thud",
+        "occ": [
+          201,
+          233
+        ]
+      },
+      {
+        "spellId": 1296095,
+        "name": "Mighty Thud",
+        "occ": [
+          201,
+          233
+        ]
+      },
+      {
+        "spellId": 1296133,
+        "name": "Mighty Thud",
+        "occ": [
+          201,
+          233
+        ]
+      },
+      {
+        "spellId": 1296252,
+        "name": "Smashing Shovel",
+        "occ": [
+          299
+        ]
+      },
+      {
+        "spellId": 1296227,
+        "name": "Relentless Escalation",
+        "occ": [
+          302
         ]
       }
     ]
@@ -2190,25 +2077,25 @@
         "title": "The Venomous Abyss"
       },
       {
-        "code": "GRt7aH8NKbdM3XYA",
-        "fightId": 60,
-        "duration": 171,
-        "url": "https://www.warcraftlogs.com/reports/GRt7aH8NKbdM3XYA?fight=60",
+        "code": "68RN2CVTjprx3b9L",
+        "fightId": 21,
+        "duration": 156,
+        "url": "https://www.warcraftlogs.com/reports/68RN2CVTjprx3b9L?fight=21",
+        "title": "Mythic+ Season 2"
+      },
+      {
+        "code": "r9anCyzkhm8qJd2K",
+        "fightId": 21,
+        "duration": 161,
+        "url": "https://www.warcraftlogs.com/reports/r9anCyzkhm8qJd2K?fight=21",
         "title": "The Venomous Abyss"
       },
       {
-        "code": "kwZm3h1QLybHgMAp",
-        "fightId": 20,
-        "duration": 184,
-        "url": "https://www.warcraftlogs.com/reports/kwZm3h1QLybHgMAp?fight=20",
-        "title": "big logs"
-      },
-      {
-        "code": "dNmL64hDjGf3pHry",
-        "fightId": 4,
-        "duration": 186,
-        "url": "https://www.warcraftlogs.com/reports/dNmL64hDjGf3pHry?fight=4",
-        "title": "Non-Optional Optional Tek Raid"
+        "code": "2p9rWj8tyHwTc4QX",
+        "fightId": 17,
+        "duration": 170,
+        "url": "https://www.warcraftlogs.com/reports/2p9rWj8tyHwTc4QX?fight=17",
+        "title": "ja"
       }
     ],
     "diffs": [
@@ -2229,7 +2116,7 @@
         "wclMedian": 22,
         "delta": 0,
         "occ": 0,
-        "spread": 5
+        "spread": 16
       },
       {
         "window": {
@@ -2267,7 +2154,7 @@
         "wclMedian": 38,
         "delta": 0,
         "occ": 1,
-        "spread": 5
+        "spread": 10
       },
       {
         "window": {
@@ -2282,11 +2169,11 @@
           "assignCd": true,
           "note": "Main CD during empowered turtle."
         },
-        "status": "ok",
-        "wclMedian": 60,
-        "delta": 1,
+        "status": "~",
+        "wclMedian": 57,
+        "delta": 4,
         "occ": 0,
-        "spread": 3
+        "spread": 6
       },
       {
         "window": {
@@ -2302,10 +2189,10 @@
           "note": "Empowered slam pressure."
         },
         "status": "ok",
-        "wclMedian": 76,
-        "delta": 0,
+        "wclMedian": 73,
+        "delta": 3,
         "occ": 0,
-        "spread": 4
+        "spread": 6
       },
       {
         "window": {
@@ -2321,10 +2208,10 @@
           "note": "Second shards set."
         },
         "status": "ok",
-        "wclMedian": 92,
-        "delta": 1,
+        "wclMedian": 89,
+        "delta": 2,
         "occ": 1,
-        "spread": 6
+        "spread": 7
       },
       {
         "window": {
@@ -2340,10 +2227,10 @@
           "note": "Into Dark Whispers / late fight."
         },
         "status": "ok",
-        "wclMedian": 108,
-        "delta": 0,
+        "wclMedian": 105,
+        "delta": 3,
         "occ": 1,
-        "spread": 4
+        "spread": 6
       },
       {
         "window": {
@@ -2359,10 +2246,10 @@
           "note": "Late mid-fight pressure before kill on ~2:30–3:00 clears."
         },
         "status": "ok",
-        "wclMedian": 120,
-        "delta": 1,
+        "wclMedian": 117,
+        "delta": 2,
         "occ": 0,
-        "spread": 6
+        "spread": 5
       },
       {
         "window": {
@@ -2378,10 +2265,10 @@
           "note": "Late spins on kills that stretch past ~2:20."
         },
         "status": "ok",
-        "wclMedian": 144,
-        "delta": 1,
-        "occ": 3,
-        "spread": 68
+        "wclMedian": 141,
+        "delta": 2,
+        "occ": 5,
+        "spread": 2
       },
       {
         "window": {
@@ -2396,11 +2283,11 @@
           "assignCd": true,
           "note": "Final shards on slower speed kills."
         },
-        "status": "ok",
-        "wclMedian": 153,
-        "delta": 0,
+        "status": "~",
+        "wclMedian": 148,
+        "delta": 5,
         "occ": 2,
-        "spread": 4
+        "spread": 2
       }
     ],
     "sequences": [
@@ -2409,7 +2296,7 @@
         "name": "Final Ascension",
         "occ": [
           0,
-          121
+          118
         ]
       },
       {
@@ -2424,7 +2311,7 @@
         "name": "Anti-Magic Zone",
         "occ": [
           5,
-          110
+          138
         ]
       },
       {
@@ -2433,8 +2320,8 @@
         "occ": [
           10,
           41,
-          132,
-          163
+          80,
+          129
         ]
       },
       {
@@ -2443,7 +2330,8 @@
         "occ": [
           17,
           48,
-          139
+          87,
+          136
         ]
       },
       {
@@ -2453,8 +2341,10 @@
           22,
           38,
           53,
-          144,
-          161
+          79,
+          106,
+          141,
+          156
         ]
       },
       {
@@ -2463,10 +2353,10 @@
         "occ": [
           23,
           54,
-          71,
-          88,
-          119,
-          147
+          73,
+          96,
+          116,
+          145
         ]
       },
       {
@@ -2475,10 +2365,10 @@
         "occ": [
           27,
           54,
-          71,
-          88,
-          119,
-          148
+          73,
+          96,
+          116,
+          146
         ]
       },
       {
@@ -2486,8 +2376,8 @@
         "name": "Shredding Shards",
         "occ": [
           30,
-          92,
-          153
+          89,
+          148
         ]
       },
       {
@@ -2495,8 +2385,8 @@
         "name": "Shredding Shards",
         "occ": [
           31,
-          94,
-          155
+          91,
+          150
         ]
       },
       {
@@ -2504,7 +2394,7 @@
         "name": "Throw Junk",
         "occ": [
           31,
-          154
+          150
         ]
       },
       {
@@ -2512,68 +2402,75 @@
         "name": "Throw Junk",
         "occ": [
           31,
-          154
+          150
         ]
       },
       {
         "spellId": 1292758,
         "name": "Evil Eyes",
         "occ": [
-          57,
-          169
+          54
+        ]
+      },
+      {
+        "spellId": 1297022,
+        "name": "Mor'zahi's Command",
+        "occ": [
+          57
         ]
       },
       {
         "spellId": 1296975,
         "name": "Mor'zahi's Command",
         "occ": [
-          60
+          57
+        ]
+      },
+      {
+        "spellId": 1295891,
+        "name": "Frostfire Volley",
+        "occ": [
+          72,
+          99
         ]
       },
       {
         "spellId": 1296094,
         "name": "Mighty Thud",
         "occ": [
-          76,
-          108
-        ]
-      },
-      {
-        "spellId": 1296133,
-        "name": "Mighty Thud",
-        "occ": [
-          77,
-          109
+          73,
+          105
         ]
       },
       {
         "spellId": 1296135,
         "name": "Mighty Thud",
         "occ": [
-          78,
-          110
+          75,
+          107
         ]
       },
       {
         "spellId": 1296095,
         "name": "Mighty Thud",
         "occ": [
-          78,
-          110
+          75,
+          107
+        ]
+      },
+      {
+        "spellId": 1296133,
+        "name": "Mighty Thud",
+        "occ": [
+          75,
+          106
         ]
       },
       {
         "spellId": 1301667,
         "name": "Dark Whispers",
         "occ": [
-          120
-        ]
-      },
-      {
-        "spellId": 1310028,
-        "name": "Relic Rupture",
-        "occ": [
-          169
+          117
         ]
       }
     ]
@@ -2583,31 +2480,31 @@
     "encounterId": 3455,
     "kills": [
       {
+        "code": "C3Qhv1nMZYpcztyK",
+        "fightId": 42,
+        "duration": 345,
+        "url": "https://www.warcraftlogs.com/reports/C3Qhv1nMZYpcztyK?fight=42",
+        "title": "The Venomous Abyss"
+      },
+      {
+        "code": "D9WVXhFmACJPbdx4",
+        "fightId": 48,
+        "duration": 346,
+        "url": "https://www.warcraftlogs.com/reports/D9WVXhFmACJPbdx4?fight=48",
+        "title": "lots of loot"
+      },
+      {
+        "code": "fn47y6kAHXP3RdMp",
+        "fightId": 1,
+        "duration": 347,
+        "url": "https://www.warcraftlogs.com/reports/fn47y6kAHXP3RdMp?fight=1",
+        "title": "The Venomous Abyss"
+      },
+      {
         "code": "VT3bLxDpX61gZQRt",
         "fightId": 7,
         "duration": 349,
         "url": "https://www.warcraftlogs.com/reports/VT3bLxDpX61gZQRt?fight=7",
-        "title": "The Venomous Abyss"
-      },
-      {
-        "code": "v67n3QmTMbcLkPgF",
-        "fightId": 11,
-        "duration": 363,
-        "url": "https://www.warcraftlogs.com/reports/v67n3QmTMbcLkPgF?fight=11",
-        "title": "The Venomous Abyss"
-      },
-      {
-        "code": "TdFyZxQ7ArN28KvH",
-        "fightId": 58,
-        "duration": 373,
-        "url": "https://www.warcraftlogs.com/reports/TdFyZxQ7ArN28KvH?fight=58",
-        "title": "miffic"
-      },
-      {
-        "code": "T7HC9RKNd4nGvyPh",
-        "fightId": 13,
-        "duration": 381,
-        "url": "https://www.warcraftlogs.com/reports/T7HC9RKNd4nGvyPh?fight=13",
         "title": "The Venomous Abyss"
       }
     ],
@@ -2682,11 +2579,11 @@
           "assignCd": true,
           "note": "Extra Mythic occurrence vs Heroic timeline."
         },
-        "status": "~",
-        "wclMedian": 38,
-        "delta": 4,
+        "status": "ok",
+        "wclMedian": 39,
+        "delta": 3,
         "occ": 0,
-        "spread": 10
+        "spread": 15
       },
       {
         "window": {
@@ -2721,10 +2618,10 @@
           "note": "Raid-wide surge."
         },
         "status": "ok",
-        "wclMedian": 70,
-        "delta": 0,
-        "occ": 2,
-        "spread": 19
+        "wclMedian": 73,
+        "delta": 3,
+        "occ": 1,
+        "spread": 1
       },
       {
         "window": {
@@ -2797,10 +2694,10 @@
           "note": "Extra Mythic occurrence vs Heroic timeline."
         },
         "status": "ok",
-        "wclMedian": 131,
-        "delta": 1,
-        "occ": 3,
-        "spread": 9
+        "wclMedian": 134,
+        "delta": 2,
+        "occ": 2,
+        "spread": 17
       },
       {
         "window": {
@@ -2835,10 +2732,10 @@
           "note": "Extra Mythic occurrence vs Heroic timeline."
         },
         "status": "ok",
-        "wclMedian": 162,
-        "delta": 0,
-        "occ": 5,
-        "spread": 13
+        "wclMedian": 159,
+        "delta": 3,
+        "occ": 3,
+        "spread": 15
       },
       {
         "window": {
@@ -2891,11 +2788,11 @@
           "assignCd": true,
           "note": "Second surge."
         },
-        "status": "~",
-        "wclMedian": 227,
-        "delta": 6,
-        "occ": 7,
-        "spread": 12
+        "status": "ok",
+        "wclMedian": 219,
+        "delta": 2,
+        "occ": 4,
+        "spread": 20
       },
       {
         "window": {
@@ -2930,10 +2827,10 @@
           "note": "Extra Mythic occurrence vs Heroic timeline."
         },
         "status": "ok",
-        "wclMedian": 248,
-        "delta": 0,
-        "occ": 8,
-        "spread": 13
+        "wclMedian": 251,
+        "delta": 3,
+        "occ": 6,
+        "spread": 3
       },
       {
         "window": {
@@ -2986,11 +2883,11 @@
           "assignCd": true,
           "note": "Extra Mythic occurrence vs Heroic timeline."
         },
-        "status": "~",
-        "wclMedian": 304,
-        "delta": 5,
-        "occ": 9,
-        "spread": 11
+        "status": "ok",
+        "wclMedian": 311,
+        "delta": 2,
+        "occ": 7,
+        "spread": 12
       },
       {
         "window": {
@@ -3024,11 +2921,11 @@
           "assignCd": true,
           "note": "Extra Mythic occurrence vs Heroic timeline."
         },
-        "status": "ok",
-        "wclMedian": 335,
-        "delta": 0,
-        "occ": 11,
-        "spread": 7
+        "status": "~",
+        "wclMedian": 330,
+        "delta": 5,
+        "occ": 8,
+        "spread": 13
       },
       {
         "window": {
@@ -3043,11 +2940,7 @@
           "assignCd": true,
           "note": "Third Imbibe — leftover CDs on ~3:35 kills."
         },
-        "status": "ok",
-        "wclMedian": 360,
-        "delta": 0,
-        "occ": 4,
-        "spread": 0
+        "status": "missing"
       },
       {
         "window": {
@@ -3062,11 +2955,7 @@
           "assignCd": true,
           "note": "Final Catalyst into kill."
         },
-        "status": "ok",
-        "wclMedian": 366,
-        "delta": 0,
-        "occ": 8,
-        "spread": 0
+        "status": "missing"
       }
     ],
     "sequences": [
@@ -3096,8 +2985,7 @@
           24,
           108,
           192,
-          276,
-          360
+          276
         ]
       },
       {
@@ -3111,8 +2999,7 @@
           198,
           237,
           282,
-          321,
-          366
+          321
         ]
       },
       {
@@ -3126,24 +3013,22 @@
           203,
           242,
           287,
-          326,
-          371
+          326
         ]
       },
       {
         "spellId": 1285979,
         "name": "Caustic Surge",
         "occ": [
-          42,
-          61,
-          74,
-          131,
+          39,
+          73,
+          134,
           159,
-          218,
-          235,
-          249,
-          308,
-          333
+          219,
+          237,
+          251,
+          311,
+          330
         ]
       },
       {
@@ -3151,9 +3036,8 @@
         "name": "Anti-Magic Zone",
         "occ": [
           107,
-          191,
-          277,
-          361
+          193,
+          276
         ]
       }
     ]
@@ -3162,6 +3046,20 @@
     "file": "vashnik.json",
     "encounterId": 3455,
     "kills": [
+      {
+        "code": "TB3PCjWDaRnyqr78",
+        "fightId": 50,
+        "duration": 202,
+        "url": "https://www.warcraftlogs.com/reports/TB3PCjWDaRnyqr78?fight=50",
+        "title": "The Venomous Abyss"
+      },
+      {
+        "code": "bxZHBcVmgLhwKn6Q",
+        "fightId": 29,
+        "duration": 210,
+        "url": "https://www.warcraftlogs.com/reports/bxZHBcVmgLhwKn6Q?fight=29",
+        "title": "The Venomous Abyss"
+      },
       {
         "code": "zQJ3FbXBAm1Cx7k2",
         "fightId": 31,
@@ -3175,20 +3073,6 @@
         "duration": 215,
         "url": "https://www.warcraftlogs.com/reports/FwYGhtr2byBavHjz?fight=43",
         "title": "Mythic+ Season 2"
-      },
-      {
-        "code": "t1PWCqd4TMG6YpQK",
-        "fightId": 32,
-        "duration": 222,
-        "url": "https://www.warcraftlogs.com/reports/t1PWCqd4TMG6YpQK?fight=32",
-        "title": "Mythic+ Season 2"
-      },
-      {
-        "code": "LFfA9x6cknpHgVhJ",
-        "fightId": 26,
-        "duration": 224,
-        "url": "https://www.warcraftlogs.com/reports/LFfA9x6cknpHgVhJ?fight=26",
-        "title": "The Venomous Abyss"
       }
     ],
     "diffs": [
@@ -3262,11 +3146,11 @@
           "assignCd": true,
           "note": "Raid-wide surge."
         },
-        "status": "~",
-        "wclMedian": 41,
-        "delta": 4,
+        "status": "ok",
+        "wclMedian": 37,
+        "delta": 0,
         "occ": 0,
-        "spread": 12
+        "spread": 13
       },
       {
         "window": {
@@ -3358,10 +3242,10 @@
           "note": "Second surge."
         },
         "status": "ok",
-        "wclMedian": 126,
-        "delta": 0,
+        "wclMedian": 127,
+        "delta": 1,
         "occ": 1,
-        "spread": 84
+        "spread": 11
       },
       {
         "window": {
@@ -3471,9 +3355,15 @@
         "spellId": 1285979,
         "name": "Caustic Surge",
         "occ": [
-          45,
-          130,
-          213
+          37,
+          127
+        ]
+      },
+      {
+        "spellId": 145629,
+        "name": "Anti-Magic Zone",
+        "occ": [
+          187
         ]
       }
     ]
@@ -3483,32 +3373,32 @@
     "encounterId": 3420,
     "kills": [
       {
-        "code": "h4GKpPrQbnY7Wfmd",
+        "code": "fn47y6kAHXP3RdMp",
         "fightId": 13,
-        "duration": 360,
-        "url": "https://www.warcraftlogs.com/reports/h4GKpPrQbnY7Wfmd?fight=13",
-        "title": "week 3.2"
-      },
-      {
-        "code": "7PG6Wdjzmf1MLQ4a",
-        "fightId": 1,
-        "duration": 362,
-        "url": "https://www.warcraftlogs.com/reports/7PG6Wdjzmf1MLQ4a?fight=1",
+        "duration": 352,
+        "url": "https://www.warcraftlogs.com/reports/fn47y6kAHXP3RdMp?fight=13",
         "title": "The Venomous Abyss"
       },
       {
-        "code": "aDrAXfN9yBjYFHgc",
-        "fightId": 22,
-        "duration": 366,
-        "url": "https://www.warcraftlogs.com/reports/aDrAXfN9yBjYFHgc?fight=22",
-        "title": "Snowblind's Wrath Will Be Swift"
+        "code": "2qXyMVmcvRdz7w43",
+        "fightId": 11,
+        "duration": 357,
+        "url": "https://www.warcraftlogs.com/reports/2qXyMVmcvRdz7w43?fight=11",
+        "title": "The Venomous Abyss"
       },
       {
-        "code": "yRpcDAbhkwPxjngz",
-        "fightId": 19,
-        "duration": 368,
-        "url": "https://www.warcraftlogs.com/reports/yRpcDAbhkwPxjngz?fight=19",
-        "title": "raid"
+        "code": "ZYp1azBNKHrFyhQw",
+        "fightId": 20,
+        "duration": 359,
+        "url": "https://www.warcraftlogs.com/reports/ZYp1azBNKHrFyhQw?fight=20",
+        "title": "The Venomous Abyss"
+      },
+      {
+        "code": "zbDfKhxBZd2Xnc1w",
+        "fightId": 121,
+        "duration": 360,
+        "url": "https://www.warcraftlogs.com/reports/zbDfKhxBZd2Xnc1w?fight=121",
+        "title": "The Venomous Abyss"
       }
     ],
     "diffs": [
@@ -3525,11 +3415,11 @@
           "assignCd": true,
           "note": "Tank combo — external if needed."
         },
-        "status": "ok",
-        "wclMedian": 8,
-        "delta": 0,
+        "status": "~",
+        "wclMedian": 12,
+        "delta": 4,
         "occ": 0,
-        "spread": 4
+        "spread": 9
       },
       {
         "window": {
@@ -3545,10 +3435,10 @@
           "note": "Early raid weather pressure."
         },
         "status": "ok",
-        "wclMedian": 19,
-        "delta": 0,
+        "wclMedian": 20,
+        "delta": 1,
         "occ": 0,
-        "spread": 9
+        "spread": 8
       },
       {
         "window": {
@@ -3602,8 +3492,8 @@
           "note": "Extra Mythic occurrence vs Heroic timeline."
         },
         "status": "ok",
-        "wclMedian": 65,
-        "delta": 0,
+        "wclMedian": 64,
+        "delta": 1,
         "occ": 1,
         "spread": 8
       },
@@ -3637,6 +3527,7 @@
           "category": "throughput",
           "phase": 1,
           "assignCd": true,
+          "suggestPersonals": true,
           "note": "Crosswinds soak / dodge damage."
         },
         "status": "ok",
@@ -3678,10 +3569,10 @@
           "note": "Into second Surge."
         },
         "status": "ok",
-        "wclMedian": 144,
-        "delta": 0,
+        "wclMedian": 146,
+        "delta": 2,
         "occ": 2,
-        "spread": 9
+        "spread": 8
       },
       {
         "window": {
@@ -3734,11 +3625,11 @@
           "assignCd": true,
           "note": "Extra Mythic occurrence vs Heroic timeline."
         },
-        "status": "ok",
-        "wclMedian": 189,
-        "delta": 0,
+        "status": "~",
+        "wclMedian": 193,
+        "delta": 4,
         "occ": 3,
-        "spread": 8
+        "spread": 4
       },
       {
         "window": {
@@ -3753,11 +3644,11 @@
           "assignCd": true,
           "note": "Post-Dig tank check."
         },
-        "status": "ok",
-        "wclMedian": 195,
-        "delta": 2,
-        "occ": 7,
-        "spread": 9
+        "status": "~",
+        "wclMedian": 186,
+        "delta": 7,
+        "occ": 4,
+        "spread": 13
       },
       {
         "window": {
@@ -3773,10 +3664,10 @@
           "note": "Extra Mythic occurrence vs Heroic timeline."
         },
         "status": "ok",
-        "wclMedian": 203,
-        "delta": 0,
+        "wclMedian": 204,
+        "delta": 1,
         "occ": 3,
-        "spread": 0
+        "spread": 1
       },
       {
         "window": {
@@ -3829,9 +3720,9 @@
           "assignCd": true,
           "note": "Late Tempest."
         },
-        "status": "ok",
-        "wclMedian": 271,
-        "delta": 2,
+        "status": "~",
+        "wclMedian": 269,
+        "delta": 4,
         "occ": 4,
         "spread": 8
       },
@@ -3887,10 +3778,10 @@
           "note": "Into final Surge on ~4:00 kills."
         },
         "status": "ok",
-        "wclMedian": 318,
-        "delta": 0,
+        "wclMedian": 316,
+        "delta": 2,
         "occ": 5,
-        "spread": 0
+        "spread": 4
       },
       {
         "window": {
@@ -3956,12 +3847,13 @@
         "name": "Mutilate",
         "occ": [
           12,
-          61,
+          55,
+          67,
           135,
-          152,
-          191,
+          186,
           273,
-          322
+          309,
+          326
         ]
       },
       {
@@ -3969,11 +3861,40 @@
         "name": "Mutilate",
         "occ": [
           12,
-          61,
+          55,
+          67,
           135,
-          152,
-          191,
+          186,
           273,
+          309,
+          326
+        ]
+      },
+      {
+        "spellId": 1277101,
+        "name": "Ravage",
+        "occ": [
+          19,
+          67,
+          150,
+          182,
+          199,
+          262,
+          279,
+          322
+        ]
+      },
+      {
+        "spellId": 1277002,
+        "name": "Ravage",
+        "occ": [
+          19,
+          67,
+          150,
+          182,
+          199,
+          262,
+          279,
           322
         ]
       },
@@ -3981,42 +3902,12 @@
         "spellId": 1287072,
         "name": "Tempest",
         "occ": [
-          19,
-          65,
-          144,
-          189,
-          271,
-          318
-        ]
-      },
-      {
-        "spellId": 1277101,
-        "name": "Ravage",
-        "occ": [
-          21,
-          55,
-          71,
+          20,
+          64,
           146,
-          182,
-          197,
-          266,
-          279,
-          313
-        ]
-      },
-      {
-        "spellId": 1277002,
-        "name": "Ravage",
-        "occ": [
-          21,
-          55,
-          71,
-          146,
-          182,
-          197,
-          266,
-          279,
-          313
+          193,
+          269,
+          316
         ]
       },
       {
@@ -4026,7 +3917,7 @@
           29,
           76,
           156,
-          203,
+          204,
           283,
           330
         ]
@@ -4095,9 +3986,9 @@
         "spellId": 145629,
         "name": "Anti-Magic Zone",
         "occ": [
-          71,
-          136,
-          276
+          62,
+          282,
+          321
         ]
       },
       {
@@ -4116,6 +4007,20 @@
     "encounterId": 3420,
     "kills": [
       {
+        "code": "VxQwkhD7Hrad4B1Y",
+        "fightId": 14,
+        "duration": 223,
+        "url": "https://www.warcraftlogs.com/reports/VxQwkhD7Hrad4B1Y?fight=14",
+        "title": "HC Reclear"
+      },
+      {
+        "code": "TB3PCjWDaRnyqr78",
+        "fightId": 58,
+        "duration": 231,
+        "url": "https://www.warcraftlogs.com/reports/TB3PCjWDaRnyqr78?fight=58",
+        "title": "The Venomous Abyss"
+      },
+      {
         "code": "7qCMJYNmQcBX9T13",
         "fightId": 24,
         "duration": 233,
@@ -4123,25 +4028,11 @@
         "title": "H"
       },
       {
-        "code": "LFfA9x6cknpHgVhJ",
-        "fightId": 37,
-        "duration": 248,
-        "url": "https://www.warcraftlogs.com/reports/LFfA9x6cknpHgVhJ?fight=37",
-        "title": "The Venomous Abyss"
-      },
-      {
-        "code": "A4Pf6nadhcrgLCbq",
-        "fightId": 15,
-        "duration": 251,
-        "url": "https://www.warcraftlogs.com/reports/A4Pf6nadhcrgLCbq?fight=15",
-        "title": "The Venomous Abyss"
-      },
-      {
-        "code": "mg3A6KqbCvdkJ4VR",
-        "fightId": 11,
-        "duration": 251,
-        "url": "https://www.warcraftlogs.com/reports/mg3A6KqbCvdkJ4VR?fight=11",
-        "title": "The Venomous Abyss"
+        "code": "tr93fAyTLBFcPNqV",
+        "fightId": 19,
+        "duration": 236,
+        "url": "https://www.warcraftlogs.com/reports/tr93fAyTLBFcPNqV?fight=19",
+        "title": "faaaaaaaaaaaaaaaaaaaaaaaaaaaaarm"
       }
     ],
     "diffs": [
@@ -4158,11 +4049,11 @@
           "assignCd": true,
           "note": "Tank combo — external if needed."
         },
-        "status": "~",
-        "wclMedian": 11,
-        "delta": 4,
+        "status": "ok",
+        "wclMedian": 15,
+        "delta": 0,
         "occ": 0,
-        "spread": 4
+        "spread": 12
       },
       {
         "window": {
@@ -4213,6 +4104,7 @@
           "category": "throughput",
           "phase": 1,
           "assignCd": true,
+          "suggestPersonals": true,
           "note": "Crosswinds soak / dodge damage."
         },
         "status": "ok",
@@ -4238,7 +4130,7 @@
         "wclMedian": 71,
         "delta": 2,
         "occ": 1,
-        "spread": 8
+        "spread": 4
       },
       {
         "window": {
@@ -4273,8 +4165,8 @@
           "note": "Into Dig In."
         },
         "status": "ok",
-        "wclMedian": 95,
-        "delta": 0,
+        "wclMedian": 96,
+        "delta": 1,
         "occ": 1,
         "spread": 1
       },
@@ -4310,11 +4202,11 @@
           "assignCd": true,
           "note": "Post-Dig tank check."
         },
-        "status": "ok",
-        "wclMedian": 149,
-        "delta": 2,
-        "occ": 4,
-        "spread": 12
+        "status": "~",
+        "wclMedian": 147,
+        "delta": 4,
+        "occ": 2,
+        "spread": 8
       },
       {
         "window": {
@@ -4333,7 +4225,7 @@
         "wclMedian": 157,
         "delta": 2,
         "occ": 2,
-        "spread": 4
+        "spread": 8
       },
       {
         "window": {
@@ -4386,9 +4278,9 @@
           "assignCd": true,
           "note": "Into final Surge on ~4:00 kills."
         },
-        "status": "ok",
-        "wclMedian": 209,
-        "delta": 2,
+        "status": "~",
+        "wclMedian": 205,
+        "delta": 6,
         "occ": 3,
         "spread": 8
       },
@@ -4421,10 +4313,8 @@
           25,
           65,
           77,
-          151,
-          163,
-          199,
-          215
+          159,
+          207
         ]
       },
       {
@@ -4435,10 +4325,8 @@
           25,
           65,
           77,
-          151,
-          163,
-          199,
-          215
+          159,
+          207
         ]
       },
       {
@@ -4447,9 +4335,9 @@
         "occ": [
           15,
           65,
-          151,
-          163,
-          203
+          147,
+          203,
+          215
         ]
       },
       {
@@ -4458,9 +4346,9 @@
         "occ": [
           15,
           65,
-          151,
-          163,
-          203
+          147,
+          203,
+          215
         ]
       },
       {
@@ -4470,16 +4358,7 @@
           17,
           71,
           157,
-          209
-        ]
-      },
-      {
-        "spellId": 145629,
-        "name": "Anti-Magic Zone",
-        "occ": [
-          20,
-          67,
-          206
+          205
         ]
       },
       {
@@ -4497,19 +4376,8 @@
         "name": "Raging Crosswinds",
         "occ": [
           43,
-          95,
-          181,
-          234
-        ]
-      },
-      {
-        "spellId": 1285453,
-        "name": "Raging Crosswinds",
-        "occ": [
-          44,
           96,
-          182,
-          234
+          181
         ]
       },
       {
@@ -4518,16 +4386,23 @@
         "occ": [
           44,
           96,
-          182,
-          234
+          182
+        ]
+      },
+      {
+        "spellId": 1285453,
+        "name": "Raging Crosswinds",
+        "occ": [
+          44,
+          96,
+          182
         ]
       },
       {
         "spellId": 1286033,
         "name": "Dig In",
         "occ": [
-          111,
-          249
+          111
         ]
       }
     ]
@@ -4537,32 +4412,32 @@
     "encounterId": 3421,
     "kills": [
       {
-        "code": "hpq8F2H6KLxBg4mG",
-        "fightId": 8,
-        "duration": 416,
-        "url": "https://www.warcraftlogs.com/reports/hpq8F2H6KLxBg4mG?fight=8",
-        "title": "raid"
-      },
-      {
-        "code": "4d7gGMRCjArnzWaT",
-        "fightId": 39,
-        "duration": 426,
-        "url": "https://www.warcraftlogs.com/reports/4d7gGMRCjArnzWaT?fight=39",
-        "title": "B2"
-      },
-      {
-        "code": "9rMa7Z1JBNDqxnPz",
-        "fightId": 37,
-        "duration": 427,
-        "url": "https://www.warcraftlogs.com/reports/9rMa7Z1JBNDqxnPz?fight=37",
+        "code": "Nct6Y7PFqHwa1d9f",
+        "fightId": 1,
+        "duration": 404,
+        "url": "https://www.warcraftlogs.com/reports/Nct6Y7PFqHwa1d9f?fight=1",
         "title": "The Venomous Abyss"
       },
       {
-        "code": "bX9r7nMgCf8Gzd26",
-        "fightId": 17,
-        "duration": 430,
-        "url": "https://www.warcraftlogs.com/reports/bX9r7nMgCf8Gzd26?fight=17",
-        "title": "Cancel Tactyks, he is a cyberbully"
+        "code": "gHKADqQkWcz7PrXh",
+        "fightId": 50,
+        "duration": 406,
+        "url": "https://www.warcraftlogs.com/reports/gHKADqQkWcz7PrXh?fight=50",
+        "title": "The Venomous Abyss"
+      },
+      {
+        "code": "m61fJxRZvkpXC2Gj",
+        "fightId": 6,
+        "duration": 408,
+        "url": "https://www.warcraftlogs.com/reports/m61fJxRZvkpXC2Gj?fight=6",
+        "title": "Kick Fails auf der anderen Seite"
+      },
+      {
+        "code": "CB18wTzc9HGby7XL",
+        "fightId": 33,
+        "duration": 409,
+        "url": "https://www.warcraftlogs.com/reports/CB18wTzc9HGby7XL?fight=33",
+        "title": "M"
       }
     ],
     "diffs": [
@@ -4599,10 +4474,10 @@
           "note": "Tank breaker."
         },
         "status": "ok",
-        "wclMedian": 28,
-        "delta": 0,
-        "occ": 1,
-        "spread": 1
+        "wclMedian": 27,
+        "delta": 1,
+        "occ": 0,
+        "spread": 7
       },
       {
         "window": {
@@ -4735,8 +4610,8 @@
         "status": "ok",
         "wclMedian": 183,
         "delta": 0,
-        "occ": 7,
-        "spread": 0
+        "occ": 2,
+        "spread": 6
       },
       {
         "window": {
@@ -4868,8 +4743,8 @@
         "status": "ok",
         "wclMedian": 338,
         "delta": 0,
-        "occ": 13,
-        "spread": 0
+        "occ": 4,
+        "spread": 6
       },
       {
         "window": {
@@ -4925,14 +4800,14 @@
         "status": "ok",
         "wclMedian": 399,
         "delta": 0,
-        "occ": 16,
-        "spread": 0
+        "occ": 5,
+        "spread": 6
       }
     ],
     "sequences": [
       {
-        "spellId": 1303230,
-        "name": "Blood Torrent",
+        "spellId": 1289192,
+        "name": "Caustic Deluge",
         "occ": [
           9,
           70,
@@ -4943,8 +4818,8 @@
         ]
       },
       {
-        "spellId": 1289192,
-        "name": "Caustic Deluge",
+        "spellId": 1303230,
+        "name": "Blood Torrent",
         "occ": [
           9,
           70,
@@ -4959,7 +4834,7 @@
         "name": "Envenomed",
         "occ": [
           11,
-          72,
+          73,
           166,
           227,
           321,
@@ -4975,8 +4850,7 @@
           168,
           229,
           323,
-          384,
-          415
+          384
         ]
       },
       {
@@ -4995,43 +4869,42 @@
         "spellId": 1289201,
         "name": "Caustic Globule",
         "occ": [
-          17,
+          16,
           77,
-          172,
-          233,
+          171,
+          234,
           326,
-          388,
-          419
+          388
         ]
       },
       {
         "spellId": 1290336,
         "name": "Eternal Venom",
         "occ": [
-          17,
+          16,
           42,
           77,
           103,
-          121,
-          140,
-          172,
+          138,
+          152,
+          171,
           197,
-          233,
+          234,
           258,
           282,
-          298,
+          300,
           326,
           352,
-          387,
-          413
+          388,
+          404
         ]
       },
       {
         "spellId": 1289092,
         "name": "Stone Breaker",
         "occ": [
-          28,
-          89,
+          27,
+          88,
           183,
           244,
           338,
@@ -5042,8 +4915,8 @@
         "spellId": 1288538,
         "name": "Stone Breaker",
         "occ": [
-          28,
-          89,
+          27,
+          88,
           183,
           244,
           338,
@@ -5070,20 +4943,18 @@
           97,
           191,
           252,
-          346,
-          407
+          346
         ]
       },
       {
         "spellId": 1291478,
         "name": "Corrosive Spit",
         "occ": [
-          42,
-          105,
+          43,
+          103,
           197,
           258,
-          352,
-          415
+          354
         ]
       },
       {
@@ -5094,8 +4965,7 @@
           104,
           198,
           259,
-          353,
-          414
+          353
         ]
       },
       {
@@ -5106,8 +4976,7 @@
           108,
           202,
           263,
-          357,
-          418
+          357
         ]
       },
       {
@@ -5125,8 +4994,27 @@
         "spellId": 145629,
         "name": "Anti-Magic Zone",
         "occ": [
-          65,
-          279
+          63,
+          124,
+          281
+        ]
+      },
+      {
+        "spellId": 1295115,
+        "name": "Clotted Bolt",
+        "occ": [
+          66,
+          222,
+          376
+        ]
+      },
+      {
+        "spellId": 1295107,
+        "name": "Concentrated Spittle",
+        "occ": [
+          125,
+          280,
+          389
         ]
       },
       {
@@ -5152,6 +5040,13 @@
     "encounterId": 3421,
     "kills": [
       {
+        "code": "7rPqdczQCgNbX6h8",
+        "fightId": 12,
+        "duration": 269,
+        "url": "https://www.warcraftlogs.com/reports/7rPqdczQCgNbX6h8?fight=12",
+        "title": "hc"
+      },
+      {
         "code": "NGbwjf7VqKgax1MC",
         "fightId": 32,
         "duration": 276,
@@ -5159,25 +5054,18 @@
         "title": "The Venomous Abyss"
       },
       {
-        "code": "86T2WXFCwzr4JZg9",
-        "fightId": 26,
-        "duration": 290,
-        "url": "https://www.warcraftlogs.com/reports/86T2WXFCwzr4JZg9?fight=26",
-        "title": "The Venomous Abyss"
-      },
-      {
-        "code": "67c4hVAtKDCHfWTM",
+        "code": "bVhnMgWLY1rZ8wfN",
         "fightId": 23,
-        "duration": 294,
-        "url": "https://www.warcraftlogs.com/reports/67c4hVAtKDCHfWTM?fight=23",
+        "duration": 282,
+        "url": "https://www.warcraftlogs.com/reports/bVhnMgWLY1rZ8wfN?fight=23",
         "title": "The Venomous Abyss"
       },
       {
-        "code": "7qCMJYNmQcBX9T13",
-        "fightId": 26,
-        "duration": 299,
-        "url": "https://www.warcraftlogs.com/reports/7qCMJYNmQcBX9T13?fight=26",
-        "title": "H"
+        "code": "bxZHBcVmgLhwKn6Q",
+        "fightId": 32,
+        "duration": 284,
+        "url": "https://www.warcraftlogs.com/reports/bxZHBcVmgLhwKn6Q?fight=32",
+        "title": "The Venomous Abyss"
       }
     ],
     "diffs": [
@@ -5216,8 +5104,8 @@
         "status": "ok",
         "wclMedian": 29,
         "delta": 0,
-        "occ": 1,
-        "spread": 0
+        "occ": 0,
+        "spread": 7
       },
       {
         "window": {
@@ -5274,8 +5162,8 @@
         "status": "ok",
         "wclMedian": 97,
         "delta": 0,
-        "occ": 4,
-        "spread": 0
+        "occ": 1,
+        "spread": 6
       },
       {
         "window": {
@@ -5369,8 +5257,8 @@
         "status": "ok",
         "wclMedian": 199,
         "delta": 0,
-        "occ": 7,
-        "spread": 0
+        "occ": 2,
+        "spread": 6
       },
       {
         "window": {
@@ -5426,8 +5314,8 @@
         "status": "ok",
         "wclMedian": 267,
         "delta": 0,
-        "occ": 10,
-        "spread": 0
+        "occ": 3,
+        "spread": 6
       }
     ],
     "sequences": [
@@ -5448,7 +5336,7 @@
           12,
           80,
           181,
-          249
+          250
         ]
       },
       {
@@ -5465,27 +5353,28 @@
         "spellId": 1289201,
         "name": "Caustic Globule",
         "occ": [
-          16,
-          83,
-          185,
-          254
+          15,
+          85,
+          186,
+          255
         ]
       },
       {
         "spellId": 1290336,
         "name": "Eternal Venom",
         "occ": [
-          16,
+          15,
           46,
-          83,
-          109,
-          136,
-          159,
-          185,
+          69,
+          85,
+          113,
+          139,
+          154,
+          168,
+          186,
           215,
-          253,
-          277,
-          290
+          252,
+          273
         ]
       },
       {
@@ -5523,9 +5412,8 @@
         "name": "Corrosive Spit",
         "occ": [
           46,
-          113,
-          217,
-          285
+          115,
+          220
         ]
       },
       {
@@ -5534,8 +5422,7 @@
         "occ": [
           47,
           115,
-          217,
-          285
+          217
         ]
       },
       {
@@ -5544,8 +5431,7 @@
         "occ": [
           52,
           120,
-          222,
-          289
+          222
         ]
       },
       {
@@ -5578,31 +5464,31 @@
     "encounterId": 3429,
     "kills": [
       {
-        "code": "HCWrqw6fYZA3Mbx9",
-        "fightId": 50,
-        "duration": 338,
-        "url": "https://www.warcraftlogs.com/reports/HCWrqw6fYZA3Mbx9?fight=50",
+        "code": "Zdh6K8pwmV4ztAHy",
+        "fightId": 49,
+        "duration": 317,
+        "url": "https://www.warcraftlogs.com/reports/Zdh6K8pwmV4ztAHy?fight=49",
+        "title": "as"
+      },
+      {
+        "code": "D2FpCnbxB1mAVHTw",
+        "fightId": 10,
+        "duration": 324,
+        "url": "https://www.warcraftlogs.com/reports/D2FpCnbxB1mAVHTw?fight=10",
         "title": "The Venomous Abyss"
       },
       {
-        "code": "dnFMLRmgZXy6bY7r",
-        "fightId": 39,
-        "duration": 341,
-        "url": "https://www.warcraftlogs.com/reports/dnFMLRmgZXy6bY7r?fight=39",
-        "title": "LE TRINKET UEEEEEEEEEEEEEEE"
+        "code": "DQqth3TJCfaZmFjM",
+        "fightId": 15,
+        "duration": 325,
+        "url": "https://www.warcraftlogs.com/reports/DQqth3TJCfaZmFjM?fight=15",
+        "title": "reclear"
       },
       {
-        "code": "6mQtrPjpcFKvZgLa",
-        "fightId": 3,
-        "duration": 342,
-        "url": "https://www.warcraftlogs.com/reports/6mQtrPjpcFKvZgLa?fight=3",
-        "title": "2026-09-03(Thursday) - Farm"
-      },
-      {
-        "code": "Q8ZJDFXnqjC2VpMK",
-        "fightId": 5,
-        "duration": 351,
-        "url": "https://www.warcraftlogs.com/reports/Q8ZJDFXnqjC2VpMK?fight=5",
+        "code": "bxZHBcVmgLhwKn6Q",
+        "fightId": 36,
+        "duration": 328,
+        "url": "https://www.warcraftlogs.com/reports/bxZHBcVmgLhwKn6Q?fight=36",
         "title": "The Venomous Abyss"
       }
     ],
@@ -5640,10 +5526,10 @@
           "note": "First Guillotine — major raid CD."
         },
         "status": "ok",
-        "wclMedian": 46,
-        "delta": 0,
+        "wclMedian": 47,
+        "delta": 1,
         "occ": 0,
-        "spread": 0
+        "spread": 1
       },
       {
         "window": {
@@ -5715,11 +5601,11 @@
           "assignCd": true,
           "note": "Stage 2 start — Spiritcackle / add pressure follows."
         },
-        "status": "ok",
-        "wclMedian": 121,
-        "delta": 0,
+        "status": "~",
+        "wclMedian": 116,
+        "delta": 5,
         "occ": 0,
-        "spread": 116
+        "spread": 3
       },
       {
         "window": {
@@ -5734,11 +5620,11 @@
           "assignCd": true,
           "note": "Stage 2 tank sever."
         },
-        "status": "ok",
-        "wclMedian": 151,
-        "delta": 0,
+        "status": "~",
+        "wclMedian": 147,
+        "delta": 4,
         "occ": 0,
-        "spread": 116
+        "spread": 4
       },
       {
         "window": {
@@ -5753,11 +5639,11 @@
           "assignCd": true,
           "note": "Second Dreadmarch pulse."
         },
-        "status": "ok",
-        "wclMedian": 157,
-        "delta": 0,
+        "status": "~",
+        "wclMedian": 153,
+        "delta": 4,
         "occ": 1,
-        "spread": 115
+        "spread": 3
       },
       {
         "window": {
@@ -5772,11 +5658,7 @@
           "assignCd": true,
           "note": "Into Soulbinding."
         },
-        "status": "ok",
-        "wclMedian": 182,
-        "delta": 0,
-        "occ": 1,
-        "spread": 115
+        "status": "missing"
       },
       {
         "window": {
@@ -5791,11 +5673,11 @@
           "assignCd": true,
           "note": "Intermission — stack raid CDs into the push."
         },
-        "status": "ok",
-        "wclMedian": 201,
-        "delta": 1,
+        "status": "DIFF",
+        "wclMedian": 180,
+        "delta": 22,
         "occ": 0,
-        "spread": 76
+        "spread": 11
       },
       {
         "window": {
@@ -5810,11 +5692,11 @@
           "assignCd": true,
           "note": "Post-intermission Defilement."
         },
-        "status": "ok",
-        "wclMedian": 240,
-        "delta": 0,
+        "status": "DIFF",
+        "wclMedian": 218,
+        "delta": 22,
         "occ": 0,
-        "spread": 76
+        "spread": 12
       },
       {
         "window": {
@@ -5829,11 +5711,11 @@
           "assignCd": true,
           "note": "Grim Guillotine — major CD."
         },
-        "status": "ok",
-        "wclMedian": 257,
-        "delta": 0,
+        "status": "DIFF",
+        "wclMedian": 235,
+        "delta": 22,
         "occ": 0,
-        "spread": 76
+        "spread": 12
       },
       {
         "window": {
@@ -5848,11 +5730,11 @@
           "assignCd": true,
           "note": "Late tank sever."
         },
-        "status": "~",
-        "wclMedian": 276,
-        "delta": 4,
+        "status": "DIFF",
+        "wclMedian": 260,
+        "delta": 12,
         "occ": 0,
-        "spread": 76
+        "spread": 11
       },
       {
         "window": {
@@ -5867,11 +5749,11 @@
           "assignCd": true,
           "note": "Late Dreadmarch on ~5:40 kills."
         },
-        "status": "ok",
-        "wclMedian": 303,
-        "delta": 0,
+        "status": "DIFF",
+        "wclMedian": 281,
+        "delta": 22,
         "occ": 2,
-        "spread": 215
+        "spread": 12
       },
       {
         "window": {
@@ -5886,11 +5768,11 @@
           "assignCd": true,
           "note": "Final tank check into kill."
         },
-        "status": "ok",
-        "wclMedian": 309,
-        "delta": 0,
-        "occ": 3,
-        "spread": 0
+        "status": "DIFF",
+        "wclMedian": 321,
+        "delta": 12,
+        "occ": 2,
+        "spread": 1
       }
     ],
     "sequences": [
@@ -5909,38 +5791,16 @@
           2,
           45,
           87,
-          245,
-          280,
-          294
-        ]
-      },
-      {
-        "spellId": 1307184,
-        "name": "Dread Bolt",
-        "occ": [
-          8,
-          30,
-          56,
-          88,
-          120,
-          141,
-          156,
-          172,
-          186,
-          202,
-          250,
-          270,
-          301,
-          327,
-          343
+          220,
+          268
         ]
       },
       {
         "spellId": 1283290,
         "name": "Noxious Ground",
         "occ": [
-          9,
-          96
+          10,
+          95
         ]
       },
       {
@@ -5963,11 +5823,12 @@
         "spellId": 1285017,
         "name": "Axegrinder",
         "occ": [
-          22,
+          21,
+          37,
           53,
           70,
-          137,
-          156
+          114,
+          139
         ]
       },
       {
@@ -5999,84 +5860,95 @@
         "spellId": 1283489,
         "name": "Guillotine",
         "occ": [
-          46
-        ]
-      },
-      {
-        "spellId": 1285847,
-        "name": "Unassailable",
-        "occ": [
-          49,
-          127,
-          161,
-          237,
-          310,
-          332
+          47
         ]
       },
       {
         "spellId": 145629,
         "name": "Anti-Magic Zone",
         "occ": [
-          50,
-          110,
-          144,
+          85,
+          105
+        ]
+      },
+      {
+        "spellId": 1307184,
+        "name": "Dread Bolt",
+        "occ": [
+          95,
+          118,
+          139,
           159,
-          313,
-          334
+          172,
+          223,
+          246,
+          276,
+          304,
+          318
         ]
       },
       {
         "spellId": 1288624,
         "name": "Dreadful Presence",
         "occ": [
-          115
+          109
         ]
       },
       {
         "spellId": 1285643,
         "name": "Dreadmarch",
         "occ": [
-          122,
-          159,
-          306
+          116,
+          153,
+          281
+        ]
+      },
+      {
+        "spellId": 1285847,
+        "name": "Unassailable",
+        "occ": [
+          121,
+          156,
+          264,
+          288,
+          308
         ]
       },
       {
         "spellId": 1286441,
         "name": "Spiritcackle",
         "occ": [
-          128,
-          161
+          122,
+          155
         ]
       },
       {
         "spellId": 1285911,
         "name": "Unnerving Fixation",
         "occ": [
-          129,
-          163,
-          239,
-          311,
-          330
+          123,
+          158,
+          266,
+          290,
+          307
         ]
       },
       {
         "spellId": 1308311,
         "name": "Retaliatory Malice",
         "occ": [
-          132,
-          165
+          126,
+          159
         ]
       },
       {
         "spellId": 1310882,
         "name": "Gloombomb",
         "occ": [
-          139,
-          177,
-          273,
-          322
+          133,
+          171,
+          247,
+          297
         ]
       },
       {
@@ -6084,73 +5956,74 @@
         "name": "Wail of Terror",
         "occ": [
           141,
-          176
+          170,
+          191
         ]
       },
       {
         "spellId": 1286620,
         "name": "Soul Sever",
         "occ": [
-          153,
-          184
+          147
         ]
       },
       {
         "spellId": 1304028,
         "name": "Deathguard",
         "occ": [
-          203
+          178
         ]
       },
       {
         "spellId": 1304032,
         "name": "Soulbinding",
         "occ": [
-          205
+          180
         ]
       },
       {
         "spellId": 1304033,
         "name": "Ghastly Regeneration",
         "occ": [
-          206
+          181
         ]
       },
       {
         "spellId": 1304498,
         "name": "Ghastly Regeneration",
         "occ": [
-          206
+          181
         ]
       },
       {
         "spellId": 1298381,
         "name": "Defilement of the Coiled Altar",
         "occ": [
-          243
+          218,
+          324
         ]
       },
       {
         "spellId": 1299266,
         "name": "Grim Guillotine",
         "occ": [
-          260
+          235
         ]
       },
       {
         "spellId": 1299267,
         "name": "Grim Guillotine",
         "occ": [
-          264
+          239
         ]
       },
       {
         "spellId": 1307292,
         "name": "Blighted Sever",
         "occ": [
-          276,
-          311,
-          343
+          260,
+          287,
+          321
         ]
       }
     ]
@@ -6160,32 +6033,32 @@
     "encounterId": 3379,
     "kills": [
       {
-        "code": "N2nQhmHDxgafRWvk",
-        "fightId": 52,
-        "duration": 194,
-        "url": "https://www.warcraftlogs.com/reports/N2nQhmHDxgafRWvk?fight=52",
-        "title": "where logs !?! ?! ?! !! ! !!!"
+        "code": "XV8wjBfNxJFACp49",
+        "fightId": 4,
+        "duration": 180,
+        "url": "https://www.warcraftlogs.com/reports/XV8wjBfNxJFACp49?fight=4",
+        "title": "Venom_day13"
       },
       {
-        "code": "GRt7aH8NKbdM3XYA",
-        "fightId": 52,
-        "duration": 194,
-        "url": "https://www.warcraftlogs.com/reports/GRt7aH8NKbdM3XYA?fight=52",
+        "code": "MCyp7nvH24qhb1LX",
+        "fightId": 51,
+        "duration": 182,
+        "url": "https://www.warcraftlogs.com/reports/MCyp7nvH24qhb1LX?fight=51",
+        "title": "嘿，爺爺！"
+      },
+      {
+        "code": "r9anCyzkhm8qJd2K",
+        "fightId": 15,
+        "duration": 184,
+        "url": "https://www.warcraftlogs.com/reports/r9anCyzkhm8qJd2K?fight=15",
         "title": "The Venomous Abyss"
       },
       {
-        "code": "Nz7BWcVtvy6gmXbH",
-        "fightId": 74,
-        "duration": 197,
-        "url": "https://www.warcraftlogs.com/reports/Nz7BWcVtvy6gmXbH?fight=74",
-        "title": "The Venomous Abyss"
-      },
-      {
-        "code": "HdrWC6pLtxDb3whX",
-        "fightId": 1,
-        "duration": 199,
-        "url": "https://www.warcraftlogs.com/reports/HdrWC6pLtxDb3whX?fight=1",
-        "title": "The Venomous Abyss"
+        "code": "t8P1yFXxbDdrWQ9a",
+        "fightId": 7,
+        "duration": 184,
+        "url": "https://www.warcraftlogs.com/reports/t8P1yFXxbDdrWQ9a?fight=7",
+        "title": "nekzali"
       }
     ],
     "diffs": [
@@ -6301,7 +6174,7 @@
         "wclMedian": 70,
         "delta": 0,
         "occ": 1,
-        "spread": 1
+        "spread": 0
       },
       {
         "window": {
@@ -6431,11 +6304,7 @@
           "assignCd": true,
           "note": "Late frost into kill."
         },
-        "status": "ok",
-        "wclMedian": 191,
-        "delta": 0,
-        "occ": 3,
-        "spread": 0
+        "status": "missing"
       }
     ],
     "sequences": [
@@ -6494,8 +6363,7 @@
         "occ": [
           37,
           81,
-          147,
-          191
+          147
         ]
       },
       {
@@ -6503,12 +6371,11 @@
         "name": "Lingering Frost",
         "occ": [
           48,
-          65,
-          90,
-          113,
+          73,
+          93,
+          109,
           161,
-          179,
-          194
+          175
         ]
       },
       {
@@ -6529,8 +6396,7 @@
         "spellId": 145629,
         "name": "Anti-Magic Zone",
         "occ": [
-          128,
-          173
+          157
         ]
       }
     ]

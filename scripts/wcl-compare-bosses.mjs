@@ -282,6 +282,9 @@ for (const boss of bosses) {
     );
   }
 
+  const sampleDur = median(kills.map((k) => k.durationSec));
+  const MATCH_RADIUS = 30; // don't latch onto a distant occurrence of the same spell
+
   for (const w of boss.windows) {
     if (!w.abilitySpellId) {
       console.log(
@@ -289,16 +292,26 @@ for (const boss of bosses) {
       );
       continue;
     }
+
+    if (w.timeSec > sampleDur + 20) {
+      console.log(
+        `  ${fmt(w.timeSec).padStart(5)}  ${w.ability.padEnd(40)}  [beyond-sample]  (kills ~${fmt(sampleDur)})`,
+      );
+      diffs.push({ window: w, status: "beyond-sample", sampleDur });
+      continue;
+    }
+
     const clusters = clustersBySpell.get(w.abilitySpellId) || [];
     let best = null;
     for (const c of clusters) {
       const delta = Math.abs(c.med - w.timeSec);
+      if (delta > MATCH_RADIUS) continue;
       if (!best || delta < best.delta) best = { ...c, delta };
     }
 
     if (!best) {
       console.log(
-        `  ${fmt(w.timeSec).padStart(5)}  ${w.ability.padEnd(40)}  NO WCL casts for ${w.abilitySpellId}`,
+        `  ${fmt(w.timeSec).padStart(5)}  ${w.ability.padEnd(40)}  NO WCL casts for ${w.abilitySpellId} near ${fmt(w.timeSec)}`,
       );
       diffs.push({ window: w, status: "missing" });
       continue;
