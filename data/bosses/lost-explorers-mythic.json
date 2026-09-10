@@ -6,8 +6,8 @@
   "group": "raid",
   "difficulty": "Mythic",
   "order": 3,
-  "source": "WCL Mythic consensus — 4 speed kills (~5:23–5:37). Heroic windows remapped by scaled time to nearest Mythic cast; extra critical/raid casts added.",
-  "sourceUrl": "https://www.warcraftlogs.com/reports/yLdbhz9PkTF1MpBa?fight=34",
+  "source": "WCL Mythic consensus — 4 kills (~5:22–5:25). Windows remapped to current cast times; Mighty Thud / Command spell ids refreshed.",
+  "sourceUrl": "https://www.warcraftlogs.com/reports/fn47y6kAHXP3RdMp?fight=6",
   "enrageSec": 390,
   "enrageName": "Kill target (~6:30 speed)",
   "windows": [
@@ -21,7 +21,7 @@
       "category": "throughput",
       "phase": 1,
       "assignCd": true,
-      "note": "Extra Mythic occurrence vs Heroic timeline."
+      "note": "Opener spin."
     },
     {
       "id": "lem-shredding-shards1",
@@ -61,10 +61,15 @@
     },
     {
       "id": "lem-mor-zahi-s-command1",
-      "timeSec": 64,
+      "timeSec": 61,
       "ability": "Mor’zahi’s Command #1",
+<<<<<<< Updated upstream
       "abilitySpellId": 1296975,
       "trigger": "WCL 1:04",
+=======
+      "abilitySpellId": 1297022,
+      "trigger": "WCL 1:01",
+>>>>>>> Stashed changes
       "severity": "critical",
       "category": "defensive",
       "phase": 2,
@@ -72,11 +77,23 @@
       "note": "Main CD during empowered turtle."
     },
     {
+      "id": "lem-shell-spin4",
+      "timeSec": 70,
+      "ability": "Shell Spin #4",
+      "abilitySpellId": 1296062,
+      "trigger": "WCL 1:10",
+      "severity": "raid",
+      "category": "throughput",
+      "phase": 2,
+      "assignCd": true,
+      "note": "Into Mighty Thud."
+    },
+    {
       "id": "lem-mighty-thud1",
-      "timeSec": 79,
+      "timeSec": 75,
       "ability": "Mighty Thud #1",
       "abilitySpellId": 1296094,
-      "trigger": "WCL 1:19",
+      "trigger": "WCL 1:15",
       "severity": "raid",
       "category": "throughput",
       "phase": 2,
@@ -84,148 +101,167 @@
       "note": "Empowered slam pressure."
     },
     {
+      "id": "lem-shell-spin5",
+      "timeSec": 105,
+      "ability": "Shell Spin #5",
+      "abilitySpellId": 1296062,
+      "trigger": "WCL 1:45",
+      "severity": "raid",
+      "category": "throughput",
+      "phase": 2,
+      "assignCd": true,
+      "note": "Into second Thud."
+    },
+    {
       "id": "lem-mighty-thud2",
-      "timeSec": 111,
+      "timeSec": 107,
       "ability": "Mighty Thud #2",
       "abilitySpellId": 1296094,
-      "trigger": "WCL 1:51",
+      "trigger": "WCL 1:47",
       "severity": "raid",
       "category": "defensive",
       "phase": 2,
       "assignCd": true,
-      "note": "Into Dark Whispers / late fight."
+      "note": "Into Dark Whispers."
     },
     {
       "id": "lem-dark-whispers1",
-      "timeSec": 124,
+      "timeSec": 121,
       "ability": "Dark Whispers #1",
       "abilitySpellId": 1301667,
-      "trigger": "WCL 2:04",
+      "trigger": "WCL 2:01",
       "severity": "critical",
       "category": "throughput",
       "phase": 3,
       "assignCd": true,
-      "note": "Extra Mythic occurrence vs Heroic timeline."
+      "note": "Major mid-fight check."
     },
     {
-      "id": "lem-shell-spin4",
-      "timeSec": 148,
-      "ability": "Shell Spin #4",
+      "id": "lem-shell-spin6",
+      "timeSec": 144,
+      "ability": "Shell Spin #6",
       "abilitySpellId": 1296062,
-      "trigger": "WCL 2:28",
+      "trigger": "WCL 2:24",
       "severity": "raid",
       "category": "throughput",
-      "phase": 1,
+      "phase": 3,
       "assignCd": true,
-      "note": "Extra Mythic occurrence vs Heroic timeline."
+      "note": "Post-Whispers spins."
     },
     {
-      "id": "lem-shredding-shards3",
-      "timeSec": 156,
-      "ability": "Shredding Shards #3",
+      "id": "lem-shredding-shards2",
+      "timeSec": 152,
+      "ability": "Shredding Shards #2",
       "abilitySpellId": 1295854,
-      "trigger": "WCL 2:36",
+      "trigger": "WCL 2:32",
       "severity": "tank",
       "category": "external",
-      "phase": 2,
+      "phase": 3,
       "assignCd": true,
       "note": "Second shards set."
     },
     {
-      "id": "lem-shell-spin5",
-      "timeSec": 166,
-      "ability": "Shell Spin #5",
-      "abilitySpellId": 1296062,
-      "trigger": "WCL 2:46",
-      "severity": "raid",
-      "category": "throughput",
-      "phase": 1,
-      "assignCd": true,
-      "note": "Extra Mythic occurrence vs Heroic timeline."
-    },
-    {
-      "id": "lem-shell-spin6",
-      "timeSec": 181,
-      "ability": "Shell Spin #6",
-      "abilitySpellId": 1296062,
-      "trigger": "WCL 3:01",
-      "severity": "raid",
-      "category": "throughput",
-      "phase": 1,
-      "assignCd": true,
-      "note": "Extra Mythic occurrence vs Heroic timeline."
-    },
-    {
       "id": "lem-shell-spin7",
-      "timeSec": 207,
+      "timeSec": 161,
       "ability": "Shell Spin #7",
       "abilitySpellId": 1296062,
-      "trigger": "WCL 3:27",
+      "trigger": "WCL 2:41",
       "severity": "raid",
       "category": "throughput",
-      "phase": 1,
-      "assignCd": true,
-      "note": "Extra Mythic occurrence vs Heroic timeline."
+      "phase": 3,
+      "assignCd": true
     },
     {
       "id": "lem-shell-spin8",
-      "timeSec": 235,
+      "timeSec": 175,
       "ability": "Shell Spin #8",
       "abilitySpellId": 1296062,
-      "trigger": "WCL 3:55",
+      "trigger": "WCL 2:55",
       "severity": "raid",
       "category": "throughput",
-      "phase": 1,
-      "assignCd": true,
-      "note": "Extra Mythic occurrence vs Heroic timeline."
+      "phase": 3,
+      "assignCd": true
+    },
+    {
+      "id": "lem-shell-spin9",
+      "timeSec": 205,
+      "ability": "Shell Spin #9",
+      "abilitySpellId": 1296062,
+      "trigger": "WCL 3:25",
+      "severity": "raid",
+      "category": "throughput",
+      "phase": 3,
+      "assignCd": true
+    },
+    {
+      "id": "lem-shell-spin10",
+      "timeSec": 232,
+      "ability": "Shell Spin #10",
+      "abilitySpellId": 1296062,
+      "trigger": "WCL 3:52",
+      "severity": "raid",
+      "category": "throughput",
+      "phase": 3,
+      "assignCd": true
     },
     {
       "id": "lem-dark-whispers2",
-      "timeSec": 248,
+      "timeSec": 243,
       "ability": "Dark Whispers #2",
       "abilitySpellId": 1301667,
-      "trigger": "WCL 4:08",
+      "trigger": "WCL 4:03",
       "severity": "critical",
       "category": "throughput",
       "phase": 3,
       "assignCd": true,
-      "note": "Late mid-fight pressure before kill on ~2:30–3:00 clears."
+      "note": "Second Whispers — save a major CD."
     },
     {
-      "id": "lem-shell-spin9",
-      "timeSec": 274,
-      "ability": "Shell Spin #9",
+      "id": "lem-shell-spin11",
+      "timeSec": 267,
+      "ability": "Shell Spin #11",
       "abilitySpellId": 1296062,
-      "trigger": "WCL 4:34",
+      "trigger": "WCL 4:27",
       "severity": "raid",
       "category": "defensive",
       "phase": 3,
       "assignCd": true,
-      "note": "Late spins on kills that stretch past ~2:20."
+      "note": "Late spins."
     },
     {
-      "id": "lem-shredding-shards5",
-      "timeSec": 280,
-      "ability": "Shredding Shards #5",
+      "id": "lem-shredding-shards3",
+      "timeSec": 276,
+      "ability": "Shredding Shards #3",
       "abilitySpellId": 1295854,
-      "trigger": "WCL 4:40",
+      "trigger": "WCL 4:36",
       "severity": "tank",
       "category": "external",
       "phase": 3,
       "assignCd": true,
-      "note": "Final shards on slower speed kills."
+      "note": "Final shards on ~5:20+ kills."
     },
     {
-      "id": "lem-shell-spin10",
-      "timeSec": 300,
-      "ability": "Shell Spin #10",
+      "id": "lem-shell-spin12",
+      "timeSec": 285,
+      "ability": "Shell Spin #12",
       "abilitySpellId": 1296062,
-      "trigger": "WCL 5:00",
+      "trigger": "WCL 4:45",
       "severity": "raid",
       "category": "throughput",
-      "phase": 1,
+      "phase": 3,
+      "assignCd": true
+    },
+    {
+      "id": "lem-shell-spin13",
+      "timeSec": 298,
+      "ability": "Shell Spin #13",
+      "abilitySpellId": 1296062,
+      "trigger": "WCL 4:58",
+      "severity": "raid",
+      "category": "throughput",
+      "phase": 3,
       "assignCd": true,
-      "note": "Extra Mythic occurrence vs Heroic timeline."
+      "note": "Final spin before kill on ~5:20 clears."
     }
   ]
 }

@@ -6,10 +6,10 @@
   "group": "raid",
   "difficulty": "Mythic",
   "order": 1,
-  "source": "WCL Mythic consensus — 4 speed kills (~6:23–6:29). Longer than Heroic: Ignition repeats, Pyre intermission ~3:00–4:24, Invoke Stage 2 from ~4:45.",
-  "sourceUrl": "https://www.warcraftlogs.com/reports/9wd3qxabQtJMz7fW?fight=20",
-  "enrageSec": 420,
-  "enrageName": "Kill target (~7:00 speed)",
+  "source": "WCL Mythic prog consensus — 4 kills (~6:12–6:14) with Hungering Pyre. Rebuilt for guild prog (not race-only ~4:30 speed).",
+  "sourceUrl": "https://www.warcraftlogs.com/reports/kVg3DchMCQK9b7Jm?fight=23",
+  "enrageSec": 450,
+  "enrageName": "Kill target (~7:30 speed)",
   "windows": [
     {
       "id": "nkm-ign1",
@@ -61,15 +61,15 @@
     },
     {
       "id": "nkm-ign2",
-      "timeSec": 78,
+      "timeSec": 77,
       "ability": "Soulcoil Ignition #2",
       "abilitySpellId": 1285681,
-      "trigger": "WCL 1:18",
+      "trigger": "WCL 1:17",
       "severity": "critical",
       "category": "defensive",
       "phase": 1,
       "assignCd": true,
-      "note": "Second Ignition + Ritual Burn (~1:20)."
+      "note": "Second Ignition + Ritual Burn."
     },
     {
       "id": "nkm-barrage3",
@@ -84,35 +84,35 @@
       "note": "Third barrage."
     },
     {
-      "id": "nkm-barrage4",
-      "timeSec": 141,
-      "ability": "Possession Barrage #4",
-      "abilitySpellId": 1284103,
-      "trigger": "WCL 2:21",
-      "severity": "tank",
-      "category": "external",
-      "phase": 1,
-      "assignCd": true,
-      "note": "Into Ritual of Awakening / intermission."
-    },
-    {
       "id": "nkm-awaken",
-      "timeSec": 143,
+      "timeSec": 117,
       "ability": "Ritual of Awakening",
       "abilitySpellId": 1295124,
-      "trigger": "WCL 2:23",
+      "trigger": "WCL 1:57",
       "severity": "critical",
       "category": "throughput",
       "phase": 2,
       "assignCd": true,
-      "note": "Intermission start — Awakening into Hungering Pyre sets."
+      "note": "Intermission start — into Hungering Pyre sets."
+    },
+    {
+      "id": "nkm-awaken2",
+      "timeSec": 136,
+      "ability": "Ritual of Awakening #2",
+      "abilitySpellId": 1295124,
+      "trigger": "WCL 2:16",
+      "severity": "critical",
+      "category": "throughput",
+      "phase": 2,
+      "assignCd": true,
+      "note": "Second Awakening pulse before first Pyre."
     },
     {
       "id": "nkm-pyre1",
-      "timeSec": 178,
+      "timeSec": 150,
       "ability": "Hungering Pyre #1",
       "abilitySpellId": 1294742,
-      "trigger": "WCL 2:58",
+      "trigger": "WCL 2:30",
       "severity": "critical",
       "category": "defensive",
       "phase": 2,
@@ -122,10 +122,10 @@
     },
     {
       "id": "nkm-pyre2",
-      "timeSec": 207,
+      "timeSec": 169,
       "ability": "Hungering Pyre #2",
       "abilitySpellId": 1294742,
-      "trigger": "WCL 3:27",
+      "trigger": "WCL 2:49",
       "severity": "critical",
       "category": "throughput",
       "phase": 2,
@@ -134,34 +134,46 @@
     },
     {
       "id": "nkm-pyre3",
-      "timeSec": 234,
+      "timeSec": 201,
       "ability": "Hungering Pyre #3",
       "abilitySpellId": 1294742,
-      "trigger": "WCL 3:54",
+      "trigger": "WCL 3:21",
       "severity": "critical",
       "category": "defensive",
       "phase": 2,
       "assignCd": true,
-      "note": "Third Pyre — into Stage 2."
+      "note": "Third Pyre."
     },
     {
       "id": "nkm-pyre4",
-      "timeSec": 264,
+      "timeSec": 227,
       "ability": "Hungering Pyre #4",
       "abilitySpellId": 1294742,
-      "trigger": "WCL 4:24 (slower kills)",
+      "trigger": "WCL 3:47",
       "severity": "raid",
       "category": "throughput",
       "phase": 2,
       "assignCd": true,
-      "note": "Fourth Pyre on some kills before first Invoke."
+      "note": "Fourth Pyre."
+    },
+    {
+      "id": "nkm-pyre5",
+      "timeSec": 254,
+      "ability": "Hungering Pyre #5",
+      "abilitySpellId": 1294742,
+      "trigger": "WCL 4:14",
+      "severity": "critical",
+      "category": "defensive",
+      "phase": 2,
+      "assignCd": true,
+      "note": "Fifth Pyre — into Stage 2 Invoke."
     },
     {
       "id": "nkm-invoke1",
-      "timeSec": 285,
+      "timeSec": 281,
       "ability": "Invoke #1 (+ Ritual Burn)",
       "abilitySpellId": 1299673,
-      "trigger": "WCL 4:45",
+      "trigger": "WCL 4:41",
       "severity": "critical",
       "category": "defensive",
       "phase": 3,
@@ -169,11 +181,11 @@
       "note": "Stage 2 — Invoke overlaps Ritual Burn. Lust here."
     },
     {
-      "id": "nkm-barrage5",
-      "timeSec": 318,
-      "ability": "Possession Barrage #5",
+      "id": "nkm-barrage4",
+      "timeSec": 314,
+      "ability": "Possession Barrage #4",
       "abilitySpellId": 1284103,
-      "trigger": "WCL 5:18",
+      "trigger": "WCL 5:14",
       "severity": "tank",
       "category": "external",
       "phase": 3,
@@ -182,10 +194,10 @@
     },
     {
       "id": "nkm-invoke2",
-      "timeSec": 333,
+      "timeSec": 328,
       "ability": "Invoke #2 (+ Ritual Burn)",
       "abilitySpellId": 1299673,
-      "trigger": "WCL 5:33",
+      "trigger": "WCL 5:28",
       "severity": "critical",
       "category": "throughput",
       "phase": 3,
@@ -193,11 +205,11 @@
       "note": "Second Invoke."
     },
     {
-      "id": "nkm-barrage6",
-      "timeSec": 346,
-      "ability": "Possession Barrage #6",
+      "id": "nkm-barrage5",
+      "timeSec": 342,
+      "ability": "Possession Barrage #5",
       "abilitySpellId": 1284103,
-      "trigger": "WCL 5:46",
+      "trigger": "WCL 5:42",
       "severity": "tank",
       "category": "external",
       "phase": 3,
@@ -206,15 +218,15 @@
     },
     {
       "id": "nkm-invoke3",
-      "timeSec": 365,
+      "timeSec": 361,
       "ability": "Invoke #3 (+ Ritual Burn)",
       "abilitySpellId": 1299673,
-      "trigger": "WCL 6:05",
+      "trigger": "WCL 6:01",
       "severity": "critical",
       "category": "defensive",
       "phase": 3,
       "assignCd": true,
-      "note": "Final Invoke — leftover raid CDs into ~6:25 kill."
+      "note": "Final Invoke — leftover raid CDs into ~6:15 kill."
     }
   ]
 }
