@@ -43,13 +43,18 @@ Each plan row is **boss ability → healer CD(s), raid utilities, and/or raid pe
 
 Heroic timers lean on **BigWigs** first-cycle cast bars / guides; several fights also track public **WowUtils** / **WCL** Mythic kill data. Coiled Altar and Ula’tek are Heroic-only until Mythic rankings exist. Nymrissa remains guide-estimated. Prefer editing JSON under `data/bosses/` when a fight changes.
 
+**Offline WCL loop (no live suggester):** keep auto-assign as the heuristic. Occasionally run the scripts below against current rankings; only bake boss-specific fixes into `data/bosses/*.json` (timers, `suggestPersonals`, category/notes) when raid reality disagrees. Speed-kill samples skip late windows past the kill — those are not automatic deletes.
+
 ## Scripts
 
-| Command         | Purpose                 |
-| --------------- | ----------------------- |
-| `npm run dev`   | Local app               |
-| `npm run build` | Production build        |
-| `npm test`      | Domain / auto-assign tests |
+| Command | Purpose |
+| --- | --- |
+| `npm run dev` | Local app |
+| `npm run build` | Production build |
+| `npm test` | Domain / auto-assign tests |
+| `node scripts/wcl-compare-bosses.mjs [kills]` | Planner windows vs current WCL cast times |
+| `node scripts/wcl-cd-gaps.mjs` | Catalog CD lengths vs cast gaps on logs |
+| `node scripts/audit-boss-meta.mjs` | Soak notes missing `suggestPersonals` / soft-CD wording |
 
 ## Scope
 
